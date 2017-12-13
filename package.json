@@ -1,0 +1,33 @@
+{
+  "name": "proto-clienti",
+  "version": "1.0.0",
+  "description": "ciao",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "bootstrap": "^4.0.0-alpha.6",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-postcss": "^7.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/langhenet/lgenf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/langhenet/lgenf/issues"
+  },
+  "homepage": "https://github.com/langhenet/lgenf#readme",
+  "dependencies": {
+    "node-sass": "^4.6.0"
+  }
+}

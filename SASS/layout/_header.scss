@@ -1,0 +1,31 @@
+.top-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @include layout-padding();
+}
+
+.header-nav__container  {
+  @include layout-padding();
+}
+
+.logo--mobile {
+  @include layout-padding();
+
+  @include breakpoint-min(md) {
+    display: none;
+  }
+}
+
+.logo {
+  max-width: 150px; //TODO in child theme only
+  @include layout-padding();
+
+  @include breakpoint-max(md) {
+    display: none;
+  }
+}
+
+.logo__image {
+  width: 100%;
+}

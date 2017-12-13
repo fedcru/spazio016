@@ -1,0 +1,20 @@
+.footer {
+  overflow: hidden;
+}
+
+.footer__inner {
+  max-width: $website-width;
+  margin: 0 auto;
+}
+
+.footer__row {
+  @include flex-setup;
+}
+.footer__column {
+  @include flex-child($wd: 25);
+
+  box-sizing: border-box;
+
+  background: white;
+  border: 2px solid;
+}

@@ -1,0 +1,47 @@
+img {
+  width: 100%;
+  height: auto;
+}
+
+.site  {
+  background: tan;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+
+body {
+  font-size: $font-size;
+}
+
+
+.main {
+  width: 100%;
+}
+
+.main__inner {
+  max-width: $website-width;
+  margin: 0 auto;
+}
+
+.main__row {
+  @include flex-setup;
+}
+
+.main__content {
+  @include flex-child($wd: 70);
+  box-sizing: border-box;
+
+  &--full {
+    @include flex-child($wd: 100);
+
+    box-sizing: border-box;
+  }
+}
+.sidebar__container {
+  @include flex-child($wd: 30);
+
+  box-sizing: border-box;
+}

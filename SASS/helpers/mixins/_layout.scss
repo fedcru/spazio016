@@ -1,0 +1,296 @@
+//****************************************************************************//
+//                            LAYOUT
+//****************************************************************************//
+///
+// Media Queries
+///
+@mixin breakpoint-max($media: lg) {
+  @media (max-width: map-get( $grid-breakpoints, $media ) - 0.01 ) {
+    @content;
+  }
+}
+
+@mixin breakpoint-min($media: lg) {
+  @media ( min-width: map-get( $grid-breakpoints, $media ) ) { @content;
+  }
+}
+
+/***********************
+* MAX width
+***********************/
+@mixin max-width($mw: md, $mr: null, $ml: null) {
+  max-width: max-width($mw);
+
+  @if $mr == null {
+    margin-right: auto;
+  } @else {
+    margin-right: spacing($mr);
+  }
+
+  @if $ml == null {
+    margin-left: auto;
+  } @else {
+    margin-left: spacing($ml);
+  }
+}
+
+////
+// Padding
+////
+@mixin padding($t: 4, $r: 4, $b: 4, $l: 4, $c: 0) {
+  @if $c == 0 {
+    @if $t != 'x' {
+      padding-top: spacing($t);
+    }
+    @if $r != 'x' {
+      padding-right: spacing($r);
+    }
+    @if $b != 'x' {
+      padding-bottom: spacing($b);
+    }
+    @if $l != 'x' {
+      padding-left: spacing($l);
+    }
+  }
+
+  @else {
+    padding: spacing($c);
+  }
+}
+
+@mixin pad($v:null, $h:null) {
+  @if ($v) {
+    padding-top: spacing($v);
+    padding-bottom: spacing($v);
+  }
+
+  @if ($h) {
+    padding-right: spacing($h);
+    padding-left: spacing($h);
+  }
+}
+
+
+////
+// Margin
+////
+@mixin margin($t: 4, $r: 4, $b: 4, $l: 4, $c: 0) {
+
+  // Individual margin
+  @if $c == 0 {
+
+    // Top Numeric value
+    @if $t != 'x' {
+      margin-top: spacing($t);
+    }
+
+    // Right auto value
+    @if $r == 'auto' {
+      margin-right: auto;
+    }
+    // Right numeric value
+    @else if $r != 'x' {
+      margin-right: spacing($r);
+    }
+
+    // Bottom numeric value
+    @if $b != 'x' {
+      margin-bottom: spacing($b);
+    }
+
+    // Left auto value
+    @if $l = 'auto' {
+      margin-left: auto;
+    }
+    // Left numeric value
+    @else if $l != 'x' {
+      margin-left: spacing($l);
+    }
+  }
+
+  @else {
+    margin: spacing($c);
+  }
+}
+
+@mixin marg($v:null, $h:null) {
+  @if ($v) {
+    margin-top: spacing($v);
+    margin-bottom: spacing($v);
+  }
+
+  @if ($h) {
+    margin-right: spacing($h);
+    margin-left: spacing($h);
+  }
+}
+
+////
+// Standard Layout Padding
+///
+@mixin layout-padding() {
+  padding-left: spacing(5);
+  padding-right: spacing(5);
+
+  @include breakpoint-min(sm) {
+    padding-left: spacing(6);
+    padding-right: spacing(6);
+  }
+}
+
+////
+// Image cropping
+// http://nicolasgallagher.com/flexible-css-cover-images
+//
+// RATIOS
+// * 8/5 - Landscape - event header
+// * 4/6 - portrait - magazine archive
+// * 3/4 - portrait - activity / holidays list
+// * 4/3 - landscape - Personal Page big image
+///
+@mixin aspect-ratio($w, $h, $ow: 0, $os: 6, $mw: sm) {
+  overflow: hidden;
+  position: relative;
+  max-width: max-width($mw);
+  margin-right: auto;
+  margin-left: auto;
+
+  @if $ow != 0 {
+    @include breakpoint-max($ow) {
+      margin-left: spacing($os) * -1;
+      margin-right: spacing($os) * -1;
+      max-width: max-width($ow);
+    }
+  }
+
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($h / $w) * 100%;
+  }
+
+  &> .ratio__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  img, video {
+    object-fit:cover;
+    width:100%;
+    height:100%;
+  }
+}
+
+
+
+
+//************************************************************************************************//
+//*
+//* FLEX LAYOUT
+//* Awesome Flexbox reference: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+//*
+//************************************************************************************************//
+
+
+////
+// FLEX SETUP
+// Sets up a flex-box container with basic information such as:
+// display property
+// direction property: row (default) | row-reverse | column | column-reverse
+// wrap property: nowrap (default) | wrap | wrap-reverse
+////
+@mixin flex-setup($gt: -3, $fd: row, $fw: wrap) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  margin-right: spacing($gt);
+  margin-left: spacing($gt);
+}
+
+////
+// FLEX LAYOUT
+// Define more flex parameters when necessary
+////
+@mixin flex-layout($jc: null, $ai: null, $ac: null) {
+
+  // $jc - Justify Content - defines how the elements are laid out horizontally
+  //    start (default): at the begininng of the Container
+  //    end: at the end of the container
+  //    center: elements are centered
+  //    between: space is put between the childs
+  //    around: space is put around the childs
+  //    evenly: the space is evenly distribuited around and in between the childs
+  @if $jc != null {
+    @if $jc == 'start' {
+      justify-content: flex-start;
+    } @else if $jc == 'end' {
+      justify-content: flex-end;
+    } @else if $jc == 'center' {
+      justify-content: center;
+    } @else if $jc == 'between' {
+      justify-content: space-between;
+    } @else if $jc == 'around' {
+      justify-content: space-around;
+    } @else if $jc == 'evenly' {
+      justify-content: space-around;
+    }
+  }
+  // $ai - align-items - defines how the elemts are laid out vertically
+  //    top: at the top of the Container
+  //    bottom: at the bottom of the Container
+  //    center: at the center of the container
+  //    stretch (default): childs are stretched to fill the container
+  //    baseline: childs are aligned such as their baselines align
+  @if $ai != null {
+    @if $ai == 'top' {
+      align-items: flex-start;
+    } @else if $ai == 'bottom' {
+      align-items: flex-end;
+    } @else if $ai == 'center' {
+      align-items: center;
+    } @else if $ai == 'stretch' {
+      align-items: stretch;
+    } @else if $ai == 'baseline' {
+      align-items: baseline;
+    }
+  }
+  // $ac - align-content - This aligns a flex container's lines within when there is extra space in the cross-axis, similar to how justify-content aligns individual items within the main-axis.
+  //    top: lines packed to the start of the container
+  //    bottom: lines packed to the end of the container
+  //    center: lines packed to the center of the container
+  //    between: lines evenly distributed; the first line is at the start of the container while the last one is at the end
+  //    around: lines evenly distributed with equal space around each line
+  //    stretch (default): lines stretch to take up the remaining space
+  @if $ac != null {
+    @if $ac == 'top' {
+      align-content: flex-start;
+    } @else if $ac == 'bottom' {
+      align-content: flex-end;
+    } @else if $ac == 'center' {
+      align-content: center;
+    } @else if $ac == 'between' {
+      align-content: space-between;
+    } @else if $ac == 'around' {
+      align-content: space-around;
+    } @else if $ac == 'stretch' {
+      align-content: stretch;
+    }
+  }
+}
+
+@mixin flex-child($gt: 3, $wd: 50, $fo: 0, $gr: 0, $sh: 0) {
+  order: $fo;
+  flex-basis: $wd + %;
+  width: $wd + %;
+  align-self: auto;
+  flex-grow: $gr;
+  flex-shrink: $sh;
+
+  padding-left: spacing($gt);
+  padding-right: spacing($gt);
+}

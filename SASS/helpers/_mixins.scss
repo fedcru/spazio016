@@ -1,0 +1,284 @@
+
+//****************************************************************************//
+//*                                                                          *//
+//*                  I MIXIN - FUNZIONI CHE COMPONGONO COSE
+//*                 descrizione - descrizione - descrizione
+//*                                                                          *//
+//****************************************************************************//
+
+
+
+//****************************************************************************//
+//                            MIXIN TIPOGRAFICI
+//****************************************************************************//
+
+///
+// Dimensioni e margini caratteri
+///
+
+@mixin size($size: p) {
+  font-size: size($size, fs);
+  line-height: size($size, lh);
+}
+
+@mixin margin($size: p) {
+  margin-top: size($size, mt);
+  margin-bottom: size($size, mb);
+}
+
+@mixin m-size($size: h3, $mt: $size, $mb: $size) {
+  font-size: m-size($size, fs);
+  line-height: m-size($size, lh);
+
+  @if $mt != $size {
+    margin-top: $mt;
+  }
+  @else {
+    margin-top: m-size($size, mt);
+  }
+
+  @if $mb != $size {
+    margin-bottom: $mt;
+  }
+  @else {
+    margin-bottom: m-size($size, mb);
+  }
+}
+
+///
+// Decorazioni caratteri (family e boldness)
+///
+@mixin decoration($size: p) {
+  font-family: family(decoration($size, fm), fm);
+  font-weight: family(decoration($size, fm), wt);
+}
+
+
+@mixin font-alt($size: p) {
+  @include size($size);
+  @include margin($size);
+  @include family($size);
+}
+
+@mixin font($size: p, $fm: $size, $wt: $size, $mt: $size, $mb: $size) {
+  @include size($size);
+
+  //MARGIN TOP
+  @if $mt != $size  {
+    margin-top: $mt;
+  }
+  @else {
+    margin-top: size($size, mt);
+  }
+
+  //MARGIN bottom
+  @if $mb != $size {
+    margin-bottom: $mb;
+  }
+  @else {
+    margin-bottom: size($size, mb);
+  }
+
+  //Family
+  @if $fm == primary or $fm == secondary or $fm == special {
+    font-family: family($fm, fm);
+  }
+  @else {
+    font-family: family(decoration($size, fm), fm);
+  }
+
+  //WEIGHT
+  @if $wt == bolder or $wt == bold or $wt == normal or $wt == light {
+    @if $fm == primary or $fm == secondary or $fm == special {
+      font-weight: family($fm, $wt);
+    }
+    @else { // DOVREI ANDARE A PESCARE LA FAMIGLIA DELLA GRANDEZZA RICHIAMATA e POTERLA METTERE QUI - FORSE CI VUOLE UN ALTRA FUNZIONE CHE FACCIA UN MERGE?!?
+      font-weight: family(decoration($size, fm), $wt);
+    }
+  }
+
+  @else {
+    @if $fm == primary or $fm == secondary or $fm == special {
+      font-weight: family($fm, decoration($size, wt));
+    }
+    @else {
+      font-weight: family(decoration($size, fm), decoration($size, wt));
+    }
+  }
+}
+
+///
+// HR
+///
+@mixin hr-spacing {
+  border: $hr-spacing;
+  margin: -$hr-spacing 0;
+}
+
+
+
+//****************************************************************************//
+//                                    BOTTONI
+//                   il padding va a compensare per i bordi
+//              il valore del padding deve essere pari alla metà di
+//                (interlinea meno la somma dei bordi sup e inf)
+//****************************************************************************//
+
+///
+// Base dei bottoni: display, font-family e ombre
+///
+%button {
+  display:inline-block;
+  font-family: $ff-button; //TODO
+  white-space: normal;
+  border-style: solid;
+  box-shadow: $button-shadow;
+}
+
+///
+// Mixin per i bottoni con padding
+///
+@mixin button($size: p, $bw:2, $pw: null) {
+  font-size: size($size, fs);
+  line-height: size($size, lh);
+
+  @if $pw == half {
+    padding-top: bhpad($bw, $size);
+    padding-bottom: bhpad($bw, $size);
+  }
+
+  @else if $pw == quarter {
+    padding-top: bqpad($bw, $size);
+    padding-bottom: bqpad($bw, $size);
+  }
+
+  @else {
+    padding-top: bpad($bw, $size);
+    padding-bottom: bpad($bw, $size);
+  }
+
+  border-bottom-width: $bw * 1px;
+  border-top-width: $bw * 1px;
+}
+
+///
+// Mixin per i bottoni con line-height
+///
+@mixin button-lh($size: p, $bw:2) {
+  @include size($size);
+
+  line-height: blh($bw, size($size, fs), size($size, lh));
+
+  padding: 0 1.5em;
+  border-bottom-width: $bw * 1px;
+  border-top-width: $bw * 1px;
+}
+
+
+//****************************************************************************//
+//                                    COLORI BOTTONI
+//
+//****************************************************************************//
+
+////
+//  Questo Mixin utilizza la funzione 'palette' in modo particolare
+//
+//  La variabile $palette, che va a selezionare il contesto (la key di
+//  "primo livello") in cui vengono salvati i diversi COLORI, viene
+//  dichiarata solamente al momento di utilizzo.
+//
+//  Nel caso specifico, verrà utilizzato un @each che looppa attraverso tutte
+//  le palette per costruire delle classi dinamiche basate sulle palette
+///
+@mixin button-color($state: none, $palette: main) {
+
+  @if ($state != hover) and ($palette == main) {
+    background: main-colors($palette, button-bg);
+    color: main-colors($palette, button);
+    border-color: main-colors($palette, button-bg);
+    border-bottom-color: darken(main-colors($palette, button-bg), 10%);
+    opacity: 1;
+  }
+
+  @if ($state == hover) and ($palette == main) {
+    background: mix(main-colors($palette, button-bg), $bianco, 80%);
+    color: main-colors($palette, button);
+    border-color: mix(main-colors($palette, button-bg), $bianco, 80%);
+    border-bottom-color: mix(main-colors($palette, button-bg), $bianco, 85%);
+    transition: all 700ms;
+  }
+
+  @if $state != hover and $palette != main {
+    background: palette($palette, button-bg);
+    color: palette($palette, button);
+    border-color: palette($palette, button-bg);
+    border-bottom-color: darken(palette($palette, button-bg), 10%);
+    opacity: 1;
+  }
+
+  @if ($state == hover) and ($palette != main) {
+    background: mix(palette($palette, button-bg), $bianco, 80%);
+    color: palette($palette, button);
+    border-color: mix(palette($palette, button-bg), $bianco, 80%);
+    border-bottom-color: mix(palette($palette, button-bg), $bianco, 85%);
+    transition: all 700ms;
+  }
+}
+
+
+//****************************************************************************//
+//                                    BOTTONI SUBTLE
+//****************************************************************************//
+@mixin button-color-subtle($state:none, $palette:main) {
+
+  @if $state != hover {
+    background: palette($palette, button-bg-subtle);
+    color: palette($palette, button-subtle);
+    border-color: palette($palette, button-bg-subtle);
+    border-bottom-color: darken(palette($palette, button-bg-subtle), 10%);
+    opacity: 1;
+  }
+
+  @else {
+    background: darken(palette($palette, button-bg-subtle), 5%);
+    color: palette($palette, button-subtle);
+    border-color: palette($palette, button-bg-subtle);
+    border-bottom-color: darken(palette($palette, button-bg-subtle), 10%);
+  }
+}
+
+
+
+@import 'mixins/layout' ;
+
+//****************************************************************************//
+//                            DECORAZIONI
+//****************************************************************************//
+
+///
+// Overlay di colore da mettere sui ::before //TOCR
+///
+@mixin color-overlay($palette: main, $grade: 0.3) {
+  position: relative;
+
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left:0;
+    z-index: 0;
+
+    @if $palette == main {
+      background-color: rgba( $black, $grade);
+    }
+    @else if $palette == fheader {
+      background-color: rgba( main-colors($palette, overlay), $grade);
+    }
+    @else {
+      background-color: rgba( palette($palette, overlay), $grade);
+    }
+  }
+}

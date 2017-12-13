@@ -1,0 +1,46 @@
+//****************************************************************************//
+//                                    FORMS MIXIN
+//****************************************************************************//
+
+///
+// Form Field size settings
+///
+@mixin form-field($size: p, $bw: 1) {
+  font-family: inherit;
+  font-size: size($size, fs);
+  line-height: size($size, lh); //TOCR - forse è più facile farla con la funzione blh?
+//  margin-bottom: font($size, mb);
+  margin-top: 0;
+  padding: bhpad($bw, $size) !important;
+  border-width: $bw * 1px;
+}
+
+///
+// Forms Labels size settings
+///
+@mixin form-label($size: p) {
+  font-size: size($size, fs);
+  line-height: size($size, lh) !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0;
+  font-family: form(label, fm);
+  font-weight: form(label, wt);
+  text-transform: uppercase; //TODO //TOCR
+  letter-spacing: 0px;
+}
+
+///
+// Forms Field Descritpions
+///
+@mixin form-desc($size: h5) {
+  font-size: size($size, fs) !important;
+  line-height: size($size, lh);
+  font-style: none;
+  margin: 0 !important;
+  font-family: form(desc, fm);
+  font-weight: form(desc, wt);
+  text-transform: none; //TODO //TOCR
+  letter-spacing: 0 !important;
+  padding-top: size($size, lh);
+}
