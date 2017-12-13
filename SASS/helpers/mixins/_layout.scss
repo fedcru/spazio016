@@ -15,9 +15,9 @@
   }
 }
 
-/***********************
-* MAX width
-***********************/
+//***********************
+//* MAX width
+//***********************/
 @mixin max-width($mw: md, $mr: null, $ml: null) {
   max-width: max-width($mw);
 
