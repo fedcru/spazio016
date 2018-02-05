@@ -1,23 +1,6 @@
-//****************************************************************************//
-//                            LAYOUT
-//****************************************************************************//
-///
-// Media Queries
-///
-@mixin breakpoint-max($media: lg) {
-  @media (max-width: map-get( $grid-breakpoints, $media ) - 0.01 ) {
-    @content;
-  }
-}
-
-@mixin breakpoint-min($media: lg) {
-  @media ( min-width: map-get( $grid-breakpoints, $media ) ) { @content;
-  }
-}
-
-//***********************
-//* MAX width
-//***********************/
+/***********************
+* MAX width
+***********************/
 @mixin max-width($mw: md, $mr: null, $ml: null) {
   max-width: max-width($mw);
 
@@ -120,8 +103,14 @@
   }
 
   @if ($h) {
-    margin-right: spacing($h);
-    margin-left: spacing($h);
+    @if $h == 'auto' {
+      margin-right: auto;
+      margin-left: auto;
+    }
+    @else {
+      margin-right: spacing($h);
+      margin-left: spacing($h);
+    }
   }
 }
 
@@ -138,6 +127,74 @@
   }
 }
 
+
+@mixin layout-overflow {
+  margin-right: spacing(-5);
+  margin-left: spacing(-5);
+
+  @include breakpoint-min(sm) {
+    margin-left: spacing(-6);
+    margin-right: spacing(-6);
+  }
+}
+
+//****************************************************************************//
+//                            MEDIA QUERIES
+//****************************************************************************//
+@mixin breakpoint-max($media: lg) {
+  @media (max-width: map-get( $grid-breakpoints, $media ) - 0.01 ) {
+    @content;
+  }
+}
+
+@mixin breakpoint-min($media: lg) {
+  @media ( min-width: map-get( $grid-breakpoints, $media ) ) {
+    @content;
+  }
+}
+
+
+//****************************************************************************//
+//                            COLOR OVERLAYS
+//****************************************************************************//
+@mixin color-overlay($palette: main, $grade: 0.5) {
+  position: relative;
+
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left:0;
+    z-index: 0;
+
+    @if $palette == main {
+      background-color: rgba( $black, $grade);
+    }
+    @else if $palette == fheader {
+      background-color: rgba( main-colors($palette, overlay), $grade);
+    }
+    @else {
+      background-color: rgba( palette($palette, overlay), $grade);
+    }
+  }
+}
+
+////
+// Overflow mixin
+// It allows the selector to overflow its parent at a given breakpoint
+////
+@mixin overflow($ow: lg, $os: 5) {
+  @include breakpoint-max($ow) {
+    margin-left: spacing($os) * -1;
+    margin-right: spacing($os) * -1;
+    max-width: max-width($ow);
+  }
+}
+
+
 ////
 // Image cropping
 // http://nicolasgallagher.com/flexible-css-cover-images
@@ -148,19 +205,15 @@
 // * 3/4 - portrait - activity / holidays list
 // * 4/3 - landscape - Personal Page big image
 ///
-@mixin aspect-ratio($w, $h, $ow: 0, $os: 6, $mw: sm) {
+@mixin aspect-ratio($w, $h, $ow: 0, $os: 6, $mr: null, $ml: null) {
+//  @include max-width($mw: $mw, $mr: $mr, $ml: $ml);
   overflow: hidden;
   position: relative;
-  max-width: max-width($mw);
-  margin-right: auto;
-  margin-left: auto;
+  display: block;
+
 
   @if $ow != 0 {
-    @include breakpoint-max($ow) {
-      margin-left: spacing($os) * -1;
-      margin-right: spacing($os) * -1;
-      max-width: max-width($ow);
-    }
+    @include overflow($ow, $os)
   }
 
   &:before {
@@ -170,7 +223,7 @@
     padding-top: ($h / $w) * 100%;
   }
 
-  &> .ratio__content {
+  & > .ratio__content {
     position: absolute;
     top: 0;
     left: 0;
@@ -178,15 +231,13 @@
     bottom: 0;
   }
 
-  img, video {
+  img,
+  video {
     object-fit:cover;
     width:100%;
     height:100%;
   }
 }
-
-
-
 
 //************************************************************************************************//
 //*
@@ -205,8 +256,8 @@
 ////
 @mixin flex-setup($gt: -3, $fd: row, $fw: wrap) {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: $fd;
+  flex-wrap: $fw;
 
   margin-right: spacing($gt);
   margin-left: spacing($gt);
@@ -283,11 +334,13 @@
   }
 }
 
-@mixin flex-child($gt: 3, $wd: 50, $fo: 0, $gr: 0, $sh: 0) {
-  order: $fo;
+@mixin flex-child($gt: 3, $wd: 50, $fo: 0, $gr: 0, $sh: 0, $as: auto) {
+  @if $fo != 0 {
+    order: $fo;
+  }
   flex-basis: $wd + %;
   width: $wd + %;
-  align-self: auto;
+  align-self: $as;
   flex-grow: $gr;
   flex-shrink: $sh;
 

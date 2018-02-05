@@ -1,0 +1,123 @@
+/*
+ * The Website container
+ */
+.site  {
+
+}
+
+
+/***********************************************************************************************
+  *
+  * HEADER
+  *
+  *********************************************************************************************/
+
+.header {
+
+}
+
+.header__inner {
+  max-width: $website-width;
+}
+
+.header__row {
+
+}
+
+.logo {
+  max-width: 150px; //TODO in child theme only
+
+}
+
+.logo--mobile {
+  max-width: 150px; //TOD in child them only
+}
+
+.logo__image {
+}
+
+.primary-nav {
+
+}
+
+.primary-nav__inner {
+
+}
+
+
+/***********************************************************************************************
+  *
+  * MAIN
+  *
+  *********************************************************************************************/
+
+.main {
+  background-color: main-colors(main, bg);
+
+  * {
+    color: main-colors(main, body);
+  }
+}
+
+.main__inner {
+  max-width: $website-width;
+}
+
+.main__row {
+
+}
+
+
+/**
+ * Main content width
+ * Sets the sidebar / content ratio here
+ */
+.main__content {
+  @include breakpoint-min(lg) {
+    @include flex-child($wd: 70);
+
+    &--full {
+      @include flex-child($wd: 100);
+    }
+  }
+}
+
+
+/**
+ * Main sidebar width
+ * Sets the sidebar / content ratio here
+ */
+.main__sidebar {
+
+  @include breakpoint-min(lg) {
+    @include flex-child($wd: 30);
+  }
+
+  background-color: main-colors(sidebar, bg);
+
+  * {
+    color: mainc-colors(sidebar, body);
+  }
+}
+
+
+/************************************************************************************************
+  *
+  *                                 FOOTER
+  *
+  **********************************************************************************************/
+.footer {
+
+}
+
+.footer__inner {
+  max-width: $website-width;
+}
+
+.footer__row {
+
+}
+
+.footer__column {
+
+}

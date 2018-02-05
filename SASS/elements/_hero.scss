@@ -1,0 +1,13 @@
+.hero-title {
+  background-color: main-colors(hero, bg);
+}
+
+.hero-title__title {
+  @include font(h1, $mt: 6, $mb: 4);
+  color: main-colors(hero, body);
+}
+
+.hero-title__description {
+  @include font(h3);
+  color: main-colors(hero, body);
+}

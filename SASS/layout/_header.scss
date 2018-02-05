@@ -1,0 +1,17 @@
+.header {
+  background-color: main-colors(header, bg);
+
+  .header__nav {
+    * {
+      color: main-colors(header, body);
+    }
+
+    a {
+      color: main-colors(header, link);
+
+      &:hover {
+        color: main-colors(header, accent);
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.footer {
+  background-color: main-colors(footer, bg);
+
+  * {
+    color: main-colors(footer, body);
+  }
+}

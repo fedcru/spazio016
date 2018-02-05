@@ -1,0 +1,112 @@
+//****************************************************************************//
+//                                    BOTTONI
+//                   il padding va a compensare per i bordi
+//              il valore del padding deve essere pari alla metà di
+//                (interlinea meno la somma dei bordi sup e inf)
+//****************************************************************************//
+
+///
+// Base dei bottoni: display, font-family e ombre
+///
+%button {
+  display:inline-block;
+  font-family: $ff-button; //TODO
+  white-space: normal;
+  border-style: solid;
+}
+
+///
+// Mixin per i bottoni con padding
+///
+@mixin button( $size: uppercase--sm, $mt: 0, $mb: 0, $pv: spacing(3), $ph: spacing(4), $ta: center ) {
+  display: inline-block;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.125rem;
+  text-align: $ta;
+  cursor: pointer;
+
+  padding-left: $ph;
+  padding-right: $ph;
+  padding-top: $pv;
+  padding-bottom: $pv;
+
+  font-family: font($size, fm);
+  font-weight: font($size, wt);
+  font-size: font($size, fs);
+  line-height: font($size, lh);
+
+  @if map-has-nested-keys($fonts, $size, tt) {
+    text-transform: font($size, tt)
+  }
+
+  //Check if letter spacing is present
+  @if map-has-nested-keys($fonts, $size, ls) {
+    letter-spacing: font($size, ls)
+  }
+
+  //For each breakpoint in the breakpoint map
+  @each $breakpoint, $width in $grid-breakpoints {
+    // Creates a numeric index of the current breakpoint
+    // Reference
+    // https://benfrain.com/working-with-lists-and-each-loops-in-sass-with-the-index-and-nth-function/
+    // https://www.sassmeister.com/gist/02e1ec8bf36d20b4eba7
+    $i: index(map-keys($grid-breakpoints), $breakpoint);
+
+    // Creates a list of keys, accessible using the numeric index $i
+    // Reference
+    // https://stackoverflow.com/questions/37763601/how-can-i-use-the-key-name-instead-of-value-in-map-get
+    $breakpoint-list: map-keys($grid-breakpoints);
+
+    // Check if the current breakpoin is declared in the font-style
+    @if map-has-nested-keys($fonts, $size, nth($breakpoint-list, $i)) {
+
+      // if the breakpoint exists, it's printed
+      @include breakpoint-min(nth($breakpoint-list, $i)) {
+        // for each text attribute declared in the $text-atts map
+        @each $css-att, $att in $text-atts {
+
+          // Create a numeric index of the current attribute
+          $i2: index(map-keys($text-atts), $css-att);
+
+          // Create a list of keys, accessible using the numeric index $i2 and used to print the css attribute (eg font-size)
+          $att-list: map-keys($text-atts);
+
+          //Checks if the property exist in a given breakpoint - and checks if the property is NOT padding-top and padding-bottom
+          @if map-has-nested-keys($fonts, $size, nth($breakpoint-list, $i), $att) and nth($att-list, $i2) != 'padding-top' and nth($att-list, $i2) != 'padding-bottom' {
+            #{nth($att-list, $i2)}: responsive-font($size, nth($breakpoint-list, $i), $att);
+          }
+        }
+      }
+    }
+  }
+}
+
+//****************************************************************************//
+//                                    COLORI BOTTONI
+//
+//****************************************************************************//
+
+////
+//  Questo Mixin utilizza la funzione 'palette' in modo particolare
+//
+//  La variabile $palette, che va a selezionare il contesto (la key di
+//  "primo livello") in cui vengono salvati i diversi COLORI, viene
+//  dichiarata solamente al momento di utilizzo.
+//
+//  Nel caso specifico, verrà utilizzato un @each che looppa attraverso tutte
+//  le palette per costruire delle classi dinamiche basate sulle palette
+///
+@mixin button-color($palette: main, $type: filled) {
+  @if $type == 'filled' {
+    background: palette($palette, accent);
+    color: palette($palette, button);
+    border-color: palette($palette, accent);
+  }
+
+  @if $type == 'empty-w' {
+    background: transparent;
+    color: $white;
+    border-color: $white-40;
+  }
+}

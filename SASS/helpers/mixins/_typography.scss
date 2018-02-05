@@ -1,0 +1,158 @@
+//****************************************************************************//
+//                            MIXIN TIPOGRAFICI
+//****************************************************************************//
+
+////
+// Font Size Mixin
+////
+@mixin size($size: serif--md) {
+  font-family: font($size, fm);
+  font-weight: font($size, wt);
+  padding-top: font($size, pt);
+  padding-bottom: font($size, pb);
+}
+
+
+
+////
+// Main Font Mixin
+////
+@mixin font($size: condensed--xs, $mt: null, $mb: null, $pt: null, $pb: null ) {
+  font-family: font($size, fm);
+  font-weight: font($size, wt);
+  font-size: font($size, fs);
+  line-height: font($size, lh);
+
+  ////
+  // If the margin value passes a unitless measure, it gets it from the
+  // $spacing map - if it's not a unitless measure it prints the measure.
+  ///
+
+  //Margin Top
+  @if $mt != null {
+    @if unitless($mt) {
+      margin-top: spacing($mt);
+    }
+
+    @else {
+      margin-top: $mt;
+    }
+  }
+
+
+  //Margin bottom
+  @if $mb != null {
+    @if unitless($mb) {
+      margin-bottom: spacing($mb);
+    }
+    @else {
+      margin-bottom: $mb;
+    }
+  }
+
+  //Padding top
+  @if not $pt {
+    padding-top: font($size, pt);
+  }
+  @else {
+    padding-top: spacing($pt);
+  }
+
+  //Padding bottom
+  @if not $pb {
+    padding-bottom: font($size, pb);
+  }
+  @else {
+    padding-bottom: spacing($pb);
+  }
+
+  //CHECK IF TEXT TRANSFORM IS PRESENT
+  @if map-has-nested-keys($fonts, $size, tt) {
+    text-transform: font($size, tt)
+  }
+
+  //Check if letter spacing is present
+  @if map-has-nested-keys($fonts, $size, ls) {
+    letter-spacing: font($size, ls)
+  }
+
+  //For each breakpoint in the breakpoint map
+  @each $breakpoint, $width in $grid-breakpoints {
+
+    // Creates a numeric index of the current breakpoint
+    // Reference
+    // https://benfrain.com/working-with-lists-and-each-loops-in-sass-with-the-index-and-nth-function/
+    // https://www.sassmeister.com/gist/02e1ec8bf36d20b4eba7
+    $i: index(map-keys($grid-breakpoints), $breakpoint);
+
+    // Creates a list of keys, accessible using the numeric index $i
+    // Reference
+    // https://stackoverflow.com/questions/37763601/how-can-i-use-the-key-name-instead-of-value-in-map-get
+    $breakpoint-list: map-keys($grid-breakpoints);
+
+    // Check if the current breakpoin is declared in the font-style
+    @if map-has-nested-keys($fonts, $size, nth($breakpoint-list, $i)) {
+
+      // if the breakpoint exists, it's printed
+      @include breakpoint-min(nth($breakpoint-list, $i)) {
+
+        // for each text attribute declared in the $text-atts map
+        @each $css-att, $att in $text-atts {
+
+          // Create a numeric index of the current attribute
+          $i2: index(map-keys($text-atts), $css-att);
+
+          // Create a list of keys, accessible using the numeric index $i2 and used to print the css attribute (eg font-size)
+          $att-list: map-keys($text-atts);
+
+          //Checks if the property exist in a given breakpoint
+          @if map-has-nested-keys($fonts, $size, nth($breakpoint-list, $i), $att) {
+            @if ( nth($att-list, $i2) == 'padding-bottom' AND $pb != null ) {
+              //returns
+            }
+            @elseif ( nth($att-list, $i2) == 'padding-top' AND $pt != null ) {
+              //returns
+            }
+            @else {
+              #{nth($att-list, $i2)}: responsive-font($size, nth($breakpoint-list, $i), $att);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+///
+// mixin for bullet proof font declaration syntax
+// ref: https://content.pivotal.io/blog/bulletproof-font-face-syntax-with-sass-and-rails
+///
+@mixin declare-font-face($font-family, $font-filename, $font-weight : normal, $font-style :normal, $font-stretch : normal) {
+
+  @font-face {
+    font-family: '#{$font-family}';
+    // src: url('../fonts/#{$font-filename}.eot');
+    // src: url('../fonts/#{$font-filename}.eot?#iefix') format('embedded-opentype'),
+    // url('../fonts/#{$font-filename}.woff') format('woff'),
+    // url('../fonts/#{$font-filename}.woff2') format('woff2'),
+    // url('../fonts/#{$font-filename}.otf') format('otf'),
+    // url('../fonts/#{$font-filename}.ttf') format('truetype'),
+    // url('../fonts/#{$font-filename}.svg##{$font-family}') format('svg');
+    src: url('../fonts/#{$font-filename}.woff') format('woff');
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-stretch: $font-stretch;
+  }
+}
+
+
+
+///
+// HR
+///
+@mixin hr-spacing {
+  border: $hr-spacing;
+  margin: -$hr-spacing 0;
+}

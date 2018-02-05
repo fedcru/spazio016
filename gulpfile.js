@@ -17,7 +17,8 @@ gulp.task('browser-sync', function() {
     //watch files
     var files = [
     './style.css',
-    './*.php'
+    './*.php',
+    './*.twig'
     ];
 
     //initialize browsersync
@@ -49,4 +50,5 @@ gulp.task('sass', function () {
 gulp.task('default', ['sass', 'browser-sync'], function () {
     gulp.watch("sass/**/*.scss", ['sass']);
     gulp.watch("**/*.php", ['sass']);
+    gulp.watch("**/*.twig", ['sass']);
 });

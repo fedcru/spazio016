@@ -9,8 +9,27 @@
 @import 'helpers/mixins';
 
 
- @import 'layout';
-// @import 'layout/nav';
-// @import 'layout/header-widgets';
-// @import 'layout/header';
-// @import 'layout/footer';
+@import 'normalize';
+
+
+// Base
+@import 'base/typography';
+
+
+// Layout
+@import 'layout/main-layout';
+@import 'layout/header';
+@import 'layout/footer';
+
+
+////
+// Elements
+///
+
+// Header elements
+@import 'elements/header/top-bar';
+@import 'elements/header/header-widgets';
+@import 'elements/header/nav';
+
+// Small elements
+@import 'elements/hero';
