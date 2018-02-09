@@ -1,14 +1,38 @@
-.elementor {
-  width: 100%;
-}
-
+/**
+ * Section overflow
+ */
 .elementor-section {
   @include layout-overflow();
 }
 
+
 /**
- * BOXED section width
+ * Section inner container
  */
-.elementor-section.elementor-section-boxed > .elementor-container {
-  max-width: $website-width;
+.elementor-section .elementor-container {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/**
+ * Section Row
+ */
+.elementor-row {
+  width: auto;
+}
+
+
+/**
+ * Resets the padding on the .populated element
+ * on all screen sizes.
+ */
+.elementor-column-gap-default,
+.elementor-column-gap-narrow,
+.elementor-column-gap-extended,
+.elementor-column-gap-wide,
+.elementor-column-gap-wider {
+  &> .elementor-row > .elementor-column > .elementor-element-populated {
+    padding: 0;
+  }
 }

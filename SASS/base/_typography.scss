@@ -20,7 +20,7 @@ html {
   // }
 
   @include breakpoint-min(uxl) {
-    font-size: 1.1vw;
+    font-size: 1vw;
   }
 }
 
@@ -37,15 +37,15 @@ html {
   }
 
   &> h3 {
-    @include font(h3, $mt: 6, $mb: 2);
+    @include font(h3, $mt: 5, $mb: 2);
   }
 
   &> h4 {
-    @include font(h4, $mt: 6, $mb: 2);
+    @include font(h4, $mt: 5, $mb: 2);
   }
 
   &> p {
-    @include font(p, $mt: 2, $mb: 0);
+    @include font(p, $mt: 4, $mb: 0);
   }
 
   a {

@@ -5,16 +5,17 @@
 
 .hero-title__text {
   max-width: max-width($text-mw);
+  margin-bottom: spacing(5);
 }
 
 .hero-title__title {
-  @include font(h1, $mt: 6, $mb: 0);
+  @include font(h1, $mb: 0);
   color: main-colors(hero, body);
   display: block;
 }
 
 .hero-title__subtitle {
-  @include font(h4, $mt: 0);
+  @include font(h4, $mt: 1);
   color: main-colors(hero, body);
   display: block;
 }

@@ -1,7 +1,7 @@
 .header {
   background-color: main-colors(header, bg);
   @include pad($h: 0);
-  padding-top: spacing(4);
+  padding-top: spacing(6.5);
 
   .header__nav {
     * {
@@ -23,8 +23,8 @@
   max-width: 300px;
 
   @include breakpoint-min(md) {
-    margin-top: spacing(-6.5);
-    margin-bottom: spacing(6);
+    margin-top: spacing(-5);
+    margin-bottom: spacing(6.5);
   }
 }
 

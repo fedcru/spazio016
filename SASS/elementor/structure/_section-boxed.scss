@@ -1,100 +1,157 @@
-$gutter-sm: 5;
-$gutter-md: 6.5;
-$gutter-lg: 8;
+/**
+ * Local Variables
+ */
+$el-gutter-sm: 5;
+$el-gutter-md: 6.5;
+$el-gutter-lg: 8;
 
+$el-drop-col: ms;
+
+$el-v-space: 7;
+
+/*****************************************************************************************
+ *
+ *                                          BOXED SECTION
+ *                These are the basi Elementor's sections: they have a predefined
+*                     maximim width, that equals the width of the website
+ *
+ ****************************************************************************************/
+
+
+/**
+ * BOXED section width
+ * it needs a separate rules because of nesting
+ */
+.elementor-section.elementor-section-boxed > .elementor-container {
+  max-width: $website-width;
+}
+
+
+/**
+ * Boxed Sections
+ * Basic setup
+ */
 .elementor-section-boxed {
+  // lateral padding
   @include layout-padding();
-  width: 100%;
 
+  // Vertical Spacing
   &> .elementor-container {
+    @include pad($v: 6);
 
-    @include pad($v: 8);
+    // Vertical spacing on large screen
+    @include breakpoint-min($el-drop-col) {
+      @include pad($v: 7);
+    }
 
+    // Resets all the padding on gap-no section
     &.elementor-column-gap-no {
       @include pad($v: 0);
     }
-
-    &> .elementor-row {
-      width: 100vw;
-      //max-width: 100vw;
-    }
   }
 }
 
-/**
- * Reset Padding the .populated element on Mobile
+
+
+
+/*========================================================================================
+ * COLUMNS
  */
-.elementor-column-gap-default,
-.elementor-column-gap-narrow,
-.elementor-column-gap-extended,
-.elementor-column-gap-wide,
-.elementor-column-gap-wider {
-  &> .elementor-row > .elementor-column > .elementor-element-populated {
-    padding: 0;
-  }
+
+.elementor-section-boxed  .elementor-column {
+  @include pad($v: 3);
 }
 
 /**
- * Default GAP - lateral spacing
+ * COLUMNS gutter - only on large screen
  */
-@include breakpoint-min(lg) {
+@include breakpoint-min($el-drop-col) {
+.elementor-section-boxed {
+
+  // Default gap
   .elementor-column-gap-default {
-    &> .elementor-row {
-      @include marg($h: -$gutter-md);
 
-      &> .elementor-column {
-        @include pad( $h: $gutter-md );
+      &> .elementor-row {
+        @include marg($h: -$el-gutter-md);
+
+        &> .elementor-column {
+          @include pad( $h: $el-gutter-md );
+        }
       }
     }
-  }
 
-  .elementor-column-gap-wide,
-  .elementor-column-gap-wider {
-    &> .elementor-row {
-      @include marg($h: -$gutter-lg);
+    // Wide & Wider gap
+    .elementor-column-gap-wide,
+    .elementor-column-gap-wider {
+      &> .elementor-row {
+        @include marg($h: -$el-gutter-lg);
 
-      &> .elementor-column {
-        @include pad( $h: $gutter-lg );
+        &> .elementor-column {
+          @include pad( $h: $el-gutter-lg );
+        }
       }
     }
-  }
 
-  .elementor-column-gap-narrow,
-  .elementor-column-gap-extended {
-    &> .elementor-row {
-      @include marg($h: -$gutter-sm);
+    // Narrow & Extended gap
+    .elementor-column-gap-narrow,
+    .elementor-column-gap-extended {
+      &> .elementor-row {
+        @include marg($h: -$el-gutter-sm);
 
-      &> .elementor-column {
-        @include pad( $h: $gutter-sm );
+        &> .elementor-column {
+          @include pad( $h: $el-gutter-sm );
+        }
       }
     }
   }
 }
 
-/**
- * Nested Section
+
+
+
+/*========================================================================================
+ * NESTED SECTION
  */
 
-@include breakpoint-min(lg) {
-  .elementor-inner-section {
+/**
+ * Vertical padding correction
+ */
+.elementor-section-boxed.elementor-inner-section {
+  &> .elementor-container {
+    // Mobile
+    @include pad($v: 0);
 
-    &> .elementor-container {
+    // Large screens
+    @include breakpoint-min(lg) {
       @include pad($v: 4);
     }
   }
-
-  @at-root .elementor-column-gap-narrow #{&} {
-    @include marg($h: -$gutter-sm);
-  }
-  @at-root .elementor-column-gap-extended #{&} {
-    @include marg($h: -$gutter-sm);
-  }
+}
 
 
-  @at-root .elementor-column-gap-wide #{&} {
-    @include marg($h: -$gutter-lg);
-  }
-  @at-root .elementor-column-gap-wider #{&} {
-    @include marg($h: -$gutter-lg);
+/**
+ * Horizontal margin correction
+ * Negative margin is applied to the section
+ * According to the parent section type.
+ */
+@include breakpoint-min($el-drop-col) {
+
+  .elementor-section-boxed.elementor-inner-section {
+
+    // Narrow & Extended parents
+    @at-root .elementor-column-gap-narrow #{&} {
+      @include marg($h: -$el-gutter-sm);
+    }
+    @at-root .elementor-column-gap-extended #{&} {
+      @include marg($h: -$el-gutter-sm);
+    }
+
+    // Wide & Wider parents
+    @at-root .elementor-column-gap-wide #{&} {
+      @include marg($h: -$el-gutter-lg);
+    }
+    @at-root .elementor-column-gap-wider #{&} {
+      @include marg($h: -$el-gutter-lg);
+    }
   }
 }

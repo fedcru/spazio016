@@ -37,7 +37,7 @@ html {
   font-size: calc( 0.14880952381vw + 13.5238095238px); }
   @media (min-width: 125em) {
     html {
-      font-size: 1.1vw; } }
+      font-size: 1vw; } }
 
 .typography > * {
   max-width: 42.66667rem; }
@@ -46,44 +46,44 @@ html {
   font-family: "Pagella", serif;
   font-weight: 400;
   font-size: 3rem;
-  line-height: 3rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  line-height: 3.125rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  padding-top: 0.15625rem;
+  padding-bottom: 0.15625rem;
   letter-spacing: 0.15rem; }
 
 .typography > h2 {
   font-family: "Pagella", serif;
   font-weight: 400;
   font-size: 2rem;
-  line-height: 2.5rem;
-  margin-top: 3rem;
-  margin-bottom: 0.5rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  line-height: 2.25rem;
+  margin-top: 3.75rem;
+  margin-bottom: 0.625rem;
+  padding-top: 0.15625rem;
+  padding-bottom: 0.15625rem;
   letter-spacing: 0.1rem; }
 
 .typography > h3 {
   font-family: "Pagella", serif;
   font-weight: 400;
   font-size: 1.6rem;
-  line-height: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  line-height: 1.875rem;
+  margin-top: 1.875rem;
+  margin-bottom: 0.625rem;
+  padding-top: 0.15625rem;
+  padding-bottom: 0.15625rem;
   letter-spacing: 0.08rem; }
 
 .typography > h4 {
   font-family: "Muli", sans-serif;
   font-weight: 400;
   font-size: 1.125rem;
-  line-height: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  line-height: 1.375rem;
+  margin-top: 1.875rem;
+  margin-bottom: 0.625rem;
+  padding-top: 0.15625rem;
+  padding-bottom: 0.15625rem;
   text-transform: uppercase;
   letter-spacing: 0.05rem; }
 
@@ -92,7 +92,7 @@ html {
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.25rem;
-  margin-top: 0.5rem;
+  margin-top: 1.25rem;
   margin-bottom: 0; }
 
 .typography a {
@@ -141,8 +141,8 @@ html {
   max-width: 73.125rem; }
 
 .main__row {
-  padding-top: 6rem;
-  padding-bottom: 6rem; }
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem; }
 
 /**
  * Main content width
@@ -164,8 +164,8 @@ html {
     -webkit-flex-shrink: 0;
         -ms-flex-negative: 0;
             flex-shrink: 0;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem; }
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem; }
     .main__content--full {
       -webkit-flex-basis: 100%;
           -ms-flex-preferred-size: 100%;
@@ -181,8 +181,8 @@ html {
       -webkit-flex-shrink: 0;
           -ms-flex-negative: 0;
               flex-shrink: 0;
-      padding-left: 0.75rem;
-      padding-right: 0.75rem; } }
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
 
 /**
  * Main sidebar width
@@ -206,8 +206,8 @@ html {
       -webkit-flex-shrink: 0;
           -ms-flex-negative: 0;
               flex-shrink: 0;
-      padding-left: 0.75rem;
-      padding-right: 0.75rem; } }
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
   .main__sidebar * {
     color: #2c2b2e; }
 
@@ -223,7 +223,7 @@ html {
   background-color: #030305;
   padding-right: 0;
   padding-left: 0;
-  padding-top: 1rem; }
+  padding-top: 3.75rem; }
   .header .header__nav * {
     color: #fff; }
   .header .header__nav a {
@@ -235,8 +235,8 @@ html {
   max-width: 300px; }
   @media (min-width: 52.5em) {
     .logo {
-      margin-top: -3rem;
-      margin-bottom: 2rem; } }
+      margin-top: -1.875rem;
+      margin-bottom: 3.75rem; } }
 
 .logo--mobile {
   max-width: 200px; }
@@ -267,8 +267,8 @@ html {
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
   max-width: auto;
   background-color: #2c2b2e;
   width: 100vw; }
@@ -276,8 +276,8 @@ html {
 .primary-nav__inner {
   text-align: center;
   max-width: 73.125rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
   margin-right: auto;
   margin-left: auto;
   display: -webkit-box;
@@ -304,7 +304,7 @@ html {
   background-color: #030305;
   max-width: 73.125rem;
   margin: 0 auto;
-  padding-top: 1rem; }
+  padding-top: 1.25rem; }
   .top-area * {
     color: #e8e8ed; }
   .top-area p > a {
@@ -318,21 +318,21 @@ html {
 
 .hero-title {
   background-color: #030305;
-  padding-top: 6rem;
-  padding-bottom: 6rem; }
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem; }
 
 .hero-title__text {
-  max-width: 25rem; }
+  max-width: 25rem;
+  margin-bottom: 1.875rem; }
 
 .hero-title__title {
   font-family: "Pagella", serif;
   font-weight: 400;
   font-size: 3rem;
-  line-height: 3rem;
-  margin-top: 2rem;
+  line-height: 3.125rem;
   margin-bottom: 0;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  padding-top: 0.15625rem;
+  padding-bottom: 0.15625rem;
   letter-spacing: 0.15rem;
   color: #fff;
   display: block; }
@@ -341,10 +341,10 @@ html {
   font-family: "Muli", sans-serif;
   font-weight: 400;
   font-size: 1.125rem;
-  line-height: 2rem;
-  margin-top: 0;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  line-height: 1.375rem;
+  margin-top: 0.3125rem;
+  padding-top: 0.15625rem;
+  padding-bottom: 0.15625rem;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
   color: #fff;
@@ -358,42 +358,34 @@ html {
   color: #fff;
   max-width: 25rem; }
 
-.elementor {
-  width: 100%; }
-
+/**
+ * Section overflow
+ */
 .elementor-section {
-  margin-right: -1.5rem;
-  margin-left: -1.5rem; }
+  margin-right: -1.875rem;
+  margin-left: -1.875rem; }
   @media (min-width: 30em) {
     .elementor-section {
-      margin-left: -2rem;
-      margin-right: -2rem; } }
+      margin-left: -2.5rem;
+      margin-right: -2.5rem; } }
 
 /**
- * BOXED section width
+ * Section inner container
  */
-.elementor-section.elementor-section-boxed > .elementor-container {
-  max-width: 73.125rem; }
-
-.elementor-section-boxed {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  width: 100%; }
-  @media (min-width: 30em) {
-    .elementor-section-boxed {
-      padding-left: 2rem;
-      padding-right: 2rem; } }
-  .elementor-section-boxed > .elementor-container {
-    padding-top: 6rem;
-    padding-bottom: 6rem; }
-    .elementor-section-boxed > .elementor-container.elementor-column-gap-no {
-      padding-top: 0;
-      padding-bottom: 0; }
-    .elementor-section-boxed > .elementor-container > .elementor-row {
-      width: 100vw; }
+.elementor-section .elementor-container {
+  margin-left: auto;
+  margin-right: auto;
+  display: block; }
 
 /**
- * Reset Padding the .populated element on Mobile
+ * Section Row
+ */
+.elementor-row {
+  width: auto; }
+
+/**
+ * Resets the padding on the .populated element
+ * on all screen sizes.
  */
 .elementor-column-gap-default > .elementor-row > .elementor-column > .elementor-element-populated,
 .elementor-column-gap-narrow > .elementor-row > .elementor-column > .elementor-element-populated,
@@ -403,51 +395,110 @@ html {
   padding: 0; }
 
 /**
- * Default GAP - lateral spacing
+ * Local Variables
  */
-@media (min-width: 60em) {
-  .elementor-column-gap-default > .elementor-row {
-    margin-right: -3rem;
-    margin-left: -3rem; }
-    .elementor-column-gap-default > .elementor-row > .elementor-column {
-      padding-right: 3rem;
-      padding-left: 3rem; }
-  .elementor-column-gap-wide > .elementor-row,
-  .elementor-column-gap-wider > .elementor-row {
-    margin-right: -6rem;
-    margin-left: -6rem; }
-    .elementor-column-gap-wide > .elementor-row > .elementor-column,
-    .elementor-column-gap-wider > .elementor-row > .elementor-column {
-      padding-right: 6rem;
-      padding-left: 6rem; }
-  .elementor-column-gap-narrow > .elementor-row,
-  .elementor-column-gap-extended > .elementor-row {
-    margin-right: -1.5rem;
-    margin-left: -1.5rem; }
-    .elementor-column-gap-narrow > .elementor-row > .elementor-column,
-    .elementor-column-gap-extended > .elementor-row > .elementor-column {
-      padding-right: 1.5rem;
-      padding-left: 1.5rem; } }
+/*****************************************************************************************
+ *
+ *                                          BOXED SECTION
+ *                These are the basi Elementor's sections: they have a predefined
+*                     maximim width, that equals the width of the website
+ *
+ ****************************************************************************************/
+/**
+ * BOXED section width
+ * it needs a separate rules because of nesting
+ */
+.elementor-section.elementor-section-boxed > .elementor-container {
+  max-width: 73.125rem; }
 
 /**
- * Nested Section
+ * Boxed Sections
+ * Basic setup
  */
-@media (min-width: 60em) {
-  .elementor-inner-section > .elementor-container {
-    padding-top: 1rem;
-    padding-bottom: 1rem; }
-  .elementor-column-gap-narrow {
-    margin-right: -1.5rem;
-    margin-left: -1.5rem; }
-  .elementor-column-gap-extended {
-    margin-right: -1.5rem;
-    margin-left: -1.5rem; }
-  .elementor-column-gap-wide {
-    margin-right: -6rem;
-    margin-left: -6rem; }
-  .elementor-column-gap-wider {
-    margin-right: -6rem;
-    margin-left: -6rem; } }
+.elementor-section-boxed {
+  padding-left: 1.875rem;
+  padding-right: 1.875rem; }
+  @media (min-width: 30em) {
+    .elementor-section-boxed {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem; } }
+  .elementor-section-boxed > .elementor-container {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem; }
+    @media (min-width: 40em) {
+      .elementor-section-boxed > .elementor-container {
+        padding-top: 5rem;
+        padding-bottom: 5rem; } }
+    .elementor-section-boxed > .elementor-container.elementor-column-gap-no {
+      padding-top: 0;
+      padding-bottom: 0; }
+
+/*========================================================================================
+ * COLUMNS
+ */
+.elementor-section-boxed .elementor-column {
+  padding-top: 0.9375rem;
+  padding-bottom: 0.9375rem; }
+
+/**
+ * COLUMNS gutter - only on large screen
+ */
+@media (min-width: 40em) {
+  .elementor-section-boxed .elementor-column-gap-default > .elementor-row {
+    margin-right: -3.75rem;
+    margin-left: -3.75rem; }
+    .elementor-section-boxed .elementor-column-gap-default > .elementor-row > .elementor-column {
+      padding-right: 3.75rem;
+      padding-left: 3.75rem; }
+  .elementor-section-boxed .elementor-column-gap-wide > .elementor-row,
+  .elementor-section-boxed .elementor-column-gap-wider > .elementor-row {
+    margin-right: -7.5rem;
+    margin-left: -7.5rem; }
+    .elementor-section-boxed .elementor-column-gap-wide > .elementor-row > .elementor-column,
+    .elementor-section-boxed .elementor-column-gap-wider > .elementor-row > .elementor-column {
+      padding-right: 7.5rem;
+      padding-left: 7.5rem; }
+  .elementor-section-boxed .elementor-column-gap-narrow > .elementor-row,
+  .elementor-section-boxed .elementor-column-gap-extended > .elementor-row {
+    margin-right: -1.875rem;
+    margin-left: -1.875rem; }
+    .elementor-section-boxed .elementor-column-gap-narrow > .elementor-row > .elementor-column,
+    .elementor-section-boxed .elementor-column-gap-extended > .elementor-row > .elementor-column {
+      padding-right: 1.875rem;
+      padding-left: 1.875rem; } }
+
+/*========================================================================================
+ * NESTED SECTION
+ */
+/**
+ * Vertical padding correction
+ */
+.elementor-section-boxed.elementor-inner-section > .elementor-container {
+  padding-top: 0;
+  padding-bottom: 0; }
+  @media (min-width: 60em) {
+    .elementor-section-boxed.elementor-inner-section > .elementor-container {
+      padding-top: 1.25rem;
+      padding-bottom: 1.25rem; } }
+
+/**
+ * Horizontal margin correction
+ * Negative margin is applied to the section
+ * According to the parent section type.
+ */
+@media (min-width: 40em) {
+  .elementor-column-gap-narrow .elementor-section-boxed.elementor-inner-section {
+    margin-right: -1.875rem;
+    margin-left: -1.875rem; }
+  .elementor-column-gap-extended .elementor-section-boxed.elementor-inner-section {
+    margin-right: -1.875rem;
+    margin-left: -1.875rem; }
+  .elementor-column-gap-wide .elementor-section-boxed.elementor-inner-section {
+    margin-right: -7.5rem;
+    margin-left: -7.5rem; }
+  .elementor-column-gap-wider .elementor-section-boxed.elementor-inner-section {
+    margin-right: -7.5rem;
+    margin-left: -7.5rem; } }
 
 .elementor-section {
   background-color: #fff; }
@@ -504,44 +555,44 @@ html {
   font-family: "Pagella", serif;
   font-weight: 400;
   font-size: 3rem;
-  line-height: 3rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  line-height: 3.125rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  padding-top: 0.15625rem;
+  padding-bottom: 0.15625rem;
   letter-spacing: 0.15rem; }
 
 .elementor-text-editor > h2 {
   font-family: "Pagella", serif;
   font-weight: 400;
   font-size: 2rem;
-  line-height: 2.5rem;
-  margin-top: 3rem;
-  margin-bottom: 0.5rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  line-height: 2.25rem;
+  margin-top: 3.75rem;
+  margin-bottom: 0.625rem;
+  padding-top: 0.15625rem;
+  padding-bottom: 0.15625rem;
   letter-spacing: 0.1rem; }
 
 .elementor-text-editor > h3 {
   font-family: "Pagella", serif;
   font-weight: 400;
   font-size: 1.6rem;
-  line-height: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  line-height: 1.875rem;
+  margin-top: 1.875rem;
+  margin-bottom: 0.625rem;
+  padding-top: 0.15625rem;
+  padding-bottom: 0.15625rem;
   letter-spacing: 0.08rem; }
 
 .elementor-text-editor > h4 {
   font-family: "Muli", sans-serif;
   font-weight: 400;
   font-size: 1.125rem;
-  line-height: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  line-height: 1.375rem;
+  margin-top: 1.875rem;
+  margin-bottom: 0.625rem;
+  padding-top: 0.15625rem;
+  padding-bottom: 0.15625rem;
   text-transform: uppercase;
   letter-spacing: 0.05rem; }
 
@@ -550,5 +601,5 @@ html {
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.25rem;
-  margin-top: 0.5rem;
+  margin-top: 1.25rem;
   margin-bottom: 0; }
