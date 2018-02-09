@@ -1,5 +1,7 @@
 .header {
   background-color: main-colors(header, bg);
+  @include pad($h: 0);
+  padding-top: spacing(4);
 
   .header__nav {
     * {
@@ -13,5 +15,53 @@
         color: main-colors(header, accent);
       }
     }
+  }
+}
+
+
+.logo {
+  max-width: 300px;
+
+  @include breakpoint-min(md) {
+    margin-top: spacing(-6.5);
+    margin-bottom: spacing(6);
+  }
+}
+
+.logo--mobile {
+  max-width: 200px;
+}
+
+.header__inner {
+  max-width: 100%;
+  width: 100vw;
+}
+
+.header__row {
+  justify-content: space-around;
+  max-width: 100%;
+  width: 100vw;
+}
+
+
+.primary-nav {
+
+  @include flex-child($wd: 100);
+  max-width: auto;
+  background-color: $antracite;
+  width: 100vw;
+
+}
+
+.primary-nav__inner {
+  text-align: center;
+  max-width: $website-width;
+  @include marg($h: auto, $v: 2);
+  display: flex;
+  justify-content: space-between;
+
+  .menu-item {
+    @include font(p);
+    text-transform: uppercase;
   }
 }

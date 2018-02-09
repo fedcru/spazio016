@@ -1,6 +1,9 @@
 .top-area {
   background-color: main-colors(topbar, bg);
-
+  max-width: $website-width;
+  margin: 0 auto;
+  padding-top: spacing(4);
+  
   * {
     color: main-colors(topbar, body);
   }

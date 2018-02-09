@@ -1,0 +1,100 @@
+$gutter-sm: 5;
+$gutter-md: 6.5;
+$gutter-lg: 8;
+
+.elementor-section-boxed {
+  @include layout-padding();
+  width: 100%;
+
+  &> .elementor-container {
+
+    @include pad($v: 8);
+
+    &.elementor-column-gap-no {
+      @include pad($v: 0);
+    }
+
+    &> .elementor-row {
+      width: 100vw;
+      //max-width: 100vw;
+    }
+  }
+}
+
+/**
+ * Reset Padding the .populated element on Mobile
+ */
+.elementor-column-gap-default,
+.elementor-column-gap-narrow,
+.elementor-column-gap-extended,
+.elementor-column-gap-wide,
+.elementor-column-gap-wider {
+  &> .elementor-row > .elementor-column > .elementor-element-populated {
+    padding: 0;
+  }
+}
+
+/**
+ * Default GAP - lateral spacing
+ */
+@include breakpoint-min(lg) {
+  .elementor-column-gap-default {
+    &> .elementor-row {
+      @include marg($h: -$gutter-md);
+
+      &> .elementor-column {
+        @include pad( $h: $gutter-md );
+      }
+    }
+  }
+
+  .elementor-column-gap-wide,
+  .elementor-column-gap-wider {
+    &> .elementor-row {
+      @include marg($h: -$gutter-lg);
+
+      &> .elementor-column {
+        @include pad( $h: $gutter-lg );
+      }
+    }
+  }
+
+  .elementor-column-gap-narrow,
+  .elementor-column-gap-extended {
+    &> .elementor-row {
+      @include marg($h: -$gutter-sm);
+
+      &> .elementor-column {
+        @include pad( $h: $gutter-sm );
+      }
+    }
+  }
+}
+
+/**
+ * Nested Section
+ */
+
+@include breakpoint-min(lg) {
+  .elementor-inner-section {
+
+    &> .elementor-container {
+      @include pad($v: 4);
+    }
+  }
+
+  @at-root .elementor-column-gap-narrow #{&} {
+    @include marg($h: -$gutter-sm);
+  }
+  @at-root .elementor-column-gap-extended #{&} {
+    @include marg($h: -$gutter-sm);
+  }
+
+
+  @at-root .elementor-column-gap-wide #{&} {
+    @include marg($h: -$gutter-lg);
+  }
+  @at-root .elementor-column-gap-wider #{&} {
+    @include marg($h: -$gutter-lg);
+  }
+}

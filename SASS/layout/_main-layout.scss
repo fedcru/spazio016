@@ -16,33 +16,7 @@
 
 }
 
-.header__inner {
-  max-width: $website-width;
-}
 
-.header__row {
-
-}
-
-.logo {
-  max-width: 150px; //TODO in child theme only
-
-}
-
-.logo--mobile {
-  max-width: 150px; //TOD in child them only
-}
-
-.logo__image {
-}
-
-.primary-nav {
-
-}
-
-.primary-nav__inner {
-
-}
 
 
 /***********************************************************************************************
@@ -64,7 +38,7 @@
 }
 
 .main__row {
-
+  @include pad($v: 8);
 }
 
 
@@ -74,7 +48,7 @@
  */
 .main__content {
   @include breakpoint-min(lg) {
-    @include flex-child($wd: 70);
+    @include flex-child($wd: 65);
 
     &--full {
       @include flex-child($wd: 100);
@@ -90,13 +64,13 @@
 .main__sidebar {
 
   @include breakpoint-min(lg) {
-    @include flex-child($wd: 30);
+    @include flex-child($wd: 35);
   }
 
   background-color: main-colors(sidebar, bg);
 
   * {
-    color: mainc-colors(sidebar, body);
+    color: main-colors(sidebar, body);
   }
 }
 

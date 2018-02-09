@@ -1,0 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400');
+
+@include declare-font-face('Pagella', 'texgyrepagella-regular-webfont' , 400);
+@include declare-font-face('Pagella', 'texgyrepagella-italic-webfont' , 400, italic);

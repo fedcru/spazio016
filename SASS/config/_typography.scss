@@ -10,8 +10,8 @@
 // BASE DEL BODY
 ///
   $base: 16;
-  $font-size: 1.5rem; //TODO
-  $line-height: 1.38888889em; //TODO
+  $font-size: 1rem; //TODO
+  $line-height: 1.25rem; //TODO
 
 
 ///
@@ -24,12 +24,10 @@
 ///
 // Families
 ///
-$ff-primary: 'Tiempos Text', serif;
-$ff-condensed: 'Founders Condensed', sans-serif;
-$ff-display: 'Tiempos Headline', serif;
-$ff-sans: 'Founders Text', sans-serif;
+$ff-primary: 'Pagella', serif;
+$ff-secondary: 'Muli', sans-serif;
 $ff-script: 'Reporter', cursive;
-$ff-button: $ff-condensed;
+$ff-button: $ff-secondary;
 
 $text-atts: (
   font-size: fs,
@@ -44,47 +42,52 @@ $fonts: (
 
   h1: (
     fm: $ff-primary,
-    wt: 600,
-    fs: 4.5rem,
-    lh: 4.5rem,
-    pt: 0.5rem,
-    pb: 0.5rem,
+    wt: 400,
+    fs: 3rem,
+    lh: 3rem,
+    pt: 0.25rem,
+    pb: 0.25rem,
+    ls: 0.15rem,
   ),
 
   h2: (
     fm: $ff-primary,
-    wt: 600,
-    fs: 3rem,
-    lh: 3.5rem,
-    pt: 0.5rem,
-    pb: 0.5rem,
+    wt: 400,
+    fs: 2rem,
+    lh: 2.5rem,
+    pt: 0.25rem,
+    pb: 0.25rem,
+    ls: 0.1rem,
   ),
 
   h3: (
     fm: $ff-primary,
-    wt: 600,
-    fs: 2rem,
-    lh: 2.5rem,
-    pt: 0.5rem,
-    pb: 0.5rem,
+    wt: 400,
+    fs: 1.60rem,
+    lh: 2rem,
+    pt: 0.25rem,
+    pb: 0.25rem,
+    ls: 0.08rem,
   ),
 
   h4: (
-    fm: $ff-primary,
-    wt: 600,
-    fs: 1.5em,
+    fm: $ff-secondary,
+    wt: 400,
+    fs: 1.125rem,
     lh: 2.0rem,
-    pt: 0.5rem,
-    pb: 0.5rem,
+    pt: 0.25rem,
+    pb: 0.25rem,
+    tt: uppercase,
+    ls: 0.05rem,
   ),
 
   p: (
-    fm: $ff-sans,
-    wt: 400,
-    fs: 1.25rem,
-    lh: 1.5rem,
-    pt: 0.5rem,
-    pb: 0.5rem,
+    fm: $ff-secondary,
+    wt: 300,
+    fs: 1rem,
+    lh: 1.25rem,
+    // pt: 0.25rem,
+    // pb: 0.25rem,
   ),
 );
 

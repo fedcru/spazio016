@@ -1,13 +1,26 @@
 .hero-title {
   background-color: main-colors(hero, bg);
+  @include pad($v: 8);
+}
+
+.hero-title__text {
+  max-width: max-width($text-mw);
 }
 
 .hero-title__title {
-  @include font(h1, $mt: 6, $mb: 4);
+  @include font(h1, $mt: 6, $mb: 0);
   color: main-colors(hero, body);
+  display: block;
+}
+
+.hero-title__subtitle {
+  @include font(h4, $mt: 0);
+  color: main-colors(hero, body);
+  display: block;
 }
 
 .hero-title__description {
-  @include font(h3);
+  @include font(p);
   color: main-colors(hero, body);
+  max-width: max-width($text-mw);
 }

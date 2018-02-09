@@ -48,7 +48,7 @@ gulp.task('sass', function () {
 
 // Default task to be run with `gulp`
 gulp.task('default', ['sass', 'browser-sync'], function () {
-    gulp.watch("sass/**/*.scss", ['sass']);
+    gulp.watch("SASS/**/*.scss", ['sass']);
     gulp.watch("**/*.php", ['sass']);
     gulp.watch("**/*.twig", ['sass']);
 });

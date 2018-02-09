@@ -1,0 +1,22 @@
+.elementor-section {
+  background-color: main-colors(main, bg);
+
+  &.elementor-inner-section {
+    background-color: transparent;
+  }
+
+  * {
+    color: main-colors(main, body);
+  }
+}
+
+
+@each $palette, $color in $palettes {
+  .color--#{$palette} {
+    background-color: palette($palette, bg);
+
+    * {
+      color: palette($palette, body);
+    }
+  }
+}

@@ -1,0 +1,68 @@
+.elementor-text-editor {
+
+  & > * {
+    max-width: max-width($text-mw);
+
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    /**
+     * Lateral margin
+     */
+    @at-root {
+      .elementor-row .elementor-column:first-child #{&} {
+        margin-right: auto;
+      }
+      .elementor-row .elementor-column:last-child #{&} {
+        margin-left: auto;
+      }
+    }
+
+    /**
+     * Nested Lateral Margin
+     */
+    @at-root {
+      .elementor-inner-section .elementor-row .elementor-column:first-child #{&} {
+        margin-right: auto;
+        margin-left: 0;
+      }
+      .elementor-inner-section .elementor-row .elementor-column:last-child #{&} {
+        margin-left: auto;
+        margin-right: 0;
+      }
+      .elementor-inner-section .elementor-row .elementor-column.elementor-col-100 #{&} {
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+
+    @at-root .collapsed--right #{&} {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+  }
+  &> h1 {
+    @include font(h1, $mt: 6, $mb: 4);
+  }
+
+  &> h2 {
+    @include font(h2, $mt: 6.5, $mb: 2);
+  }
+
+  &> h3 {
+    @include font(h3, $mt: 6, $mb: 2);
+  }
+
+  &> h4 {
+    @include font(h4, $mt: 6, $mb: 2);
+  }
+
+  &> p {
+    @include font(p, $mt: 2, $mb: 0);
+  }
+}

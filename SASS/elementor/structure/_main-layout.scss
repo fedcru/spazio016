@@ -1,0 +1,14 @@
+.elementor {
+  width: 100%;
+}
+
+.elementor-section {
+  @include layout-overflow();
+}
+
+/**
+ * BOXED section width
+ */
+.elementor-section.elementor-section-boxed > .elementor-container {
+  max-width: $website-width;
+}

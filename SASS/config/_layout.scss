@@ -30,15 +30,14 @@ $grid-breakpoints: (
 $max-widths: (
   xxs: 15em,
   narrow: 20em,
-  measure: 30em,
+  measure: 25rem,
   xs: 20.83333rem,
   sm: 30.25rem,
-  sm-alt: 31.25rem,
   md: 42.66667rem,
   lg: 63rem,
 );
 
-
+$text-mw: 'measure';
 
 //***********************************************************************//
 //             SPACES
@@ -55,6 +54,7 @@ $spacing: (
   5.5: $space * 7, //lg
   6: 2rem, //xl
   6.1: 2.25rem,
+  6.5: 3rem,
   7: 4rem, //xxl
   7.5: 5rem,
   8: 6rem,
