@@ -1,12 +1,19 @@
+/**
+ * Widget Max Widths
+ */
+
 .elementor-widget {
 
+  // Basic max width
   max-width: max-width($text-mw);
+
+  // Margin on mobile
   @include breakpoint-max(md) {
     margin-left: auto;
     margin-right: auto;
   }
 
-
+  // Alternative max widths
   @at-root .widget--wide {
     max-width: max-width(sm);
   }
@@ -16,49 +23,86 @@
   @at-root .widget--full {
     max-width: 100%;
   }
+}
 
+
+/**
+ * Widget lateral margins
+ */
 @include breakpoint-min(md) {
-    /**
-     * Lateral margin
-     */
-    @at-root {
-      .elementor-row .elementor-column:first-child #{&} {
-        margin-right: auto;
-      }
-      .elementor-row .elementor-column:last-child #{&} {
-        margin-left: auto;
-      }
-    }
 
-    /**
-     * Nested Lateral Margin
-     */
-    @at-root {
-      .elementor-inner-section .elementor-row .elementor-column:first-child #{&} {
-        margin-right: auto;
-        margin-left: 0;
-      }
-      .elementor-inner-section .elementor-row .elementor-column:last-child #{&} {
-        margin-left: auto;
-        margin-right: 0;
-      }
-      .elementor-inner-section .elementor-row .elementor-column.elementor-col-100 #{&} {
-        margin-right: auto;
-        margin-left: auto;
-      }
-    }
+  // Declare flexbox on the widget wrapper
+  .elementor-widget-wrap {
+    display: flex;
+    flex-direction: column;
+  }
 
-    &.collapsed--right {
-      margin-right: 0 !important;
-      margin-left: auto;
+  // default state of the widget
+  .elementor-widget {
+    align-self: center;
+  }
+
+
+  ///
+  // Normal Sections
+  ///
+
+  // First column
+  @at-root .elementor-row .elementor-column:first-child {
+    .elementor-widget {
+      align-self: flex-start;
     }
-    &.collapsed--left {
-      margin-left: 0 !important;
-      margin-right: auto;
+  }
+
+  // Last column
+  @at-root .elementor-row .elementor-column:last-child {
+    .elementor-widget {
+      align-self: flex-end;
     }
+  }
+
+  // Center column
+  @at-root .elementor-row .elementor-column:first-child:last-child .elementor-widget {
+    align-self: center;
+  }
+
+
+  ///
+  // Nested Sections
+  ///
+  .elementor-inner-section .elementor-row .elementor-column:first-child .elementor-widget {
+    align-self: flex-start;
+  }
+
+  .elementor-inner-section .elementor-row .elementor-column:last-child .elementor-widget {
+    align-self: flex-end;
+  }
+
+  .elementor-inner-section .elementor-row .elementor-column:first-child:last-child .elementor-widget {
+    align-self: center;
+  }
+
+
+  ///
+  // Collapsed widgets
+  ///
+  .widget--right {
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .widget--left {
+    margin-left: 0;
+    margin-right: auto;
   }
 }
 
+
+
+
+
+/***
+ * Text Widget
+ */
 .elementor-text-editor {
   & > * {
     &:first-child {

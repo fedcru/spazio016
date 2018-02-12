@@ -523,6 +523,9 @@ html {
   .color--light * {
     color: #030305; }
 
+/**
+ * Widget Max Widths
+ */
 .elementor-widget {
   max-width: 25rem; }
   @media (max-width: 52.49em) {
@@ -535,34 +538,59 @@ html {
     max-width: 42.66667rem; }
   .widget--full {
     max-width: 100%; }
-  @media (min-width: 52.5em) {
-    .elementor-widget {
-      /**
-     * Lateral margin
-     */
-      /**
-     * Nested Lateral Margin
-     */ }
-      .elementor-row .elementor-column:first-child .elementor-widget {
-        margin-right: auto; }
-      .elementor-row .elementor-column:last-child .elementor-widget {
-        margin-left: auto; }
-      .elementor-inner-section .elementor-row .elementor-column:first-child .elementor-widget {
-        margin-right: auto;
-        margin-left: 0; }
-      .elementor-inner-section .elementor-row .elementor-column:last-child .elementor-widget {
-        margin-left: auto;
-        margin-right: 0; }
-      .elementor-inner-section .elementor-row .elementor-column.elementor-col-100 .elementor-widget {
-        margin-right: auto;
-        margin-left: auto; }
-      .elementor-widget.collapsed--right {
-        margin-right: 0 !important;
-        margin-left: auto; }
-      .elementor-widget.collapsed--left {
-        margin-left: 0 !important;
-        margin-right: auto; } }
 
+/**
+ * Widget lateral margins
+ */
+@media (min-width: 52.5em) {
+  .elementor-widget-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .elementor-widget {
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center; }
+  .elementor-row .elementor-column:first-child .elementor-widget {
+    -webkit-align-self: flex-start;
+        -ms-flex-item-align: start;
+            align-self: flex-start; }
+  .elementor-row .elementor-column:last-child .elementor-widget {
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end; }
+  .elementor-row .elementor-column:first-child:last-child .elementor-widget {
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center; }
+  .elementor-inner-section .elementor-row .elementor-column:first-child .elementor-widget {
+    -webkit-align-self: flex-start;
+        -ms-flex-item-align: start;
+            align-self: flex-start; }
+  .elementor-inner-section .elementor-row .elementor-column:last-child .elementor-widget {
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end; }
+  .elementor-inner-section .elementor-row .elementor-column:first-child:last-child .elementor-widget {
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center; }
+  .widget--right {
+    margin-right: 0;
+    margin-left: auto; }
+  .widget--left {
+    margin-left: 0;
+    margin-right: auto; } }
+
+/***
+ * Text Widget
+ */
 .elementor-text-editor > *:first-child {
   margin-top: 0; }
 
