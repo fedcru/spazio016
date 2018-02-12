@@ -1,15 +1,23 @@
-.elementor-text-editor {
+.elementor-widget {
 
-  & > * {
-    max-width: max-width($text-mw);
+  max-width: max-width($text-mw);
+  @include breakpoint-max(md) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    &:first-child {
-      margin-top: 0;
-    }
-    &:last-child {
-      margin-bottom: 0;
-    }
 
+  @at-root .widget--wide {
+    max-width: max-width(sm);
+  }
+  @at-root .widget--wider {
+    max-width: max-width(md);
+  }
+  @at-root .widget--full {
+    max-width: 100%;
+  }
+
+@include breakpoint-min(md) {
     /**
      * Lateral margin
      */
@@ -40,13 +48,27 @@
       }
     }
 
-    @at-root .collapsed--right #{&} {
-      margin-right: auto;
+    &.collapsed--right {
+      margin-right: 0 !important;
       margin-left: auto;
     }
-
+    &.collapsed--left {
+      margin-left: 0 !important;
+      margin-right: auto;
+    }
   }
-  
+}
+
+.elementor-text-editor {
+  & > * {
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   &> h1 {
     @include font(h1, $mt: 6, $mb: 4);
   }

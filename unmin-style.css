@@ -436,9 +436,10 @@ html {
 /*========================================================================================
  * COLUMNS
  */
-.elementor-section-boxed .elementor-column {
-  padding-top: 0.9375rem;
-  padding-bottom: 0.9375rem; }
+@media (max-width: 39.99em) {
+  .elementor-section-boxed .elementor-column {
+    padding-top: 0.9375rem;
+    padding-bottom: 0.9375rem; } }
 
 /**
  * COLUMNS gutter - only on large screen
@@ -522,34 +523,51 @@ html {
   .color--light * {
     color: #030305; }
 
-.elementor-text-editor > * {
-  max-width: 25rem;
-  /**
+.elementor-widget {
+  max-width: 25rem; }
+  @media (max-width: 52.49em) {
+    .elementor-widget {
+      margin-left: auto;
+      margin-right: auto; } }
+  .widget--wide {
+    max-width: 30.25rem; }
+  .widget--wider {
+    max-width: 42.66667rem; }
+  .widget--full {
+    max-width: 100%; }
+  @media (min-width: 52.5em) {
+    .elementor-widget {
+      /**
      * Lateral margin
      */
-  /**
+      /**
      * Nested Lateral Margin
      */ }
-  .elementor-text-editor > *:first-child {
-    margin-top: 0; }
-  .elementor-text-editor > *:last-child {
-    margin-bottom: 0; }
-  .elementor-row .elementor-column:first-child .elementor-text-editor > * {
-    margin-right: auto; }
-  .elementor-row .elementor-column:last-child .elementor-text-editor > * {
-    margin-left: auto; }
-  .elementor-inner-section .elementor-row .elementor-column:first-child .elementor-text-editor > * {
-    margin-right: auto;
-    margin-left: 0; }
-  .elementor-inner-section .elementor-row .elementor-column:last-child .elementor-text-editor > * {
-    margin-left: auto;
-    margin-right: 0; }
-  .elementor-inner-section .elementor-row .elementor-column.elementor-col-100 .elementor-text-editor > * {
-    margin-right: auto;
-    margin-left: auto; }
-  .collapsed--right .elementor-text-editor > * {
-    margin-right: auto;
-    margin-left: auto; }
+      .elementor-row .elementor-column:first-child .elementor-widget {
+        margin-right: auto; }
+      .elementor-row .elementor-column:last-child .elementor-widget {
+        margin-left: auto; }
+      .elementor-inner-section .elementor-row .elementor-column:first-child .elementor-widget {
+        margin-right: auto;
+        margin-left: 0; }
+      .elementor-inner-section .elementor-row .elementor-column:last-child .elementor-widget {
+        margin-left: auto;
+        margin-right: 0; }
+      .elementor-inner-section .elementor-row .elementor-column.elementor-col-100 .elementor-widget {
+        margin-right: auto;
+        margin-left: auto; }
+      .elementor-widget.collapsed--right {
+        margin-right: 0 !important;
+        margin-left: auto; }
+      .elementor-widget.collapsed--left {
+        margin-left: 0 !important;
+        margin-right: auto; } }
+
+.elementor-text-editor > *:first-child {
+  margin-top: 0; }
+
+.elementor-text-editor > *:last-child {
+  margin-bottom: 0; }
 
 .elementor-text-editor > h1 {
   font-family: "Pagella", serif;

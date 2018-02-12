@@ -59,7 +59,9 @@ $el-v-space: 7;
  */
 
 .elementor-section-boxed  .elementor-column {
-  @include pad($v: 3);
+  @include breakpoint-max($el-drop-col) {
+    @include pad($v: 3);
+  }
 }
 
 /**
