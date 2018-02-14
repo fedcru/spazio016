@@ -8,7 +8,7 @@
   max-width: max-width($text-mw);
 
   // Margin on mobile
-  @include breakpoint-max(md) {
+  @include breakpoint-max(el) {
     margin-left: auto;
     margin-right: auto;
   }
@@ -29,7 +29,7 @@
 /**
  * Widget lateral margins
  */
-@include breakpoint-min(md) {
+@include breakpoint-min(el) {
 
   // Declare flexbox on the widget wrapper
   .elementor-widget-wrap {

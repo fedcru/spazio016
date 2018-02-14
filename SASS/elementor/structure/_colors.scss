@@ -18,5 +18,15 @@
     * {
       color: palette($palette, body);
     }
+
+    @each $palette, $color in $palettes {
+      .color--#{$palette} {
+        background-color: palette($palette, bg);
+
+        * {
+          color: palette($palette, body);
+        }
+      }
+    }
   }
 }

@@ -1,6 +1,9 @@
 .hero-title {
-  background-color: main-colors(hero, bg);
+  @include layout-padding();
+  @include layout-overflow();
   @include pad($v: 8);
+
+  background-color: main-colors(hero, bg);
 }
 
 .hero-title__text {

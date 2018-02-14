@@ -5,8 +5,6 @@ $el-gutter-sm: 5;
 $el-gutter-md: 6.5;
 $el-gutter-lg: 8;
 
-$el-drop-col: ms;
-
 $el-v-space: 7;
 
 /*****************************************************************************************
@@ -40,7 +38,7 @@ $el-v-space: 7;
     @include pad($v: 6);
 
     // Vertical spacing on large screen
-    @include breakpoint-min($el-drop-col) {
+    @include breakpoint-min(el) {
       @include pad($v: 7);
     }
 
@@ -59,7 +57,7 @@ $el-v-space: 7;
  */
 
 .elementor-section-boxed  .elementor-column {
-  @include breakpoint-max($el-drop-col) {
+  @include breakpoint-max(el) {
     @include pad($v: 3);
   }
 }
@@ -67,7 +65,7 @@ $el-v-space: 7;
 /**
  * COLUMNS gutter - only on large screen
  */
-@include breakpoint-min($el-drop-col) {
+@include breakpoint-min(el) {
 .elementor-section-boxed {
 
   // Default gap
@@ -136,7 +134,7 @@ $el-v-space: 7;
  * Negative margin is applied to the section
  * According to the parent section type.
  */
-@include breakpoint-min($el-drop-col) {
+@include breakpoint-min(el) {
 
   .elementor-section-boxed.elementor-inner-section {
 

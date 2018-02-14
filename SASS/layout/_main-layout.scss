@@ -26,6 +26,8 @@
   *********************************************************************************************/
 
 .main {
+  @include layout-padding();
+
   background-color: main-colors(main, bg);
 
   * {

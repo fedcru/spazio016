@@ -133,7 +133,13 @@ html {
   *
   *********************************************************************************************/
 .main {
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
   background-color: #fff; }
+  @media (min-width: 30em) {
+    .main {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem; } }
   .main * {
     color: #2c2b2e; }
 
@@ -317,9 +323,21 @@ html {
   display: flex; }
 
 .hero-title {
-  background-color: #030305;
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
+  margin-right: -1.875rem;
+  margin-left: -1.875rem;
   padding-top: 7.5rem;
-  padding-bottom: 7.5rem; }
+  padding-bottom: 7.5rem;
+  background-color: #030305; }
+  @media (min-width: 30em) {
+    .hero-title {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem; } }
+  @media (min-width: 30em) {
+    .hero-title {
+      margin-left: -2.5rem;
+      margin-right: -2.5rem; } }
 
 .hero-title__text {
   max-width: 25rem;
@@ -425,7 +443,7 @@ html {
   .elementor-section-boxed > .elementor-container {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem; }
-    @media (min-width: 40em) {
+    @media (min-width: 768px) {
       .elementor-section-boxed > .elementor-container {
         padding-top: 5rem;
         padding-bottom: 5rem; } }
@@ -436,7 +454,7 @@ html {
 /*========================================================================================
  * COLUMNS
  */
-@media (max-width: 39.99em) {
+@media (max-width: 767.99px) {
   .elementor-section-boxed .elementor-column {
     padding-top: 0.9375rem;
     padding-bottom: 0.9375rem; } }
@@ -444,7 +462,7 @@ html {
 /**
  * COLUMNS gutter - only on large screen
  */
-@media (min-width: 40em) {
+@media (min-width: 768px) {
   .elementor-section-boxed .elementor-column-gap-default > .elementor-row {
     margin-right: -3.75rem;
     margin-left: -3.75rem; }
@@ -487,7 +505,7 @@ html {
  * Negative margin is applied to the section
  * According to the parent section type.
  */
-@media (min-width: 40em) {
+@media (min-width: 768px) {
   .elementor-column-gap-narrow .elementor-section-boxed.elementor-inner-section {
     margin-right: -1.875rem;
     margin-left: -1.875rem; }
@@ -512,23 +530,59 @@ html {
   background-color: #030305; }
   .color--dark * {
     color: #fff; }
+  .color--dark .color--dark {
+    background-color: #030305; }
+    .color--dark .color--dark * {
+      color: #fff; }
+  .color--dark .color--dark-alt {
+    background-color: #2c2b2e; }
+    .color--dark .color--dark-alt * {
+      color: #fff; }
+  .color--dark .color--light {
+    background-color: #e8e8ed; }
+    .color--dark .color--light * {
+      color: #030305; }
 
 .color--dark-alt {
   background-color: #2c2b2e; }
   .color--dark-alt * {
     color: #fff; }
+  .color--dark-alt .color--dark {
+    background-color: #030305; }
+    .color--dark-alt .color--dark * {
+      color: #fff; }
+  .color--dark-alt .color--dark-alt {
+    background-color: #2c2b2e; }
+    .color--dark-alt .color--dark-alt * {
+      color: #fff; }
+  .color--dark-alt .color--light {
+    background-color: #e8e8ed; }
+    .color--dark-alt .color--light * {
+      color: #030305; }
 
 .color--light {
   background-color: #e8e8ed; }
   .color--light * {
     color: #030305; }
+  .color--light .color--dark {
+    background-color: #030305; }
+    .color--light .color--dark * {
+      color: #fff; }
+  .color--light .color--dark-alt {
+    background-color: #2c2b2e; }
+    .color--light .color--dark-alt * {
+      color: #fff; }
+  .color--light .color--light {
+    background-color: #e8e8ed; }
+    .color--light .color--light * {
+      color: #030305; }
 
 /**
  * Widget Max Widths
  */
 .elementor-widget {
   max-width: 25rem; }
-  @media (max-width: 52.49em) {
+  @media (max-width: 767.99px) {
     .elementor-widget {
       margin-left: auto;
       margin-right: auto; } }
@@ -542,7 +596,7 @@ html {
 /**
  * Widget lateral margins
  */
-@media (min-width: 52.5em) {
+@media (min-width: 768px) {
   .elementor-widget-wrap {
     display: -webkit-box;
     display: -webkit-flex;

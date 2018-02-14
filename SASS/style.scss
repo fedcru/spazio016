@@ -2,11 +2,11 @@
 
 @import 'wp_header';
 // FUNCTIONS & PROJECT CONFIGURATION
-@import 'helpers/functions';
-@import 'config/typography';
-@import 'config/colors';
-@import 'config/layout';
-@import 'helpers/mixins';
+@import '_helpers/functions';
+@import '_config/typography';
+@import '_config/colors';
+@import '_config/layout';
+@import '_helpers/mixins';
 
 
 @import 'normalize';
