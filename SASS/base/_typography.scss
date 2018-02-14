@@ -48,15 +48,8 @@ html {
     @include font(p, $mt: 4, $mb: 0);
   }
 
-  a {
-    position: relative;
-    text-shadow: -1px -1px 0 #fff, -1px -1px 0 #fff, -1px -1px 0 #fff, 1px 1px 0 #fff;
-    transition: color .15s ease-in;
-    background-position: 0 1.0525em;
-    background-size: 5px 5px;
-    background-repeat-y: no-repeat;
-    background-image: linear-gradient(to top, transparent, transparent 1.5px, main-colors(main, accent) 2.5px, main-colors(main, accent) 2px, transparent 2px);
-    background-position: center bottom;
+  &> p > a {
+    @include link;
   }
 }
 

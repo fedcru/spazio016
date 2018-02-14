@@ -95,7 +95,7 @@ html {
   margin-top: 1.25rem;
   margin-bottom: 0; }
 
-.typography a {
+.typography > p > a {
   position: relative;
   text-shadow: -1px -1px 0 #fff, -1px -1px 0 #fff, -1px -1px 0 #fff, 1px 1px 0 #fff;
   -webkit-transition: color .15s ease-in;
@@ -104,9 +104,9 @@ html {
   background-position: 0 1.0525em;
   background-size: 5px 5px;
   background-repeat-y: no-repeat;
-  background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #2c2b2e 2.5px, #2c2b2e 2px, transparent 2px);
-  background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #2c2b2e 2.5px, #2c2b2e 2px, transparent 2px);
-  background-image: linear-gradient(to top, transparent, transparent 1.5px, #2c2b2e 2.5px, #2c2b2e 2px, transparent 2px);
+  background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #2c2b2e 1.5px, #2c2b2e 2px, transparent 2px);
+  background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #2c2b2e 1.5px, #2c2b2e 2px, transparent 2px);
+  background-image: linear-gradient(to top, transparent, transparent 1.5px, #2c2b2e 1.5px, #2c2b2e 2px, transparent 2px);
   background-position: center bottom; }
 
 ::-moz-selection {
@@ -525,57 +525,226 @@ html {
     background-color: transparent; }
   .elementor-section * {
     color: #2c2b2e; }
+  .elementor-section .elementor-text-editor > p > a {
+    position: relative;
+    text-shadow: -1px -1px 0 #fff, -1px -1px 0 #fff, -1px -1px 0 #fff, 1px 1px 0 #fff;
+    -webkit-transition: color .15s ease-in;
+    -o-transition: color .15s ease-in;
+    transition: color .15s ease-in;
+    background-position: 0 1.0525em;
+    background-size: 5px 5px;
+    background-repeat-y: no-repeat;
+    background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #2c2b2e 1.5px, #2c2b2e 2px, transparent 2px);
+    background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #2c2b2e 1.5px, #2c2b2e 2px, transparent 2px);
+    background-image: linear-gradient(to top, transparent, transparent 1.5px, #2c2b2e 1.5px, #2c2b2e 2px, transparent 2px);
+    background-position: center bottom; }
 
 .color--dark {
   background-color: #030305; }
   .color--dark * {
     color: #fff; }
+  .color--dark .elementor-text-editor > p > a {
+    position: relative;
+    text-shadow: -1px -1px 0 #030305, -1px -1px 0 #030305, -1px -1px 0 #030305, 1px 1px 0 #030305;
+    -webkit-transition: color .15s ease-in;
+    -o-transition: color .15s ease-in;
+    transition: color .15s ease-in;
+    background-position: 0 1.0525em;
+    background-size: 5px 5px;
+    background-repeat-y: no-repeat;
+    background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
+    background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
+    background-image: linear-gradient(to top, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
+    background-position: center bottom; }
   .color--dark .color--dark {
     background-color: #030305; }
     .color--dark .color--dark * {
       color: #fff; }
+    .color--dark .color--dark .elementor-text-editor > p > a {
+      position: relative;
+      text-shadow: -1px -1px 0 #030305, -1px -1px 0 #030305, -1px -1px 0 #030305, 1px 1px 0 #030305;
+      -webkit-transition: color .15s ease-in;
+      -o-transition: color .15s ease-in;
+      transition: color .15s ease-in;
+      background-position: 0 1.0525em;
+      background-size: 5px 5px;
+      background-repeat-y: no-repeat;
+      background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
+      background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
+      background-image: linear-gradient(to top, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
+      background-position: center bottom; }
   .color--dark .color--dark-alt {
     background-color: #2c2b2e; }
     .color--dark .color--dark-alt * {
       color: #fff; }
+    .color--dark .color--dark-alt .elementor-text-editor > p > a {
+      position: relative;
+      text-shadow: -1px -1px 0 #2c2b2e, -1px -1px 0 #2c2b2e, -1px -1px 0 #2c2b2e, 1px 1px 0 #2c2b2e;
+      -webkit-transition: color .15s ease-in;
+      -o-transition: color .15s ease-in;
+      transition: color .15s ease-in;
+      background-position: 0 1.0525em;
+      background-size: 5px 5px;
+      background-repeat-y: no-repeat;
+      background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
+      background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
+      background-image: linear-gradient(to top, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
+      background-position: center bottom; }
   .color--dark .color--light {
     background-color: #e8e8ed; }
     .color--dark .color--light * {
       color: #030305; }
+    .color--dark .color--light .elementor-text-editor > p > a {
+      position: relative;
+      text-shadow: -1px -1px 0 #e8e8ed, -1px -1px 0 #e8e8ed, -1px -1px 0 #e8e8ed, 1px 1px 0 #e8e8ed;
+      -webkit-transition: color .15s ease-in;
+      -o-transition: color .15s ease-in;
+      transition: color .15s ease-in;
+      background-position: 0 1.0525em;
+      background-size: 5px 5px;
+      background-repeat-y: no-repeat;
+      background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
+      background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
+      background-image: linear-gradient(to top, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
+      background-position: center bottom; }
 
 .color--dark-alt {
   background-color: #2c2b2e; }
   .color--dark-alt * {
     color: #fff; }
+  .color--dark-alt .elementor-text-editor > p > a {
+    position: relative;
+    text-shadow: -1px -1px 0 #2c2b2e, -1px -1px 0 #2c2b2e, -1px -1px 0 #2c2b2e, 1px 1px 0 #2c2b2e;
+    -webkit-transition: color .15s ease-in;
+    -o-transition: color .15s ease-in;
+    transition: color .15s ease-in;
+    background-position: 0 1.0525em;
+    background-size: 5px 5px;
+    background-repeat-y: no-repeat;
+    background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
+    background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
+    background-image: linear-gradient(to top, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
+    background-position: center bottom; }
   .color--dark-alt .color--dark {
     background-color: #030305; }
     .color--dark-alt .color--dark * {
       color: #fff; }
+    .color--dark-alt .color--dark .elementor-text-editor > p > a {
+      position: relative;
+      text-shadow: -1px -1px 0 #030305, -1px -1px 0 #030305, -1px -1px 0 #030305, 1px 1px 0 #030305;
+      -webkit-transition: color .15s ease-in;
+      -o-transition: color .15s ease-in;
+      transition: color .15s ease-in;
+      background-position: 0 1.0525em;
+      background-size: 5px 5px;
+      background-repeat-y: no-repeat;
+      background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
+      background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
+      background-image: linear-gradient(to top, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
+      background-position: center bottom; }
   .color--dark-alt .color--dark-alt {
     background-color: #2c2b2e; }
     .color--dark-alt .color--dark-alt * {
       color: #fff; }
+    .color--dark-alt .color--dark-alt .elementor-text-editor > p > a {
+      position: relative;
+      text-shadow: -1px -1px 0 #2c2b2e, -1px -1px 0 #2c2b2e, -1px -1px 0 #2c2b2e, 1px 1px 0 #2c2b2e;
+      -webkit-transition: color .15s ease-in;
+      -o-transition: color .15s ease-in;
+      transition: color .15s ease-in;
+      background-position: 0 1.0525em;
+      background-size: 5px 5px;
+      background-repeat-y: no-repeat;
+      background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
+      background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
+      background-image: linear-gradient(to top, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
+      background-position: center bottom; }
   .color--dark-alt .color--light {
     background-color: #e8e8ed; }
     .color--dark-alt .color--light * {
       color: #030305; }
+    .color--dark-alt .color--light .elementor-text-editor > p > a {
+      position: relative;
+      text-shadow: -1px -1px 0 #e8e8ed, -1px -1px 0 #e8e8ed, -1px -1px 0 #e8e8ed, 1px 1px 0 #e8e8ed;
+      -webkit-transition: color .15s ease-in;
+      -o-transition: color .15s ease-in;
+      transition: color .15s ease-in;
+      background-position: 0 1.0525em;
+      background-size: 5px 5px;
+      background-repeat-y: no-repeat;
+      background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
+      background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
+      background-image: linear-gradient(to top, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
+      background-position: center bottom; }
 
 .color--light {
   background-color: #e8e8ed; }
   .color--light * {
     color: #030305; }
+  .color--light .elementor-text-editor > p > a {
+    position: relative;
+    text-shadow: -1px -1px 0 #e8e8ed, -1px -1px 0 #e8e8ed, -1px -1px 0 #e8e8ed, 1px 1px 0 #e8e8ed;
+    -webkit-transition: color .15s ease-in;
+    -o-transition: color .15s ease-in;
+    transition: color .15s ease-in;
+    background-position: 0 1.0525em;
+    background-size: 5px 5px;
+    background-repeat-y: no-repeat;
+    background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
+    background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
+    background-image: linear-gradient(to top, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
+    background-position: center bottom; }
   .color--light .color--dark {
     background-color: #030305; }
     .color--light .color--dark * {
       color: #fff; }
+    .color--light .color--dark .elementor-text-editor > p > a {
+      position: relative;
+      text-shadow: -1px -1px 0 #030305, -1px -1px 0 #030305, -1px -1px 0 #030305, 1px 1px 0 #030305;
+      -webkit-transition: color .15s ease-in;
+      -o-transition: color .15s ease-in;
+      transition: color .15s ease-in;
+      background-position: 0 1.0525em;
+      background-size: 5px 5px;
+      background-repeat-y: no-repeat;
+      background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
+      background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
+      background-image: linear-gradient(to top, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
+      background-position: center bottom; }
   .color--light .color--dark-alt {
     background-color: #2c2b2e; }
     .color--light .color--dark-alt * {
       color: #fff; }
+    .color--light .color--dark-alt .elementor-text-editor > p > a {
+      position: relative;
+      text-shadow: -1px -1px 0 #2c2b2e, -1px -1px 0 #2c2b2e, -1px -1px 0 #2c2b2e, 1px 1px 0 #2c2b2e;
+      -webkit-transition: color .15s ease-in;
+      -o-transition: color .15s ease-in;
+      transition: color .15s ease-in;
+      background-position: 0 1.0525em;
+      background-size: 5px 5px;
+      background-repeat-y: no-repeat;
+      background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
+      background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
+      background-image: linear-gradient(to top, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
+      background-position: center bottom; }
   .color--light .color--light {
     background-color: #e8e8ed; }
     .color--light .color--light * {
       color: #030305; }
+    .color--light .color--light .elementor-text-editor > p > a {
+      position: relative;
+      text-shadow: -1px -1px 0 #e8e8ed, -1px -1px 0 #e8e8ed, -1px -1px 0 #e8e8ed, 1px 1px 0 #e8e8ed;
+      -webkit-transition: color .15s ease-in;
+      -o-transition: color .15s ease-in;
+      transition: color .15s ease-in;
+      background-position: 0 1.0525em;
+      background-size: 5px 5px;
+      background-repeat-y: no-repeat;
+      background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
+      background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
+      background-image: linear-gradient(to top, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
+      background-position: center bottom; }
 
 /**
  * Widget Max Widths

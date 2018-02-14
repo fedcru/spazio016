@@ -8,6 +8,10 @@
   * {
     color: main-colors(main, body);
   }
+
+  .elementor-text-editor > p > a {
+    @include link();
+  }
 }
 
 
@@ -19,12 +23,20 @@
       color: palette($palette, body);
     }
 
+    .elementor-text-editor > p > a {
+      @include link($palette);
+    }
+
     @each $palette, $color in $palettes {
       .color--#{$palette} {
         background-color: palette($palette, bg);
 
         * {
           color: palette($palette, body);
+        }
+
+        .elementor-text-editor > p > a {
+          @include link($palette);
         }
       }
     }
