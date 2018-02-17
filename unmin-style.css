@@ -301,6 +301,13 @@ html {
     line-height: 1.25rem;
     text-transform: uppercase; }
 
+/**
+ * Mobile Nav
+ */
+@media (min-width: 52.5em) {
+  .mobile-nav__toggler--open {
+    display: none; } }
+
 .footer {
   background-color: #2c2b2e; }
   .footer * {
@@ -556,6 +563,14 @@ html {
     background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
     background-image: linear-gradient(to top, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
     background-position: center bottom; }
+  .color--dark ::-moz-selection {
+    background-color: #fff;
+    color: #030305;
+    text-shadow: none; }
+  .color--dark ::selection {
+    background-color: #fff;
+    color: #030305;
+    text-shadow: none; }
   .color--dark .color--dark {
     background-color: #030305; }
     .color--dark .color--dark * {
@@ -573,6 +588,14 @@ html {
       background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
       background-image: linear-gradient(to top, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
       background-position: center bottom; }
+    .color--dark .color--dark ::-moz-selection {
+      background-color: #fff;
+      color: #030305;
+      text-shadow: none; }
+    .color--dark .color--dark ::selection {
+      background-color: #fff;
+      color: #030305;
+      text-shadow: none; }
   .color--dark .color--dark-alt {
     background-color: #2c2b2e; }
     .color--dark .color--dark-alt * {
@@ -590,6 +613,14 @@ html {
       background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
       background-image: linear-gradient(to top, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
       background-position: center bottom; }
+    .color--dark .color--dark-alt ::-moz-selection {
+      background-color: #fff;
+      color: #2c2b2e;
+      text-shadow: none; }
+    .color--dark .color--dark-alt ::selection {
+      background-color: #fff;
+      color: #2c2b2e;
+      text-shadow: none; }
   .color--dark .color--light {
     background-color: #e8e8ed; }
     .color--dark .color--light * {
@@ -607,6 +638,14 @@ html {
       background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
       background-image: linear-gradient(to top, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
       background-position: center bottom; }
+    .color--dark .color--light ::-moz-selection {
+      background-color: #030305;
+      color: #e8e8ed;
+      text-shadow: none; }
+    .color--dark .color--light ::selection {
+      background-color: #030305;
+      color: #e8e8ed;
+      text-shadow: none; }
 
 .color--dark-alt {
   background-color: #2c2b2e; }
@@ -625,6 +664,14 @@ html {
     background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
     background-image: linear-gradient(to top, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
     background-position: center bottom; }
+  .color--dark-alt ::-moz-selection {
+    background-color: #fff;
+    color: #2c2b2e;
+    text-shadow: none; }
+  .color--dark-alt ::selection {
+    background-color: #fff;
+    color: #2c2b2e;
+    text-shadow: none; }
   .color--dark-alt .color--dark {
     background-color: #030305; }
     .color--dark-alt .color--dark * {
@@ -642,6 +689,14 @@ html {
       background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
       background-image: linear-gradient(to top, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
       background-position: center bottom; }
+    .color--dark-alt .color--dark ::-moz-selection {
+      background-color: #fff;
+      color: #030305;
+      text-shadow: none; }
+    .color--dark-alt .color--dark ::selection {
+      background-color: #fff;
+      color: #030305;
+      text-shadow: none; }
   .color--dark-alt .color--dark-alt {
     background-color: #2c2b2e; }
     .color--dark-alt .color--dark-alt * {
@@ -659,6 +714,14 @@ html {
       background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
       background-image: linear-gradient(to top, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
       background-position: center bottom; }
+    .color--dark-alt .color--dark-alt ::-moz-selection {
+      background-color: #fff;
+      color: #2c2b2e;
+      text-shadow: none; }
+    .color--dark-alt .color--dark-alt ::selection {
+      background-color: #fff;
+      color: #2c2b2e;
+      text-shadow: none; }
   .color--dark-alt .color--light {
     background-color: #e8e8ed; }
     .color--dark-alt .color--light * {
@@ -676,6 +739,14 @@ html {
       background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
       background-image: linear-gradient(to top, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
       background-position: center bottom; }
+    .color--dark-alt .color--light ::-moz-selection {
+      background-color: #030305;
+      color: #e8e8ed;
+      text-shadow: none; }
+    .color--dark-alt .color--light ::selection {
+      background-color: #030305;
+      color: #e8e8ed;
+      text-shadow: none; }
 
 .color--light {
   background-color: #e8e8ed; }
@@ -694,6 +765,14 @@ html {
     background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
     background-image: linear-gradient(to top, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
     background-position: center bottom; }
+  .color--light ::-moz-selection {
+    background-color: #030305;
+    color: #e8e8ed;
+    text-shadow: none; }
+  .color--light ::selection {
+    background-color: #030305;
+    color: #e8e8ed;
+    text-shadow: none; }
   .color--light .color--dark {
     background-color: #030305; }
     .color--light .color--dark * {
@@ -711,6 +790,14 @@ html {
       background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
       background-image: linear-gradient(to top, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
       background-position: center bottom; }
+    .color--light .color--dark ::-moz-selection {
+      background-color: #fff;
+      color: #030305;
+      text-shadow: none; }
+    .color--light .color--dark ::selection {
+      background-color: #fff;
+      color: #030305;
+      text-shadow: none; }
   .color--light .color--dark-alt {
     background-color: #2c2b2e; }
     .color--light .color--dark-alt * {
@@ -728,6 +815,14 @@ html {
       background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
       background-image: linear-gradient(to top, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
       background-position: center bottom; }
+    .color--light .color--dark-alt ::-moz-selection {
+      background-color: #fff;
+      color: #2c2b2e;
+      text-shadow: none; }
+    .color--light .color--dark-alt ::selection {
+      background-color: #fff;
+      color: #2c2b2e;
+      text-shadow: none; }
   .color--light .color--light {
     background-color: #e8e8ed; }
     .color--light .color--light * {
@@ -745,6 +840,14 @@ html {
       background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
       background-image: linear-gradient(to top, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
       background-position: center bottom; }
+    .color--light .color--light ::-moz-selection {
+      background-color: #030305;
+      color: #e8e8ed;
+      text-shadow: none; }
+    .color--light .color--light ::selection {
+      background-color: #030305;
+      color: #e8e8ed;
+      text-shadow: none; }
 
 /**
  * Widget Max Widths

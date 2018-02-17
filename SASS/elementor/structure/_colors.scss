@@ -27,6 +27,12 @@
       @include link($palette);
     }
 
+    ::selection {
+      background-color: palette($palette, accent);
+      color: palette($palette, bg);
+      text-shadow: none;
+    }
+
     @each $palette, $color in $palettes {
       .color--#{$palette} {
         background-color: palette($palette, bg);
@@ -37,6 +43,12 @@
 
         .elementor-text-editor > p > a {
           @include link($palette);
+        }
+
+        ::selection {
+          background-color: palette($palette, accent);
+          color: palette($palette, bg);
+          text-shadow: none;
         }
       }
     }

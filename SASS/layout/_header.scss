@@ -1,3 +1,5 @@
+$header_bp: 'md';
+
 .header {
   background-color: main-colors(header, bg);
   @include pad($h: 0);
@@ -45,12 +47,10 @@
 
 
 .primary-nav {
-
   @include flex-child($wd: 100);
   max-width: auto;
   background-color: $antracite;
   width: 100vw;
-
 }
 
 .primary-nav__inner {
@@ -63,5 +63,14 @@
   .menu-item {
     @include font(p);
     text-transform: uppercase;
+  }
+}
+
+/**
+ * Mobile Nav
+ */
+.mobile-nav__toggler--open {
+  @include breakpoint-min($header_bp) {
+    display: none;
   }
 }
