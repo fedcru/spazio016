@@ -1,0 +1,79 @@
+/**
+ * Columns gutter on small screens
+ */
+.elementor-section-full_width {
+  .elementor-container {
+
+    &> .elementor-row > .elementor-column .elementor-column-wrap {
+      @include pad( $v: $el-gutter-md, $h: $el-gutter-sm );
+    }
+  }
+
+  @include breakpoint-max(el) {
+    .elementor-element-populated {
+      min-height: spacing(8) * 2.5;
+    }
+  }
+}
+/**
+ * COLUMNS gutter - only on large screen
+ */
+@include breakpoint-min(el) {
+  .elementor-section-full_width {
+
+    // Default gap
+    .elementor-container > .elementor-row > .elementor-column .elementor-column-wrap {
+      @include pad( $h: $el-gutter-md );
+      @include pad( $v: $el-gutter-lg );
+    }
+
+    .elementor-column-gap-narrow,
+    .elementor-column-gap-extended {
+      &> .elementor-row > .elementor-column .elementor-column-wrap {
+        @include pad( $v: $el-gutter-md );
+        @include pad( $h: $el-gutter-sm );
+      }
+    }
+
+    // First column
+    .elementor-row .elementor-column {
+      .elementor-widget {
+        align-self: center;
+      }
+    }
+
+    // First column
+    .elementor-row .elementor-column:first-child {
+      .elementor-widget {
+        align-self: center;
+      }
+    }
+    // Last column
+    .elementor-row .elementor-column:last-child {
+      .elementor-widget {
+        align-self: center;
+      }
+    }
+
+    // Center column
+    .elementor-row .elementor-column:first-child:last-child .elementor-widget {
+      align-self: center;
+    }
+  }
+}
+
+@include breakpoint-bet(xl, el) {
+.elementor-section-full_width .elementor-row > .elementor-column:not(.elementor-col-50) .elementor-column-wrap {
+    @include pad( $v: $el-gutter-sm );
+    @include pad( $h: $el-gutter-sm );
+  }
+  .elementor-column.elementor-column.elementor-col-25,
+  .elementor-section-full_width .elementor-row .elementor-column[data-col="25"] {
+    width: 50%;
+    flex-basis: 50%;
+  }
+}
+
+@include breakpoint-bet(md, el) {
+
+}

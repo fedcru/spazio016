@@ -153,6 +153,12 @@
   }
 }
 
+@mixin breakpoint-bet($max: lg, $min: md) {
+  @media (max-width: map-get( $grid-breakpoints, $max ) - 0.01 ) and ( min-width: map-get( $grid-breakpoints, $min ) ) {
+    @content;
+  }
+}
+
 
 //****************************************************************************//
 //                            COLOR OVERLAYS

@@ -33,6 +33,8 @@ $el-v-space: 7;
   // lateral padding
   @include layout-padding();
 
+
+
   // Vertical Spacing
   &> .elementor-container {
     @include pad($v: 6);

@@ -3,6 +3,10 @@
  */
 .elementor-section {
   @include layout-overflow();
+
+  * {
+    background-position: center;
+  }
 }
 
 
