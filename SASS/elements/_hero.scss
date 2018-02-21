@@ -28,3 +28,11 @@
   color: main-colors(hero, body);
   max-width: max-width($text-mw);
 }
+
+@include breakpoint-max(el) {
+  .hero-title__text,
+  .hero-title__description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

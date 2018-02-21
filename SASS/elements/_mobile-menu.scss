@@ -1,0 +1,47 @@
+.mobile-nav {
+  @include pad($h: 4);
+  @include pad($v: 6);
+  background-color: main-colors(header, bg);
+}
+
+.mobile-nav__inner {
+//  @include pad($v: 4);
+  display: flex; //TODO - move in parent
+  flex-direction: column; //TODO move in parent
+  justify-content: flex-start;
+  min-height: 95vh;
+
+
+
+  li {
+    @include font(h4);
+    flex-basis: 100%;
+    width: 100%;
+    border-bottom: 1px solid main-colors(header, border);
+
+    &:last-child {
+      border: 0;
+    }
+  }
+
+  .item--bottom {
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+
+  a {
+    @include pad($v: 2);
+    display: block; //TODO move in parent
+    color: main-colors(header, body);
+  }
+}
+
+.mobile-nav__toggler--close {
+  top: spacing(2);
+  right: spacing(2);
+  color: main-colors(header, body);
+
+  .mobile-nav__icon--close {
+    fill: main-colors(header, body);
+  }
+}

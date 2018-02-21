@@ -24,7 +24,7 @@ $header_bp: 'md';
 .logo {
   max-width: 300px;
 
-  @include breakpoint-min(md) {
+  @include breakpoint-min($header_bp) {
     margin-top: spacing(-5);
     margin-bottom: spacing(6.5);
   }
