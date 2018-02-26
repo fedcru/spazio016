@@ -18,7 +18,7 @@
 ///
 // Mixin per i bottoni con padding
 ///
-@mixin button( $size: uppercase--sm, $mt: 0, $mb: 0, $pv: spacing(3), $ph: spacing(4), $ta: center ) {
+@mixin button( $size: uppercase--sm, $mt: 0, $mb: 0, $pv: 3, $ph: 4, $ta: center ) {
   display: inline-block;
   border-width: 1px;
   border-style: solid;
@@ -26,10 +26,10 @@
   text-align: $ta;
   cursor: pointer;
 
-  padding-left: $ph;
-  padding-right: $ph;
-  padding-top: $pv;
-  padding-bottom: $pv;
+  padding-left: spacing($ph);
+  padding-right: spacing($ph);
+  padding-top: spacing($pv);
+  padding-bottom: spacing($pv);
 
   font-family: font($size, fm);
   font-weight: font($size, wt);

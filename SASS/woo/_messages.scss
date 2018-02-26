@@ -1,0 +1,19 @@
+.woocommerce-info {
+  width: 100%;
+  padding: spacing(3);
+  background-color: $green;
+  @include marg($v: 4);
+  color: $white;
+}
+
+
+/**
+ * Message
+ */
+ .woocommerce-message {
+  @include flex-child($wd: 100);
+  padding: spacing(3);
+  @include marg($v: 4);
+  background-color: $green;
+  color: $white;
+ }

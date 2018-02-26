@@ -1,0 +1,122 @@
+.shop_table_responsive.cart {
+  th {
+    @include font(h4);
+    text-align: left;
+    padding: spacing(2);
+    background-color: palette(dark-alt, bg);
+    color: palette(dark-alt, body);
+  }
+
+  td {
+    padding: spacing(1);
+    border-bottom: 2px solid;
+    border-color: inherit;
+
+    @at-root .shop_table_responsive.cart tr:last-child td {
+      border-bottom: 0;
+    }
+
+    &.actions {
+      @include pad($v: 6);
+
+
+      .button {
+        cursor: pointer;
+        @include button(p, $pv: 2);
+      }
+
+      .coupon {
+        float: left;
+        display: inline;
+
+        .input-text {
+          padding: spacing(1);
+          max-width: max-width(xxxs);
+        }
+
+        .button {
+          display: block;
+          margin-left: auto;
+          max-width: max-width(xxxs);
+          width: 100%;
+          margin-top: spacing(2);
+        }
+      }
+      p:first-of-type {
+        float: right;
+        display: inline;
+      }
+    }
+  }
+
+}
+
+.cart_totals {
+  max-width: max-width(sm);
+  width: 100%;
+
+  h2 {
+    @include font(h3);
+    margin-bottom: spacing(4);
+  }
+
+  tr {
+    text-align: left;
+  }
+
+  td {
+    text-align: right;
+  }
+
+  td, th {
+    @include pad($v: 2, $h: 1);
+
+    a {
+      @include link();
+      display: inline-block;
+      margin-top: spacing(1);
+    }
+  }
+
+  .shipping-calculator-form {
+    padding: spacing(1);
+
+    .button {
+      cursor: pointer;
+      @include button(p, $pv: 1);
+    }
+  }
+
+  .select2-container--default .select2-selection--single {
+    border: 2px solid $black-05;
+    padding: spacing(1);
+    height: auto;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 1.2;
+  }
+
+
+  .form-row {
+    @include marg($v: 4);
+    max-width: 90%;
+    margin-left: auto;
+
+    .input-text {
+      width: 100%;
+      padding: spacing(1);
+    }
+  }
+
+  .checkout-button {
+    @include button(h4);
+    margin-top: spacing(4);
+    background: $green;
+    color: $white;
+
+    br {
+      display: none;
+    }
+  }
+}

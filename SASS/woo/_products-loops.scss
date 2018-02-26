@@ -1,0 +1,44 @@
+/********************************
+* WC archive
+************************************/
+.before-shop-loop {
+  @include flex-child($wd: 100);
+  margin-bottom: spacing(6);
+}
+
+.products-loop {
+  @include flex-setup(0); //TODO - move in child
+}
+
+.products-loop--4 {
+  .product {
+    @include flex-child($wd: 25); //TODO - move in child
+    text-align: center;
+  }
+}
+
+.products-loop  {
+  .onsale {
+    position: absolute;
+    z-index: 99;
+    background: main-colors(main, body);
+    color: main-colors(main, bg);
+    padding: spacing(2);
+  }
+  .entry-title {
+    @include font(p, $mt: 4, $mb: 2);
+    font-weight: bold;
+  }
+
+  .price {
+    display: block;
+    @include font(p);
+  }
+
+  .button {
+    @include button(p);
+    margin-top: spacing(4);
+    width: 90%;
+    @include marg($h: auto);
+  }
+}

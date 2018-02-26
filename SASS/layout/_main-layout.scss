@@ -32,6 +32,7 @@
 
   * {
     color: main-colors(main, body);
+    border-color: main-colors(main, border);
   }
 }
 
@@ -40,6 +41,7 @@
 }
 
 .main__row {
+  @include flex-setup()
   @include pad($v: 8);
 }
 
