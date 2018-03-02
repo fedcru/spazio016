@@ -1,0 +1,27 @@
+.compare-products {
+  @include flex-setup();
+  width: 100%;
+  max-width: 100%;
+
+  &__item {
+    @include flex-child($wd: 33.3333);
+  }
+
+  &__title {
+    @include font(h4, $mb: 2);
+  }
+
+  &__intro {
+    @include font(p);
+  }
+
+  &__image {
+    @include marg($v: 4);
+  }
+
+  &__description {
+    &>p {
+      @include font(p) ;  
+    }
+  }
+}

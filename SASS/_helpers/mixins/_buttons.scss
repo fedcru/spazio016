@@ -99,9 +99,9 @@
 ///
 @mixin button-color($palette: main, $type: filled) {
   @if $type == 'filled' {
-    background: palette($palette, accent);
-    color: palette($palette, button);
-    border-color: palette($palette, accent);
+    background: palette($palette, button-bg);
+    color: palette($palette, button-body);
+    border-color: palette($palette, button-bg);
   }
 
   @if $type == 'empty-w' {

@@ -69,6 +69,7 @@ p.price {
 
 .single_add_to_cart_button {
   @include button(p);
+  @include button-color(light, filled)
   @include marg($v: 5);
   text-transform: uppercase;
 }
@@ -77,12 +78,58 @@ p.price {
  * Tabs
  */
 .wc-tabs-wrapper {
-  @include flex-child($wd: 100);
+  @include flex-child($wd: 50);
+
 }
 
 .wc-tabs {
-
   li {
-    @include pad($h: 1);
+    @include pad($h: 2);
+    @include pad($v: 2);
+    border-right: 1px solid $black-40;
+    //border-bottom: 2px solid $black-40;
+    border-top: 1px solid $black-40;
+    border-radius: 2px 2px 0 0;
+
+    &.active {
+      border-bottom: 1px solid $white;
+    }
+
+    &:first-child {
+      border-left: 1px solid $black-40;
+    }
+  }
+}
+
+.woocommerce-Tabs-panel {
+  padding: spacing(4);
+  border-left: 1px solid $black-40;
+  border-right: 1px solid $black-40;
+  border-bottom: 1px solid $black-40;
+  border-top: 1px solid $black-40;
+  margin-top: -1px; // it hides the border
+  border-radius: 0px 2px 2px 2px;
+
+  h2 {
+    @include font(h2, $mt: 4, $mb: 2);
+  }
+
+  p {
+    @include font(p, $mt: 2, $mb: 2);
+  }
+}
+
+/*
+ * Related Products
+ */
+.related.products {
+  margin-top: spacing(8);
+  width: 100%;
+
+  > h2 {
+    @include font(h2);
+    width: 100%;
+    margin-bottom: spacing(6);
+    text-align: center;
   }
 }

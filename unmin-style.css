@@ -107,7 +107,8 @@ html {
   background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #2c2b2e 1.5px, #2c2b2e 2px, transparent 2px);
   background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #2c2b2e 1.5px, #2c2b2e 2px, transparent 2px);
   background-image: linear-gradient(to top, transparent, transparent 1.5px, #2c2b2e 1.5px, #2c2b2e 2px, transparent 2px);
-  background-position: center bottom; }
+  background-position: center bottom;
+  color: #2c2b2e; }
 
 ::-moz-selection {
   background-color: #2c2b2e;
@@ -718,7 +719,8 @@ html {
     background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #2c2b2e 1.5px, #2c2b2e 2px, transparent 2px);
     background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #2c2b2e 1.5px, #2c2b2e 2px, transparent 2px);
     background-image: linear-gradient(to top, transparent, transparent 1.5px, #2c2b2e 1.5px, #2c2b2e 2px, transparent 2px);
-    background-position: center bottom; }
+    background-position: center bottom;
+    color: #2c2b2e; }
 
 .color--dark {
   background-color: #030305; }
@@ -736,7 +738,8 @@ html {
     background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
     background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
     background-image: linear-gradient(to top, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
-    background-position: center bottom; }
+    background-position: center bottom;
+    color: #fff; }
   .color--dark ::-moz-selection {
     background-color: #fff;
     color: #030305;
@@ -761,7 +764,8 @@ html {
       background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
       background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
       background-image: linear-gradient(to top, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
-      background-position: center bottom; }
+      background-position: center bottom;
+      color: #fff; }
     .color--dark .color--dark ::-moz-selection {
       background-color: #fff;
       color: #030305;
@@ -786,7 +790,8 @@ html {
       background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
       background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
       background-image: linear-gradient(to top, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
-      background-position: center bottom; }
+      background-position: center bottom;
+      color: #fff; }
     .color--dark .color--dark-alt ::-moz-selection {
       background-color: #fff;
       color: #2c2b2e;
@@ -811,7 +816,8 @@ html {
       background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
       background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
       background-image: linear-gradient(to top, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
-      background-position: center bottom; }
+      background-position: center bottom;
+      color: #030305; }
     .color--dark .color--light ::-moz-selection {
       background-color: #030305;
       color: #e8e8ed;
@@ -837,7 +843,8 @@ html {
     background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
     background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
     background-image: linear-gradient(to top, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
-    background-position: center bottom; }
+    background-position: center bottom;
+    color: #fff; }
   .color--dark-alt ::-moz-selection {
     background-color: #fff;
     color: #2c2b2e;
@@ -862,7 +869,8 @@ html {
       background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
       background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
       background-image: linear-gradient(to top, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
-      background-position: center bottom; }
+      background-position: center bottom;
+      color: #fff; }
     .color--dark-alt .color--dark ::-moz-selection {
       background-color: #fff;
       color: #030305;
@@ -887,7 +895,8 @@ html {
       background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
       background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
       background-image: linear-gradient(to top, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
-      background-position: center bottom; }
+      background-position: center bottom;
+      color: #fff; }
     .color--dark-alt .color--dark-alt ::-moz-selection {
       background-color: #fff;
       color: #2c2b2e;
@@ -912,7 +921,8 @@ html {
       background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
       background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
       background-image: linear-gradient(to top, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
-      background-position: center bottom; }
+      background-position: center bottom;
+      color: #030305; }
     .color--dark-alt .color--light ::-moz-selection {
       background-color: #030305;
       color: #e8e8ed;
@@ -938,7 +948,8 @@ html {
     background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
     background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
     background-image: linear-gradient(to top, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
-    background-position: center bottom; }
+    background-position: center bottom;
+    color: #030305; }
   .color--light ::-moz-selection {
     background-color: #030305;
     color: #e8e8ed;
@@ -963,7 +974,8 @@ html {
       background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
       background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
       background-image: linear-gradient(to top, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
-      background-position: center bottom; }
+      background-position: center bottom;
+      color: #fff; }
     .color--light .color--dark ::-moz-selection {
       background-color: #fff;
       color: #030305;
@@ -988,7 +1000,8 @@ html {
       background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
       background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
       background-image: linear-gradient(to top, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
-      background-position: center bottom; }
+      background-position: center bottom;
+      color: #fff; }
     .color--light .color--dark-alt ::-moz-selection {
       background-color: #fff;
       color: #2c2b2e;
@@ -1013,7 +1026,8 @@ html {
       background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
       background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
       background-image: linear-gradient(to top, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
-      background-position: center bottom; }
+      background-position: center bottom;
+      color: #030305; }
     .color--light .color--light ::-moz-selection {
       background-color: #030305;
       color: #e8e8ed;
@@ -1172,7 +1186,8 @@ html {
   padding-right: 0.9375rem;
   margin-bottom: 2.5rem; }
 
-.products-loop {
+.products-loop,
+.products {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1185,10 +1200,71 @@ html {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  margin-right: 0;
-  margin-left: 0; }
+  margin-right: -0.9375rem;
+  margin-left: -0.9375rem; }
 
-.products-loop--4 .product {
+.products-loop--full {
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  width: 100%;
+  -webkit-align-self: auto;
+      -ms-flex-item-align: auto;
+          align-self: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem; }
+
+.products-loop--has-sidebar {
+  -webkit-flex-basis: 70%;
+      -ms-flex-preferred-size: 70%;
+          flex-basis: 70%;
+  width: 70%;
+  -webkit-align-self: auto;
+      -ms-flex-item-align: auto;
+          align-self: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem; }
+
+.shop-archive__sidebar-container {
+  -webkit-flex-basis: 30%;
+      -ms-flex-preferred-size: 30%;
+          flex-basis: 30%;
+  width: 30%;
+  -webkit-align-self: auto;
+      -ms-flex-item-align: auto;
+          align-self: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem; }
+
+.products {
+  width: 100%; }
+
+.products-loop .product {
+  text-align: center; }
+
+.products-loop--4 .product,
+.products.columns-4 .product {
   -webkit-flex-basis: 25%;
       -ms-flex-preferred-size: 25%;
           flex-basis: 25%;
@@ -1204,17 +1280,39 @@ html {
       -ms-flex-negative: 0;
           flex-shrink: 0;
   padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
-  text-align: center; }
+  padding-right: 0.9375rem; }
 
-.products-loop .onsale {
+.products-loop--3 .product,
+.products.columns-3 .product {
+  -webkit-flex-basis: 33.333%;
+      -ms-flex-preferred-size: 33.333%;
+          flex-basis: 33.333%;
+  width: 33.333%;
+  -webkit-align-self: auto;
+      -ms-flex-item-align: auto;
+          align-self: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem; }
+
+.products-loop .onsale,
+.products .onsale {
   position: absolute;
   z-index: 99;
   background: #2c2b2e;
   color: #fff;
   padding: 0.625rem; }
 
-.products-loop .entry-title {
+.products-loop .entry-title,
+.products-loop .woocommerce-loop-product__title,
+.products .entry-title,
+.products .woocommerce-loop-product__title {
   font-family: "Muli", sans-serif;
   font-weight: 300;
   font-size: 1rem;
@@ -1223,14 +1321,16 @@ html {
   margin-bottom: 0.625rem;
   font-weight: bold; }
 
-.products-loop .price {
+.products-loop .price,
+.products .price {
   display: block;
   font-family: "Muli", sans-serif;
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.25rem; }
 
-.products-loop .button {
+.products-loop .button,
+.products .button {
   display: inline-block;
   border-width: 1px;
   border-style: solid;
@@ -1239,16 +1339,28 @@ html {
   cursor: pointer;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
-  padding-top: 0.9375rem;
-  padding-bottom: 0.9375rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
   font-family: "Muli", sans-serif;
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.25rem;
+  background: #2c2b2e;
+  color: #e8e8ed;
+  border-color: #2c2b2e;
   margin-top: 1.25rem;
-  width: 90%;
+  width: auto;
   margin-right: auto;
   margin-left: auto; }
+  .products-loop .button.loading,
+  .products .button.loading {
+    opacity: 0.2; }
+
+.products-loop .added_to_cart,
+.products .added_to_cart {
+  color: #5cb85c;
+  display: block;
+  margin-top: 0.625rem; }
 
 .product__images {
   -webkit-flex-basis: 50%;
@@ -1352,6 +1464,9 @@ p.price {
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.25rem;
+  background: #2c2b2e;
+  color: #e8e8ed;
+  border-color: #2c2b2e;
   margin-top: 1.875rem;
   margin-bottom: 1.875rem;
   text-transform: uppercase; }
@@ -1360,10 +1475,10 @@ p.price {
  * Tabs
  */
 .wc-tabs-wrapper {
-  -webkit-flex-basis: 100%;
-      -ms-flex-preferred-size: 100%;
-          flex-basis: 100%;
-  width: 100%;
+  -webkit-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+  width: 50%;
   -webkit-align-self: auto;
       -ms-flex-item-align: auto;
           align-self: auto;
@@ -1378,8 +1493,61 @@ p.price {
   padding-right: 0.9375rem; }
 
 .wc-tabs li {
-  padding-right: 0.3125rem;
-  padding-left: 0.3125rem; }
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  border-right: 1px solid rgba(3, 3, 5, 0.4);
+  border-top: 1px solid rgba(3, 3, 5, 0.4);
+  border-radius: 2px 2px 0 0; }
+  .wc-tabs li.active {
+    border-bottom: 1px solid #fff; }
+  .wc-tabs li:first-child {
+    border-left: 1px solid rgba(3, 3, 5, 0.4); }
+
+.woocommerce-Tabs-panel {
+  padding: 1.25rem;
+  border-left: 1px solid rgba(3, 3, 5, 0.4);
+  border-right: 1px solid rgba(3, 3, 5, 0.4);
+  border-bottom: 1px solid rgba(3, 3, 5, 0.4);
+  border-top: 1px solid rgba(3, 3, 5, 0.4);
+  margin-top: -1px;
+  border-radius: 0px 2px 2px 2px; }
+  .woocommerce-Tabs-panel h2 {
+    font-family: "Pagella", serif;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 0.625rem;
+    padding-top: 0.15625rem;
+    padding-bottom: 0.15625rem;
+    letter-spacing: 0.1rem; }
+  .woocommerce-Tabs-panel p {
+    font-family: "Muli", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem; }
+
+/*
+ * Related Products
+ */
+.related.products {
+  margin-top: 7.5rem;
+  width: 100%; }
+  .related.products > h2 {
+    font-family: "Pagella", serif;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.25rem;
+    padding-top: 0.15625rem;
+    padding-bottom: 0.15625rem;
+    letter-spacing: 0.1rem;
+    width: 100%;
+    margin-bottom: 2.5rem;
+    text-align: center; }
 
 .shop_table_responsive.cart th {
   font-family: "Muli", sans-serif;
@@ -1470,6 +1638,7 @@ p.price {
       background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #2c2b2e 1.5px, #2c2b2e 2px, transparent 2px);
       background-image: linear-gradient(to top, transparent, transparent 1.5px, #2c2b2e 1.5px, #2c2b2e 2px, transparent 2px);
       background-position: center bottom;
+      color: #2c2b2e;
       display: inline-block;
       margin-top: 0.3125rem; }
   .cart_totals .shipping-calculator-form {
@@ -1527,6 +1696,258 @@ p.price {
     .cart_totals .checkout-button br {
       display: none; }
 
+.col2-set {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-right: -1.875rem;
+  margin-left: -1.875rem; }
+
+.col-1,
+.col-2 {
+  -webkit-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+  width: 50%;
+  -webkit-align-self: auto;
+      -ms-flex-item-align: auto;
+          align-self: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  padding-left: 1.875rem;
+  padding-right: 1.875rem; }
+
+.woocommerce-billing-fields h3 {
+  font-family: "Pagella", serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.875rem;
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
+  padding-top: 0.15625rem;
+  padding-bottom: 0.15625rem;
+  letter-spacing: 0.08rem; }
+
+.woocommerce-billing-fields label,
+.shipping_address label,
+.woocommerce-additional-fields label,
+.woocommerce-account-fields label {
+  display: block;
+  font-family: "Muli", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  margin-bottom: 0.3125rem;
+  font-weight: bold; }
+
+.woocommerce-billing-fields .form-row,
+.shipping_address .form-row,
+.woocommerce-additional-fields .form-row,
+.woocommerce-account-fields .form-row {
+  margin-top: 1.875rem;
+  max-width: 25rem; }
+
+.woocommerce-billing-fields #billing_address_1_field,
+.shipping_address #billing_address_1_field,
+.woocommerce-additional-fields #billing_address_1_field,
+.woocommerce-account-fields #billing_address_1_field {
+  margin-top: 1.875rem; }
+
+.woocommerce-billing-fields #billing_address_2_field,
+.shipping_address #billing_address_2_field,
+.woocommerce-additional-fields #billing_address_2_field,
+.woocommerce-account-fields #billing_address_2_field {
+  margin-top: 0.9375rem; }
+
+.woocommerce-billing-fields .input-text,
+.shipping_address .input-text,
+.woocommerce-additional-fields .input-text,
+.woocommerce-account-fields .input-text {
+  padding: 0.3125rem;
+  border: 2px solid rgba(3, 3, 5, 0.05);
+  width: 100%; }
+  .woocommerce-billing-fields .input-text::-webkit-input-placeholder,
+  .shipping_address .input-text::-webkit-input-placeholder,
+  .woocommerce-additional-fields .input-text::-webkit-input-placeholder,
+  .woocommerce-account-fields .input-text::-webkit-input-placeholder {
+    color: rgba(3, 3, 5, 0.5); }
+  .woocommerce-billing-fields .input-text:-ms-input-placeholder,
+  .shipping_address .input-text:-ms-input-placeholder,
+  .woocommerce-additional-fields .input-text:-ms-input-placeholder,
+  .woocommerce-account-fields .input-text:-ms-input-placeholder {
+    color: rgba(3, 3, 5, 0.5); }
+  .woocommerce-billing-fields .input-text::-ms-input-placeholder,
+  .shipping_address .input-text::-ms-input-placeholder,
+  .woocommerce-additional-fields .input-text::-ms-input-placeholder,
+  .woocommerce-account-fields .input-text::-ms-input-placeholder {
+    color: rgba(3, 3, 5, 0.5); }
+  .woocommerce-billing-fields .input-text::placeholder,
+  .shipping_address .input-text::placeholder,
+  .woocommerce-additional-fields .input-text::placeholder,
+  .woocommerce-account-fields .input-text::placeholder {
+    color: rgba(3, 3, 5, 0.5); }
+
+.woocommerce-billing-fields textarea,
+.shipping_address textarea,
+.woocommerce-additional-fields textarea,
+.woocommerce-account-fields textarea {
+  width: 100% !important;
+  min-height: 7.5rem; }
+
+.woocommerce-billing-fields .select2-container--default .select2-selection--single,
+.shipping_address .select2-container--default .select2-selection--single,
+.woocommerce-additional-fields .select2-container--default .select2-selection--single,
+.woocommerce-account-fields .select2-container--default .select2-selection--single {
+  border: 2px solid rgba(3, 3, 5, 0.05);
+  padding: 0.3125rem;
+  height: auto; }
+
+.woocommerce-billing-fields .select2-container--default .select2-selection--single .select2-selection__rendered,
+.shipping_address .select2-container--default .select2-selection--single .select2-selection__rendered,
+.woocommerce-additional-fields .select2-container--default .select2-selection--single .select2-selection__rendered,
+.woocommerce-account-fields .select2-container--default .select2-selection--single .select2-selection__rendered {
+  line-height: 1.2; }
+
+.woocommerce-billing-fields abbr,
+.shipping_address abbr,
+.woocommerce-additional-fields abbr,
+.woocommerce-account-fields abbr {
+  text-decoration: none;
+  color: #d9534f; }
+
+.woocommerce-shipping-fields__field-wrapper {
+  margin-top: -0.5625rem; }
+
+#order_review_heading {
+  font-family: "Pagella", serif;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.875rem;
+  padding-top: 0.15625rem;
+  padding-bottom: 0.15625rem;
+  letter-spacing: 0.1rem; }
+
+.woocommerce-checkout-review-order-table {
+  width: 100%;
+  max-width: 42.66667rem; }
+  .woocommerce-checkout-review-order-table thead th,
+  .woocommerce-checkout-review-order-table tbody td {
+    text-align: left; }
+    .woocommerce-checkout-review-order-table thead th:last-child,
+    .woocommerce-checkout-review-order-table tbody td:last-child {
+      text-align: right; }
+  .woocommerce-checkout-review-order-table tfoot th {
+    text-align: left; }
+  .woocommerce-checkout-review-order-table tfoot td {
+    text-align: right; }
+  .woocommerce-checkout-review-order-table th {
+    font-family: "Muli", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    text-transform: uppercase;
+    font-weight: bold; }
+  .woocommerce-checkout-review-order-table th,
+  .woocommerce-checkout-review-order-table td {
+    padding: 0.3125rem; }
+    .woocommerce-checkout-review-order-table th:first-child,
+    .woocommerce-checkout-review-order-table td:first-child {
+      padding-left: 0; }
+  .woocommerce-checkout-review-order-table td {
+    font-family: "Muli", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.25rem; }
+  .woocommerce-checkout-review-order-table tbody tr:last-child .product-name {
+    padding-bottom: 1.875rem; }
+  .woocommerce-checkout-review-order-table .cart-subtotal th,
+  .woocommerce-checkout-review-order-table .cart-subtotal td {
+    padding-top: 1.875rem;
+    border-top: 1px solid rgba(3, 3, 5, 0.1); }
+  .woocommerce-checkout-review-order-table .order-total .woocommerce-Price-amount {
+    font-weight: bold; }
+
+.wc_payment_methods {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  margin-top: 1.875rem;
+  border-radius: 2px;
+  max-width: 42.66667rem; }
+
+.wc_payment_method {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(3, 3, 5, 0.1); }
+  .wc_payment_method:last-child {
+    border-bottom: 0; }
+  .wc_payment_method p {
+    font-family: "Muli", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    margin-top: 0.625rem; }
+  .wc_payment_method .about_paypal {
+    font-weight: normal;
+    position: relative;
+    text-shadow: -1px -1px 0 #e8e8ed, -1px -1px 0 #e8e8ed, -1px -1px 0 #e8e8ed, 1px 1px 0 #e8e8ed;
+    -webkit-transition: color .15s ease-in;
+    -o-transition: color .15s ease-in;
+    transition: color .15s ease-in;
+    background-position: 0 1.0525em;
+    background-size: 5px 5px;
+    background-repeat-y: no-repeat;
+    background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
+    background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
+    background-image: linear-gradient(to top, transparent, transparent 1.5px, #030305 1.5px, #030305 2px, transparent 2px);
+    background-position: center bottom;
+    color: #030305; }
+  .wc_payment_method img {
+    max-height: 30px;
+    float: right;
+    width: auto; }
+
+.wc-terms-and-conditions {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem; }
+
+#place_order {
+  display: inline-block;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.125rem;
+  text-align: center;
+  cursor: pointer;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.9375rem;
+  padding-bottom: 0.9375rem;
+  font-family: "Muli", sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  background: #5cb85c;
+  color: #fff;
+  font-weight: bold; }
+
 .woocommerce-info {
   width: 100%;
   padding: 0.9375rem;
@@ -1534,6 +1955,21 @@ p.price {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
   color: #fff; }
+  .woocommerce-info a {
+    position: relative;
+    text-shadow: -1px -1px 0 #030305, -1px -1px 0 #030305, -1px -1px 0 #030305, 1px 1px 0 #030305;
+    -webkit-transition: color .15s ease-in;
+    -o-transition: color .15s ease-in;
+    transition: color .15s ease-in;
+    background-position: 0 1.0525em;
+    background-size: 5px 5px;
+    background-repeat-y: no-repeat;
+    background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
+    background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
+    background-image: linear-gradient(to top, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
+    background-position: center bottom;
+    color: #fff;
+    text-shadow: -1px -1px 0 #5cb85c, -1px -1px 0 #5cb85c, -1px -1px 0 #5cb85c, 1px 1px 0 #5cb85c; }
 
 /**
  * Message
@@ -1559,4 +1995,94 @@ p.price {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
   background-color: #5cb85c;
+  color: #fff;
+  max-width: 73.125rem;
+  margin-left: auto;
+  margin-right: auto; }
+  .woocommerce-message a {
+    position: relative;
+    text-shadow: -1px -1px 0 #030305, -1px -1px 0 #030305, -1px -1px 0 #030305, 1px 1px 0 #030305;
+    -webkit-transition: color .15s ease-in;
+    -o-transition: color .15s ease-in;
+    transition: color .15s ease-in;
+    background-position: 0 1.0525em;
+    background-size: 5px 5px;
+    background-repeat-y: no-repeat;
+    background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
+    background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
+    background-image: linear-gradient(to top, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
+    background-position: center bottom;
+    color: #fff;
+    text-shadow: -1px -1px 0 #5cb85c, -1px -1px 0 #5cb85c, -1px -1px 0 #5cb85c, 1px 1px 0 #5cb85c; }
+
+/**
+ * Error
+ */
+.woocommerce-error {
+  background: #d9534f;
+  padding: 1.25rem;
   color: #fff; }
+  .woocommerce-error li {
+    color: #fff;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem; }
+    .woocommerce-error li strong {
+      color: #fff; }
+
+.compare-products {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-right: -0.9375rem;
+  margin-left: -0.9375rem;
+  width: 100%;
+  max-width: 100%; }
+  .compare-products__item {
+    -webkit-flex-basis: 33.3333%;
+        -ms-flex-preferred-size: 33.3333%;
+            flex-basis: 33.3333%;
+    width: 33.3333%;
+    -webkit-align-self: auto;
+        -ms-flex-item-align: auto;
+            align-self: auto;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem; }
+  .compare-products__title {
+    font-family: "Muli", sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    margin-bottom: 0.625rem;
+    padding-top: 0.15625rem;
+    padding-bottom: 0.15625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem; }
+  .compare-products__intro {
+    font-family: "Muli", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.25rem; }
+  .compare-products__image {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem; }
+  .compare-products__description > p {
+    font-family: "Muli", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.25rem; }
