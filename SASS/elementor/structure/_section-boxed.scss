@@ -65,13 +65,25 @@ $el-v-space: 7;
 }
 
 /**
- * COLUMNS gutter - only on large screen
+ * COLUMNS Vertical gutter - only on large screen
  */
 @include breakpoint-min(el) {
 .elementor-section-boxed {
 
-  // Default gap
-  .elementor-column-gap-default {
+
+  }
+}
+
+
+
+/**
+ * COLUMNS Horizontal gutter - only on large screen
+ */
+@include breakpoint-min(el) {
+  .elementor-section-boxed {
+
+    // Default gap
+    .elementor-column-gap-default {
 
       &> .elementor-row {
         @include marg($h: -$el-gutter-md);
@@ -86,10 +98,10 @@ $el-v-space: 7;
     .elementor-column-gap-wide,
     .elementor-column-gap-wider {
       &> .elementor-row {
-        @include marg($h: -$el-gutter-lg);
+        @include marg($h: -$el-gutter-md);
 
         &> .elementor-column {
-          @include pad( $h: $el-gutter-lg );
+          @include pad( $h: $el-gutter-md );
         }
       }
     }
@@ -108,7 +120,25 @@ $el-v-space: 7;
   }
 }
 
+/**
+ * Big padding on wide and wider sections
+ */
+@include breakpoint-min(lg) {
+  .elementor-section-boxed {
 
+    // Wide & Wider gap
+    .elementor-column-gap-wide,
+    .elementor-column-gap-wider {
+      &> .elementor-row {
+        @include marg($h: -$el-gutter-lg);
+
+        &> .elementor-column {
+          @include pad( $h: $el-gutter-lg );
+        }
+      }
+    }
+  }
+}
 
 
 /*========================================================================================

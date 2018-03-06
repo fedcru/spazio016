@@ -6,9 +6,9 @@
   background-color: main-colors(hero, bg);
 }
 
-.hero-title__text {
+.hero-title__content {
   max-width: max-width($text-mw);
-  margin-bottom: spacing(5);
+  margin-left: auto;
 }
 
 .hero-title__title {
@@ -18,7 +18,7 @@
 }
 
 .hero-title__subtitle {
-  @include font(h4, $mt: 1);
+  @include font(h4, $mt: 1, $mb: 5);
   color: main-colors(hero, body);
   display: block;
 }

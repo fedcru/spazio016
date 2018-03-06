@@ -362,9 +362,9 @@ html {
       margin-left: -2.5rem;
       margin-right: -2.5rem; } }
 
-.hero-title__text {
+.hero-title__content {
   max-width: 25rem;
-  margin-bottom: 1.875rem; }
+  margin-left: auto; }
 
 .hero-title__title {
   font-family: "Pagella", serif;
@@ -384,6 +384,7 @@ html {
   font-size: 1.125rem;
   line-height: 1.375rem;
   margin-top: 0.3125rem;
+  margin-bottom: 1.875rem;
   padding-top: 0.15625rem;
   padding-bottom: 0.15625rem;
   text-transform: uppercase;
@@ -545,7 +546,10 @@ html {
     padding-bottom: 0.9375rem; } }
 
 /**
- * COLUMNS gutter - only on large screen
+ * COLUMNS Vertical gutter - only on large screen
+ */
+/**
+ * COLUMNS Horizontal gutter - only on large screen
  */
 @media (min-width: 768px) {
   .elementor-section-boxed .elementor-column-gap-default > .elementor-row {
@@ -556,12 +560,12 @@ html {
       padding-left: 3.75rem; }
   .elementor-section-boxed .elementor-column-gap-wide > .elementor-row,
   .elementor-section-boxed .elementor-column-gap-wider > .elementor-row {
-    margin-right: -7.5rem;
-    margin-left: -7.5rem; }
+    margin-right: -3.75rem;
+    margin-left: -3.75rem; }
     .elementor-section-boxed .elementor-column-gap-wide > .elementor-row > .elementor-column,
     .elementor-section-boxed .elementor-column-gap-wider > .elementor-row > .elementor-column {
-      padding-right: 7.5rem;
-      padding-left: 7.5rem; }
+      padding-right: 3.75rem;
+      padding-left: 3.75rem; }
   .elementor-section-boxed .elementor-column-gap-narrow > .elementor-row,
   .elementor-section-boxed .elementor-column-gap-extended > .elementor-row {
     margin-right: -1.875rem;
@@ -570,6 +574,19 @@ html {
     .elementor-section-boxed .elementor-column-gap-extended > .elementor-row > .elementor-column {
       padding-right: 1.875rem;
       padding-left: 1.875rem; } }
+
+/**
+ * Big padding on wide and wider sections
+ */
+@media (min-width: 60em) {
+  .elementor-section-boxed .elementor-column-gap-wide > .elementor-row,
+  .elementor-section-boxed .elementor-column-gap-wider > .elementor-row {
+    margin-right: -7.5rem;
+    margin-left: -7.5rem; }
+    .elementor-section-boxed .elementor-column-gap-wide > .elementor-row > .elementor-column,
+    .elementor-section-boxed .elementor-column-gap-wider > .elementor-row > .elementor-column {
+      padding-right: 7.5rem;
+      padding-left: 7.5rem; } }
 
 /*========================================================================================
  * NESTED SECTION
@@ -2073,11 +2090,6 @@ p.price {
     padding-bottom: 0.15625rem;
     text-transform: uppercase;
     letter-spacing: 0.05rem; }
-  .compare-products__intro {
-    font-family: "Muli", sans-serif;
-    font-weight: 300;
-    font-size: 1rem;
-    line-height: 1.25rem; }
   .compare-products__image {
     margin-top: 1.25rem;
     margin-bottom: 1.25rem; }
@@ -2086,3 +2098,36 @@ p.price {
     font-weight: 300;
     font-size: 1rem;
     line-height: 1.25rem; }
+  .compare-products__attribute {
+    font-family: "Muli", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    border-bottom: 1px solid rgba(3, 3, 5, 0.1); }
+  .compare-products__attribute-name {
+    font-weight: bold;
+    text-transform: uppercase; }
+  .compare-products__add-to-cart {
+    margin-top: 0.9375rem;
+    text-align: center; }
+  .compare-products__button {
+    display: inline-block;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0.125rem;
+    text-align: center;
+    cursor: pointer;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 0.9375rem;
+    padding-bottom: 0.9375rem;
+    font-family: "Muli", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    background: #2c2b2e;
+    color: #e8e8ed;
+    border-color: #2c2b2e;
+    text-transform: uppercase; }
