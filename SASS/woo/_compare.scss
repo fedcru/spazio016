@@ -1,17 +1,16 @@
 .compare-products {
   @include flex-setup();
-  width: 100%;
-  max-width: 100%;
+  min-width: 100%;
 
   &__item {
     @include flex-child($wd: 33.3333);
   }
 
   &__title {
-    @include font(h4, $mb: 2);
+    @include font(h3, $mb: 2);
   }
 
-  &__intro {
+  &__excerpt {
   //  @include font(p);
   }
 
@@ -25,24 +24,202 @@
     }
   }
 
-  &__attribute {
+  .attributes__attribute {
+    border-bottom: 2px solid $black-10;
     @include font(p, $pb: 2, $pt: 2);
-    border-bottom: 1px solid $black-10;
+
   }
 
-  &__attribute-name {
+  .attributes__name {
     font-weight: bold;
-    text-transform: uppercase;
   }
 
   &__add-to-cart {
     margin-top: spacing(3);
     text-align: center;
+
+    .added_to_cart {
+      @include font(p, $mt: 2);
+      color: $green;
+      display: block;
+    }
   }
 
   &__button {
-    @include button(p);
+    @include button(p, $pv: 2);
     @include button-color(light, filled);
     text-transform: uppercase;
+
+    &.loading {
+      opacity: 0.2;
+    }
   }
+
+  &__prices {
+    @include font(p, $mt: 3);
+  }
+
+  &__price--barred {
+    text-decoration: line-through;
+  }
+}
+
+
+/****
+ * TOM ROGER's SPECIFIC
+ */
+
+.compare-products.first-loop {
+  @include flex-setup($gt: -6);
+  margin-top: spacing(-9) * 3.5;
+  .compare-products {
+    &__item {
+      @include flex-child(6, $wd: 100);
+      display: flex;
+      flex-direction: column;
+      max-width: max-width(sm);
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: spacing(7);
+      // padding: 0;
+      // margin-left: spacing(6);
+      //
+      // &:last-child {
+      //   margin-left: 0;
+      // }
+
+      @include breakpoint-min(lg) {
+        @include flex-child(6, $wd: 33.3333);
+        margin-bottom: 0;
+      }
+    }
+
+    &__image {
+      order: 0;
+      margin-bottom: 0;
+    }
+    &__title,
+    &__excerpt,
+    &__add-to-cart {
+      @include pad($h: 5);
+      background: #fff;
+    }
+    &__title {
+      order: 1;
+      margin-bottom: 0;
+      padding-top: spacing(5);
+    }
+
+    &__excerpt {
+      order: 2;
+      padding-bottom: spacing(6);
+      height: 100%;
+    }
+
+    &__add-to-cart {
+      order: 3;
+      margin-top: auto;
+      margin-bottom: 0;
+    }
+
+    &__button {
+      @include button-color($type: 'empty-d');
+      font-weight: bold;
+      width: 100%;
+    }
+
+    &__prices {
+      margin-bottom: spacing(4);
+    }
+  }
+}
+
+.compare-products.second-loop {
+  @include flex-setup($gt: -6);
+
+  .compare-products {
+
+    &__item {
+      @include flex-child(6, $wd: 100);
+      max-width: max-width(sm);
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: spacing(7);
+
+      @include breakpoint-min(lg) {
+        @include flex-child(6, $wd: 33.3333);
+        margin-bottom: 0;
+      }
+    }
+
+    &__title {
+      @include font(h4, $mb: 6);
+      text-align: center;
+    }
+
+    &__description {
+
+      padding-bottom: spacing(5);
+    }
+
+    &__add-to-cart {
+      margin-bottom: 0;
+      margin-top: auto;
+      border-top: 2px solid $black-10;
+      padding-top: spacing(5)
+    }
+  }
+
+  .attributes__attribute {
+    @include flex-setup(0);
+    justify-content: space-between;
+    text-align: left;
+    @include pad($h: 3);
+
+    @include breakpoint-max(lg) {
+      @include pad($h: 0);
+    }
+
+
+    &--pa_catena {
+      min-height: spacing(6.5);
+    }
+  }
+
+  .attributes__value {
+    text-align: right;
+  }
+
+  @include breakpoint-max(lg) {
+    .attributes__name,
+    .attributes__value {
+      @include flex-child(0, $wd: 50);
+    }
+  }
+
+  .attributes__name {
+    text-transform: lowercase;
+  }
+
+
+  @include breakpoint-min(lg) {
+    .attributes__value {
+      text-align: left;
+      display: block;
+      flex-basis: 100%;
+    }
+
+    .attributes__name {
+      display: none;
+
+      @at-root .compare-products.second-loop .compare-products__item:first-child .attributes__name  {
+        display: block;
+        margin-left: spacing(-8) * 1.4;
+      }
+    }
+  }
+
+
 }

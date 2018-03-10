@@ -3,6 +3,9 @@
  */
 
 .elementor-widget {
+  &:not(:last-child) {
+    margin-bottom: spacing(6)
+  }
 
   // Basic max width
   max-width: max-width($text-mw);
@@ -22,6 +25,65 @@
   }
   @at-root .widget--full {
     max-width: 100%;
+    min-width: 100%;
+  }
+
+  /**
+   * Specific margin top
+   */
+  @at-root {
+    .widget--mt-lg,
+    .widget--mt-xl {
+      margin-top: spacing(6);
+    }
+  }
+
+  @include breakpoint-min(el) {
+    @at-root .widget--mt-xl {
+      margin-top: spacing(7);
+    }
+  }
+
+  /**
+   * Specific margin bottom
+   */
+  @at-root {
+    .widget--mb-lg,
+    .widget--mb-lg:not(:last-child),
+    .widget--mb-xl,
+    .widget--mb-xl:not(:last-child) {
+      margin-bottom: spacing(6);
+    }
+  }
+
+  @include breakpoint-min(el) {
+    @at-root {
+      .widget--mb-xl,
+      .widget--mb-xl:not(:last-child) {
+        margin-bottom: spacing(7);
+      }
+    }
+  }
+
+  /**
+   * Specific vertical margin
+   */
+  @at-root {
+    .widget--mv-lg,
+    .widget--mv-lg:not(:last-child),
+    .widget--mv-xl,
+    .widget--mv-xl:not(:last-child) {
+      @include marg($v: 6);
+    }
+  }
+
+  @include breakpoint-min(el) {
+    @at-root {
+      .widget--mv-xl,
+      .widget--mv-xl:not(:last-child) {
+        @include marg($v: 7);
+      }
+    }
   }
 }
 

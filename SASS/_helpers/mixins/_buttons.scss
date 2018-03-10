@@ -108,5 +108,12 @@
     background: transparent;
     color: $white;
     border-color: $white-40;
+    border-width: 2px;
+  }
+  @if $type == 'empty-d' {
+    background: transparent;
+    color: $black-70;
+    border-color: $black-50;
+    border-width: 2px;
   }
 }

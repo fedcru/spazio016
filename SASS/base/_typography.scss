@@ -53,6 +53,38 @@ html {
   }
 }
 
+.title--special {
+  position: relative;
+  margin-bottom: spacing(7) !important;
+  margin-top: spacing(6) !important;
+
+  &:before {
+    @include font(h1);
+    content: '\e800';
+    font-family: "Theme Icons";
+    position: absolute;
+    top: -1.5em;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin-bottom: 20px;
+    color: $black-50;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 30%;
+    border-bottom: 2px solid $antracite;
+    // text-align: center;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 100%;
+    padding-top: spacing(4);
+  }
+}
 
 ::selection {
   background-color: main-colors(main, accent);

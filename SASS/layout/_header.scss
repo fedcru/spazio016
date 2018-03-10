@@ -51,6 +51,9 @@ $header_bp: 'md';
   max-width: auto;
   background-color: $antracite;
   width: 100vw;
+  box-shadow: $card-shadow--3;
+  position: relative;
+  z-index: 999999;
 }
 
 .primary-nav__inner {
@@ -63,6 +66,31 @@ $header_bp: 'md';
   .menu-item {
     @include font(p);
     text-transform: uppercase;
+
+    &:hover,
+    &.current-menu-item {
+      position: relative;
+
+      &::after {
+        // content: '\e800';
+        // font-family: "Theme Icons";
+        content: "";
+        position: absolute;
+        // width: 10px;
+        // height: 10px;
+        border-left: spacing(1) / 1.5 solid transparent;
+        border-right: spacing(1) / 1.5 solid transparent;
+        border-bottom: spacing(2) / 1.5 solid $perla;
+        z-index: 9999;
+        right: auto;
+        left: auto;
+        // bottom: -8px;
+      }
+
+      a {
+        color: $perla;
+      }
+    }
   }
 }
 

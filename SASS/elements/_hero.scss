@@ -36,3 +36,12 @@
     margin-right: auto;
   }
 }
+
+.hero-title__ctas {
+  margin-top: spacing(5);
+}
+
+.ctas__button {
+  @include button(h4);
+  @include button-color($type: empty-w);
+}
