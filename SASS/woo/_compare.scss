@@ -160,7 +160,7 @@
     }
 
     &__description {
-
+      @include pad($h: 0);
       padding-bottom: spacing(5);
     }
 
@@ -176,14 +176,14 @@
     @include flex-setup(0);
     justify-content: space-between;
     text-align: left;
-    @include pad($h: 3);
+    @include pad($h: 0);
 
     @include breakpoint-max(lg) {
       @include pad($h: 0);
     }
 
 
-    &--pa_catena {
+    &--pa_choker {
       min-height: spacing(6.5);
     }
   }
@@ -204,7 +204,7 @@
   }
 
 
-  @include breakpoint-min(lg) {
+  @include breakpoint-min(uxl) {
     .attributes__value {
       text-align: left;
       display: block;

@@ -179,7 +179,7 @@
     @if $palette == main {
       background-color: rgba( $black, $grade);
     }
-    @else if $palette == fheader {
+    @else if $palette == hero {
       background-color: rgba( main-colors($palette, overlay), $grade);
     }
     @else {

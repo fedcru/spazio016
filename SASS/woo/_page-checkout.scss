@@ -56,7 +56,12 @@
   }
 
   .select2-container--default .select2-selection--single .select2-selection__rendered {
-    line-height: 1.2;
+    line-height: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: spacing(1);
   }
 
   abbr {
@@ -308,4 +313,8 @@
   &.input-radio[name=payment_method]:checked + label::before {
     background: $black;
   }
+}
+
+.woocommerce-form__input-checkbox {
+  width: auto;
 }

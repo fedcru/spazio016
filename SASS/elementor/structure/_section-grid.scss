@@ -14,7 +14,7 @@
   // On mobile Min height for empty columns with just a bg image
   @include breakpoint-max(el) {
     .elementor-element-populated {
-      min-height: spacing(8) * 2.5;
+      min-height: 90vh;
     }
 
     // On mobile, the widget centers itself vertically

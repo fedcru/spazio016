@@ -51,6 +51,25 @@ html {
   &> p > a {
     @include link;
   }
+
+  &> ul,
+  &> ol {
+    margin-left: spacing(5);
+
+    @include marg($v: 4);
+    li {
+      // @include pad($v: 1);
+      // padding-left: spacing(3);
+      @include font(p);
+    }
+  }
+
+  &> ul {
+    list-style: disc;
+  }
+  &> ol {
+    list-style: decimal;
+  }
 }
 
 .title--special {
@@ -90,4 +109,8 @@ html {
   background-color: main-colors(main, accent);
   color: main-colors(main, bg);
   text-shadow: none;
+}
+
+p > strong {
+  font-weight: 600;
 }

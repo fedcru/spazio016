@@ -1,0 +1,10 @@
+.sidebar__widget {
+  margin-bottom: spacing(5);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.sidebar-widget__title {
+  @include font(h4);
+}

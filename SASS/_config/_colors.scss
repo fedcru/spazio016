@@ -15,6 +15,7 @@
 ///
 $white: #fff;
 $white-90: rgba($white, 0.90);
+$white-70: rgba($white, 0.70);
 $white-60: rgba($white, 0.60);
 $white-50: rgba($white, 0.50);
 $white-40: rgba($white, 0.40);
@@ -40,7 +41,7 @@ $main-colors: (
   topbar: (
     bg: $black,
     body: $perla,
-    link: $perla,
+    link: $grigio,
     accent: $perla,
     border: $perla,
   ),
@@ -75,9 +76,9 @@ $main-colors: (
     border: $black-05,
   ),
   footer: (
-    bg: $antracite,
-    body: $grigio,
-    link: $white,
+    bg: $black,
+    body: $white-70,
+    link: $white-70,
     accent: $perla,
     border: $black-05,
   ),
@@ -90,6 +91,9 @@ $palettes: (
     accent: $white,
     border: $white-40,
     overlay: $black,
+
+    button-bg: $white-90,
+    button-body: $black,
   ),
 
   dark-alt: (
@@ -98,6 +102,10 @@ $palettes: (
     accent: $white,
     border: $white-40,
     overlay: $antracite,
+    button-bg: $white-60,
+    button-body: $black,
+    // button-bg: $black,
+    // button-body: $white,
   ),
   light: (
     bg: $perla,

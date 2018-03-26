@@ -20,6 +20,7 @@
 
 // Layout
 @import 'layout/main-layout';
+@import 'layout/sidebar';
 @import 'layout/header';
 @import 'layout/footer';
 
@@ -33,16 +34,24 @@
 @import 'elements/header/header-widgets';
 @import 'elements/header/nav';
 
-// Small elements
-@import 'elements/hero';
-@import 'elements/mobile-menu';
+
 
 ////
 // Elementor
 ///
 @import 'elementor/elementor';
 
+// Small elements
+@import 'elements/mobile-menu';
+@import 'elements/forms';
+@import 'elements/widgets-sidebar';
+@import 'elements/titles/standard';
+@import 'elements/titles/hero';
+
+// BLOG
+@import 'elements/blog/loops';
+
 ////
-// Elementor
+// Woo
 ///
 @import 'woo/woo-styles';

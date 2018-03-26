@@ -1,0 +1,37 @@
+.elementor-button.elementor-size-sm {
+  @include button(h5, $pv: 1);
+  text-transform: uppercase;
+}
+.elementor-button.elementor-size-md {
+  @include button(p, $pv: 2);
+  text-transform: uppercase;
+}
+
+.elementor-button.elementor-size-lg {
+  @include button(h4, $pv: 3, $ph: 5);
+}
+
+.elementor-section .elementor-button {
+  @include button-color(light, filled)
+}
+
+@each $palette, $color in $palettes {
+  .color--#{$palette} .elementor-button {
+    @include button-color($palette, filled);
+  }
+}
+
+
+.elementor-element.elementor-button-info .elementor-button {
+  @include button-color(light, empty-d)
+}
+
+@each $palette, $color in $palettes {
+  .color--#{$palette} .elementor-element.elementor-button-info .elementor-button {
+    @include button-color($palette, empty-w);
+  }
+}
+
+.color--light .elementor-element.elementor-button-info .elementor-button {
+  @include button-color(light, empty-d);
+}

@@ -3,12 +3,23 @@
  */
 
 .elementor-widget {
+  // Basic max width
+  max-width: max-width($text-mw);
+
+  //This is because widget remain small if not enough text is in them.
+  // it can damage something...
+  width: 100%;
+
+  &.elementor-widget-video,
+  &.elementor-widget-button {
+    width: 100%;
+  }
+
   &:not(:last-child) {
     margin-bottom: spacing(6)
   }
 
-  // Basic max width
-  max-width: max-width($text-mw);
+
 
   // Margin on mobile
   @include breakpoint-max(el) {
@@ -16,6 +27,8 @@
     margin-right: auto;
   }
 
+
+@include breakpoint-min(el) {
   // Alternative max widths
   @at-root .widget--wide {
     max-width: max-width(sm);
@@ -27,6 +40,7 @@
     max-width: 100%;
     min-width: 100%;
   }
+}
 
   /**
    * Specific margin top
@@ -159,7 +173,9 @@
 }
 
 
-
+.widget--boxed {
+  padding: spacing(4) * 2;
+}
 
 
 /***
@@ -180,7 +196,7 @@
   }
 
   &> h2 {
-    @include font(h2, $mt: 6.5, $mb: 2);
+    @include font(h2, $mt: 6.5, $mb: 6);
   }
 
   &> h3 {
@@ -191,7 +207,57 @@
     @include font(h4, $mt: 5, $mb: 2);
   }
 
-  &> p {
+  &> p,
+  &> h3--p {
     @include font(p, $mt: 4, $mb: 0);
+  }
+
+  &> ul,
+  &> ol {
+    margin-left: spacing(5);
+
+    @include marg($v: 4);
+    li {
+      // @include pad($v: 1);
+      // padding-left: spacing(3);
+      @include font(p);
+    }
+  }
+
+  &> ul {
+    list-style: disc;
+  }
+  &> ol {
+    list-style: decimal;
+  }
+
+  &> .h1--h2 {
+    @include font(h2, $mt: 6.5, $mb: 6);
+  }
+  &> .h1--h3 {
+    @include font(h3, $mt: 5, $mb: 2);
+  }
+
+  &> blockquote {
+    @include font(h3);
+    position: relative;
+    padding: spacing(4);
+
+    &::before {
+      top: spacing(4) * 2;
+      left: spacing(4) * -2;
+      content: "\201C";
+      position: absolute;
+      font-family: serif;
+      font-size: 6rem;
+    }
+    &::after {
+      bottom: spacing(4) * 2;
+      right: spacing(4) * -1.5;
+      content: "\201E";
+      position: absolute;
+      font-family: serif;
+      font-size: 6rem;
+    }
   }
 }

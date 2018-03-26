@@ -1,4 +1,5 @@
 .shop_table_responsive.cart {
+
   th {
     @include font(h4);
     text-align: left;
@@ -19,6 +20,9 @@
     &.actions {
       @include pad($v: 6);
 
+      @include breakpoint-max(xs) {
+      }
+
 
       .button {
         cursor: pointer;
@@ -29,9 +33,23 @@
         float: left;
         display: inline;
 
+        @include breakpoint-max(md) {
+          float: none;
+          display: block;
+          width: 100%;
+          text-align: right;
+        }
+
         .input-text {
-          padding: spacing(1);
+          padding: spacing(2);
           max-width: max-width(xxxs);
+          border-radius: spacing(1);
+
+
+          @include breakpoint-max(md) {
+            // display: block;
+            // margin-top: spacing(2);
+          }
         }
 
         .button {
@@ -39,21 +57,57 @@
           margin-left: auto;
           max-width: max-width(xxxs);
           width: 100%;
-          margin-top: spacing(2);
+          margin-top: spacing(1);
         }
       }
       p:first-of-type {
         float: right;
         display: inline;
+
+        @include breakpoint-max(md) {
+          float: none;
+          overflow: hidden;
+          display: block;
+          text-align: right;
+          margin-right: 0;
+
+          button {
+            @include pad($h: 3);
+            margin-top: spacing(3);
+            text-align: right;
+            margin-right: 0;
+            max-width: max-width(xxxs);
+          }
+        }
       }
     }
   }
 
+  @include breakpoint-max(md) {
+    .product-remove,
+    .product-thumbnail {
+      display: none;
+    }
+
+    .input-text.qty {
+      max-width: 60px;
+    }
+  }
+  @include breakpoint-max(sm) {
+    .product-price {
+      display: none;
+    }
+  }
 }
 
 .cart_totals {
   max-width: max-width(sm);
   width: 100%;
+
+
+  @include breakpoint-max(md) {
+    margin-top: spacing(4);
+  }
 
   h2 {
     @include font(h3);

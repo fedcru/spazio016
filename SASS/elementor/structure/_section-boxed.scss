@@ -153,7 +153,7 @@ $el-v-space: 7;
     // Mobile
     @include pad($v: 0);
 
-    // Large screens
+    // Large screens //TODO - check if this should be breapoint 'el'
     @include breakpoint-min(lg) {
       @include pad($v: 4);
     }
@@ -184,6 +184,85 @@ $el-v-space: 7;
     }
     @at-root .elementor-column-gap-wider #{&} {
       @include marg($h: -$el-gutter-lg);
+    }
+  }
+}
+
+/**
+ * Special layout such as the 1/3 +2/3 with the netsted columns inside
+ */
+.elementor-col-66 .elementor-section-boxed.elementor-inner-section {
+
+  @include breakpoint-max(xl) {
+    .elementor-column {
+      @include pad($v: 2);
+    }
+
+    .elementor-col-50 {
+      width: 100%;
+
+      .elementor-widget {
+        margin-right: auto;
+      }
+    }
+
+    .elementor-col-100 {
+      .widget--wider,
+      .widget--full {
+        max-width: max-width($text-mw);
+      }
+    }
+  }
+}
+
+/**
+ * Sections with borders
+ */
+.section--border-center {
+  @include breakpoint-min(el) {
+    &.elementor-inner-section > .elementor-container {
+      padding: 0;
+    }
+    .elementor-column {
+      padding-top: spacing($el-gutter-md) / 2;
+      padding-bottom: spacing($el-gutter-md) / 2;
+
+      &:first-child {
+        border-right: 1px solid $grigio;
+      }
+      &:last-child {
+        border-left: 1px solid $grigio;
+      }
+    }
+  }
+}
+
+@each $palette, $color in $palettes {
+  .color--#{$palette} .section--border-center .elementor-column {
+    border-color: palette($palette, border);
+  }
+}
+
+.border-bottom--short {
+
+  &::after {
+    content: "";
+    // height: spacing(1);
+    border-bottom: solid 1px $grigio;
+    width: 55%;
+    left: 0;
+    top: 100%;
+    position: absolute;
+    padding-top: spacing(6.5);
+    margin-left: spacing(6.5);
+
+    @include breakpoint-max(el) {
+      padding-top: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: spacing(4);
+      width: 80%;
     }
   }
 }

@@ -107,7 +107,7 @@
   @if $type == 'empty-w' {
     background: transparent;
     color: $white;
-    border-color: $white-40;
+    border-color: $white-90;
     border-width: 2px;
   }
   @if $type == 'empty-d' {

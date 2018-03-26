@@ -72,13 +72,23 @@ $fonts: (
 
   h4: (
     fm: $ff-secondary,
-    wt: 400,
+    wt: 600,
     fs: 1.125rem,
     lh: 1.375rem,
     pt: 0.15625rem,
     pb: 0.15625rem,
     tt: uppercase,
     ls: 0.05rem,
+  ),
+
+  h5: (
+    fm: $ff-secondary,
+    wt: 600,
+    fs: 0.75rem,
+    lh: 1.25rem,
+    pt: 0.15625rem,
+    pb: 0.15625rem,
+    ls: 0,
   ),
 
   p: (
