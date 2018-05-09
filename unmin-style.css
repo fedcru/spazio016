@@ -1629,6 +1629,8 @@ p > strong {
    */ }
   .elementor-widget.elementor-widget-video, .elementor-widget.elementor-widget-button {
     width: 100%; }
+  .elementor-widget.elementor-widget-image {
+    width: auto; }
   .elementor-widget:not(:last-child) {
     margin-bottom: 2.5rem; }
   @media (max-width: 767.99px) {
