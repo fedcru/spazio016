@@ -3804,8 +3804,8 @@ p.price {
     font-weight: 300;
     font-size: 1rem;
     line-height: 1.25rem;
-    padding-top: 0.625rem;
-    padding-bottom: 0.625rem; }
+    padding-top: 0.9375rem;
+    padding-bottom: 0.9375rem; }
   .compare-products .attributes__name {
     font-weight: bold; }
   .compare-products__add-to-cart {
@@ -3867,7 +3867,10 @@ p.price {
           flex-wrap: wrap;
   margin-right: -2.5rem;
   margin-left: -2.5rem;
-  margin-top: -35rem; }
+  margin-top: -45rem; }
+  @media (min-width: 85em) {
+    .compare-products.first-loop {
+      margin-top: -35rem; } }
   .compare-products.first-loop .compare-products__item {
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
@@ -4061,6 +4064,9 @@ p.price {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
     text-align: left;
     padding-right: 0;
     padding-left: 0; }
@@ -4068,7 +4074,7 @@ p.price {
       .compare-products.second-loop .attributes__attribute {
         padding-right: 0;
         padding-left: 0; } }
-    .compare-products.second-loop .attributes__attribute--pa_choker {
+    .compare-products.second-loop .attributes__attribute--pa_choker, .compare-products.second-loop .attributes__attribute--pa_chain-lenght {
       min-height: 3.75rem; }
   .compare-products.second-loop .attributes__value {
     text-align: right; }

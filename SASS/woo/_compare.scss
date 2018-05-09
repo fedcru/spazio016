@@ -26,7 +26,7 @@
 
   .attributes__attribute {
     border-bottom: 2px solid $black-10;
-    @include font(p, $pb: 2, $pt: 2);
+    @include font(p, $pb: 3, $pt: 3);
 
   }
 
@@ -71,7 +71,12 @@
 
 .compare-products.first-loop {
   @include flex-setup($gt: -6);
-  margin-top: spacing(-9) * 3.5;
+  margin-top: spacing(-9) * 4.5;
+
+  @include breakpoint-min(xl) {
+    margin-top: spacing(-9) * 3.5;
+  }
+
   .compare-products {
     &__item {
       @include flex-child(6, $wd: 100);
@@ -175,6 +180,7 @@
   .attributes__attribute {
     @include flex-setup(0);
     justify-content: space-between;
+    flex-wrap: nowrap;
     text-align: left;
     @include pad($h: 0);
 
@@ -183,7 +189,8 @@
     }
 
 
-    &--pa_choker {
+    &--pa_choker,
+    &--pa_chain-lenght {
       min-height: spacing(6.5);
     }
   }
