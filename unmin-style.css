@@ -2843,10 +2843,10 @@ textarea {
 
 .products-loop--4 .product,
 .products.columns-4 .product {
-  -webkit-flex-basis: 25%;
-      -ms-flex-preferred-size: 25%;
-          flex-basis: 25%;
-  width: 25%;
+  -webkit-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+  width: 50%;
   -webkit-align-self: auto;
       -ms-flex-item-align: auto;
           align-self: auto;
@@ -2859,6 +2859,25 @@ textarea {
           flex-shrink: 0;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem; }
+  @media (min-width: 60em) {
+    .products-loop--4 .product,
+    .products.columns-4 .product {
+      -webkit-flex-basis: 25%;
+          -ms-flex-preferred-size: 25%;
+              flex-basis: 25%;
+      width: 25%;
+      -webkit-align-self: auto;
+          -ms-flex-item-align: auto;
+              align-self: auto;
+      -webkit-box-flex: 0;
+      -webkit-flex-grow: 0;
+          -ms-flex-positive: 0;
+              flex-grow: 0;
+      -webkit-flex-shrink: 0;
+          -ms-flex-negative: 0;
+              flex-shrink: 0;
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
 
 .products-loop--3 .product,
 .products.columns-3 .product {
@@ -2941,10 +2960,10 @@ textarea {
   margin-top: 0.625rem; }
 
 .product__images {
-  -webkit-flex-basis: 50%;
-      -ms-flex-preferred-size: 50%;
-          flex-basis: 50%;
-  width: 50%;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  width: 100%;
   -webkit-align-self: auto;
       -ms-flex-item-align: auto;
           align-self: auto;
@@ -2957,6 +2976,24 @@ textarea {
           flex-shrink: 0;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem; }
+  @media (min-width: 52.5em) {
+    .product__images {
+      -webkit-flex-basis: 50%;
+          -ms-flex-preferred-size: 50%;
+              flex-basis: 50%;
+      width: 50%;
+      -webkit-align-self: auto;
+          -ms-flex-item-align: auto;
+              align-self: auto;
+      -webkit-box-flex: 0;
+      -webkit-flex-grow: 0;
+          -ms-flex-positive: 0;
+              flex-grow: 0;
+      -webkit-flex-shrink: 0;
+          -ms-flex-negative: 0;
+              flex-shrink: 0;
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
   .product__images .woocommerce-product-gallery {
     margin-bottom: 2.5rem; }
   .product__images .woocommerce-product-gallery__trigger {
@@ -2979,10 +3016,10 @@ textarea {
  * Summary
  */
 .product__summary {
-  -webkit-flex-basis: 50%;
-      -ms-flex-preferred-size: 50%;
-          flex-basis: 50%;
-  width: 50%;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  width: 100%;
   -webkit-align-self: auto;
       -ms-flex-item-align: auto;
           align-self: auto;
@@ -2995,6 +3032,24 @@ textarea {
           flex-shrink: 0;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem; }
+  @media (min-width: 52.5em) {
+    .product__summary {
+      -webkit-flex-basis: 50%;
+          -ms-flex-preferred-size: 50%;
+              flex-basis: 50%;
+      width: 50%;
+      -webkit-align-self: auto;
+          -ms-flex-item-align: auto;
+              align-self: auto;
+      -webkit-box-flex: 0;
+      -webkit-flex-grow: 0;
+          -ms-flex-positive: 0;
+              flex-grow: 0;
+      -webkit-flex-shrink: 0;
+          -ms-flex-negative: 0;
+              flex-shrink: 0;
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
 
 .product_title {
   font-family: "Pagella", serif;
@@ -3020,9 +3075,19 @@ p.price {
 .single-product .quantity {
   max-width: 20.83333rem;
   margin-top: 2.5rem; }
+  .single-product .quantity label {
+    font-family: "Muli", sans-serif;
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    padding-top: 0.15625rem;
+    padding-bottom: 0.15625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    margin-right: 0.625rem; }
   .single-product .quantity .qty {
-    max-width: 2.5rem;
-    padding: 0.3125rem; }
+    max-width: 5rem;
+    padding: 0.625rem 0.625rem; }
     @media (min-width: 60em) {
       .single-product .quantity .qty {
         margin-left: 0.3125rem; } }
@@ -3049,14 +3114,32 @@ p.price {
   margin-bottom: 1.875rem;
   text-transform: uppercase; }
 
+/****
+ * Variation
+ */
+.variations .label {
+  font-family: "Muli", sans-serif;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  padding-top: 0.15625rem;
+  padding-bottom: 0.15625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  padding-right: 0.3125rem; }
+
+.variations select {
+  padding: 0.625rem;
+  border-color: rgba(3, 3, 5, 0.1); }
+
 /*
  * Tabs
  */
 .wc-tabs-wrapper {
-  -webkit-flex-basis: 50%;
-      -ms-flex-preferred-size: 50%;
-          flex-basis: 50%;
-  width: 50%;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  width: 100%;
   -webkit-align-self: auto;
       -ms-flex-item-align: auto;
           align-self: auto;
@@ -3068,7 +3151,29 @@ p.price {
       -ms-flex-negative: 0;
           flex-shrink: 0;
   padding-left: 0.9375rem;
-  padding-right: 0.9375rem; }
+  padding-right: 0.9375rem;
+  margin-top: 2.5rem;
+  justify-self: flex-end;
+  margin-right: 0;
+  margin-left: auto; }
+  @media (min-width: 52.5em) {
+    .wc-tabs-wrapper {
+      -webkit-flex-basis: 50%;
+          -ms-flex-preferred-size: 50%;
+              flex-basis: 50%;
+      width: 50%;
+      -webkit-align-self: auto;
+          -ms-flex-item-align: auto;
+              align-self: auto;
+      -webkit-box-flex: 0;
+      -webkit-flex-grow: 0;
+          -ms-flex-positive: 0;
+              flex-grow: 0;
+      -webkit-flex-shrink: 0;
+          -ms-flex-negative: 0;
+              flex-shrink: 0;
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
 
 .wc-tabs li {
   padding-right: 0.625rem;
@@ -3113,8 +3218,28 @@ p.price {
  * Related Products
  */
 .related.products {
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  width: 100%;
+  -webkit-align-self: auto;
+      -ms-flex-item-align: auto;
+          align-self: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
   margin-top: 7.5rem;
-  width: 100%; }
+  margin-left: auto;
+  margin-right: auto; }
+  .related.products .products {
+    width: auto;
+    max-width: none; }
   .related.products > h2 {
     font-family: "Pagella", serif;
     font-weight: 400;

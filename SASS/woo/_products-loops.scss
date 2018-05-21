@@ -36,9 +36,12 @@
 
 .products-loop--4,
 .products.columns-4 {
-
+  
   .product {
-    @include flex-child($wd: 25);
+    @include flex-child($wd: 50);
+    @include breakpoint-min(lg) {
+      @include flex-child($wd: 25);
+    }
   }
 }
 
