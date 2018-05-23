@@ -227,6 +227,8 @@
       }
     }
   }
+}
 
-
+.compare-products__item:last-child .compare-products__price-text {
+  display: none;
 }

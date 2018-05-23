@@ -47,10 +47,12 @@ html {
     html {
       font-size: 1vw; } }
 
-.typography > * {
+.typography > *,
+.woocommerce-product-details__short-description > * {
   max-width: 42.66667rem; }
 
-.typography > h1 {
+.typography > h1,
+.woocommerce-product-details__short-description > h1 {
   font-family: "Pagella", serif;
   font-weight: 400;
   font-size: 3rem;
@@ -61,7 +63,8 @@ html {
   padding-bottom: 0.15625rem;
   letter-spacing: 0.15rem; }
 
-.typography > h2 {
+.typography > h2,
+.woocommerce-product-details__short-description > h2 {
   font-family: "Pagella", serif;
   font-weight: 400;
   font-size: 2rem;
@@ -72,7 +75,8 @@ html {
   padding-bottom: 0.15625rem;
   letter-spacing: 0.1rem; }
 
-.typography > h3 {
+.typography > h3,
+.woocommerce-product-details__short-description > h3 {
   font-family: "Pagella", serif;
   font-weight: 400;
   font-size: 1.6rem;
@@ -83,7 +87,8 @@ html {
   padding-bottom: 0.15625rem;
   letter-spacing: 0.08rem; }
 
-.typography > h4 {
+.typography > h4,
+.woocommerce-product-details__short-description > h4 {
   font-family: "Muli", sans-serif;
   font-weight: 600;
   font-size: 1.125rem;
@@ -95,7 +100,8 @@ html {
   text-transform: uppercase;
   letter-spacing: 0.05rem; }
 
-.typography > p {
+.typography > p,
+.woocommerce-product-details__short-description > p {
   font-family: "Muli", sans-serif;
   font-weight: 300;
   font-size: 1rem;
@@ -103,7 +109,8 @@ html {
   margin-top: 1.25rem;
   margin-bottom: 0; }
 
-.typography > p > a {
+.typography > p > a,
+.woocommerce-product-details__short-description > p > a {
   position: relative;
   text-shadow: -1px -1px 0 #fff, -1px -1px 0 #fff, -1px -1px 0 #fff, 1px 1px 0 #fff;
   -webkit-transition: color .15s ease-in;
@@ -116,24 +123,31 @@ html {
   background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #2c2b2e 1.5px, #2c2b2e 2px, transparent 2px);
   background-image: linear-gradient(to top, transparent, transparent 1.5px, #2c2b2e 1.5px, #2c2b2e 2px, transparent 2px);
   background-position: center bottom;
-  color: #2c2b2e; }
+  color: #2c2b2e;
+  font-weight: bold; }
 
 .typography > ul,
-.typography > ol {
+.typography > ol,
+.woocommerce-product-details__short-description > ul,
+.woocommerce-product-details__short-description > ol {
   margin-left: 1.875rem;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem; }
   .typography > ul li,
-  .typography > ol li {
+  .typography > ol li,
+  .woocommerce-product-details__short-description > ul li,
+  .woocommerce-product-details__short-description > ol li {
     font-family: "Muli", sans-serif;
     font-weight: 300;
     font-size: 1rem;
     line-height: 1.25rem; }
 
-.typography > ul {
+.typography > ul,
+.woocommerce-product-details__short-description > ul {
   list-style: disc; }
 
-.typography > ol {
+.typography > ol,
+.woocommerce-product-details__short-description > ol {
   list-style: decimal; }
 
 .title--special {
@@ -1236,7 +1250,8 @@ p > strong {
     background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #2c2b2e 1.5px, #2c2b2e 2px, transparent 2px);
     background-image: linear-gradient(to top, transparent, transparent 1.5px, #2c2b2e 1.5px, #2c2b2e 2px, transparent 2px);
     background-position: center bottom;
-    color: #2c2b2e; }
+    color: #2c2b2e;
+    font-weight: bold; }
   .elementor-section .font--color-light {
     color: #a39dab; }
   .elementor-section blockquote,
@@ -2071,7 +2086,7 @@ p > strong {
   width: 20px;
   background: rgba(3, 3, 5, 0.1); }
 
-.mobile-nav {
+.mobile-nav__menu {
   padding-right: 1.25rem;
   padding-left: 1.25rem;
   padding-top: 2.5rem;
@@ -2084,10 +2099,10 @@ p > strong {
   max-height: 100vh;
   overflow-x: hidden; }
 
-.modal .mobile-nav {
+.modal .mobile-nav__menu {
   position: absolute; }
 
-.modal--show .mobile-nav {
+.modal--show .mobile-nav__menu {
   position: fixed; }
 
 .mobile-nav__inner {
@@ -2142,10 +2157,10 @@ p > strong {
 
 .mobile-nav__toggler--close {
   color: #fff;
-  top: 2vw;
-  right: 2vw;
+  top: 3vw;
+  right: 3vw;
   z-index: 99;
-  position: fixed; }
+  position: absolute; }
   .modal .mobile-nav__toggler--close {
     display: none; }
   .modal--show .mobile-nav__toggler--close {
@@ -4236,6 +4251,9 @@ p.price {
       .compare-products.second-loop .compare-products__item:first-child .attributes__name {
         display: block;
         margin-left: -10.5rem; } }
+
+.compare-products__item:last-child .compare-products__price-text {
+  display: none; }
 
 .small_cart_widget {
   font-family: "Muli", sans-serif;

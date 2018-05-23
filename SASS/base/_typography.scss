@@ -24,7 +24,8 @@ html {
   }
 }
 
-.typography {
+.typography,
+.woocommerce-product-details__short-description {
   & > * {
     max-width: max-width(md);
   }
@@ -50,6 +51,7 @@ html {
 
   &> p > a {
     @include link;
+    font-weight: bold;
   }
 
   &> ul,

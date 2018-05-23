@@ -17,6 +17,7 @@
 
   .elementor-text-editor > p > a {
     @include link();
+    font-weight: bold;
   }
 
   .font--color-light {
