@@ -187,7 +187,9 @@
 /**
  * Stripe
  */
-
+.woocommerce-checkout #payment .payment_method_stripe label[for=payment_method_stripe], #add_payment_method #payment .payment_method_stripe label[for=payment_method_stripe] {
+  padding-left: 0;
+}
 .payment_method_stripe{
   .stripe-pf {
     display: none;
