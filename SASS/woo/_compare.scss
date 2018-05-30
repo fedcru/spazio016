@@ -1,0 +1,234 @@
+.compare-products {
+  @include flex-setup();
+  min-width: 100%;
+
+  &__item {
+    @include flex-child($wd: 33.3333);
+  }
+
+  &__title {
+    @include font(h3, $mb: 2);
+  }
+
+  &__excerpt {
+  //  @include font(p);
+  }
+
+  &__image {
+    @include marg($v: 4);
+  }
+
+  &__description {
+    &>p {
+      @include font(p) ;
+    }
+  }
+
+  .attributes__attribute {
+    border-bottom: 2px solid $black-10;
+    @include font(p, $pb: 3, $pt: 3);
+
+  }
+
+  .attributes__name {
+    font-weight: bold;
+  }
+
+  &__add-to-cart {
+    margin-top: spacing(3);
+    text-align: center;
+
+    .added_to_cart {
+      @include font(p, $mt: 2);
+      color: $green;
+      display: block;
+    }
+  }
+
+  &__button {
+    @include button(p, $pv: 2);
+    @include button-color(light, filled);
+    text-transform: uppercase;
+
+    &.loading {
+      opacity: 0.2;
+    }
+  }
+
+  &__prices {
+    @include font(p, $mt: 3);
+  }
+
+  &__price--barred {
+    text-decoration: line-through;
+  }
+}
+
+
+/****
+ * TOM ROGER's SPECIFIC
+ */
+
+.compare-products.first-loop {
+  @include flex-setup($gt: -6);
+  margin-top: spacing(-9) * 4.5;
+
+  @include breakpoint-min(xl) {
+    margin-top: spacing(-9) * 3.5;
+  }
+
+  .compare-products {
+    &__item {
+      @include flex-child(6, $wd: 100);
+      display: flex;
+      flex-direction: column;
+      max-width: max-width(sm);
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: spacing(7);
+      // padding: 0;
+      // margin-left: spacing(6);
+      //
+      // &:last-child {
+      //   margin-left: 0;
+      // }
+
+      @include breakpoint-min(lg) {
+        @include flex-child(6, $wd: 33.3333);
+        margin-bottom: 0;
+      }
+    }
+
+    &__image {
+      order: 0;
+      margin-bottom: 0;
+    }
+    &__title,
+    &__excerpt,
+    &__add-to-cart {
+      @include pad($h: 5);
+      background: #fff;
+    }
+    &__title {
+      order: 1;
+      margin-bottom: 0;
+      padding-top: spacing(5);
+    }
+
+    &__excerpt {
+      order: 2;
+      padding-bottom: spacing(6);
+      height: 100%;
+    }
+
+    &__add-to-cart {
+      order: 3;
+      margin-top: auto;
+      margin-bottom: 0;
+    }
+
+    &__button {
+      @include button-color($type: 'empty-d');
+      font-weight: bold;
+      width: 100%;
+    }
+
+    &__prices {
+      margin-bottom: spacing(4);
+    }
+  }
+}
+
+.compare-products.second-loop {
+  @include flex-setup($gt: -6);
+
+  .compare-products {
+
+    &__item {
+      @include flex-child(6, $wd: 100);
+      max-width: max-width(sm);
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: spacing(7);
+
+      @include breakpoint-min(lg) {
+        @include flex-child(6, $wd: 33.3333);
+        margin-bottom: 0;
+      }
+    }
+
+    &__title {
+      @include font(h4, $mb: 6);
+      text-align: center;
+    }
+
+    &__description {
+      @include pad($h: 0);
+      padding-bottom: spacing(5);
+    }
+
+    &__add-to-cart {
+      margin-bottom: 0;
+      margin-top: auto;
+      border-top: 2px solid $black-10;
+      padding-top: spacing(5)
+    }
+  }
+
+  .attributes__attribute {
+    @include flex-setup(0);
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    text-align: left;
+    @include pad($h: 0);
+
+    @include breakpoint-max(lg) {
+      @include pad($h: 0);
+    }
+
+
+    &--pa_choker,
+    &--pa_chain-lenght {
+      min-height: spacing(6.5);
+    }
+  }
+
+  .attributes__value {
+    text-align: right;
+  }
+
+  @include breakpoint-max(lg) {
+    .attributes__name,
+    .attributes__value {
+      @include flex-child(0, $wd: 50);
+    }
+  }
+
+  .attributes__name {
+    text-transform: lowercase;
+  }
+
+
+  @include breakpoint-min(uxl) {
+    .attributes__value {
+      text-align: left;
+      display: block;
+      flex-basis: 100%;
+    }
+
+    .attributes__name {
+      display: none;
+
+      @at-root .compare-products.second-loop .compare-products__item:first-child .attributes__name  {
+        display: block;
+        margin-left: spacing(-8) * 1.4;
+      }
+    }
+  }
+}
+
+.compare-products__item:last-child .compare-products__price-text {
+  display: none;
+}

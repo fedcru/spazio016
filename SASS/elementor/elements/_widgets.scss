@@ -1,0 +1,267 @@
+/**
+ * Widget Max Widths
+ */
+
+.elementor-widget {
+  // Basic max width
+  max-width: max-width($text-mw);
+
+  //This is because widget remain small if not enough text is in them.
+  // it can damage something...
+  width: 100%;
+
+  &.elementor-widget-video,
+  &.elementor-widget-button {
+    width: 100%;
+  }
+
+  &.elementor-widget-image {
+    width: auto;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: spacing(6)
+  }
+
+
+
+  // Margin on mobile
+  @include breakpoint-max(el) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+@include breakpoint-min(el) {
+  // Alternative max widths
+  @at-root .widget--wide {
+    max-width: max-width(sm);
+  }
+  @at-root .widget--wider {
+    max-width: max-width(md);
+  }
+  @at-root .widget--full {
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
+
+  /**
+   * Specific margin top
+   */
+  @at-root {
+    .widget--mt-lg,
+    .widget--mt-xl {
+      margin-top: spacing(6);
+    }
+  }
+
+  @include breakpoint-min(el) {
+    @at-root .widget--mt-xl {
+      margin-top: spacing(7);
+    }
+  }
+
+  /**
+   * Specific margin bottom
+   */
+  @at-root {
+    .widget--mb-lg,
+    .widget--mb-lg:not(:last-child),
+    .widget--mb-xl,
+    .widget--mb-xl:not(:last-child) {
+      margin-bottom: spacing(6);
+    }
+  }
+
+  @include breakpoint-min(el) {
+    @at-root {
+      .widget--mb-xl,
+      .widget--mb-xl:not(:last-child) {
+        margin-bottom: spacing(7);
+      }
+    }
+  }
+
+  /**
+   * Specific vertical margin
+   */
+  @at-root {
+    .widget--mv-lg,
+    .widget--mv-lg:not(:last-child),
+    .widget--mv-xl,
+    .widget--mv-xl:not(:last-child) {
+      @include marg($v: 6);
+    }
+  }
+
+  @include breakpoint-min(el) {
+    @at-root {
+      .widget--mv-xl,
+      .widget--mv-xl:not(:last-child) {
+        @include marg($v: 7);
+      }
+    }
+  }
+}
+
+
+/**
+ * Widget lateral margins
+ */
+@include breakpoint-min(el) {
+
+  // Declare flexbox on the widget wrapper
+  .elementor-widget-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // default state of the widget
+  .elementor-widget {
+    align-self: center;
+  }
+
+
+  ///
+  // Normal Sections
+  ///
+
+  // First column
+  @at-root .elementor-row .elementor-column:first-child {
+    .elementor-widget {
+      align-self: flex-start;
+    }
+  }
+
+  // Last column
+  @at-root .elementor-row .elementor-column:last-child {
+    .elementor-widget {
+      align-self: flex-end;
+    }
+  }
+
+  // Center column
+  @at-root .elementor-row .elementor-column:first-child:last-child .elementor-widget {
+    align-self: center;
+  }
+
+
+  ///
+  // Nested Sections
+  ///
+  .elementor-inner-section .elementor-row .elementor-column:first-child .elementor-widget {
+    align-self: flex-start;
+  }
+
+  .elementor-inner-section .elementor-row .elementor-column:last-child .elementor-widget {
+    align-self: flex-end;
+  }
+
+  .elementor-inner-section .elementor-row .elementor-column:first-child:last-child .elementor-widget {
+    align-self: center;
+  }
+
+
+  ///
+  // Collapsed widgets
+  ///
+  .widget--right {
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .widget--left {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+
+.widget--boxed {
+  padding: spacing(4) * 2;
+}
+
+
+/***
+ * Text Widget
+ */
+.elementor-text-editor {
+  & > * {
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &> h1 {
+    @include font(h1, $mt: 6, $mb: 4);
+  }
+
+  &> h2 {
+    @include font(h2, $mt: 6.5, $mb: 6);
+  }
+
+  &> h3 {
+    @include font(h3, $mt: 5, $mb: 2);
+  }
+
+  &> h4 {
+    @include font(h4, $mt: 5, $mb: 2);
+  }
+
+  &> p,
+  &> h3--p {
+    @include font(p, $mt: 4, $mb: 0);
+  }
+
+  &> ul,
+  &> ol {
+    margin-left: spacing(5);
+
+    @include marg($v: 4);
+    li {
+      // @include pad($v: 1);
+      // padding-left: spacing(3);
+      @include font(p);
+    }
+  }
+
+  &> ul {
+    list-style: disc;
+  }
+  &> ol {
+    list-style: decimal;
+  }
+
+  &> .h1--h2 {
+    @include font(h2, $mt: 6.5, $mb: 6);
+  }
+  &> .h1--h3 {
+    @include font(h3, $mt: 5, $mb: 2);
+  }
+
+  &> blockquote {
+    @include font(h3);
+    position: relative;
+    padding: spacing(4);
+
+    &::before {
+      top: spacing(4) * 2;
+      left: spacing(4) * -2;
+      content: "\201C";
+      position: absolute;
+      font-family: serif;
+      font-size: 6rem;
+    }
+    &::after {
+      bottom: spacing(4) * 2;
+      right: spacing(4) * -1.5;
+      content: "\201E";
+      position: absolute;
+      font-family: serif;
+      font-size: 6rem;
+    }
+  }
+}

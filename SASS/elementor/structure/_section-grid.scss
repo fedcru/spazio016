@@ -1,0 +1,130 @@
+/**
+ * Standard column gutter and layout
+ */
+.elementor-section-full_width {
+
+  ///
+  // Standard gutter
+  ///
+  .elementor-row > .elementor-column .elementor-column-wrap {
+    @include pad( $v: $el-gutter-md, $h: $el-gutter-sm );
+  }
+
+
+  // On mobile Min height for empty columns with just a bg image
+  @include breakpoint-max(el) {
+    .column--mobile-height .elementor-element-populated {
+      padding-bottom: 100% !important;
+    }
+
+    // On mobile, the widget centers itself vertically
+    // to accomodate a possible extended min height
+    .elementor-widget-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}
+
+
+
+/**
+ * COLUMNS gutter - only on large screen
+ */
+@include breakpoint-min(el) {
+  .elementor-section-full_width {
+
+    // Default gap
+    .elementor-row > .elementor-column .elementor-column-wrap {
+      @include pad( $h: $el-gutter-md );
+      @include pad( $v: $el-gutter-lg );
+    }
+
+    // A slightly smaller gap
+    .elementor-column-gap-narrow,
+    .elementor-column-gap-extended {
+      &> .elementor-row > .elementor-column .elementor-column-wrap {
+        @include pad( $v: $el-gutter-md );
+        @include pad( $h: $el-gutter-sm );
+      }
+    }
+
+
+    /**
+     * Padding resets before the columns drop
+     * On smaller columns (such as thirds and) the padding become smaller. but not on the half * column
+     */
+    @include breakpoint-bet(xl, el) {
+    .elementor-section-full_width .elementor-row > .elementor-column:not(.elementor-col-50) .elementor-column-wrap {
+        @include pad( $v: $el-gutter-md );
+        @include pad( $h: $el-gutter-sm );
+      }
+
+      // The fourhts become halfes
+      .elementor-section-full_width .elementor-column.elementor-column.elementor-col-25,
+      .elementor-section-full_width .elementor-row .elementor-column[data-col="25"] {
+        width: 50%;
+        flex-basis: 50%;
+      }
+    }
+
+
+    /**
+     * Widths resets for thirds just before the column drops
+     * the first col becomes a 100%
+     * the last 2 become a 50%
+     */
+    @include breakpoint-bet(md, el) {
+      .elementor-section-full_width {
+
+        .elementor-column.elementor-column.elementor-col-33,
+        .elementor-section-full_width .elementor-row .elementor-column[data-col="33"] {
+          width: 50%;
+          flex-basis: 50%;
+        }
+
+        .elementor-column.elementor-column.elementor-col-33:first-child,
+        .elementor-section-full_width .elementor-row .elementor-column[data-col="33"]:first-child {
+          width: 100%;
+          flex-basis: 100%;
+        }
+      }
+    }
+
+
+
+
+    ///
+    // Horizontal align of widgets
+    // This has to be very specific so that it resets the more "generic" option.
+    // We can see if we want to move this rules inside the widgets.scss file
+    // and make a more specific
+    ///
+
+    // First column
+    .elementor-row .elementor-column {
+      .elementor-widget {
+        align-self: center;
+      }
+    }
+
+    // First column
+    .elementor-row .elementor-column:first-child {
+      .elementor-widget {
+        align-self: center;
+      }
+    }
+    // Last column
+    .elementor-row .elementor-column:last-child {
+      .elementor-widget {
+        align-self: center;
+      }
+    }
+
+    // Center column
+    .elementor-row .elementor-column:first-child:last-child .elementor-widget {
+      align-self: center;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.woocommerce-thankyou-order-received {
+  @include font(p);
+  @include padding($c: 4);
+  background: rgba($green, 0.3);
+}
+
+.woocommerce-thankyou-order-details {
+  @include marg($v: 4);
+
+  li {
+    @include font(p);
+    padding-bottom: spacing(1);
+  }
+}

@@ -1,0 +1,266 @@
+.woocommerce-account .woocommerce > h2:first-of-type {
+  @include font(h2);
+  @include max-width(narrow);
+  @include marg($v: 5);
+  text-align: center;
+}
+
+/*********************************************************************************************
+  *
+  *                LOGGED OUT
+  *
+  *******************************************************************************************/
+
+/**
+ * Login Form
+ **/
+.woocommerce-form-login {
+  @include max-width(narrow);
+
+  // this is the button container
+  .form-row {
+    // text-align: center;
+  }
+  .button {
+    @include button(p, $pv: 2);
+    @include button-color(light);
+  }
+
+  // standard login ROW
+  .woocommerce-form-row {
+    margin-bottom: spacing(5);
+    text-align: left;
+
+    label {
+      @include font(p);
+      display: inline-block;
+      margin-bottom: spacing(2);
+    }
+  }
+
+
+  // REMEMBER ME
+  .woocommerce-form__label-for-checkbox {
+    text-align: left;
+    display: block;
+    margin-top: spacing(0);
+
+    .woocommerce-form__input-checkbox {
+      width: auto;
+      margin-right: spacing(1);
+    }
+  }
+
+  .woocommerce-LostPassword {
+    margin-top: spacing(6);
+  }
+
+}
+
+
+
+/*********************************************************************************************
+  *
+  *                LOGGED IN
+  *
+  *******************************************************************************************/
+.woocommerce-MyAccount-navigation {
+  width: 100%;
+  padding-bottom: spacing(4);
+
+  &> ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @include breakpoint-min(md) {
+    padding: 0;
+    width: 30%;
+    min-width: 150px;
+    max-width: 200px;
+    display: inline;
+    float: left;
+    border-right: 1px solid $black-10;
+
+    &> ul {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+
+
+
+  .woocommerce-MyAccount-navigation-link {
+    @include padding($c: 2);
+    @include font(p);
+
+    a {
+      border-bottom: 2px solid transparent;
+
+      &:hover {
+        border-color: $black-40;
+      }
+    }
+
+
+    &.is-active {
+      font-weight: bold;
+
+      a {
+        border-color: $black-90;
+      }
+
+      @include breakpoint-min(md) {
+        &::after {
+          position: absolute;
+          content:" <";
+          content:"\02190";
+          padding-left: spacing(1);
+        }
+      }
+    }
+  }
+}
+
+.woocommerce-MyAccount-content {
+  @include padding($c: 2);
+  border-top: 1px solid $black-10;
+
+  @include breakpoint-min(md) {
+    border: 0;
+    width: 70%;
+    display: inline;
+    float: left;
+    @include padding($c: 4);
+  }
+
+  p {
+    @include font(p, $mt: 4);
+    max-width: max-width(md);
+
+    a {
+      @include link();
+    }
+  }
+}
+
+
+/***
+ * ORDINI
+ */
+.woocommerce-orders-table {
+  thead {
+    background: $black-90;
+
+    th {
+      padding: spacing(2);
+      span {
+        color: $white;
+      }
+    }
+  }
+
+  .woocommerce-orders-table__header-order-total,
+  .woocommerce-orders-table__cell-order-total {
+    @include breakpoint-max(xs) {
+      display: none;
+    }
+  }
+
+  td {
+    padding: spacing(2) spacing(1);
+    border-bottom: 1px solid $black-10;
+
+    a {
+      @include link();
+      font-weight: bold;
+    }
+
+    p,
+    br {
+      display: none;
+    }
+  }
+}
+
+
+/**************************************************************************************************
+ *
+ *  Dettagli ordine
+ *
+ **************************************************************************************************/
+.woocommerce-order-details__title {
+  @include font(h2, $mt: 6, $mb: 4 );
+  text-align: center;
+}
+.woocommerce-table--order-details {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: spacing(5);
+
+  thead {
+    background: $black-90;
+
+    th {
+      color: $white;
+      padding: spacing(2);
+    }
+  }
+
+  td {
+    padding: spacing(2);
+    border-bottom: 1px solid $black-10;
+  }
+
+  tr th {
+    text-align: left;
+    padding: spacing(2);
+  }
+}
+
+.woocommerce-customer-details {
+  .woocommerce-column__title {
+    @include font(h4, $mb: 2);
+  }
+
+  address {
+    @include font(p);
+  }
+}
+
+/**
+ * Indirizzi
+ */
+.woocommerce-Address-title h3 {
+  @include font(h4, $mt: 6, $mb: 2);
+}
+.woocommerce-Address address {
+  @include font(p, $mt: 2);
+}
+
+
+/**************************************************************************************************
+ *
+ *  Modifica Indirizzi
+ *
+ **************************************************************************************************/
+.woocommerce-address-fields {
+  button {
+    @include button(p, $pv: 2);
+    @include button-color(light);
+  }
+}
+
+
+.woocommerce-EditAccountForm.edit-account {
+  fieldset {
+    margin-top: spacing(6)
+  }
+
+  .button {
+    @include button(p, $pv: 2);
+    @include button-color(light);
+  }
+}

@@ -1,0 +1,119 @@
+/**
+ *
+ */
+
+input,
+textarea {
+  @include font(p, $pt: 2, $pb: 2);
+  width: 100%;
+}
+
+
+.gform_fields {
+  @include flex-setup(-2);
+}
+
+.gfield {
+  @include flex-child(2, $wd: 100);
+  margin-bottom: spacing(5);
+}
+
+@include breakpoint-min(sm) {
+  .gf_left_half,
+  .gf_right_half {
+    @include flex-child(2, $wd: 50);
+  }
+}
+
+/**
+ * Labels
+ */
+.gfield_label {
+  @include font(h5);
+  font-style: italic;
+}
+
+.gfield_description {
+  @include font(h5);
+}
+
+
+/**
+ * Complex Fields
+ */
+.field_sublabel_above > .gfield_label_before_complex {
+ display: none;
+}
+
+.gf_name_has_2 {
+  @include flex-setup(-2);
+}
+
+.name_first,
+.name_last {
+  @include flex-child(2, $wd: 50);
+  label {
+    @include font(h5);
+    display: block;
+    font-style: italic;
+  }
+}
+
+
+/**
+ * Footer
+ */
+.gform_footer {
+  width: 100%;
+  text-align: right;
+}
+
+.gform_button {
+  @include button(h4);
+  @include button-color(light, filled);
+  cursor: pointer;
+}
+
+.gform_ajax_spinner {
+  max-width: 25px;
+  width: 25px;
+}
+
+
+/**
+ * Errors
+ */
+.validation_error {
+  padding: 0;
+  color: $red;
+  margin-bottom: spacing(4);
+}
+
+.validation_message {
+  color: $red;
+  font-weight: bolder !important;
+}
+/**
+ * Colors
+ */
+input,
+textarea {
+  border: 2px solid $black-10;
+  @include pad($h: 2);
+
+  &:focus {
+    border-color: $black-30;
+    outline: none;
+  }
+}
+
+.color--dark {
+  input,
+  textarea{
+    background: $antracite;
+  }
+  .gform_button {
+    @include button-color(dark, empty-w);
+    cursor: pointer;
+  }
+}

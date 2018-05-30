@@ -2,22 +2,25 @@
 
 @import 'wp_header';
 // FUNCTIONS & PROJECT CONFIGURATION
-@import 'helpers/functions';
-@import 'config/typography';
-@import 'config/colors';
-@import 'config/layout';
-@import 'helpers/mixins';
+@import '_helpers/functions';
+@import '_config/typography';
+@import '_config/colors';
+@import '_config/layout';
+@import '_helpers/mixins';
 
 
 @import 'normalize';
 
 
 // Base
+@import 'base/fonts';
 @import 'base/typography';
+@import 'base/icons';
 
 
 // Layout
 @import 'layout/main-layout';
+@import 'layout/sidebar';
 @import 'layout/header';
 @import 'layout/footer';
 
@@ -31,5 +34,24 @@
 @import 'elements/header/header-widgets';
 @import 'elements/header/nav';
 
+
+
+////
+// Elementor
+///
+@import 'elementor/elementor';
+
 // Small elements
-@import 'elements/hero';
+@import 'elements/mobile-menu';
+@import 'elements/forms';
+@import 'elements/widgets-sidebar';
+@import 'elements/titles/standard';
+@import 'elements/titles/hero';
+
+// BLOG
+@import 'elements/blog/loops';
+
+////
+// Woo
+///
+@import 'woo/woo-styles';

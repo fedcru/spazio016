@@ -1,0 +1,93 @@
+/********************************
+* WC archive
+************************************/
+.before-shop-loop {
+  @include flex-child($wd: 100);
+  margin-bottom: spacing(6);
+}
+
+.products-loop,
+.products {
+  @include flex-setup(); //TODO - move in child
+}
+
+.products-loop--full {
+  @include flex-child($wd: 100);
+}
+
+.products-loop--has-sidebar {
+  @include flex-child($wd: 70);
+}
+
+.shop-archive__sidebar-container {
+  @include flex-child($wd: 30);
+}
+
+.products {
+  width: 100%;
+}
+
+.products-loop,
+.products {
+  .product {
+    text-align: center;
+  }
+}
+
+.products-loop--4,
+.products.columns-4 {
+  
+  .product {
+    @include flex-child($wd: 50);
+    @include breakpoint-min(lg) {
+      @include flex-child($wd: 25);
+    }
+  }
+}
+
+.products-loop--3,
+.products.columns-3 {
+
+  .product {
+    @include flex-child($wd: 33.333);
+  }
+}
+
+.products-loop,
+.products  {
+  .onsale {
+    position: absolute;
+    z-index: 99;
+    background: main-colors(main, body);
+    color: main-colors(main, bg);
+    padding: spacing(2);
+  }
+  .entry-title,
+  .woocommerce-loop-product__title {
+    @include font(p, $mt: 4, $mb: 2);
+    font-weight: bold;
+  }
+
+  .price {
+    display: block;
+    @include font(p);
+  }
+
+  .button {
+    @include button(p, $pv: 1);
+    @include button-color(light, filled);
+    margin-top: spacing(4);
+    width: auto;
+    @include marg($h: auto);
+
+    &.loading {
+      opacity: 0.2;
+    }
+  }
+
+  .added_to_cart {
+    color: $green;
+    display: block;
+    margin-top: spacing(2);
+  }
+}

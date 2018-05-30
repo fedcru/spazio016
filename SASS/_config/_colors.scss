@@ -15,10 +15,11 @@
 ///
 $white: #fff;
 $white-90: rgba($white, 0.90);
+$white-70: rgba($white, 0.70);
 $white-60: rgba($white, 0.60);
 $white-50: rgba($white, 0.50);
 $white-40: rgba($white, 0.40);
-$black: #000;
+$black: #030305;
 $black-90: rgba($black, 0.85);
 $black-70: rgba($black, 0.7);
 $black-50: rgba($black, 0.5);
@@ -28,59 +29,98 @@ $black-10: rgba($black, 0.10);
 $black-05: rgba($black, 0.05);
 $red: red;
 
+$green: #5cb85c;
+$yello: #f0ad4e;
+$red: #d9534f;
+
+$antracite: #2c2b2e;
+$grigio: #a39dab;
+$perla: #e8e8ed;
 
 $main-colors: (
   topbar: (
-    bg: $black-05,
-    body: $black-50,
-    link: $black-90,
-    accent: $red,
-    border: $black-10,
+    bg: $black,
+    body: $perla,
+    link: $grigio,
+    accent: $perla,
+    border: $perla,
   ),
   header: (
-    bg: $white,
-    body: $black-70,
-    link: $black-90,
-    accent: $red,
-    border: $black-05,
+    bg: $black,
+    body: $white,
+    link: $white,
+    accent: $white,
+    border: $perla,
   ),
   hero: (
-    bg: $black-90,
-    body: $white-90,
-    link: $white-90,
-    accent: $red,
-    border: $black-05,
+    bg: $black,
+    body: $white,
+    link: $white,
+    accent: $perla,
+    border: $perla,
     overlay: $black,
   ),
   main: (
     bg: $white,
-    body: $black-90,
-    link: $black-90,
-    accent: $red,
+    body: $antracite,
+    link: $antracite,
+    accent: $antracite,
     border: $black-05,
     overlay: $black,
   ),
   sidebar: (
-    bg: $black-10,
-    body: $black,
-    link: $black,
-    accent: $red,
+    bg: $white,
+    body: $antracite,
+    link: $antracite,
+    accent: $antracite,
     border: $black-05,
   ),
   footer: (
     bg: $black,
-    body: $white-40,
-    link: $white-40,
-    accent: $red,
+    body: $white-70,
+    link: $white-70,
+    accent: $perla,
     border: $black-05,
   ),
 );
 
 $palettes: (
+  dark: (
+    bg: $black,
+    body: $white,
+    accent: $white,
+    border: $white-40,
+    overlay: $black,
 
+    button-bg: $white-90,
+    button-body: $black,
+  ),
+
+  dark-alt: (
+    bg: $antracite,
+    body: $white,
+    accent: $white,
+    border: $white-40,
+    overlay: $antracite,
+    button-bg: $white-60,
+    button-body: $black,
+    // button-bg: $black,
+    // button-body: $white,
+  ),
+  light: (
+    bg: $perla,
+    body: $black,
+    accent: $black,
+    border: $black-10,
+    overlay: $perla,
+
+    button-bg: $antracite,
+    button-body: $perla,
+  ),
 );
 
 
 $card-shadow--1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 $card-shadow--2: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+$card-shadow--3: 0 3px 6px rgba(0,0,0,0.32), 0 3px 6px rgba(0,0,0,0.46);
 $card-shadow--hover: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);

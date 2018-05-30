@@ -1,5 +1,5 @@
 body {
-  font-family: $ff-primary;
+  font-family: $ff-secondary;
   text-rendering: optimizeLegibility;
   text-rendering: geometricPrecision;
 }
@@ -9,59 +9,110 @@ body {
  * HTML base font size: calculated with between() function
  */
 html {
-  font-size: between(12,13, 320,480, "vw");
+  font-size: between(14,16.5, 320,2000, "vw");
 
-  @include breakpoint-min(sm) {
-    font-size: between(13,15, 480,1360, "vw");
-  }
+  // @include breakpoint-min(sm) {
+  //   font-size: between(12,14, 480,1360, "vw");
+  // }
 
-  @include breakpoint-min(xl) {
-    font-size: between(15,17, 1360,2000, "vw");
-  }
+  // @include breakpoint-min(xl) {
+  //   font-size: between(14,16.5, 1360,2000, "vw");
+  // }
 
   @include breakpoint-min(uxl) {
-    font-size: 1.1vw;
+    font-size: 1vw;
   }
 }
 
-.typography {
-
+.typography,
+.woocommerce-product-details__short-description {
+  & > * {
+    max-width: max-width(md);
+  }
   &> h1 {
     @include font(h1, $mt: 6, $mb: 4);
   }
 
   &> h2 {
-    @include font(h2, $mt: 6, $mb: 2);
+    @include font(h2, $mt: 6.5, $mb: 2);
   }
 
   &> h3 {
-    @include font(h3, $mt: 6, $mb: 2);
+    @include font(h3, $mt: 5, $mb: 2);
   }
 
   &> h4 {
-    @include font(h4, $mt: 6, $mb: 2);
+    @include font(h4, $mt: 5, $mb: 2);
   }
 
   &> p {
-    @include font(p, $mt: 2, $mb: 0);
+    @include font(p, $mt: 4, $mb: 0);
   }
 
-  a {
-    position: relative;
-    text-shadow: -1px -1px 0 #fff, -1px -1px 0 #fff, -1px -1px 0 #fff, 1px 1px 0 #fff;
-    transition: color .15s ease-in;
-    background-position: 0 1.0525em;
-    background-size: 5px 5px;
-    background-repeat-y: no-repeat;
-    background-image: linear-gradient(to top, transparent, transparent 1.5px, main-colors(main, accent) 2.5px, main-colors(main, accent) 2px, transparent 2px);
-    background-position: center bottom;
+  &> p > a {
+    @include link;
+    font-weight: bold;
+  }
 
+  &> ul,
+  &> ol {
+    margin-left: spacing(5);
+
+    @include marg($v: 4);
+    li {
+      // @include pad($v: 1);
+      // padding-left: spacing(3);
+      @include font(p);
+    }
+  }
+
+  &> ul {
+    list-style: disc;
+  }
+  &> ol {
+    list-style: decimal;
   }
 }
 
+.title--special {
+  position: relative;
+  margin-bottom: spacing(7) !important;
+  margin-top: spacing(6) !important;
+
+  &:before {
+    @include font(h1);
+    content: '\e800';
+    font-family: "Theme Icons";
+    position: absolute;
+    top: -1.5em;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin-bottom: 20px;
+    color: $black-50;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 30%;
+    border-bottom: 2px solid $antracite;
+    // text-align: center;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 100%;
+    padding-top: spacing(4);
+  }
+}
 
 ::selection {
   background-color: main-colors(main, accent);
   color: main-colors(main, bg);
   text-shadow: none;
+}
+
+p > strong {
+  font-weight: 600;
 }

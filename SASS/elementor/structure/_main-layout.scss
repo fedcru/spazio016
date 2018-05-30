@@ -1,0 +1,49 @@
+/**
+ * Section overflow
+ */
+.elementor-section {
+  @include layout-overflow();
+
+  * {
+    background-position: center;
+  }
+}
+
+
+/**
+ * Section inner container
+ */
+.elementor-section .elementor-container {
+  margin-left: auto;
+  margin-right: auto;
+
+  // HOTFIX #1 because valign of **columns** is not working
+  //display: block;
+  display: flex;
+}
+
+/**
+ * Section Row
+ */
+.elementor-row {
+  width: auto;
+
+  //Rel to: HOTFIX #1
+  flex-basis: 100%;
+  flex-grow: 1;
+}
+
+
+/**
+ * Resets the padding on the .populated element
+ * on all screen sizes.
+ */
+.elementor-column-gap-default,
+.elementor-column-gap-narrow,
+.elementor-column-gap-extended,
+.elementor-column-gap-wide,
+.elementor-column-gap-wider {
+  &> .elementor-row > .elementor-column > .elementor-element-populated {
+    padding: 0;
+  }
+}

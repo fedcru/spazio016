@@ -1,15 +1,119 @@
 .top-area {
   background-color: main-colors(topbar, bg);
+  max-width: $website-width;
+  margin: 0 auto;
+  padding-top: spacing(4);
+
+
+
+
+
+  @include breakpoint-max(xl) {
+    padding-left: spacing(4);
+    padding-right: spacing(4);
+  }
+
+  @include breakpoint-max(md) {
+    padding-bottom: spacing(4);
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include breakpoint-max(xs) {
+    flex-direction: column;
+  }
 
   * {
-    color: main-colors(topbar, body);
+    color: lighten(main-colors(topbar, link), 10%);
   }
 
   p > a {
-    color: main-colors(topbar, link)
+    color: lighten(main-colors(topbar, link), 10%);
+  }
+
+  .theme-icon {
+    color: lighten(main-colors(topbar, link), 10%);
   }
 }
 
 .top-area__widget-container {
   display: flex;
+}
+
+.top-area__widget {
+  margin-right: spacing(5);
+  @include font(p);
+
+  &:last-child {
+    margin-right: 0;
+
+    @include breakpoint-max(sm) {
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+
+
+}
+
+.top-area__widget-container--left {
+  @include breakpoint-max(xs) {
+    padding-bottom: spacing(3);
+  }
+}
+
+.top-area .theme-icon::before {
+  padding-right: spacing(2);
+  font-size: 1em;
+}
+
+/*WPML*/
+.wpml-ls-legacy-dropdown {
+  background: transparent;
+  border: 0;
+  max-width: 150px;
+  width: auto;
+  padding-top: 0;
+  padding-bottom: 0;
+
+
+  &::before {
+    content: '\e814';
+    font-family: "Theme Icons";
+    position: absolute;
+    padding-right: spacing(2);
+  }
+
+  a {
+    background: transparent;
+    border: 0;
+    padding-top: 0;
+    padding-bottom: spacing(0);
+
+    &:hover {
+      background: transparent;
+      color: $white;
+    }
+  }
+
+  .wpml-ls-sub-menu {
+    padding: spacing(2);
+    background: main-colors(header, bg);
+    border: 0;
+     a {
+      padding: spacing(2);
+    }
+  }
+}
+
+.wpml-ls-legacy-dropdown .wpml-ls-current-language:hover > a {
+  background: transparent;
+}
+
+.wpml-ls-legacy-dropdown a.wpml-ls-item-toggle:after {
+  color: $white-90;
+}
+
+.wpml-ls-legacy-dropdown a.wpml-ls-item-toggle {
+  padding-left: spacing(4);
 }

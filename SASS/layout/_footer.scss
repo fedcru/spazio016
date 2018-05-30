@@ -4,4 +4,75 @@
   * {
     color: main-colors(footer, body);
   }
+
+  strong {
+    color: main-colors(footer, accent)
+  }
+}
+
+.footer {
+  @include pad($v: 7);
+  @include layout-padding();
+
+
+  &__inner {
+    max-width: $website-width;
+    padding-bottom: spacing(6);
+  }
+
+  &__row {
+    @include flex-setup(-6);
+  }
+}
+
+.footer__column  {
+  @include flex-child(6, $wd: 100);
+  max-width: max-width($text-mw);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@include breakpoint-min(el) {
+  .footer__column--1-3 {
+    @include flex-child(6, $wd: 33.333);
+    max-width: 100%;
+    margin-left: 0;
+  }
+}
+
+
+.footer__widget-title {
+  @include font(h4, $mb: 4);
+}
+
+.footer__widget {
+  margin-bottom: spacing(6);
+
+  p {
+    @include font(p, $mb: 4);
+
+    em {
+      font-family: $ff-primary;
+    }
+  }
+
+  .theme-icon {
+    font-size: 3rem;
+    padding: spacing(1);
+  }
+}
+
+
+.footer-bottom {
+
+  &__inner {
+    border-top: 1px solid $grigio;
+    padding-top: spacing(6);
+    max-width: $website-width;
+    margin: 0 auto;
+  }
+
+  p {
+    @include font(p);
+  }
 }
