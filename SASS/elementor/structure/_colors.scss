@@ -21,18 +21,7 @@
   }
 
   .font--color-light {
-    color: $grigio;
-    // color: $black-50;
-  }
 
-  blockquote,
-  blockquote p {
-    color: rgba($antracite, 0.7);
-
-    &::before,
-    &::after {
-      color: rgba($antracite, 0.3);
-    }
   }
 }
 

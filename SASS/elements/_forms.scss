@@ -110,7 +110,7 @@ textarea {
 .color--dark {
   input,
   textarea{
-    background: $antracite;
+    
   }
   .gform_button {
     @include button-color(dark, empty-w);

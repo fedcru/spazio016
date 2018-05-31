@@ -2,21 +2,17 @@
   background-color: main-colors(topbar, bg);
   max-width: $website-width;
   margin: 0 auto;
-  padding-top: spacing(4);
 
 
 
 
 
   @include breakpoint-max(xl) {
-    padding-left: spacing(4);
-    padding-right: spacing(4);
+
   }
 
   @include breakpoint-max(md) {
-    padding-bottom: spacing(4);
-    padding-left: 0;
-    padding-right: 0;
+
   }
 
   @include breakpoint-max(xs) {
@@ -40,6 +36,10 @@
   display: flex;
 }
 
+
+/***
+ * Widget
+ */
 .top-area__widget {
   margin-right: spacing(5);
   @include font(p);
@@ -76,12 +76,9 @@
   padding-top: 0;
   padding-bottom: 0;
 
-
+  // Icon
   &::before {
-    content: '\e814';
-    font-family: "Theme Icons";
-    position: absolute;
-    padding-right: spacing(2);
+
   }
 
   a {
@@ -100,6 +97,7 @@
     padding: spacing(2);
     background: main-colors(header, bg);
     border: 0;
+
      a {
       padding: spacing(2);
     }

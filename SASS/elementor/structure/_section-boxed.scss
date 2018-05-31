@@ -228,10 +228,10 @@ $el-v-space: 7;
       padding-bottom: spacing($el-gutter-md) / 2;
 
       &:first-child {
-        border-right: 1px solid $grigio;
+        border-right: 1px solid main-colors(main, border);
       }
       &:last-child {
-        border-left: 1px solid $grigio;
+        border-left: 1px solid main-colors(main, border);
       }
     }
   }
@@ -248,7 +248,7 @@ $el-v-space: 7;
   &::after {
     content: "";
     // height: spacing(1);
-    border-bottom: solid 1px $grigio;
+    border-bottom: solid 1px main-colors(main, border);
     width: 55%;
     left: 0;
     top: 100%;

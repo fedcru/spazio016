@@ -14,11 +14,12 @@
 
 
   @include breakpoint-min(el) {
-    height: 70vh;
+
   }
+
   @include breakpoint-min(md) {
     &::before {
-      background: linear-gradient(90deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.0) 20%, rgba(0,0,0,0.3) 45%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0.7) 100%);
+      background: $black-10;
     }
   }
 }
@@ -29,6 +30,7 @@
   justify-content: center;
   width: 100%;
 }
+
 .hero-title__content {
   max-width: max-width($text-mw);
   margin-left: auto;
@@ -36,19 +38,16 @@
 }
 
 .hero-title__title {
-  @include font(h1, $mb: 0);
   color: main-colors(hero, body);
   display: block;
 }
 
 .hero-title__subtitle {
-  @include font(h4, $mt: 1, $mb: 5);
   color: main-colors(hero, body);
   display: block;
 }
 
 .hero-title__description {
-  @include font(p);
   color: main-colors(hero, body);
   max-width: max-width($text-mw);
 

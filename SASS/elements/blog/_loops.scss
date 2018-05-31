@@ -26,12 +26,6 @@
 
 .card__meta {
   @include pad($h: 2);
-  overflow: hidden;
-  order: -1;
-  z-index: 99;
-  background: rgba($black, 0.35);
-  margin-bottom: spacing(4);
-  margin-top: spacing(-6);
   @include font(h5, $pt: 2, $pb: 2);
 
   * {
@@ -44,5 +38,4 @@
 }
 .card__excerpt-link {
   @include link();
-  // margin-top: spacing(2);
 }

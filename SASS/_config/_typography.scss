@@ -24,9 +24,9 @@
 ///
 // Families
 ///
-$ff-primary: 'Pagella', serif;
-$ff-secondary: 'Muli', sans-serif;
-$ff-script: 'Reporter', cursive;
+$ff-primary: 'Times New Roman', serif;
+$ff-secondary: 'Arial', sans-serif;
+$ff-script: 'Comic Sans', cursive;
 $ff-button: $ff-secondary;
 
 $text-atts: (
@@ -41,7 +41,7 @@ $text-atts: (
 $fonts: (
 
   h1: (
-    fm: $ff-primary,
+    fm: $ff-secondary,
     wt: 400,
     fs: 3rem,
     lh: 3.75rem,
@@ -51,7 +51,7 @@ $fonts: (
   ),
 
   h2: (
-    fm: $ff-primary,
+    fm: $ff-secondary,
     wt: 400,
     fs: 2rem,
     lh: 2.25rem,
@@ -61,7 +61,7 @@ $fonts: (
   ),
 
   h3: (
-    fm: $ff-primary,
+    fm: $ff-secondary,
     wt: 400,
     fs: 1.60rem,
     lh: 1.875rem,
@@ -71,18 +71,17 @@ $fonts: (
   ),
 
   h4: (
-    fm: $ff-secondary,
+    fm: $ff-primary,
     wt: 600,
     fs: 1.125rem,
     lh: 1.375rem,
     pt: 0.15625rem,
     pb: 0.15625rem,
-    tt: uppercase,
     ls: 0.05rem,
   ),
 
   h5: (
-    fm: $ff-secondary,
+    fm: $ff-primary,
     wt: 600,
     fs: 0.75rem,
     lh: 1.25rem,
@@ -92,12 +91,10 @@ $fonts: (
   ),
 
   p: (
-    fm: $ff-secondary,
+    fm: $ff-primary,
     wt: 300,
     fs: 1rem,
     lh: 1.25rem,
-    // pt: 0.15625rem,
-    // pb: 0.15625rem,
   ),
 );
 

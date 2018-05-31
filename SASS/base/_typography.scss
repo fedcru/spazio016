@@ -1,5 +1,5 @@
 body {
-  font-family: $ff-secondary;
+  font-family: $ff-primary;
   text-rendering: optimizeLegibility;
   text-rendering: geometricPrecision;
 }
@@ -24,10 +24,9 @@ html {
   }
 }
 
-.typography,
-.woocommerce-product-details__short-description {
+.typography {
   & > * {
-    max-width: max-width(md);
+    max-width: max-width($text-mw);
   }
   &> h1 {
     @include font(h1, $mt: 6, $mb: 4);
@@ -56,12 +55,10 @@ html {
 
   &> ul,
   &> ol {
+    @include marg($v: 4);
     margin-left: spacing(5);
 
-    @include marg($v: 4);
     li {
-      // @include pad($v: 1);
-      // padding-left: spacing(3);
       @include font(p);
     }
   }
@@ -76,34 +73,13 @@ html {
 
 .title--special {
   position: relative;
-  margin-bottom: spacing(7) !important;
-  margin-top: spacing(6) !important;
 
   &:before {
-    @include font(h1);
-    content: '\e800';
-    font-family: "Theme Icons";
-    position: absolute;
-    top: -1.5em;
-    text-align: center;
-    left: 0;
-    right: 0;
-    margin-bottom: 20px;
-    color: $black-50;
+
   }
 
   &:after {
-    content: "";
-    position: absolute;
-    width: 30%;
-    border-bottom: 2px solid $antracite;
-    // text-align: center;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    top: 100%;
-    padding-top: spacing(4);
+
   }
 }
 

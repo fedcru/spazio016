@@ -1,17 +1,14 @@
 .elementor-widget-wp-widget-nav_menu {
   .menu {
+    @include marg($h: auto);
     margin-top: spacing(4);
     text-align: center;
-    @include marg($h: auto);
 
-    // @include flex-setup(0);
 
     .menu-item {
-
-      display: inline-block;
       @include pad($h: 2);
       @include font(h4);
-      border-right: 1px solid $grigio;
+      display: inline-block;
 
       @include breakpoint-min(md) {
         @include pad($h: 4);
@@ -25,7 +22,6 @@
         padding-right: 0;
         border-right: 0;
       }
-      // @include flex-child(2);
     }
   }
 }
