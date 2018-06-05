@@ -29,34 +29,32 @@ html {
     max-width: max-width($text-mw);
   }
   &> h1 {
-    @include font(h1, $mt: 6, $mb: 4);
+    @include font(h1, $mt: default, $mb: default);
   }
 
   &> h2 {
-    @include font(h2, $mt: 6.5, $mb: 2);
+    @include font(h2, $mt: default, $mb: default);
   }
 
   &> h3 {
-    @include font(h3, $mt: 5, $mb: 2);
+    @include font(h3, $mt: default, $mb: default);
   }
 
   &> h4 {
-    @include font(h4, $mt: 5, $mb: 2);
+    @include font(h4, $mt: default, $mb: default);
   }
 
   &> p {
-    @include font(p, $mt: 4, $mb: 0);
+    @include font(p, $mt: default, $mb: default);
   }
 
   &> p > a {
     @include link;
-    font-weight: bold;
   }
 
   &> ul,
   &> ol {
-    @include marg($v: 4);
-    margin-left: spacing(5);
+    @include list();
 
     li {
       @include font(p);

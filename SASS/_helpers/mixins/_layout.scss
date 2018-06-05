@@ -55,6 +55,62 @@
 
 
 ////
+// Grid Pad
+////
+@mixin grid-pad($xs: true, $sm: true, $lg: true, $xl: true) {
+  @if ($xs) {
+    padding-left: spacing(1);
+    padding-right: spacing(1);
+  }
+
+  @include breakpoint-min(sm) {
+    padding-left: spacing(2);
+    padding-right: spacing(2);
+    padding-left: calc( 0.9895833333vw + -0.5px);
+    padding-right: calc( 0.9895833333vw + -0.5px);
+  }
+
+  @include breakpoint-min(lg) {
+    padding-left: spacing(3);
+    padding-right: spacing(3);
+    padding-left: calc( 1.5vw + -5.4px);
+    padding-right: calc( 1.5vw + -5.4px);
+  }
+
+  @include breakpoint-min(xl) {
+    padding-left: spacing(3);
+    padding-right: spacing(3);
+  }
+}
+
+/**
+ * Vertical grid pad
+ */
+@mixin v-grid-pad() {
+  padding-top: spacing(1);
+  padding-bottom: spacing(1);
+
+  @include breakpoint-min(sm) {
+    padding-top: spacing(2);
+    padding-bottom: spacing(2);
+    padding-top: calc( 0.9895833333vw + -0.5px);
+    padding-bottom: calc( 0.9895833333vw + -0.5px);
+  }
+
+  @include breakpoint-min(lg) {
+    padding-top: spacing(3);
+    padding-bottom: spacing(3);
+    padding-top: calc( 1.5vw + -5.4px);
+    padding-bottom: calc( 1.5vw + -5.4px);
+  }
+
+  @include breakpoint-min(xl) {
+    padding-top: spacing(3);
+    padding-bottom: spacing(3);
+  }
+}
+
+////
 // Margin
 ////
 @mixin margin($t: 4, $r: 4, $b: 4, $l: 4, $c: 0) {
@@ -114,27 +170,102 @@
   }
 }
 
+
+////
+// Grid margins (negative)
+////
+@mixin grid-marg() {
+  margin-left: spacing(-1);
+  margin-right: spacing(-1);
+
+  @include breakpoint-min(sm) {
+    margin-left: spacing(-2);
+    margin-right: spacing(-2);
+    margin-left: calc( -0.9895833333vw + 0.5px);
+    margin-right: calc( -0.9895833333vw + 0.5px);
+  }
+
+  @include breakpoint-min(lg) {
+    margin-left: spacing(-3);
+    margin-right: spacing(-3);
+    margin-left: calc( -1.5vw + 5.4px);
+    margin-right: calc( -1.5vw + 5.4px);
+  }
+
+  @include breakpoint-min(xl) {
+    margin-left: spacing(-3);
+    margin-right: spacing(-3);
+  }
+}
+
 ////
 // Standard Layout Padding
 ///
 @mixin layout-padding() {
-  padding-left: spacing(5);
-  padding-right: spacing(5);
+  padding-left: calc( 8.75vw + -8px);
+  padding-right: calc( 8.75vw + -8px);
 
   @include breakpoint-min(sm) {
     padding-left: spacing(6);
     padding-right: spacing(6);
   }
+  @include breakpoint-min(lg) {
+    padding-left: calc( 3.5vw + 2.4px);
+    padding-right: calc( 3.5vw + 2.4px);
+  }
+  @include breakpoint-min(xl) {
+    padding-left: spacing(6.5);
+    padding-right: spacing(6.5);
+  }
 }
 
 
-@mixin layout-overflow {
-  margin-right: spacing(-5);
-  margin-left: spacing(-5);
+////
+// Layout Overflow Steps
+////
 
+@mixin layout-overflow-xs {
+  margin-left: calc( -8.75vw + 8px);
+  margin-right: calc( -8.75vw + 8px);
+}
+
+@mixin layout-overflow-sm {
   @include breakpoint-min(sm) {
     margin-left: spacing(-6);
     margin-right: spacing(-6);
+  }
+}
+
+@mixin layout-overflow-lg {
+  @include breakpoint-min(lg) {
+    margin-left: calc( -3.5vw + -2.4px);
+    margin-right: calc( -3.5vw + -2.4px);
+  }
+}
+
+@mixin layout-overflow-xl {
+  @include breakpoint-min(lg) {
+    margin-left: spacing(-6.5);
+    margin-right: spacing(-6.5);
+  }
+}
+
+@mixin layout-overflow($xs: 1, $sm: 1, $lg: 1, $xl: 1) {
+
+  @if $xs == 1 {
+    @include layout-overflow-xs;
+  }
+
+  @if $sm == 1 {
+    @include layout-overflow-sm;
+  }
+
+  @if $lg == 1 {
+    @include layout-overflow-lg;
+  }
+
+  @if $xl == 1 {
+    @include layout-overflow-xl;
   }
 }
 
@@ -260,13 +391,17 @@
 // direction property: row (default) | row-reverse | column | column-reverse
 // wrap property: nowrap (default) | wrap | wrap-reverse
 ////
-@mixin flex-setup($gt: -3, $fd: row, $fw: wrap) {
+@mixin flex-setup($gt: 'x', $fd: row, $fw: wrap) {
   display: flex;
   flex-direction: $fd;
   flex-wrap: $fw;
 
-  margin-right: spacing($gt);
-  margin-left: spacing($gt);
+  @if $gt != 'grid' AND $gt != 'x' {
+    margin-left: spacing($gt);
+    margin-right: spacing($gt);
+  } @else if $gt == 'grid' {
+    @include grid-marg();
+  }
 }
 
 ////
@@ -340,7 +475,7 @@
   }
 }
 
-@mixin flex-child($gt: 3, $wd: 50, $fo: 0, $gr: 0, $sh: 0, $as: auto) {
+@mixin flex-child($gt: 'x', $wd: 50, $fo: 0, $gr: 0, $sh: 0, $as: auto) {
   @if $fo != 0 {
     order: $fo;
   }
@@ -350,6 +485,10 @@
   flex-grow: $gr;
   flex-shrink: $sh;
 
-  padding-left: spacing($gt);
-  padding-right: spacing($gt);
+  @if $gt != 'grid' AND $gt != 'x' {
+    padding-left: spacing($gt);
+    padding-right: spacing($gt);
+  } @else if $gt == 'grid' {
+    @include grid-pad();
+  }
 }

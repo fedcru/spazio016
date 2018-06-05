@@ -30,24 +30,34 @@
 
   //Margin Top
   @if $mt != null {
-    @if unitless($mt) {
-      margin-top: spacing($mt);
+    @if $mt == 'default' AND map-has-nested-keys($fonts, $size, mt) {
+      margin-top: spacing(font($size, mt));
     }
 
-    @else {
-      margin-top: $mt;
+    @else if type-of($mt) == 'number' {
+      @if unitless($mt) {
+        margin-top: spacing($mt);
+      }
+      @else {
+        margin-top: $mt;
+      }
     }
   }
 
 
   //Margin bottom
   @if $mb != null {
-    @if unitless($mb) {
-      margin-bottom: spacing($mb);
+    @if $mb == 'default' AND map-has-nested-keys($fonts, $size, mb) {
+      margin-bottom: font($size, mb);
     }
-    @else {
-      margin-bottom: $mb;
-    }
+    @else if type-of($mb) == 'number' {
+        @if unitless($mb) {
+         margin-bottom: spacing($mb);
+       }
+       @else {
+         margin-bottom: $mb;
+       }
+      }
   }
 
   //Padding top
@@ -123,7 +133,11 @@
   }
 }
 
-
+@mixin list() {
+  margin-top: spacing(map-get($lists, mt));
+  margin-bottom: spacing(map-get($lists, mb));
+  padding-left: spacing(map-get($lists, pl))
+}
 
 ///
 // mixin for bullet proof font declaration syntax

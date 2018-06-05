@@ -98,7 +98,13 @@
 //  le palette per costruire delle classi dinamiche basate sulle palette
 ///
 @mixin button-color($palette: main, $type: filled) {
-  @if $type == 'filled' {
+  @if $type == 'filled' and $palette == 'main' {
+    background: main-colors($palette, button-bg);
+    color: main-colors($palette, button-body);
+    border-color: main-colors($palette, button-bg);
+  }
+
+  @if $type == 'filled' and $palette != 'main' {
     background: palette($palette, button-bg);
     color: palette($palette, button-body);
     border-color: palette($palette, button-bg);
