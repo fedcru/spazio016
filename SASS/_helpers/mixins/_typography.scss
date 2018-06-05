@@ -48,7 +48,7 @@
   //Margin bottom
   @if $mb != null {
     @if $mb == 'default' AND map-has-nested-keys($fonts, $size, mb) {
-      margin-bottom: font($size, mb);
+      margin-bottom: spacing(font($size, mb));
     }
     @else if type-of($mb) == 'number' {
         @if unitless($mb) {
