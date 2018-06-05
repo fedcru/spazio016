@@ -10,7 +10,7 @@
 // BASE DEL BODY
 ///
   $base: 16;
-  $font-size: 1rem; //TODO
+  $font-size: 1.25rem; //TODO
   $line-height: 1.25rem; //TODO
 
 
@@ -95,8 +95,8 @@ $fonts: (
   p: (
     fm: $ff-primary,
     wt: 300,
-    fs: 1rem,
-    lh: 1.25rem,
+    fs: $font-size,
+    lh: $line-height,
   ),
 );
 

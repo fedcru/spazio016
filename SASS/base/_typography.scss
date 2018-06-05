@@ -9,7 +9,7 @@ body {
  * HTML base font size: calculated with between() function
  */
 html {
-  font-size: between(14,16.5, 320,2000, "vw");
+  font-size: between(16,16.5, 320,2000, "vw");
 
   // @include breakpoint-min(sm) {
   //   font-size: between(12,14, 480,1360, "vw");
@@ -23,6 +23,42 @@ html {
     font-size: 1vw;
   }
 }
+
+
+/*************************************************************************************************************
+ *  Baisc typographic elements
+ **/
+
+a, b, i, strong, em, small, code {
+  line-height: 0;
+}
+
+sub, sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+hr,
+.hr {
+  border: 1px solid;
+  margin: -1px 0;
+}
+
+
+/*******************************************************************************************************************
+ *
+ * Main typography
+ *
+ ****/
 
 .typography {
   & > * {

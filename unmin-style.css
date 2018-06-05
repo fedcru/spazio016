@@ -22,13 +22,40 @@ body {
  * HTML base font size: calculated with between() function
  */
 html {
-  font-size: calc( 0.14880952381vw + 13.5238095238px); }
+  font-size: calc( 0.0297619047619vw + 15.9047619048px); }
   @media (min-width: 125em) {
     html {
       font-size: 1vw; } }
 
+/*************************************************************************************************************
+ *  Baisc typographic elements
+ **/
+a, b, i, strong, em, small, code {
+  line-height: 0; }
+
+sub, sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+hr,
+.hr {
+  border: 1px solid;
+  margin: -1px 0; }
+
+/*******************************************************************************************************************
+ *
+ * Main typography
+ *
+ ****/
 .typography > * {
-  max-width: 25rem; }
+  max-width: 30.25rem; }
 
 .typography > h1 {
   font-family: "Arial", sans-serif;
@@ -71,7 +98,7 @@ html {
 .typography > p {
   font-family: "Times New Roman", serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.25rem; }
 
 .typography > p > a {
@@ -98,7 +125,7 @@ html {
   .typography > ol li {
     font-family: "Times New Roman", serif;
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1.25rem; }
 
 .typography > ul {
@@ -358,7 +385,7 @@ p > strong {
           flex-shrink: 0;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
-  max-width: 25rem;
+  max-width: 30.25rem;
   margin-right: auto;
   margin-left: auto; }
 
@@ -421,7 +448,7 @@ p > strong {
   margin-right: 1.875rem;
   font-family: "Times New Roman", serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.25rem; }
   .top-area__widget:last-child {
     margin-right: 0; }
@@ -670,7 +697,7 @@ p > strong {
       margin-right: auto; }
   .elementor-col-66 .elementor-section-boxed.elementor-inner-section .elementor-col-100 .widget--wider,
   .elementor-col-66 .elementor-section-boxed.elementor-inner-section .elementor-col-100 .widget--full {
-    max-width: 25rem; } }
+    max-width: 30.25rem; } }
 
 /**
  * Sections with borders
@@ -1203,7 +1230,7 @@ p > strong {
  * Widget Max Widths
  */
 .elementor-widget {
-  max-width: 25rem;
+  max-width: 30.25rem;
   width: 100%;
   /**
    * Specific margin top
@@ -1353,7 +1380,7 @@ p > strong {
 .elementor-text-editor > h3--p {
   font-family: "Times New Roman", serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.25rem; }
 
 .elementor-text-editor > ul,
@@ -1365,7 +1392,7 @@ p > strong {
   .elementor-text-editor > ol li {
     font-family: "Times New Roman", serif;
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1.25rem; }
 
 .elementor-text-editor > ul {
@@ -1452,7 +1479,7 @@ p > strong {
   padding-bottom: 0.625rem;
   font-family: "Times New Roman", serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.25rem;
   text-transform: uppercase; }
 
@@ -1745,7 +1772,7 @@ input,
 textarea {
   font-family: "Times New Roman", serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.25rem;
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
@@ -2021,7 +2048,7 @@ textarea {
   letter-spacing: 0.05rem; }
 
 .standard-title__description {
-  max-width: 25rem;
+  max-width: 30.25rem;
   margin: 0 auto; }
 
 .standard-title__image {
@@ -2131,7 +2158,7 @@ textarea {
   width: 100%; }
 
 .hero-title__content {
-  max-width: 25rem;
+  max-width: 30.25rem;
   margin-left: auto;
   position: relative; }
 
@@ -2145,7 +2172,7 @@ textarea {
 
 .hero-title__description {
   color: #fff;
-  max-width: 25rem; }
+  max-width: 30.25rem; }
   .hero-title__description strong {
     color: #fff; }
 
@@ -2265,7 +2292,7 @@ textarea {
 .card__excerpt {
   font-family: "Times New Roman", serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.25rem; }
 
 .card__excerpt-link {
@@ -2438,7 +2465,7 @@ textarea {
 .products .woocommerce-loop-product__title {
   font-family: "Times New Roman", serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.25rem;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
@@ -2449,7 +2476,7 @@ textarea {
   display: block;
   font-family: "Times New Roman", serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.25rem; }
 
 .products-loop .button,
@@ -2466,7 +2493,7 @@ textarea {
   padding-bottom: 0.3125rem;
   font-family: "Times New Roman", serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.25rem;
   background: rgba(0, 0, 0, 0.7);
   color: #fff;
@@ -2581,7 +2608,7 @@ textarea {
 p.price {
   font-family: "Times New Roman", serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.25rem;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem; }
@@ -2622,7 +2649,7 @@ p.price {
   padding-bottom: 0.9375rem;
   font-family: "Times New Roman", serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.25rem;
   background: rgba(0, 0, 0, 0.7);
   color: #fff;
@@ -2721,7 +2748,7 @@ p.price {
   .woocommerce-Tabs-panel p {
     font-family: "Times New Roman", serif;
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1.25rem;
     margin-top: 0.625rem;
     margin-bottom: 0.625rem; }
@@ -2798,7 +2825,7 @@ p.price {
       padding-bottom: 0.625rem;
       font-family: "Times New Roman", serif;
       font-weight: 300;
-      font-size: 1rem;
+      font-size: 1.25rem;
       line-height: 1.25rem; }
     .shop_table_responsive.cart td.actions .coupon {
       float: left;
@@ -2904,7 +2931,7 @@ p.price {
       padding-bottom: 0.3125rem;
       font-family: "Times New Roman", serif;
       font-weight: 300;
-      font-size: 1rem;
+      font-size: 1.25rem;
       line-height: 1.25rem; }
   .cart_totals .select2-container--default .select2-selection--single {
     border: 2px solid rgba(0, 0, 0, 0.05);
@@ -2995,7 +3022,7 @@ p.price {
   display: block;
   font-family: "Times New Roman", serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.25rem;
   margin-bottom: 0.3125rem;
   font-weight: bold; }
@@ -3112,7 +3139,7 @@ p.price {
   .woocommerce-checkout-review-order-table th {
     font-family: "Times New Roman", serif;
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1.25rem;
     text-transform: uppercase;
     font-weight: bold; }
@@ -3125,7 +3152,7 @@ p.price {
   .woocommerce-checkout-review-order-table td {
     font-family: "Times New Roman", serif;
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1.25rem; }
   .woocommerce-checkout-review-order-table tbody tr:last-child .product-name {
     padding-bottom: 1.875rem; }
@@ -3151,7 +3178,7 @@ p.price {
   .wc_payment_method p {
     font-family: "Times New Roman", serif;
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1.25rem;
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
@@ -3195,7 +3222,7 @@ p.price {
     .wc-credit-card-form .form-row label {
       font-family: "Times New Roman", serif;
       font-weight: 300;
-      font-size: 1rem;
+      font-size: 1.25rem;
       line-height: 1.25rem;
       font-weight: normal; }
 
@@ -3425,13 +3452,13 @@ p.price {
   .compare-products__description > p {
     font-family: "Times New Roman", serif;
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1.25rem; }
   .compare-products .attributes__attribute {
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
     font-family: "Times New Roman", serif;
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1.25rem;
     padding-top: 0.9375rem;
     padding-bottom: 0.9375rem; }
@@ -3443,7 +3470,7 @@ p.price {
     .compare-products__add-to-cart .added_to_cart {
       font-family: "Times New Roman", serif;
       font-weight: 300;
-      font-size: 1rem;
+      font-size: 1.25rem;
       line-height: 1.25rem;
       margin-top: 0.625rem;
       color: #5cb85c;
@@ -3461,7 +3488,7 @@ p.price {
     padding-bottom: 0.625rem;
     font-family: "Times New Roman", serif;
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1.25rem;
     background: rgba(0, 0, 0, 0.7);
     color: #fff;
@@ -3472,7 +3499,7 @@ p.price {
   .compare-products__prices {
     font-family: "Times New Roman", serif;
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1.25rem;
     margin-top: 0.9375rem; }
   .compare-products__price--barred {
@@ -3746,7 +3773,7 @@ p.price {
 .small_cart_widget {
   font-family: "Times New Roman", serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.25rem; }
 
 .woocommerce-account .woocommerce > h2:first-of-type {
@@ -3789,7 +3816,7 @@ p.price {
     padding-bottom: 0.625rem;
     font-family: "Times New Roman", serif;
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1.25rem;
     background: rgba(0, 0, 0, 0.7);
     color: #fff;
@@ -3800,7 +3827,7 @@ p.price {
     .woocommerce-form-login .woocommerce-form-row label {
       font-family: "Times New Roman", serif;
       font-weight: 300;
-      font-size: 1rem;
+      font-size: 1.25rem;
       line-height: 1.25rem;
       display: inline-block;
       margin-bottom: 0.625rem; }
@@ -3858,7 +3885,7 @@ p.price {
     padding: 0.625rem;
     font-family: "Times New Roman", serif;
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1.25rem; }
     .woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link a {
       border-bottom: 2px solid transparent; }
@@ -3888,7 +3915,7 @@ p.price {
   .woocommerce-MyAccount-content p {
     font-family: "Times New Roman", serif;
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1.25rem;
     margin-top: 1.25rem;
     max-width: 42.66667rem; }
@@ -3990,7 +4017,7 @@ p.price {
 .woocommerce-customer-details address {
   font-family: "Times New Roman", serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.25rem; }
 
 /**
@@ -4010,7 +4037,7 @@ p.price {
 .woocommerce-Address address {
   font-family: "Times New Roman", serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.25rem;
   margin-top: 0.625rem; }
 
@@ -4032,7 +4059,7 @@ p.price {
   padding-bottom: 0.625rem;
   font-family: "Times New Roman", serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.25rem;
   background: rgba(0, 0, 0, 0.7);
   color: #fff;
@@ -4054,7 +4081,7 @@ p.price {
   padding-bottom: 0.625rem;
   font-family: "Times New Roman", serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.25rem;
   background: rgba(0, 0, 0, 0.7);
   color: #fff;
@@ -4063,7 +4090,7 @@ p.price {
 .woocommerce-thankyou-order-received {
   font-family: "Times New Roman", serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.25rem;
   padding: 1.25rem;
   background: rgba(92, 184, 92, 0.3); }
@@ -4074,6 +4101,6 @@ p.price {
   .woocommerce-thankyou-order-details li {
     font-family: "Times New Roman", serif;
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1.25rem;
     padding-bottom: 0.3125rem; }
