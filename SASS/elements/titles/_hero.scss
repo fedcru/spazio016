@@ -4,17 +4,15 @@
   @include pad($v: 7);
   background-color: main-colors(hero, bg);
   position: relative;
-  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: flex-end;
 
   @include color-overlay(hero, 0.3);
 
 
   @include breakpoint-min(el) {
-
+    
   }
 
   @include breakpoint-min(md) {
@@ -33,11 +31,11 @@
 
 .hero-title__content {
   max-width: max-width($text-mw);
-  margin-left: auto;
   position: relative;
 }
 
 .hero-title__title {
+  @include font(h1);
   color: main-colors(hero, body);
   display: block;
 }

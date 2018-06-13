@@ -10,8 +10,8 @@
 // BASE DEL BODY
 ///
   $base: 16;
-  $font-size: 1.25rem; //TODO
-  $line-height: 1.25rem; //TODO
+  $font-size: 1rem; //TODO
+  $line-height: 1.4375rem; //TODO
 
 
 ///
@@ -24,8 +24,8 @@
 ///
 // Families
 ///
-$ff-primary: 'Times New Roman', serif;
-$ff-secondary: 'Arial', sans-serif;
+$ff-primary: 'Lato', sans-serif;
+$ff-secondary: 'Crimson Text', serif;
 $ff-script: 'Comic Sans', cursive;
 $ff-button: $ff-secondary;
 
@@ -39,64 +39,57 @@ $text-atts: (
 );
 
 $fonts: (
-
   h1: (
     fm: $ff-secondary,
-    wt: 400,
-    fs: 3rem,
-    lh: 3.75rem,
-    pt: 0.15625rem,
-    pb: 0.15625rem,
-    ls: 0.15rem,
+    fs: 4.3125rem,
+    lh: 4.3125rem,
+    mt: 4,
+    mb: 2.875rem,
   ),
-
   h2: (
     fm: $ff-secondary,
-    wt: 400,
-    fs: 2rem,
-    lh: 2.25rem,
-    pt: 0.15625rem,
-    pb: 0.15625rem,
+    fs: 2.625rem,
+    lh: 2.875rem,
     mt: 4,
-    mb: 1rem,
-    ls: 0.1rem,
+    mb: 4,
   ),
-
   h3: (
     fm: $ff-secondary,
-    wt: 400,
-    fs: 1.60rem,
-    lh: 1.875rem,
-    pt: 0.15625rem,
-    pb: 0.15625rem,
-    ls: 0.08rem,
+    fs: 1.625rem,
+    lh: 2.875rem / 2,
+    mt: 5,
+    mb: 2,
   ),
-
   h4: (
-    fm: $ff-primary,
-    wt: 600,
-    fs: 1.125rem,
-    lh: 1.375rem,
-    pt: 0.15625rem,
-    pb: 0.15625rem,
-    ls: 0.05rem,
+    fm: $ff-secondary,
+    fs: 1rem,
+    lh: 4,
+    mt: 0,
+    mb: 0,
   ),
-
   h5: (
-    fm: $ff-primary,
-    wt: 600,
-    fs: 0.75rem,
-    lh: 1.25rem,
-    pt: 0.15625rem,
-    pb: 0.15625rem,
-    ls: 0,
+    fm: $ff-secondary,
+    fs: 1rem,
+    lh: 4,
+    mt: 4,
+    mb: 0,
   ),
 
   p: (
     fm: $ff-primary,
-    wt: 300,
+    wt: 400,
     fs: $font-size,
     lh: $line-height,
+    mb: 4,
+  ),
+
+  uppercase: (
+    fm: $ff-primary,
+    wt: 700,
+    fs: $font-size,
+    mb: 4,
+    mt: 4,
+    tt: uppercase,
   ),
 );
 

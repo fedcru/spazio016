@@ -79,51 +79,31 @@ $el-v-space: 7;
 /**
  * COLUMNS Horizontal gutter - only on large screen
  */
-@include breakpoint-min(el) {
-  .elementor-section-boxed {
 
-    // Default gap
-    .elementor-column-gap-default {
+.elementor-section-boxed {
 
-      &> .elementor-row {
-        @include marg($h: -$el-gutter-md);
+  // Default gap
+  .elementor-column-gap-default,
+  .elementor-column-gap-wide,
+  .elementor-column-gap-wider,
+  .elementor-column-gap-narrow,
+  .elementor-column-gap-extended  {
 
-        &> .elementor-column {
-          @include pad( $h: $el-gutter-md );
-        }
-      }
-    }
+    &> .elementor-row {
+      @include grid-marg();
 
-    // Wide & Wider gap
-    .elementor-column-gap-wide,
-    .elementor-column-gap-wider {
-      &> .elementor-row {
-        @include marg($h: -$el-gutter-md);
-
-        &> .elementor-column {
-          @include pad( $h: $el-gutter-md );
-        }
-      }
-    }
-
-    // Narrow & Extended gap
-    .elementor-column-gap-narrow,
-    .elementor-column-gap-extended {
-      &> .elementor-row {
-        @include marg($h: -$el-gutter-sm);
-
-        &> .elementor-column {
-          @include pad( $h: $el-gutter-sm );
-        }
+      &> .elementor-column {
+        @include grid-pad();
       }
     }
   }
 }
 
+
 /**
  * Big padding on wide and wider sections
  */
-@include breakpoint-min(lg) {
+@include breakpoint-min(xl) {
   .elementor-section-boxed {
 
     // Wide & Wider gap
@@ -149,6 +129,9 @@ $el-v-space: 7;
  * Vertical padding correction
  */
 .elementor-section-boxed.elementor-inner-section {
+  padding: 0;
+  margin: 0;
+
   &> .elementor-container {
     // Mobile
     @include pad($v: 0);
@@ -166,26 +149,37 @@ $el-v-space: 7;
  * Negative margin is applied to the section
  * According to the parent section type.
  */
-@include breakpoint-min(el) {
 
-  .elementor-section-boxed.elementor-inner-section {
+.elementor-section-boxed.elementor-inner-section .elementor-row {
 
-    // Narrow & Extended parents
-    @at-root .elementor-column-gap-narrow #{&} {
-      @include marg($h: -$el-gutter-sm);
-    }
-    @at-root .elementor-column-gap-extended #{&} {
-      @include marg($h: -$el-gutter-sm);
-    }
+  // // Default, Narrow & Extended parents
+  // @at-root .elementor-column-gap-default #{&} {
+  //   @include grid-marg();
+  // }
+  // @at-root .elementor-column-gap-narrow #{&} {
+  //   @include grid-marg();
+  // }
+  // @at-root .elementor-column-gap-extended #{&} {
+  //   @include grid-marg();
+  // }
+  // @at-root .elementor-column-gap-wide #{&} {
+  //   @include grid-marg();
+  // }
+  // @at-root .elementor-column-gap-wider #{&} {
+  //   @include grid-marg();
+  // }
+}
 
-    // Wide & Wider parents
-    @at-root .elementor-column-gap-wide #{&} {
-      @include marg($h: -$el-gutter-lg);
-    }
-    @at-root .elementor-column-gap-wider #{&} {
-      @include marg($h: -$el-gutter-lg);
-    }
-  }
+@include breakpoint-min(xl) {
+  // .elementor-section-boxed.elementor-inner-section .elementor-row {
+  //   // Wide & Wider parents
+  //   @at-root .elementor-column-gap-wide #{&} {
+  //     @include marg($h: -$el-gutter-lg);
+  //   }
+  //   @at-root .elementor-column-gap-wider #{&} {
+  //     @include marg($h: -$el-gutter-lg);
+  //   }
+  // }
 }
 
 /**
