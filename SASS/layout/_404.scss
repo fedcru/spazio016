@@ -1,0 +1,47 @@
+.notfound__error {
+  @include flex-setup();
+  @include flex-child(grid, $wd: 100);
+  margin-top: spacing(6);
+  margin-bottom: spacing(7);
+}
+
+.notfound__404 {
+  @include flex-child($wd: 100);
+  text-align: center;
+  font-family: $ff-secondary;
+  font-size: 8rem;
+
+  @include breakpoint-min(md) {
+    @include flex-child($wd: 40);
+  }
+}
+
+.notfound__texts {
+  @include flex-child($wd: 100);
+  text-align: center;
+
+  @include breakpoint-min(md) {
+    @include flex-child($wd: 60);
+    text-align: left;
+  }
+}
+
+.notfound__title {
+  font-family: $ff-primary;
+  font-size: 3rem;
+}
+.notfound__text {
+  font-family: $ff-secondary;
+  margin-top: spacing(4);
+  font-size: 1.5rem;
+}
+
+
+.notfound__site {
+  @include font(h3, $mb: 4);
+  @include flex-child($wd: 100);
+}
+
+.notfound__row {
+  display: block;
+}

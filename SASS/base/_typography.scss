@@ -9,7 +9,7 @@ body {
  * HTML base font size: calculated with between() function
  */
 html {
-  font-size: between(14,18, 320,2000, "vw");
+  font-size: between(15,18, 320,2000, "vw");
 
   // @include breakpoint-min(sm) {
   //   font-size: between(12,14, 480,1360, "vw");

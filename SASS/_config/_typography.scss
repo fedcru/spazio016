@@ -41,36 +41,58 @@ $text-atts: (
 $fonts: (
   h1: (
     fm: $ff-secondary,
-    fs: 4.3125rem,
+    fs: 3.375rem,
     lh: 4.3125rem,
     mt: 4,
-    mb: 2.875rem,
+    mb: 2,
+
+    md: (
+      fs: 4.25rem,
+      lh: 2.875rem,
+    ),
   ),
   h2: (
     fm: $ff-secondary,
-    fs: 2.625rem,
+    fs: 2.25rem,
     lh: 2.875rem,
-    mt: 4,
-    mb: 4,
+    mt: 6,
+    mb: 2,
+
+    lg: (
+      fs: 2.625rem,
+      lh: 2.875rem,
+    ),
   ),
   h3: (
     fm: $ff-secondary,
-    fs: 1.625rem,
+    fs: 1.5rem,
     lh: 2.875rem / 2,
     mt: 5,
     mb: 2,
+
+    lg: (
+      fs: 1.625rem,
+      lh: 2.875rem / 2,
+    ),
   ),
   h4: (
     fm: $ff-secondary,
     fs: 1rem,
-    lh: 4,
-    mt: 0,
+    lh: $line-height,
+    mt: 4,
     mb: 0,
   ),
   h5: (
     fm: $ff-secondary,
-    fs: 1rem,
-    lh: 4,
+    fs: 0.875rem,
+    lh: $line-height,
+    mt: 4,
+    mb: 0,
+  ),
+  h5-alt: (
+    fm: $ff-primary,
+    fs: 0.875rem,
+    lh: $line-height,
     mt: 4,
     mb: 0,
   ),

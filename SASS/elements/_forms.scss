@@ -4,10 +4,24 @@
 
 input,
 textarea {
-  @include font(p, $pt: 2, $pb: 2);
-  width: 100%;
+  @include input-text(p);
 }
 
+select {
+  @include input-select(p);
+}
+
+.gform_wrapper {
+  padding: spacing(3);
+  background: $black-10;
+
+  @include breakpoint-min(md) {
+    padding: spacing(4);
+  }
+  @include breakpoint-min(lg) {
+    padding: spacing(5);
+  }
+}
 
 .gform_fields {
   @include flex-setup(-2);
@@ -15,7 +29,7 @@ textarea {
 
 .gfield {
   @include flex-child(2, $wd: 100);
-  margin-bottom: spacing(5);
+  margin-bottom: spacing(3);
 }
 
 @include breakpoint-min(sm) {
@@ -29,12 +43,12 @@ textarea {
  * Labels
  */
 .gfield_label {
-  @include font(h5);
-  font-style: italic;
+  @include label(h5-alt);
 }
 
 .gfield_description {
   @include font(h5);
+  font-style: italic;
 }
 
 
@@ -52,10 +66,10 @@ textarea {
 .name_first,
 .name_last {
   @include flex-child(2, $wd: 50);
+
   label {
-    @include font(h5);
+    @include label(h5-alt);
     display: block;
-    font-style: italic;
   }
 }
 
@@ -84,8 +98,8 @@ textarea {
  * Errors
  */
 .validation_error {
-  padding: 0;
   color: $red;
+  padding: 0;
   margin-bottom: spacing(4);
 }
 
@@ -93,13 +107,13 @@ textarea {
   color: $red;
   font-weight: bolder !important;
 }
+
 /**
  * Colors
  */
 input,
 textarea {
   border: 2px solid $black-10;
-  @include pad($h: 2);
 
   &:focus {
     border-color: $black-30;
@@ -109,8 +123,8 @@ textarea {
 
 .color--dark {
   input,
-  textarea{
-    
+  textarea {
+
   }
   .gform_button {
     @include button-color(dark, empty-w);

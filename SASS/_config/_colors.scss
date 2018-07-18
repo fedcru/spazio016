@@ -42,15 +42,15 @@ $main-colors: (
   topbar: (
     bg: $black,
     body: $white,
-    link: $black-30,
+    link: $white,
     accent: $white,
     border: $white,
   ),
   header: (
-    bg: $black,
-    body: $white,
-    link: $white,
-    accent: $white,
+    bg: $white,
+    body: $black,
+    link: $black,
+    accent: $green,
     border: $white,
   ),
   hero: (

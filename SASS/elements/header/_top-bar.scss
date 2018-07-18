@@ -1,10 +1,8 @@
 .top-area {
+  @include layout-overflow();
+  @include layout-padding();
+  @include pad($v: 1);
   background-color: main-colors(topbar, bg);
-  max-width: $website-width;
-  margin: 0 auto;
-
-
-
 
 
   @include breakpoint-max(xl) {
@@ -17,6 +15,16 @@
 
   @include breakpoint-max(xs) {
     flex-direction: column;
+  }
+
+  &__inner {
+    width: 100%;
+    margin: 0 auto;
+    // @include pad($h: 4);
+
+    @include breakpoint-min(lg) {
+      max-width: $website-width;
+    }
   }
 
   * {
@@ -41,8 +49,8 @@
  * Widget
  */
 .top-area__widget {
-  margin-right: spacing(5);
   @include font(p);
+  margin-right: spacing(5);
 
   &:last-child {
     margin-right: 0;
@@ -57,9 +65,7 @@
 }
 
 .top-area__widget-container--left {
-  @include breakpoint-max(xs) {
-    padding-bottom: spacing(3);
-  }
+
 }
 
 .top-area .theme-icon::before {

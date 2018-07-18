@@ -12,7 +12,7 @@
 
 
   @include breakpoint-min(el) {
-    
+
   }
 
   @include breakpoint-min(md) {
@@ -32,6 +32,7 @@
 .hero-title__content {
   max-width: max-width($text-mw);
   position: relative;
+  width: 100%;
 }
 
 .hero-title__title {

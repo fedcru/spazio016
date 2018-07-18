@@ -1,0 +1,42 @@
+.wine__inner {
+  @include layout-overflow();
+  @include flex-setup();
+}
+
+.wine__section {
+  @include flex-child($wd: 50);
+
+  p {
+    @include font(p, $mb: 4);
+  }
+}
+
+.wine__section-inner {
+  @include flex-child($wd: 100);
+  max-width: $website-width / 2;
+}
+
+.wine__section:nth-child(odd) {
+  .wine__section-inner {
+    margin-left: auto;
+    margin-right: 0;
+
+    @include breakpoint-min(lg) {
+      padding-right: spacing(4);
+    }
+  }
+}
+.wine__section:nth-child(even) {
+  .wine__section-inner {
+    margin-right: auto;
+    margin-left: 0;
+
+    @include breakpoint-min(lg) {
+      padding-left: spacing(4);
+    }
+  }
+}
+
+.wine__section-title  {
+  @include font(h2, $mt: 4, $mb: 2);
+}

@@ -178,7 +178,16 @@
 
 
 .widget--boxed {
-  padding: spacing(4) * 2;
+  padding: spacing(4);
+
+  @include breakpoint-min(sm) {
+    padding: spacing(4) * 2;
+  }
+}
+
+.widget--border {
+  border: 1px solid;
+  border-color: inherit;
 }
 
 
@@ -219,7 +228,7 @@
   &> ul,
   &> ol {
     @include list();
-    
+
     li {
       // @include pad($v: 1);
       // padding-left: spacing(3);
