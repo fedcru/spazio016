@@ -3,7 +3,7 @@
  */
 $el-gutter-sm: 5;
 $el-gutter-md: 6.5;
-$el-gutter-lg: 8;
+$el-gutter-lg: 7;
 
 $el-v-space: 7;
 
@@ -59,9 +59,12 @@ $el-v-space: 7;
  */
 
 .elementor-section-boxed  .elementor-column {
-  @include breakpoint-max(el) {
-    @include pad($v: 3);
+  @include pad($v: 3);
+
+  @include breakpoint-min(el) {
+    @include pad($v: 0);
   }
+
 }
 
 /**
@@ -234,29 +237,5 @@ $el-v-space: 7;
 @each $palette, $color in $palettes {
   .color--#{$palette} .section--border-center .elementor-column {
     border-color: palette($palette, border);
-  }
-}
-
-.border-bottom--short {
-
-  &::after {
-    content: "";
-    // height: spacing(1);
-    border-bottom: solid 1px main-colors(main, border);
-    width: 55%;
-    left: 0;
-    top: 100%;
-    position: absolute;
-    padding-top: spacing(6.5);
-    margin-left: spacing(6.5);
-
-    @include breakpoint-max(el) {
-      padding-top: 0;
-      right: 0;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: spacing(4);
-      width: 80%;
-    }
   }
 }

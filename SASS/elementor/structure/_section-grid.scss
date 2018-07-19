@@ -10,19 +10,22 @@
     @include pad( $v: $el-gutter-md, $h: $el-gutter-sm );
   }
 
+  // On mobile, the widget centers itself vertically
+  // to accomodate a possible extended min height
+  .elementor-widget-wrap {
+    justify-content: center;
+
+    @include breakpoint-min(el) {
+      justify-content: inherit;
+    }
+  }
 
   // On mobile Min height for empty columns with just a bg image
-  @include breakpoint-max(el) {
-    .column--mobile-height .elementor-element-populated {
-      padding-bottom: 100% !important;
-    }
+  .elementor-row > .column--mobile-height .elementor-element-populated {
+    padding-bottom: 100%;
 
-    // On mobile, the widget centers itself vertically
-    // to accomodate a possible extended min height
-    .elementor-widget-wrap {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    @include breakpoint-min(el) {
+      padding-bottom: inherit;
     }
   }
 }

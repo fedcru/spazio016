@@ -24,14 +24,6 @@
   }
 
 
-
-  // Margin on mobile
-  @include breakpoint-max(el) {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-
 @include breakpoint-min(el) {
   // Alternative max widths
   @at-root .widget--wide {
@@ -80,6 +72,10 @@
       .widget--mb-xl:not(:last-child) {
         margin-bottom: spacing(7);
       }
+
+      .widget--mb-none {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -106,9 +102,17 @@
 }
 
 
-/**
- * Widget lateral margins
+/**********************************************************
+ *
+ * WIDGETS HORIZONTAL ALIGN
  */
+
+.elementor-widget {
+// Margin on mobile
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @include breakpoint-min(el) {
 
   // Declare flexbox on the widget wrapper
@@ -131,6 +135,7 @@
   @at-root .elementor-row .elementor-column:first-child {
     .elementor-widget {
       align-self: flex-start;
+      margin-left: 0;
     }
   }
 
@@ -138,6 +143,7 @@
   @at-root .elementor-row .elementor-column:last-child {
     .elementor-widget {
       align-self: flex-end;
+      margin-right: 0;
     }
   }
 
@@ -168,11 +174,11 @@
   ///
   .widget--right {
     margin-right: 0;
-    margin-left: auto;
+    margin-left: auto !important;
   }
   .widget--left {
     margin-left: 0;
-    margin-right: auto;
+    margin-right: auto !important;
   }
 }
 

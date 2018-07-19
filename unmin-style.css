@@ -877,10 +877,13 @@ p > strong {
 /*========================================================================================
  * COLUMNS
  */
-@media (max-width: 767.99px) {
-  .elementor-section-boxed .elementor-column {
-    padding-top: 1.078125rem;
-    padding-bottom: 1.078125rem; } }
+.elementor-section-boxed .elementor-column {
+  padding-top: 1.078125rem;
+  padding-bottom: 1.078125rem; }
+  @media (min-width: 768px) {
+    .elementor-section-boxed .elementor-column {
+      padding-top: 0;
+      padding-bottom: 0; } }
 
 /**
  * COLUMNS Vertical gutter - only on large screen
@@ -965,12 +968,12 @@ p > strong {
 @media (min-width: 85em) {
   .elementor-section-boxed .elementor-column-gap-wide > .elementor-row,
   .elementor-section-boxed .elementor-column-gap-wider > .elementor-row {
-    margin-right: -8.625rem;
-    margin-left: -8.625rem; }
+    margin-right: -5.75rem;
+    margin-left: -5.75rem; }
     .elementor-section-boxed .elementor-column-gap-wide > .elementor-row > .elementor-column,
     .elementor-section-boxed .elementor-column-gap-wider > .elementor-row > .elementor-column {
-      padding-right: 8.625rem;
-      padding-left: 8.625rem; } }
+      padding-right: 5.75rem;
+      padding-left: 5.75rem; } }
 
 /*========================================================================================
  * NESTED SECTION
@@ -1032,24 +1035,6 @@ p > strong {
 .color--light .section--border-center .elementor-column {
   border-color: rgba(46, 41, 38, 0.1); }
 
-.border-bottom--short::after {
-  content: "";
-  border-bottom: solid 1px rgba(46, 41, 38, 0.05);
-  width: 55%;
-  left: 0;
-  top: 100%;
-  position: absolute;
-  padding-top: 4.3125rem;
-  margin-left: 4.3125rem; }
-  @media (max-width: 767.99px) {
-    .border-bottom--short::after {
-      padding-top: 0;
-      right: 0;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 1.4375rem;
-      width: 80%; } }
-
 /**
  * Standard column gutter and layout
  */
@@ -1059,23 +1044,23 @@ p > strong {
   padding-right: 2.15625rem;
   padding-left: 2.15625rem; }
 
-@media (max-width: 767.99px) {
-  .elementor-section-full_width .column--mobile-height .elementor-element-populated {
-    padding-bottom: 100% !important; }
-  .elementor-section-full_width .elementor-widget-wrap {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center; } }
+.elementor-section-full_width .elementor-widget-wrap {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  @media (min-width: 768px) {
+    .elementor-section-full_width .elementor-widget-wrap {
+      -webkit-box-pack: inherit;
+      -webkit-justify-content: inherit;
+          -ms-flex-pack: inherit;
+              justify-content: inherit; } }
+
+.elementor-section-full_width .elementor-row > .column--mobile-height .elementor-element-populated {
+  padding-bottom: 100%; }
+  @media (min-width: 768px) {
+    .elementor-section-full_width .elementor-row > .column--mobile-height .elementor-element-populated {
+      padding-bottom: inherit; } }
 
 /**
  * COLUMNS gutter - only on large screen
@@ -1094,8 +1079,8 @@ p > strong {
     .elementor-section-full_width .elementor-row > .elementor-column .elementor-column-wrap {
       padding-right: 4.3125rem;
       padding-left: 4.3125rem;
-      padding-top: 8.625rem;
-      padding-bottom: 8.625rem; }
+      padding-top: 5.75rem;
+      padding-bottom: 5.75rem; }
     .elementor-section-full_width .elementor-column-gap-narrow > .elementor-row > .elementor-column .elementor-column-wrap,
     .elementor-section-full_width .elementor-column-gap-extended > .elementor-row > .elementor-column .elementor-column-wrap {
       padding-top: 4.3125rem;
@@ -1523,18 +1508,6 @@ p > strong {
     left: 0;
     z-index: 0;
     background-color: rgba(46, 41, 38, 0.5); }
-  .overlay--dark::before {
-    background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(20%, transparent), color-stop(45%, rgba(0, 0, 0, 0.3)), color-stop(70%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.7)));
-    background: -webkit-linear-gradient(left, transparent 0%, transparent 20%, rgba(0, 0, 0, 0.3) 45%, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0.7) 100%);
-    background: -o-linear-gradient(left, transparent 0%, transparent 20%, rgba(0, 0, 0, 0.3) 45%, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0.7) 100%);
-    background: linear-gradient(90deg, transparent 0%, transparent 20%, rgba(0, 0, 0, 0.3) 45%, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0.7) 100%); }
-    @media (max-width: 52.49em) {
-      .overlay--dark::before {
-        background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.4)), color-stop(20%, rgba(0, 0, 0, 0.4)), color-stop(45%, rgba(0, 0, 0, 0.4)), color-stop(70%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.9)));
-        background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 20%, rgba(0, 0, 0, 0.4) 45%, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0.9) 100%);
-        background: -o-linear-gradient(left, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 20%, rgba(0, 0, 0, 0.4) 45%, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0.9) 100%);
-        background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 20%, rgba(0, 0, 0, 0.4) 45%, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0.9) 100%);
-        background: rgba(46, 41, 38, 0.5); } }
 
 /**
  * Widget Max Widths
@@ -1557,10 +1530,6 @@ p > strong {
     width: auto; }
   .elementor-widget:not(:last-child) {
     margin-bottom: 2.875rem; }
-  @media (max-width: 767.99px) {
-    .elementor-widget {
-      margin-left: auto;
-      margin-right: auto; } }
   @media (min-width: 768px) {
     .widget--wide {
       max-width: 30.25rem; }
@@ -1578,7 +1547,9 @@ p > strong {
     margin-bottom: 2.875rem; }
   @media (min-width: 768px) {
     .widget--mb-xl, .widget--mb-xl:not(:last-child) {
-      margin-bottom: 5.75rem; } }
+      margin-bottom: 5.75rem; }
+    .widget--mb-none {
+      margin-bottom: 0; } }
   .widget--mv-lg, .widget--mv-lg:not(:last-child), .widget--mv-xl, .widget--mv-xl:not(:last-child) {
     margin-top: 2.875rem;
     margin-bottom: 2.875rem; }
@@ -1587,9 +1558,14 @@ p > strong {
       margin-top: 5.75rem;
       margin-bottom: 5.75rem; } }
 
-/**
- * Widget lateral margins
+/**********************************************************
+ *
+ * WIDGETS HORIZONTAL ALIGN
  */
+.elementor-widget {
+  margin-left: auto;
+  margin-right: auto; }
+
 @media (min-width: 768px) {
   .elementor-widget-wrap {
     display: -webkit-box;
@@ -1608,11 +1584,13 @@ p > strong {
   .elementor-row .elementor-column:first-child .elementor-widget {
     -webkit-align-self: flex-start;
         -ms-flex-item-align: start;
-            align-self: flex-start; }
+            align-self: flex-start;
+    margin-left: 0; }
   .elementor-row .elementor-column:last-child .elementor-widget {
     -webkit-align-self: flex-end;
         -ms-flex-item-align: end;
-            align-self: flex-end; }
+            align-self: flex-end;
+    margin-right: 0; }
   .elementor-row .elementor-column:first-child:last-child .elementor-widget {
     -webkit-align-self: center;
         -ms-flex-item-align: center;
@@ -1631,10 +1609,10 @@ p > strong {
             align-self: center; }
   .widget--right {
     margin-right: 0;
-    margin-left: auto; }
+    margin-left: auto !important; }
   .widget--left {
     margin-left: 0;
-    margin-right: auto; } }
+    margin-right: auto !important; } }
 
 .widget--boxed {
   padding: 1.4375rem; }
