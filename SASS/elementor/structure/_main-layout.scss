@@ -52,17 +52,23 @@
 /***
  * Columns
  */
-// .elementor-column.elementor-col-50,
-// .elementor-column[data-col="50"] {
-//   width: 100%;
-//   // @include breakpoint-min(el) {
-//   //   width: 100%;
-//   // }
-//   @include breakpoint-min(md) {
-//     width: 100%;
-//   }
-//
-//   @include breakpoint-min(lg) {
-//     width: 50%;
-//   }
-// }
+.elementor-column.elementor-col-50,
+.elementor-column[data-col="50"] {
+
+  @include breakpoint-min(el_st) {
+    width: 100%;
+  }
+  @include breakpoint-min(el) {
+    width: 50%;
+  }
+}
+.elementor-column.elementor-col-33,
+.elementor-column[data-col="33"] {
+
+  @include breakpoint-min(el_st) {
+    width: 100%;
+  }
+  @include breakpoint-min(el) {
+    width: 33.33333%;
+  }
+}

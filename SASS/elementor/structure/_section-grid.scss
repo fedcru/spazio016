@@ -7,7 +7,8 @@
   // Standard gutter
   ///
   .elementor-row > .elementor-column .elementor-column-wrap {
-    @include pad( $v: $el-gutter-md, $h: $el-gutter-sm );
+    @include pad( $v: $el-gutter-md);
+    @include layout-padding();
   }
 
   // On mobile, the widget centers itself vertically
@@ -24,6 +25,9 @@
   .elementor-row > .column--mobile-height .elementor-element-populated {
     padding-bottom: 100%;
 
+    @include breakpoint-min(md) {
+      padding-bottom: 50%;
+    }
     @include breakpoint-min(el) {
       padding-bottom: inherit;
     }

@@ -42,13 +42,13 @@ $fonts: (
   h1: (
     fm: $ff-secondary,
     fs: 3.375rem,
-    lh: 4.3125rem,
-    mt: 4,
+    lh: 3.375rem,
+    mt: 6.5,
     mb: 2,
 
     md: (
       fs: 4.25rem,
-      lh: 2.875rem,
+      lh: 4.3125rem,
     ),
   ),
   h2: (
@@ -89,6 +89,7 @@ $fonts: (
     mt: 4,
     mb: 0,
   ),
+  
   h5-alt: (
     fm: $ff-primary,
     fs: 0.875rem,

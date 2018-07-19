@@ -77,11 +77,19 @@
 }
 
 
+.color--dark,
 .color--dark {
   h1,
   h2,
   h3 {
-    color: $white-70;
+    color: $white;
+  }
+}
+.color--light {
+  h1,
+  h2,
+  h3 {
+    color: $green;
   }
 }
 

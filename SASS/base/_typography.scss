@@ -130,3 +130,10 @@ hr,
 p > strong {
   font-weight: 600;
 }
+
+.typography,
+.elementor-text-editor {
+  &> .title--h1 {
+    @include font(h1, $mt: default, $mb: default);
+  }
+}

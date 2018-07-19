@@ -229,6 +229,10 @@
     @include font(h4, $mt: default, $mb: default);
   }
 
+  &> h5 {
+    @include font(h5-alt, $mt: default, $mb: default);
+  }
+
   &> p,
   &> h3--p {
     @include font(p, $mt: default, $mb: default);
