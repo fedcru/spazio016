@@ -191,6 +191,7 @@ $el-v-space: 7;
 .elementor-col-66 .elementor-section-boxed.elementor-inner-section {
 
   @include breakpoint-max(xl) {
+
     .elementor-column {
       @include pad($v: 2);
     }
@@ -200,6 +201,7 @@ $el-v-space: 7;
 
       .elementor-widget {
         margin-right: auto;
+        margin-left: 0;
       }
     }
 

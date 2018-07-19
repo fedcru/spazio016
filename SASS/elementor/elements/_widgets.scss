@@ -73,8 +73,11 @@
         margin-bottom: spacing(7);
       }
 
-      .widget--mb-none {
-        margin-bottom: 0;
+      @at-root {
+        .widget--mb-none,
+        .widget--mb-none:not(:last-child) {
+          margin-bottom: 0;
+        }
       }
     }
   }
