@@ -7,14 +7,20 @@ Description: None yet.
 Text Domain: FrontEnd-Child
 Template: frontend
 */
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+@import url("https://fonts.googleapis.com/css?family=Crimson+Text:400,700");
+.gform_button {
+  display: inline-block;
+  font-family: "Crimson Text", serif;
+  white-space: normal;
+  border-style: solid; }
+
 /***********************
 * MAX width
 ***********************/
 /**
  * Vertical grid pad
  */
-@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
-@import url("https://fonts.googleapis.com/css?family=Crimson+Text:400,700");
 body {
   font-family: "Lato", sans-serif;
   text-rendering: optimizeLegibility;
@@ -2158,7 +2164,8 @@ select {
   padding-bottom: 0.359375rem;
   padding-right: 0.359375rem;
   padding-left: 0.359375rem;
-  width: 100%; }
+  width: 100%;
+  background: #fff; }
 
 .gform_wrapper {
   padding: 1.078125rem;
@@ -2297,7 +2304,7 @@ select {
  */
 .gform_footer {
   width: 100%;
-  text-align: right; }
+  text-align: center; }
 
 .gform_button {
   display: inline-block;
@@ -2308,14 +2315,17 @@ select {
   border-radius: 1.25rem;
   padding-left: 1.4375rem;
   padding-right: 1.4375rem;
-  padding-top: 1.078125rem;
-  padding-bottom: 1.078125rem;
-  font-family: "Crimson Text", serif;
+  padding-top: 0.359375rem;
+  padding-bottom: 0.359375rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
   font-size: 1rem;
   line-height: 1.4375rem;
   background: #6d8764;
   color: #fafaf9;
   border-color: #6d8764;
+  text-transform: uppercase;
+  max-width: 16rem;
   cursor: pointer; }
 
 .gform_ajax_spinner {
@@ -2354,6 +2364,76 @@ textarea {
   .color--dark .gform_button:hover {
     background-color: #fafaf9;
     color: #2e2926; }
+
+/************************************************************
+ * DATE PICKER
+ *
+ **/
+.ginput_container_date {
+  position: relative; }
+
+.ui-datepicker-trigger {
+  position: absolute;
+  max-width: 20px !important;
+  right: 3%;
+  top: 25%; }
+
+.ui-datepicker {
+  width: auto;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+
+.ui-datepicker-header {
+  padding: 0.71875rem;
+  background: #eeeeeb;
+  overflow: hidden; }
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+  font-family: "Lato", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.4375rem; }
+
+.ui-datepicker-prev {
+  padding-right: 0.71875rem; }
+  .ui-datepicker-prev::before {
+    content: "\00AB";
+    margin-right: 0.359375rem; }
+
+.ui-datepicker-next {
+  padding-left: 0.359375rem; }
+  .ui-datepicker-next::after {
+    content: "\00BB";
+    margin-left: 0.359375rem; }
+
+.ui-datepicker-title {
+  margin-top: 0.71875rem; }
+  .ui-datepicker-title select {
+    width: 48%; }
+  .ui-datepicker-title .ui-datepicker-month {
+    float: left; }
+  .ui-datepicker-title .ui-datepicker-year {
+    float: right; }
+
+.ui-datepicker-calendar {
+  width: 100%;
+  background: #fafaf9;
+  padding-top: 0.71875rem; }
+  .ui-datepicker-calendar td,
+  .ui-datepicker-calendar th {
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.4375rem; }
+    .ui-datepicker-calendar td a,
+    .ui-datepicker-calendar th a {
+      color: #2e2926; }
+  .ui-datepicker-calendar td {
+    padding: 0.15rem 0.359375rem;
+    border-left: 1px solid rgba(46, 41, 38, 0.1);
+    border-bottom: 1px solid rgba(46, 41, 38, 0.1); }
+    .ui-datepicker-calendar td:first-child {
+      border-left: 0; }
 
 .sidebar__widget {
   margin-bottom: 2.15625rem; }

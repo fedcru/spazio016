@@ -9,6 +9,7 @@ textarea {
 
 select {
   @include input-select(p);
+  background: #fff;
 }
 
 .gform_wrapper {
@@ -79,12 +80,15 @@ select {
  */
 .gform_footer {
   width: 100%;
-  text-align: right;
+  text-align: center;
 }
 
 .gform_button {
-  @include button(h4);
+  @extend %button;
+  @include button(p, $pv: 1);
   @include button-color(light, filled);
+  text-transform: uppercase;
+  max-width: 16rem;
   cursor: pointer;
 }
 
@@ -129,5 +133,94 @@ textarea {
   .gform_button {
     @include button-color(dark, empty-w);
     cursor: pointer;
+  }
+}
+
+/************************************************************
+ * DATE PICKER
+ *
+ **/
+.ginput_container_date {
+  position: relative;
+}
+
+.ui-datepicker-trigger {
+  position: absolute;
+  max-width: 20px !important;
+  right: 3%;
+  top: 25%;
+}
+
+.ui-datepicker {
+  width: auto;
+  box-shadow: $card-shadow--2;
+}
+
+.ui-datepicker-header {
+  padding: spacing(2);
+  background: darken($white, 5%);
+  overflow: hidden;
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+  @include font(h5-alt);
+}
+
+.ui-datepicker-prev {
+  padding-right: spacing(2);
+
+  &::before {
+    content: "\00AB";
+    margin-right: spacing(1);
+  }
+}
+.ui-datepicker-next {
+  padding-left: spacing(1);
+
+  &::after {
+    content: "\00BB";
+    margin-left: spacing(1);
+  }
+}
+
+.ui-datepicker-title {
+  margin-top: spacing(2);
+
+  select {
+    width: 48%;
+  }
+
+  .ui-datepicker-month {
+    float: left;
+  }
+  .ui-datepicker-year {
+    float: right;
+  }
+}
+
+.ui-datepicker-calendar {
+  width: 100%;
+  background: $white;
+  padding-top: spacing(2);
+
+  td,
+  th {
+    text-align: center;
+    @include font(h5-alt);
+
+
+    a {
+      color: $black;
+    }
+  }
+
+  td {
+    padding: 0.15rem spacing(1);
+    border-left: 1px solid $black-10;
+    border-bottom: 1px solid $black-10;
+    &:first-child {
+      border-left: 0;
+    }
   }
 }
