@@ -201,24 +201,59 @@
 ////
 // Standard Layout Padding
 ///
-@mixin layout-padding() {
-  padding-left: calc( 8.75vw + -8px);
-  padding-right: calc( 8.75vw + -8px);
+@mixin layout-padding($r: 1, $l: 1, $xl: 1, $lg: 1, $sm: 1, $xs: 1 ) {
 
-  @include breakpoint-min(sm) {
-    padding-left: spacing(6);
-    padding-right: spacing(6);
+  @if $xs == 1 {
+    @if $r == 1 {
+      padding-right: calc( 8.75vw + -8px);
+    }
+
+    @if $l == 1 {
+      padding-left: calc( 8.75vw + -8px);
+    }
   }
-  @include breakpoint-min(lg) {
-    padding-left: calc( 3.5vw + 2.4px);
-    padding-right: calc( 3.5vw + 2.4px);
+
+
+  @if $sm == 1 {
+    @include breakpoint-min(sm) {
+
+      @if $l == 1 {
+        padding-left: spacing(6);
+      }
+
+      @if $r == 1 {
+        padding-right: spacing(6);
+      }
+    }
   }
-  @include breakpoint-min(xl) {
-    padding-left: spacing(6.5);
-    padding-right: spacing(6.5);
+
+
+  @if $lg == 1 {
+    @include breakpoint-min(lg) {
+
+      @if $l == 1 {
+        padding-left: calc( 3.5vw + 2.4px);
+      }
+
+      @if $r == 1 {
+        padding-right: calc( 3.5vw + 2.4px);
+      }
+    }
+  }
+
+  @if $xl == 1 {
+    @include breakpoint-min(xl) {
+
+      @if $l == 1 {
+        padding-left: spacing(6.5);
+      }
+
+      @if $r == 1 {
+        padding-right: spacing(6.5);
+      }
+    }
   }
 }
-
 
 ////
 // Layout Overflow Steps

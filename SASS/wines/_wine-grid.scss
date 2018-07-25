@@ -1,0 +1,16 @@
+.wine-grid__inner {
+  max-width: $website-width;
+  margin: 0 auto;
+}
+.wine-grid__row {
+  @include flex-setup(grid);
+}
+
+.wine-grid__title-container {
+  @include flex-child(grid, $wd: 100);
+}
+
+.wine-grid__title {
+  @include font(h1, $mt: 7, $mb: 6);
+  text-align: center;
+}

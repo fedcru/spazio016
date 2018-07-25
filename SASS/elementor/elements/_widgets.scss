@@ -266,23 +266,39 @@
   &> blockquote {
     @include font(h3);
     position: relative;
-    padding: spacing(4);
+    padding: spacing(4) 0;
+    font-style: italic;
 
     &::before {
-      top: spacing(4) * 2;
-      left: spacing(4) * -2;
+      font-style: normal;
       content: "\201C";
       position: absolute;
       font-family: serif;
-      font-size: 6rem;
+      font-size: 10rem;
+      // left: 50%;
+      // right: 50%;
+      width: 100%;
+      text-align: center;
+      top: spacing(-6.5);
+
+
+      @include breakpoint-min(md) {
+        left: spacing(4) * -4;
+        top: spacing(-1);
+        width: auto;
+        text-align: left;
+      }
     }
-    &::after {
-      bottom: spacing(4) * 2;
-      right: spacing(4) * -1.5;
-      content: "\201E";
-      position: absolute;
-      font-family: serif;
-      font-size: 6rem;
-    }
+  }
+}
+
+@include breakpoint-min(lg) {
+  .image--negative-top {
+    margin-top: spacing(-8);
+    z-index: 9;
+  }
+  .image--negative-bottom {
+    margin-bottom: spacing(-8);
+    z-index: 9;
   }
 }

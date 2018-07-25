@@ -3,9 +3,15 @@ $header_bp: 'md';
 .header {
   @include layout-padding();
   box-shadow: $card-shadow--2;
-  background-color: main-colors(header, bg);
+  background-color: $black;
   position: relative;
   z-index: 9;
+  background-color: main-colors(header, bg);
+
+
+  @include breakpoint-min(md) {
+    background-color: main-colors(header, bg);
+  }
 
 
   &__row {
@@ -38,7 +44,7 @@ $header_bp: 'md';
 }
 
 .logo--mobile {
-  max-width: 100px;
+  max-width: 150px;
 
 }
 
@@ -51,6 +57,11 @@ $header_bp: 'md';
 
 .primary-nav {
   @include marg($v: 4);
+  display: none;
+
+  @include breakpoint-min(md) {
+    display: block;
+  }
 }
 
 .primary-nav__inner {
@@ -82,7 +93,7 @@ $header_bp: 'md';
       border-color: $green;
 
       &::after {
-        
+
       }
 
       a {

@@ -15,6 +15,14 @@
     color: inherit;
   }
 
+  blockquote {
+    color: rgba(main-colors(main, body), 0.7);
+
+    &::before {
+      color: rgba(main-colors(main, body), 0.2);
+    }
+  }
+
   .elementor-text-editor > p > a {
     @include link();
     font-weight: bold;
@@ -46,11 +54,11 @@
 
     blockquote,
     blockquote p {
-      color: rgba(palette($palette, body), 0.7);
+      color: rgba(palette($palette, body), 0.8);
 
       &::after,
       &::before {
-        color: rgba(palette($palette, body), 0.3);
+        color: rgba(palette($palette, body), 0.2);
       }
     }
 

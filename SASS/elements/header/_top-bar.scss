@@ -1,7 +1,7 @@
 .top-area {
   @include layout-overflow();
   @include layout-padding();
-  @include pad($v: 1);
+  @include pad($v: 0);
   background-color: main-colors(topbar, bg);
 
 
@@ -21,6 +21,7 @@
     width: 100%;
     margin: 0 auto;
     // @include pad($h: 4);
+    // flex-wrap: wrap;
 
     @include breakpoint-min(lg) {
       max-width: $website-width;
@@ -42,6 +43,34 @@
 
 .top-area__widget-container {
   display: flex;
+  // @include flex-child($wd: 100);
+  //
+  // @include breakpoint-min(sm) {
+  //   @include flex-child($wd: 50);
+  // }
+  // @include breakpoint-max(sm) {
+  //   @include flex-child($wd: 100);
+  // }
+
+  &--left {
+    justify-content: space-between;
+    width: 100%;
+    flex-basis: 100%;
+
+    @include breakpoint-min(md) {
+      justify-content: flex-start;
+      width: auto;
+      flex-basis: auto;
+    }
+  }
+
+  &--right {
+    display: none;
+
+    @include breakpoint-min(md) {
+      display: block;
+    }
+  }
 }
 
 
@@ -49,19 +78,37 @@
  * Widget
  */
 .top-area__widget {
-  @include font(p);
-  margin-right: spacing(5);
+  @include font(h5-alt, $pt: 1, $pb: 1);
+  // margin-right: 0;
 
-  &:last-child {
-    margin-right: 0;
-
-    @include breakpoint-max(sm) {
-      margin-left: auto;
-      margin-right: 0;
-    }
+  &:nth-child(2) {
+    padding: 0;
   }
 
 
+
+  @include breakpoint-min(sm) {
+    margin-right: spacing(5);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.top-area .button {
+  @include button(h5-alt, $pv: 1);
+  @include button-color(main, filled);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 0;
+  // display: block;
+
+  @include breakpoint-max(xs) {
+    margin-right: spacing(-6);
+    margin-left: spacing(2);
+    display: block;
+  }
 }
 
 .top-area__widget-container--left {
@@ -73,7 +120,14 @@
   font-size: 1em;
 }
 
-/*WPML*/
+/***********************************************************
+ * WPML
+ *
+ **/
+
+ /**
+  * DROPDOWN
+  */
 .wpml-ls-legacy-dropdown {
   background: transparent;
   border: 0;
@@ -120,4 +174,28 @@
 
 .wpml-ls-legacy-dropdown a.wpml-ls-item-toggle {
   padding-left: spacing(4);
+}
+
+/***
+ * LIST
+ **/
+.wpml-ls-legacy-list-horizontal {
+  padding: 0;
+  border: 0;
+
+
+  li {
+    @include font(h5-alt);
+    a {
+      padding: 0;
+    }
+
+    &:nth-child(odd) {
+      padding-right: spacing(2);
+      border-right: 1px solid;
+    }
+    &:nth-child(even) {
+      padding-left: spacing(2);
+    }
+  }
 }

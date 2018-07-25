@@ -198,8 +198,8 @@ p > strong {
   *
   *********************************************************************************************/
 .main {
-  padding-left: calc( 8.75vw + -8px);
   padding-right: calc( 8.75vw + -8px);
+  padding-left: calc( 8.75vw + -8px);
   background-color: #fafaf9; }
   @media (min-width: 30em) {
     .main {
@@ -354,13 +354,14 @@ p > strong {
     color: rgba(46, 41, 38, 0.7); }
 
 .header {
-  padding-left: calc( 8.75vw + -8px);
   padding-right: calc( 8.75vw + -8px);
+  padding-left: calc( 8.75vw + -8px);
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  background-color: #fafaf9;
+  background-color: #2e2926;
   position: relative;
-  z-index: 9; }
+  z-index: 9;
+  background-color: #fafaf9; }
   @media (min-width: 30em) {
     .header {
       padding-left: 2.875rem;
@@ -373,6 +374,9 @@ p > strong {
     .header {
       padding-left: 4.3125rem;
       padding-right: 4.3125rem; } }
+  @media (min-width: 52.5em) {
+    .header {
+      background-color: #fafaf9; } }
   .header__inner {
     padding-top: 0.71875rem;
     padding-bottom: 0.71875rem; }
@@ -387,11 +391,15 @@ p > strong {
   max-width: 250px; }
 
 .logo--mobile {
-  max-width: 100px; }
+  max-width: 150px; }
 
 .primary-nav {
   margin-top: 1.4375rem;
-  margin-bottom: 1.4375rem; }
+  margin-bottom: 1.4375rem;
+  display: none; }
+  @media (min-width: 52.5em) {
+    .primary-nav {
+      display: block; } }
 
 .primary-nav__inner {
   margin-right: auto;
@@ -441,8 +449,8 @@ p > strong {
     color: #fafaf9; }
 
 .footer {
-  padding-left: calc( 8.75vw + -8px);
   padding-right: calc( 8.75vw + -8px);
+  padding-left: calc( 8.75vw + -8px);
   padding-top: 5.75rem;
   padding-bottom: 5.75rem; }
   @media (min-width: 30em) {
@@ -494,7 +502,26 @@ p > strong {
   padding-right: 2.875rem;
   max-width: 30.25rem;
   margin-right: auto;
-  margin-left: auto; }
+  margin-left: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+  @media (min-width: 60em) {
+    .footer__column:first-child {
+      margin-left: 0; }
+    .footer__column:last-child {
+      margin-right: 0;
+      text-align: right; } }
 
 @media (min-width: 60em) {
   .footer__column--1-3 {
@@ -680,10 +707,10 @@ p > strong {
 .top-area {
   margin-left: calc( -8.75vw + 8px);
   margin-right: calc( -8.75vw + 8px);
-  padding-left: calc( 8.75vw + -8px);
   padding-right: calc( 8.75vw + -8px);
-  padding-top: 0.359375rem;
-  padding-bottom: 0.359375rem;
+  padding-left: calc( 8.75vw + -8px);
+  padding-top: 0;
+  padding-bottom: 0;
   background-color: #2e2926; }
   @media (min-width: 30em) {
     .top-area {
@@ -734,28 +761,85 @@ p > strong {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
+  .top-area__widget-container--left {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%; }
+    @media (min-width: 52.5em) {
+      .top-area__widget-container--left {
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        width: auto;
+        -webkit-flex-basis: auto;
+            -ms-flex-preferred-size: auto;
+                flex-basis: auto; } }
+  .top-area__widget-container--right {
+    display: none; }
+    @media (min-width: 52.5em) {
+      .top-area__widget-container--right {
+        display: block; } }
 
 /***
  * Widget
  */
 .top-area__widget {
   font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1.4375rem;
-  margin-right: 2.15625rem; }
-  .top-area__widget:last-child {
-    margin-right: 0; }
-    @media (max-width: 29.99em) {
+  padding-top: 0.359375rem;
+  padding-bottom: 0.359375rem; }
+  .top-area__widget:nth-child(2) {
+    padding: 0; }
+  @media (min-width: 30em) {
+    .top-area__widget {
+      margin-right: 2.15625rem; }
       .top-area__widget:last-child {
-        margin-left: auto;
         margin-right: 0; } }
+
+.top-area .button {
+  display: inline-block;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 1.25rem;
+  padding-left: 1.4375rem;
+  padding-right: 1.4375rem;
+  padding-top: 0.359375rem;
+  padding-bottom: 0.359375rem;
+  font-family: "Lato", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.4375rem;
+  background: #6d8764;
+  color: #fafaf9;
+  border-color: #6d8764;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 0; }
+  @media (max-width: 479.99px) {
+    .top-area .button {
+      margin-right: -2.875rem;
+      margin-left: 0.71875rem;
+      display: block; } }
 
 .top-area .theme-icon::before {
   padding-right: 0.71875rem;
   font-size: 1em; }
 
-/*WPML*/
+/***********************************************************
+ * WPML
+ *
+ **/
+/**
+  * DROPDOWN
+  */
 .wpml-ls-legacy-dropdown {
   background: transparent;
   border: 0;
@@ -786,6 +870,24 @@ p > strong {
 
 .wpml-ls-legacy-dropdown a.wpml-ls-item-toggle {
   padding-left: 1.4375rem; }
+
+/***
+ * LIST
+ **/
+.wpml-ls-legacy-list-horizontal {
+  padding: 0;
+  border: 0; }
+  .wpml-ls-legacy-list-horizontal li {
+    font-family: "Lato", sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.4375rem; }
+    .wpml-ls-legacy-list-horizontal li a {
+      padding: 0; }
+    .wpml-ls-legacy-list-horizontal li:nth-child(odd) {
+      padding-right: 0.71875rem;
+      border-right: 1px solid; }
+    .wpml-ls-legacy-list-horizontal li:nth-child(even) {
+      padding-left: 0.71875rem; }
 
 /**
  * Section overflow
@@ -888,8 +990,8 @@ p > strong {
  * Basic setup
  */
 .elementor-section-boxed {
-  padding-left: calc( 8.75vw + -8px);
-  padding-right: calc( 8.75vw + -8px); }
+  padding-right: calc( 8.75vw + -8px);
+  padding-left: calc( 8.75vw + -8px); }
   @media (min-width: 30em) {
     .elementor-section-boxed {
       padding-left: 2.875rem;
@@ -1081,8 +1183,8 @@ p > strong {
 .elementor-section-full_width .elementor-row > .elementor-column .elementor-column-wrap {
   padding-top: 4.3125rem;
   padding-bottom: 4.3125rem;
-  padding-left: calc( 8.75vw + -8px);
-  padding-right: calc( 8.75vw + -8px); }
+  padding-right: calc( 8.75vw + -8px);
+  padding-left: calc( 8.75vw + -8px); }
   @media (min-width: 30em) {
     .elementor-section-full_width .elementor-row > .elementor-column .elementor-column-wrap {
       padding-left: 2.875rem;
@@ -1195,6 +1297,10 @@ p > strong {
     border-color: rgba(46, 41, 38, 0.05); }
   .elementor-section span {
     color: inherit; }
+  .elementor-section blockquote {
+    color: rgba(46, 41, 38, 0.7); }
+    .elementor-section blockquote::before {
+      color: rgba(46, 41, 38, 0.2); }
   .elementor-section .elementor-text-editor > p > a {
     position: relative;
     text-shadow: -1px -1px 0 #fafaf9, -1px -1px 0 #fafaf9, -1px -1px 0 #fafaf9, 1px 1px 0 #fafaf9;
@@ -1239,11 +1345,11 @@ p > strong {
     text-shadow: none; }
   .color--dark blockquote,
   .color--dark blockquote p {
-    color: rgba(250, 250, 249, 0.7); }
+    color: rgba(250, 250, 249, 0.8); }
     .color--dark blockquote::after, .color--dark blockquote::before,
     .color--dark blockquote p::after,
     .color--dark blockquote p::before {
-      color: rgba(250, 250, 249, 0.3); }
+      color: rgba(250, 250, 249, 0.2); }
   .color--dark .color--dark {
     background-color: #6d8764; }
     .color--dark .color--dark * {
@@ -1351,11 +1457,11 @@ p > strong {
     text-shadow: none; }
   .color--dark-alt blockquote,
   .color--dark-alt blockquote p {
-    color: rgba(250, 250, 249, 0.7); }
+    color: rgba(250, 250, 249, 0.8); }
     .color--dark-alt blockquote::after, .color--dark-alt blockquote::before,
     .color--dark-alt blockquote p::after,
     .color--dark-alt blockquote p::before {
-      color: rgba(250, 250, 249, 0.3); }
+      color: rgba(250, 250, 249, 0.2); }
   .color--dark-alt .color--dark {
     background-color: #6d8764; }
     .color--dark-alt .color--dark * {
@@ -1463,11 +1569,11 @@ p > strong {
     text-shadow: none; }
   .color--light blockquote,
   .color--light blockquote p {
-    color: rgba(46, 41, 38, 0.7); }
+    color: rgba(46, 41, 38, 0.8); }
     .color--light blockquote::after, .color--light blockquote::before,
     .color--light blockquote p::after,
     .color--light blockquote p::before {
-      color: rgba(46, 41, 38, 0.3); }
+      color: rgba(46, 41, 38, 0.2); }
   .color--light .color--dark {
     background-color: #6d8764; }
     .color--light .color--dark * {
@@ -1796,25 +1902,35 @@ p > strong {
   font-size: 1.5rem;
   line-height: 2.875rem/2;
   position: relative;
-  padding: 1.4375rem; }
+  padding: 1.4375rem 0;
+  font-style: italic; }
   @media (min-width: 60em) {
     .elementor-text-editor > blockquote {
       font-size: 1.625rem;
       line-height: 2.875rem/2; } }
   .elementor-text-editor > blockquote::before {
-    top: 2.875rem;
-    left: -2.875rem;
+    font-style: normal;
     content: "\201C";
     position: absolute;
     font-family: serif;
-    font-size: 6rem; }
-  .elementor-text-editor > blockquote::after {
-    bottom: 2.875rem;
-    right: -2.15625rem;
-    content: "\201E";
-    position: absolute;
-    font-family: serif;
-    font-size: 6rem; }
+    font-size: 10rem;
+    width: 100%;
+    text-align: center;
+    top: -4.3125rem; }
+    @media (min-width: 52.5em) {
+      .elementor-text-editor > blockquote::before {
+        left: -5.75rem;
+        top: -0.359375rem;
+        width: auto;
+        text-align: left; } }
+
+@media (min-width: 60em) {
+  .image--negative-top {
+    margin-top: -8.625rem;
+    z-index: 9; }
+  .image--negative-bottom {
+    margin-bottom: -8.625rem;
+    z-index: 9; } }
 
 .elementor-button.elementor-size-sm {
   display: inline-block;
@@ -2057,13 +2173,15 @@ p > strong {
   padding-left: 1.4375rem;
   padding-top: 2.875rem;
   padding-bottom: 2.875rem;
-  background-color: #fafaf9;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   max-height: 100vh;
   overflow-x: hidden; }
+
+.mobile-nav__icon {
+  fill: #2e2926; }
 
 .modal .mobile-nav__menu {
   position: absolute; }
@@ -2074,8 +2192,9 @@ p > strong {
 .mobile-nav__inner {
   padding-right: 1.4375rem;
   padding-left: 1.4375rem;
-  padding-top: 2.875rem;
+  padding-top: 8.625rem;
   padding-bottom: 2.875rem;
+  background-color: #2e2926;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2096,9 +2215,13 @@ p > strong {
   left: 0;
   right: 0; }
   .mobile-nav__inner li {
-    font-family: "Crimson Text", serif;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
     font-size: 1rem;
     line-height: 1.4375rem;
+    padding-top: 0.71875rem;
+    padding-bottom: 0.71875rem;
+    text-transform: uppercase;
     -webkit-flex-basis: auto;
         -ms-flex-preferred-size: auto;
             flex-basis: auto;
@@ -2107,27 +2230,31 @@ p > strong {
     .mobile-nav__inner li:last-child {
       border: 0;
       margin-bottom: 10vh; }
-  .mobile-nav__inner .item--bottom {
+  .mobile-nav__inner .item--bottom,
+  .mobile-nav__inner .wpml-ls-first-item {
     margin-top: auto;
     margin-bottom: 0; }
   .mobile-nav__inner a {
     padding-top: 0.71875rem;
     padding-bottom: 0.71875rem;
     display: block;
-    color: #2e2926; }
+    color: #fafaf9; }
 
 .mobile-nav__toggler--close {
-  color: #2e2926;
-  top: 3vw;
-  right: 3vw;
+  top: 6vw;
+  right: 6vw;
   z-index: 99;
   position: absolute; }
+  @media (min-width: 52.5em) {
+    .mobile-nav__toggler--close {
+      top: 1.4375rem;
+      right: 1.4375rem; } }
   .modal .mobile-nav__toggler--close {
     display: none; }
   .modal--show .mobile-nav__toggler--close {
     display: block; }
   .mobile-nav__toggler--close .mobile-nav__icon--close {
-    fill: #2e2926; }
+    fill: #fafaf9; }
 
 .mobile-nav__toggler {
   width: 2.875rem;
@@ -2535,8 +2662,8 @@ textarea {
     height: 100%; }
 
 .hero-title {
-  padding-left: calc( 8.75vw + -8px);
   padding-right: calc( 8.75vw + -8px);
+  padding-left: calc( 8.75vw + -8px);
   margin-left: calc( -8.75vw + 8px);
   margin-right: calc( -8.75vw + 8px);
   padding-top: 5.75rem;
@@ -2779,7 +2906,9 @@ textarea {
           flex-direction: row;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+          flex-wrap: wrap;
+  padding-top: 5.75rem;
+  padding-bottom: 5.75rem; }
   @media (min-width: 30em) {
     .wine__inner {
       margin-left: -2.875rem;
@@ -2793,11 +2922,14 @@ textarea {
       margin-left: -4.3125rem;
       margin-right: -4.3125rem; } }
 
+/**********************************************************************
+ * Wine general setup
+ ***/
 .wine__section {
-  -webkit-flex-basis: 50%;
-      -ms-flex-preferred-size: 50%;
-          flex-basis: 50%;
-  width: 50%;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  width: 100%;
   -webkit-align-self: auto;
       -ms-flex-item-align: auto;
           align-self: auto;
@@ -2807,13 +2939,45 @@ textarea {
           flex-grow: 0;
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
-          flex-shrink: 0; }
+          flex-shrink: 0;
+  padding-right: calc( 8.75vw + -8px);
+  padding-left: calc( 8.75vw + -8px);
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+      -ms-flex-order: 2;
+          order: 2;
+  margin-left: auto;
+  margin-right: auto; }
+  @media (min-width: 30em) {
+    .wine__section {
+      padding-left: 2.875rem;
+      padding-right: 2.875rem; } }
+  @media (min-width: 52.5em) {
+    .wine__section {
+      -webkit-flex-basis: 50%;
+          -ms-flex-preferred-size: 50%;
+              flex-basis: 50%;
+      width: 50%;
+      -webkit-align-self: auto;
+          -ms-flex-item-align: auto;
+              align-self: auto;
+      -webkit-box-flex: 0;
+      -webkit-flex-grow: 0;
+          -ms-flex-positive: 0;
+              flex-grow: 0;
+      -webkit-flex-shrink: 0;
+          -ms-flex-negative: 0;
+              flex-shrink: 0;
+      padding-left: 0;
+      padding-right: 0; } }
   .wine__section p {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.4375rem;
     margin-bottom: 1.4375rem; }
+    .wine__section p:last-child {
+      margin-bottom: 0; }
 
 .wine__section-inner {
   -webkit-flex-basis: 100%;
@@ -2830,29 +2994,362 @@ textarea {
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
-  max-width: 36.5625rem; }
-
-.wine__section:nth-child(odd) .wine__section-inner {
+  max-width: 36.5625rem;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-left: auto;
-  margin-right: 0; }
-  @media (min-width: 60em) {
-    .wine__section:nth-child(odd) .wine__section-inner {
-      padding-right: 1.4375rem; } }
-
-.wine__section:nth-child(even) .wine__section-inner {
-  margin-right: auto;
-  margin-left: 0; }
-  @media (min-width: 60em) {
-    .wine__section:nth-child(even) .wine__section-inner {
-      padding-left: 1.4375rem; } }
+  margin-right: auto; }
 
 .wine__section-title {
   font-family: "Crimson Text", serif;
   font-size: 2.25rem;
   line-height: 2.875rem;
-  margin-top: 1.4375rem;
+  margin-top: 0;
   margin-bottom: 0.71875rem; }
   @media (min-width: 60em) {
     .wine__section-title {
       font-size: 2.625rem;
       line-height: 2.875rem; } }
+
+/***************************************************************************
+ * Tasting Notes
+ ****/
+.wine__section--tasting-notes {
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1; }
+
+.wine__section-inner--tasting-notes {
+  max-width: 30.25rem; }
+  @media (min-width: 52.5em) {
+    .wine__section-inner--tasting-notes {
+      margin-left: 0;
+      margin-right: auto; } }
+
+/*************************************************************************
+ * Bottle Image
+ */
+.wine__section--bottle-image {
+  -webkit-box-ordinal-group: 1;
+  -webkit-order: 0;
+      -ms-flex-order: 0;
+          order: 0; }
+
+.wine__section-inner--bottle-image {
+  padding-right: 2.875rem; }
+  @media (min-width: 52.5em) {
+    .wine__section-inner--bottle-image {
+      margin-right: 0;
+      margin-left: auto; } }
+
+.wine__image--bottle-image {
+  max-width: 200px;
+  margin-right: auto;
+  margin-left: auto; }
+
+/*************************************************************************
+ * Basic Info
+ */
+.wine__section--basic-info,
+.wine__section--label-image {
+  padding-top: 5.75rem;
+  padding-bottom: 5.75rem;
+  background-color: #e0dfda;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1; }
+
+.wine__section-inner--basic-info {
+  margin-left: auto;
+  margin-right: 0; }
+
+/*************************************************************************
+ * WineMaking
+ */
+.wine__section--winemaking,
+.wine__section--vineyard,
+.wine__section--bottle,
+.wine__section--chemical-analysis {
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  width: 100%;
+  -webkit-align-self: auto;
+      -ms-flex-item-align: auto;
+          align-self: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1; }
+  @media (min-width: 52.5em) {
+    .wine__section--winemaking,
+    .wine__section--vineyard,
+    .wine__section--bottle,
+    .wine__section--chemical-analysis {
+      -webkit-flex-basis: 50%;
+          -ms-flex-preferred-size: 50%;
+              flex-basis: 50%;
+      width: 50%;
+      -webkit-align-self: auto;
+          -ms-flex-item-align: auto;
+              align-self: auto;
+      -webkit-box-flex: 0;
+      -webkit-flex-grow: 0;
+          -ms-flex-positive: 0;
+              flex-grow: 0;
+      -webkit-flex-shrink: 0;
+          -ms-flex-negative: 0;
+              flex-shrink: 0;
+      padding-top: 1.4375rem;
+      padding-bottom: 1.4375rem; } }
+  @media (min-width: 85em) {
+    .wine__section--winemaking,
+    .wine__section--vineyard,
+    .wine__section--bottle,
+    .wine__section--chemical-analysis {
+      padding-top: 8.625rem;
+      padding-bottom: 8.625rem;
+      -webkit-flex-basis: 25%;
+          -ms-flex-preferred-size: 25%;
+              flex-basis: 25%;
+      width: 25%;
+      -webkit-align-self: auto;
+          -ms-flex-item-align: auto;
+              align-self: auto;
+      -webkit-box-flex: 0;
+      -webkit-flex-grow: 0;
+          -ms-flex-positive: 0;
+              flex-grow: 0;
+      -webkit-flex-shrink: 0;
+          -ms-flex-negative: 0;
+              flex-shrink: 0; } }
+
+.wine__section-inner--winemaking,
+.wine__section-inner--vineyard,
+.wine__section-inner--bottle,
+.wine__section-inner--chemical-analysis {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+
+.wine__section--winemaking,
+.wine__section--bottle {
+  padding-right: calc( 8.75vw + -8px);
+  padding-left: calc( 8.75vw + -8px); }
+  @media (min-width: 30em) {
+    .wine__section--winemaking,
+    .wine__section--bottle {
+      padding-left: 2.875rem;
+      padding-right: 2.875rem; } }
+  @media (min-width: 60em) {
+    .wine__section--winemaking,
+    .wine__section--bottle {
+      padding-right: 1.4375rem;
+      padding-left: 1.4375rem; } }
+
+.wine__section--vineyard {
+  padding-left: calc( 8.75vw + -8px); }
+  @media (min-width: 30em) {
+    .wine__section--vineyard {
+      padding-left: 2.875rem; } }
+  @media (min-width: 60em) {
+    .wine__section--vineyard {
+      padding-left: calc( 3.5vw + 2.4px); } }
+  @media (min-width: 85em) {
+    .wine__section--vineyard {
+      padding-left: 4.3125rem; } }
+
+.wine__section--chemical-analysis {
+  padding-right: calc( 8.75vw + -8px); }
+  @media (min-width: 30em) {
+    .wine__section--chemical-analysis {
+      padding-right: 2.875rem; } }
+  @media (min-width: 60em) {
+    .wine__section--chemical-analysis {
+      padding-right: calc( 3.5vw + 2.4px); } }
+  @media (min-width: 85em) {
+    .wine__section--chemical-analysis {
+      padding-right: 4.3125rem; } }
+
+.wine__section-title--winemaking,
+.wine__section-title--vineyard,
+.wine__section-title--bottle,
+.wine__section-title--chemical-analysis {
+  font-family: "Crimson Text", serif;
+  font-size: 1.5rem;
+  line-height: 2.875rem/2;
+  margin-top: 0;
+  margin-bottom: 0.71875rem; }
+  @media (min-width: 60em) {
+    .wine__section-title--winemaking,
+    .wine__section-title--vineyard,
+    .wine__section-title--bottle,
+    .wine__section-title--chemical-analysis {
+      font-size: 1.625rem;
+      line-height: 2.875rem/2; } }
+
+/*********************************************
+ * Wine Grid
+ */
+.single-wine__wine-grid {
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  width: 100%;
+  -webkit-align-self: auto;
+      -ms-flex-item-align: auto;
+          align-self: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  -webkit-box-ordinal-group: 4;
+  -webkit-order: 3;
+      -ms-flex-order: 3;
+          order: 3; }
+
+.wg-item--col-current {
+  -webkit-flex-basis: 25%;
+      -ms-flex-preferred-size: 25%;
+          flex-basis: 25%;
+  width: 25%;
+  -webkit-align-self: auto;
+      -ms-flex-item-align: auto;
+          align-self: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  padding-left: 0.359375rem;
+  padding-right: 0.359375rem; }
+  @media (min-width: 30em) {
+    .wg-item--col-current {
+      padding-left: 0.71875rem;
+      padding-right: 0.71875rem;
+      padding-left: calc( 0.9895833333vw + -0.5px);
+      padding-right: calc( 0.9895833333vw + -0.5px); } }
+  @media (min-width: 60em) {
+    .wg-item--col-current {
+      padding-left: 1.078125rem;
+      padding-right: 1.078125rem;
+      padding-left: calc( 1.5vw + -5.4px);
+      padding-right: calc( 1.5vw + -5.4px); } }
+  @media (min-width: 85em) {
+    .wg-item--col-current {
+      padding-left: 1.078125rem;
+      padding-right: 1.078125rem; } }
+  .wg-item--col-current .wg-item__title {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.4375rem; }
+
+.wine-grid__inner {
+  max-width: 73.125rem;
+  margin: 0 auto; }
+
+.wine-grid__row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-left: -0.359375rem;
+  margin-right: -0.359375rem; }
+  @media (min-width: 30em) {
+    .wine-grid__row {
+      margin-left: -0.71875rem;
+      margin-right: -0.71875rem;
+      margin-left: calc( -0.9895833333vw + 0.5px);
+      margin-right: calc( -0.9895833333vw + 0.5px); } }
+  @media (min-width: 60em) {
+    .wine-grid__row {
+      margin-left: -1.078125rem;
+      margin-right: -1.078125rem;
+      margin-left: calc( -1.5vw + 5.4px);
+      margin-right: calc( -1.5vw + 5.4px); } }
+  @media (min-width: 85em) {
+    .wine-grid__row {
+      margin-left: -1.078125rem;
+      margin-right: -1.078125rem; } }
+
+.wine-grid__title-container {
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  width: 100%;
+  -webkit-align-self: auto;
+      -ms-flex-item-align: auto;
+          align-self: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  padding-left: 0.359375rem;
+  padding-right: 0.359375rem; }
+  @media (min-width: 30em) {
+    .wine-grid__title-container {
+      padding-left: 0.71875rem;
+      padding-right: 0.71875rem;
+      padding-left: calc( 0.9895833333vw + -0.5px);
+      padding-right: calc( 0.9895833333vw + -0.5px); } }
+  @media (min-width: 60em) {
+    .wine-grid__title-container {
+      padding-left: 1.078125rem;
+      padding-right: 1.078125rem;
+      padding-left: calc( 1.5vw + -5.4px);
+      padding-right: calc( 1.5vw + -5.4px); } }
+  @media (min-width: 85em) {
+    .wine-grid__title-container {
+      padding-left: 1.078125rem;
+      padding-right: 1.078125rem; } }
+
+.wine-grid__title {
+  font-family: "Crimson Text", serif;
+  font-size: 3.375rem;
+  line-height: 3.375rem;
+  margin-top: 5.75rem;
+  margin-bottom: 2.875rem;
+  text-align: center; }
+  @media (min-width: 52.5em) {
+    .wine-grid__title {
+      font-size: 4.25rem;
+      line-height: 4.3125rem; } }
