@@ -29,6 +29,24 @@
   }
 }
 
+.wine__title-text {
+  margin-bottom: spacing(4);
+  display: flex;
+  flex-direction: column;
+}
+.wine__title {
+  display: block;
+}
+
+.wine__title--p1 {
+  @include font(h1);
+  order: 1;
+}
+.wine__title--p2 {
+  @include font(p, $mb: 4);
+  text-transform: uppercase;
+}
+
 .wine__section-inner {
   @include flex-child($wd: 100);
   max-width: $website-width / 2;
@@ -41,7 +59,7 @@
 }
 
 .wine__section-title  {
-  @include font(h2, $mt: 0, $mb: 2);
+  @include font(h2, $mt: 0, $mb: 4);
 }
 
 
@@ -49,8 +67,16 @@
  * Tasting Notes
  ****/
 .wine__section--tasting-notes {
+  // @include pad($v: 7);
   // @include flex-child($wd: 100);
-  order: 1;
+  order: 0;
+  padding-bottom: spacing(6);
+  @include layout-padding($l: 0);
+
+  @include breakpoint-min(md) {
+    order: 1;
+    @include pad($v: 7);
+  }
 }
 
 .wine__section-inner--tasting-notes {
@@ -76,19 +102,23 @@
 }
 
 .wine__section-inner--bottle-image {
-  padding-right: spacing(6);
+
 
  @include breakpoint-min(md) {
    margin-right: 0;
    margin-left: auto;
+   padding-right: spacing(6);
  }
 }
 
 
 .wine__image--bottle-image {
-  max-width: 200px;
   margin-right: auto;
   margin-left: auto;
+
+  @include breakpoint-min(md) {
+    max-width: 200px;
+  }
 }
 
 /*************************************************************************
@@ -103,13 +133,32 @@
   // align-self: center;
 }
 
+.wine__section--basic-info {
+  @include layout-padding($r: 0);
+}
+
 .wine__section-inner--basic-info {
+  max-width: max-width(sm);
   margin-left: auto;
-  margin-right: 0;
-  // text-align: center;
+  margin-right: auto;
+
+  @include breakpoint-min(md) {
+    margin-right: 0;
+  }
 }
 
 
+/*************************************************************************
+ * Wine Image
+ */
+.wine__image--label-image {
+  margin-right: auto;
+  margin-left: auto;
+
+  @include breakpoint-min(md) {
+    max-width: 400px;
+  }
+}
 
 /*************************************************************************
  * WineMaking
@@ -119,15 +168,66 @@
 .wine__section--bottle,
 .wine__section--chemical-analysis {
   @include flex-child($wd: 100);
+  max-width: $website-width / 2;
   order: 1;
 
   @include breakpoint-min(md) {
     @include flex-child($wd: 50);
-    @include pad($v:4);
+    @include pad($v:6);
   }
-  @include breakpoint-min(xl) {
-    @include pad($v:8);
-    @include flex-child($wd: 25);
+  // @include breakpoint-min(xl) {
+  //   @include pad($v:8);
+  //   @include flex-child($wd: 25);
+  // }
+}
+
+.wine__section--vineyard {
+  padding-top: spacing(6);
+  padding-bottom: spacing(4);
+}
+
+.wine__section--winemaking {
+  @include pad($v: 4);
+
+  @include breakpoint-min(md) {
+    padding-top: spacing(6);
+  }
+}
+
+.wine__section--bottle {
+  @include pad($v: 4);
+
+  @include breakpoint-min(md) {
+    padding-bottom: spacing(6);
+  }
+}
+
+.wine__section--chemical-analysis {
+  padding-top: spacing(4);
+  padding-bottom: spacing(6);
+}
+
+
+@include breakpoint-min(md) {
+  .wine__section--winemaking,
+  .wine__section--chemical-analysis {
+    margin-left: 0;
+  }
+
+  .wine__section--vineyard,
+  .wine__section--bottle {
+    margin-right: 0;
+  }
+
+  .wine__section-inner--winemaking,
+  .wine__section-inner--chemical-analysis {
+    max-width: max-width(xs);
+    margin-right: 0;
+  }
+  .wine__section-inner--vineyard,
+  .wine__section-inner--bottle {
+    margin-left: 0;
+    max-width: max-width(xs);
   }
 }
 
@@ -139,21 +239,21 @@
   justify-content: flex-start;
 }
 
-.wine__section--winemaking,
-.wine__section--bottle {
-  @include layout-padding($xl: 0, $lg: 0);
-
-  @include breakpoint-min(lg) {
-    @include pad($h: 4);
-  }
-}
-
-.wine__section--vineyard {
-  @include layout-padding($r: 0);
-}
-.wine__section--chemical-analysis {
-  @include layout-padding($l: 0);
-}
+// .wine__section--winemaking,
+// .wine__section--bottle {
+//   @include layout-padding($xl: 0, $lg: 0);
+//
+//   @include breakpoint-min(lg) {
+//     @include pad($h: 4);
+//   }
+// }
+//
+// .wine__section--vineyard {
+//   @include layout-padding($r: 0);
+// }
+// .wine__section--chemical-analysis {
+//   @include layout-padding($l: 0);
+// }
 
 .wine__section-title--winemaking,
 .wine__section-title--vineyard,

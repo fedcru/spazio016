@@ -2979,6 +2979,42 @@ textarea {
     .wine__section p:last-child {
       margin-bottom: 0; }
 
+.wine__title-text {
+  margin-bottom: 1.4375rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.wine__title {
+  display: block; }
+
+.wine__title--p1 {
+  font-family: "Crimson Text", serif;
+  font-size: 3.375rem;
+  line-height: 3.375rem;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1; }
+  @media (min-width: 52.5em) {
+    .wine__title--p1 {
+      font-size: 4.25rem;
+      line-height: 4.3125rem; } }
+
+.wine__title--p2 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.4375rem;
+  margin-bottom: 1.4375rem;
+  text-transform: uppercase; }
+
 .wine__section-inner {
   -webkit-flex-basis: 100%;
       -ms-flex-preferred-size: 100%;
@@ -3017,7 +3053,7 @@ textarea {
   font-size: 2.25rem;
   line-height: 2.875rem;
   margin-top: 0;
-  margin-bottom: 0.71875rem; }
+  margin-bottom: 1.4375rem; }
   @media (min-width: 60em) {
     .wine__section-title {
       font-size: 2.625rem;
@@ -3027,10 +3063,29 @@ textarea {
  * Tasting Notes
  ****/
 .wine__section--tasting-notes {
-  -webkit-box-ordinal-group: 2;
-  -webkit-order: 1;
-      -ms-flex-order: 1;
-          order: 1; }
+  -webkit-box-ordinal-group: 1;
+  -webkit-order: 0;
+      -ms-flex-order: 0;
+          order: 0;
+  padding-bottom: 2.875rem;
+  padding-right: calc( 8.75vw + -8px); }
+  @media (min-width: 30em) {
+    .wine__section--tasting-notes {
+      padding-right: 2.875rem; } }
+  @media (min-width: 60em) {
+    .wine__section--tasting-notes {
+      padding-right: calc( 3.5vw + 2.4px); } }
+  @media (min-width: 85em) {
+    .wine__section--tasting-notes {
+      padding-right: 4.3125rem; } }
+  @media (min-width: 52.5em) {
+    .wine__section--tasting-notes {
+      -webkit-box-ordinal-group: 2;
+      -webkit-order: 1;
+          -ms-flex-order: 1;
+              order: 1;
+      padding-top: 5.75rem;
+      padding-bottom: 5.75rem; } }
 
 .wine__section-inner--tasting-notes {
   max-width: 30.25rem; }
@@ -3048,17 +3103,18 @@ textarea {
       -ms-flex-order: 0;
           order: 0; }
 
-.wine__section-inner--bottle-image {
-  padding-right: 2.875rem; }
-  @media (min-width: 52.5em) {
-    .wine__section-inner--bottle-image {
-      margin-right: 0;
-      margin-left: auto; } }
+@media (min-width: 52.5em) {
+  .wine__section-inner--bottle-image {
+    margin-right: 0;
+    margin-left: auto;
+    padding-right: 2.875rem; } }
 
 .wine__image--bottle-image {
-  max-width: 200px;
   margin-right: auto;
   margin-left: auto; }
+  @media (min-width: 52.5em) {
+    .wine__image--bottle-image {
+      max-width: 200px; } }
 
 /*************************************************************************
  * Basic Info
@@ -3073,9 +3129,35 @@ textarea {
       -ms-flex-order: 1;
           order: 1; }
 
+.wine__section--basic-info {
+  padding-left: calc( 8.75vw + -8px); }
+  @media (min-width: 30em) {
+    .wine__section--basic-info {
+      padding-left: 2.875rem; } }
+  @media (min-width: 60em) {
+    .wine__section--basic-info {
+      padding-left: calc( 3.5vw + 2.4px); } }
+  @media (min-width: 85em) {
+    .wine__section--basic-info {
+      padding-left: 4.3125rem; } }
+
 .wine__section-inner--basic-info {
+  max-width: 30.25rem;
   margin-left: auto;
-  margin-right: 0; }
+  margin-right: auto; }
+  @media (min-width: 52.5em) {
+    .wine__section-inner--basic-info {
+      margin-right: 0; } }
+
+/*************************************************************************
+ * Wine Image
+ */
+.wine__image--label-image {
+  margin-right: auto;
+  margin-left: auto; }
+  @media (min-width: 52.5em) {
+    .wine__image--label-image {
+      max-width: 400px; } }
 
 /*************************************************************************
  * WineMaking
@@ -3098,6 +3180,7 @@ textarea {
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
+  max-width: 36.5625rem;
   -webkit-box-ordinal-group: 2;
   -webkit-order: 1;
       -ms-flex-order: 1;
@@ -3121,29 +3204,46 @@ textarea {
       -webkit-flex-shrink: 0;
           -ms-flex-negative: 0;
               flex-shrink: 0;
-      padding-top: 1.4375rem;
-      padding-bottom: 1.4375rem; } }
-  @media (min-width: 85em) {
-    .wine__section--winemaking,
-    .wine__section--vineyard,
-    .wine__section--bottle,
-    .wine__section--chemical-analysis {
-      padding-top: 8.625rem;
-      padding-bottom: 8.625rem;
-      -webkit-flex-basis: 25%;
-          -ms-flex-preferred-size: 25%;
-              flex-basis: 25%;
-      width: 25%;
-      -webkit-align-self: auto;
-          -ms-flex-item-align: auto;
-              align-self: auto;
-      -webkit-box-flex: 0;
-      -webkit-flex-grow: 0;
-          -ms-flex-positive: 0;
-              flex-grow: 0;
-      -webkit-flex-shrink: 0;
-          -ms-flex-negative: 0;
-              flex-shrink: 0; } }
+      padding-top: 2.875rem;
+      padding-bottom: 2.875rem; } }
+
+.wine__section--vineyard {
+  padding-top: 2.875rem;
+  padding-bottom: 1.4375rem; }
+
+.wine__section--winemaking {
+  padding-top: 1.4375rem;
+  padding-bottom: 1.4375rem; }
+  @media (min-width: 52.5em) {
+    .wine__section--winemaking {
+      padding-top: 2.875rem; } }
+
+.wine__section--bottle {
+  padding-top: 1.4375rem;
+  padding-bottom: 1.4375rem; }
+  @media (min-width: 52.5em) {
+    .wine__section--bottle {
+      padding-bottom: 2.875rem; } }
+
+.wine__section--chemical-analysis {
+  padding-top: 1.4375rem;
+  padding-bottom: 2.875rem; }
+
+@media (min-width: 52.5em) {
+  .wine__section--winemaking,
+  .wine__section--chemical-analysis {
+    margin-left: 0; }
+  .wine__section--vineyard,
+  .wine__section--bottle {
+    margin-right: 0; }
+  .wine__section-inner--winemaking,
+  .wine__section-inner--chemical-analysis {
+    max-width: 20.83333rem;
+    margin-right: 0; }
+  .wine__section-inner--vineyard,
+  .wine__section-inner--bottle {
+    margin-left: 0;
+    max-width: 20.83333rem; } }
 
 .wine__section-inner--winemaking,
 .wine__section-inner--vineyard,
@@ -3153,45 +3253,6 @@ textarea {
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start; }
-
-.wine__section--winemaking,
-.wine__section--bottle {
-  padding-right: calc( 8.75vw + -8px);
-  padding-left: calc( 8.75vw + -8px); }
-  @media (min-width: 30em) {
-    .wine__section--winemaking,
-    .wine__section--bottle {
-      padding-left: 2.875rem;
-      padding-right: 2.875rem; } }
-  @media (min-width: 60em) {
-    .wine__section--winemaking,
-    .wine__section--bottle {
-      padding-right: 1.4375rem;
-      padding-left: 1.4375rem; } }
-
-.wine__section--vineyard {
-  padding-left: calc( 8.75vw + -8px); }
-  @media (min-width: 30em) {
-    .wine__section--vineyard {
-      padding-left: 2.875rem; } }
-  @media (min-width: 60em) {
-    .wine__section--vineyard {
-      padding-left: calc( 3.5vw + 2.4px); } }
-  @media (min-width: 85em) {
-    .wine__section--vineyard {
-      padding-left: 4.3125rem; } }
-
-.wine__section--chemical-analysis {
-  padding-right: calc( 8.75vw + -8px); }
-  @media (min-width: 30em) {
-    .wine__section--chemical-analysis {
-      padding-right: 2.875rem; } }
-  @media (min-width: 60em) {
-    .wine__section--chemical-analysis {
-      padding-right: calc( 3.5vw + 2.4px); } }
-  @media (min-width: 85em) {
-    .wine__section--chemical-analysis {
-      padding-right: 4.3125rem; } }
 
 .wine__section-title--winemaking,
 .wine__section-title--vineyard,
