@@ -36,6 +36,7 @@ $text-atts: (
   margin-bottom: mb,
   padding-top: pt,
   padding-bottom: pb,
+  weight: wt,
 );
 
 $fonts: (
@@ -45,6 +46,7 @@ $fonts: (
     lh: 3.375rem,
     mt: 6.5,
     mb: 2,
+    wt: 400,
 
     md: (
       fs: 4.25rem,
@@ -57,6 +59,7 @@ $fonts: (
     lh: 2.875rem,
     mt: 6,
     mb: 2,
+    wt: 400,
 
     lg: (
       fs: 2.625rem,
@@ -69,6 +72,7 @@ $fonts: (
     lh: 2.875rem / 2,
     mt: 5,
     mb: 2,
+    wt: 400,
 
     lg: (
       fs: 1.625rem,
@@ -81,6 +85,7 @@ $fonts: (
     lh: $line-height,
     mt: 4,
     mb: 0,
+    wt: 700,
   ),
   h5: (
     fm: $ff-secondary,
@@ -88,8 +93,9 @@ $fonts: (
     lh: $line-height,
     mt: 4,
     mb: 0,
+    wt: 700,
   ),
-  
+
   h5-alt: (
     fm: $ff-primary,
     fs: 0.875rem,

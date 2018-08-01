@@ -11,6 +11,90 @@
 }
 
 .wine-grid__title {
-  @include font(h1, $mt: 7, $mb: 6);
+  @include font(h1, $mt: 8, $mb: 7);
   text-align: center;
+}
+
+// PAGIATION
+.wine-grid__pagination {
+  @include flex-child(grid, $wd: 100);
+  // @include pad($v: 2);
+  margin-top: spacing(7);
+
+  .pagination__inner {
+    // @include pad($v: 4);
+    border-top: 1px solid $black-10;
+  }
+
+  .pagination__element  {
+    @include font(p);
+    @include pad($h: 4);
+    @include pad($v: 4);
+    display: inline-block;
+    color: $black-50;
+    border-top: spacing(1) solid transparent;
+
+    &--current {
+      border-top-color: $green;
+    }
+
+    &--current,
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+
+
+/****
+ * ITEM
+ */
+
+
+.wg-item--col-3 {
+  @include flex-child(grid, $wd: 100);
+  @include max-width(sm);
+
+  @include breakpoint-min(md) {
+    @include flex-child($wd: 33.3333);
+  }
+}
+
+
+.wg-item {
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+
+  &__image {
+    @include max-width(xxxs);
+    order: -1;
+  }
+
+  &__surtitle {
+    @include font(h4);
+    margin-top: spacing(-6);
+
+    // text-transform: uppercase;
+
+    a {
+
+    }
+  }
+
+  &__subtitle {
+    display: none;
+  }
+
+  &__title {
+    @include font(p);
+    text-transform: uppercase;
+    max-width: max-width(xxs);
+    margin: 0 auto;
+  }
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: Fontanette
 Theme URI: -
@@ -67,6 +68,7 @@ hr,
 
 .typography > h1 {
   font-family: "Crimson Text", serif;
+  font-weight: 400;
   font-size: 3.375rem;
   line-height: 3.375rem;
   margin-top: 4.3125rem;
@@ -78,6 +80,7 @@ hr,
 
 .typography > h2 {
   font-family: "Crimson Text", serif;
+  font-weight: 400;
   font-size: 2.25rem;
   line-height: 2.875rem;
   margin-top: 2.875rem;
@@ -89,6 +92,7 @@ hr,
 
 .typography > h3 {
   font-family: "Crimson Text", serif;
+  font-weight: 400;
   font-size: 1.5rem;
   line-height: 2.875rem/2;
   margin-top: 2.15625rem;
@@ -100,6 +104,7 @@ hr,
 
 .typography > h4 {
   font-family: "Crimson Text", serif;
+  font-weight: 700;
   font-size: 1rem;
   line-height: 1.4375rem;
   margin-top: 1.4375rem;
@@ -107,6 +112,7 @@ hr,
 
 .typography > h5 {
   font-family: "Crimson Text", serif;
+  font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.4375rem;
   margin-top: 1.4375rem;
@@ -171,6 +177,7 @@ p > strong {
 .typography > .title--h1,
 .elementor-text-editor > .title--h1 {
   font-family: "Crimson Text", serif;
+  font-weight: 400;
   font-size: 3.375rem;
   line-height: 3.375rem;
   margin-top: 4.3125rem;
@@ -416,6 +423,7 @@ p > strong {
           justify-content: flex-end; }
   .primary-nav__inner > .menu-item {
     font-family: "Crimson Text", serif;
+    font-weight: 700;
     font-size: 1rem;
     line-height: 1.4375rem;
     text-transform: uppercase;
@@ -679,6 +687,7 @@ p > strong {
 
 .notfound__site {
   font-family: "Crimson Text", serif;
+  font-weight: 400;
   font-size: 1.5rem;
   line-height: 2.875rem/2;
   margin-bottom: 1.4375rem;
@@ -1804,6 +1813,7 @@ p > strong {
 
 .elementor-text-editor > h1 {
   font-family: "Crimson Text", serif;
+  font-weight: 400;
   font-size: 3.375rem;
   line-height: 3.375rem;
   margin-top: 4.3125rem;
@@ -1815,6 +1825,7 @@ p > strong {
 
 .elementor-text-editor > h2 {
   font-family: "Crimson Text", serif;
+  font-weight: 400;
   font-size: 2.25rem;
   line-height: 2.875rem;
   margin-top: 2.875rem;
@@ -1826,6 +1837,7 @@ p > strong {
 
 .elementor-text-editor > h3 {
   font-family: "Crimson Text", serif;
+  font-weight: 400;
   font-size: 1.5rem;
   line-height: 2.875rem/2;
   margin-top: 2.15625rem;
@@ -1837,6 +1849,7 @@ p > strong {
 
 .elementor-text-editor > h4 {
   font-family: "Crimson Text", serif;
+  font-weight: 700;
   font-size: 1rem;
   line-height: 1.4375rem;
   margin-top: 1.4375rem;
@@ -1877,6 +1890,7 @@ p > strong {
 
 .elementor-text-editor > .h1--h2 {
   font-family: "Crimson Text", serif;
+  font-weight: 400;
   font-size: 2.25rem;
   line-height: 2.875rem;
   margin-top: 4.3125rem;
@@ -1888,6 +1902,7 @@ p > strong {
 
 .elementor-text-editor > .h1--h3 {
   font-family: "Crimson Text", serif;
+  font-weight: 400;
   font-size: 1.5rem;
   line-height: 2.875rem/2;
   margin-top: 2.15625rem;
@@ -1899,6 +1914,7 @@ p > strong {
 
 .elementor-text-editor > blockquote {
   font-family: "Crimson Text", serif;
+  font-weight: 400;
   font-size: 1.5rem;
   line-height: 2.875rem/2;
   position: relative;
@@ -1977,6 +1993,7 @@ p > strong {
   padding-top: 1.078125rem;
   padding-bottom: 1.078125rem;
   font-family: "Crimson Text", serif;
+  font-weight: 400;
   font-size: 1.5rem;
   line-height: 2.875rem/2; }
   @media (min-width: 60em) {
@@ -2058,6 +2075,7 @@ p > strong {
     padding-right: 0.71875rem;
     padding-left: 0.71875rem;
     font-family: "Crimson Text", serif;
+    font-weight: 700;
     font-size: 1rem;
     line-height: 1.4375rem;
     display: inline-block; }
@@ -2372,6 +2390,7 @@ select {
 
 .gfield_description {
   font-family: "Crimson Text", serif;
+  font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.4375rem;
   font-style: italic; }
@@ -2615,6 +2634,7 @@ textarea {
 
 .standard-title__text {
   font-family: "Crimson Text", serif;
+  font-weight: 400;
   font-size: 3.375rem;
   line-height: 3.375rem;
   margin-top: 0.71875rem;
@@ -2626,6 +2646,7 @@ textarea {
 
 .standard-title__subtitle {
   font-family: "Crimson Text", serif;
+  font-weight: 700;
   font-size: 1rem;
   line-height: 1.4375rem;
   margin-top: 0.71875rem;
@@ -2744,6 +2765,7 @@ textarea {
 
 .hero-title__title {
   font-family: "Crimson Text", serif;
+  font-weight: 400;
   font-size: 3.375rem;
   line-height: 3.375rem;
   color: #fafaf9;
@@ -2785,6 +2807,7 @@ textarea {
   padding-top: 1.078125rem;
   padding-bottom: 1.078125rem;
   font-family: "Crimson Text", serif;
+  font-weight: 700;
   font-size: 1rem;
   line-height: 1.4375rem;
   background: transparent;
@@ -2847,6 +2870,7 @@ textarea {
 
 .card__title {
   font-family: "Crimson Text", serif;
+  font-weight: 700;
   font-size: 1rem;
   line-height: 1.4375rem;
   margin-bottom: 0.71875rem; }
@@ -2864,6 +2888,7 @@ textarea {
   padding-right: 0.71875rem;
   padding-left: 0.71875rem;
   font-family: "Crimson Text", serif;
+  font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.4375rem;
   padding-top: 0.71875rem;
@@ -2996,6 +3021,7 @@ textarea {
 
 .wine__title--p1 {
   font-family: "Crimson Text", serif;
+  font-weight: 400;
   font-size: 3.375rem;
   line-height: 3.375rem;
   -webkit-box-ordinal-group: 2;
@@ -3050,6 +3076,7 @@ textarea {
 
 .wine__section-title {
   font-family: "Crimson Text", serif;
+  font-weight: 400;
   font-size: 2.25rem;
   line-height: 2.875rem;
   margin-top: 0;
@@ -3094,6 +3121,17 @@ textarea {
       margin-left: 0;
       margin-right: auto; } }
 
+.wine__section-text--tasting-notes > p {
+  padding-left: 1.4375rem;
+  position: relative; }
+
+.wine__section-text--tasting-notes > p::before {
+  position: absolute;
+  content: "▶";
+  display: block;
+  left: 0;
+  color: #6d8764; }
+
 /*************************************************************************
  * Bottle Image
  */
@@ -3130,7 +3168,9 @@ textarea {
           order: 1; }
 
 .wine__section--basic-info {
-  padding-left: calc( 8.75vw + -8px); }
+  padding-left: calc( 8.75vw + -8px);
+  padding-top: 5.75rem;
+  padding-bottom: 0; }
   @media (min-width: 30em) {
     .wine__section--basic-info {
       padding-left: 2.875rem; } }
@@ -3140,6 +3180,9 @@ textarea {
   @media (min-width: 85em) {
     .wine__section--basic-info {
       padding-left: 4.3125rem; } }
+  @media (min-width: 52.5em) {
+    .wine__section--basic-info {
+      padding-bottom: 5.75rem; } }
 
 .wine__section-inner--basic-info {
   max-width: 30.25rem;
@@ -3147,17 +3190,26 @@ textarea {
   margin-right: auto; }
   @media (min-width: 52.5em) {
     .wine__section-inner--basic-info {
-      margin-right: 0; } }
+      margin-right: 0;
+      max-width: 36.5625rem; } }
 
 /*************************************************************************
  * Wine Image
  */
+.wine__section-inner--label-image {
+  max-width: 30.25rem;
+  margin-left: auto;
+  margin-right: auto; }
+  @media (min-width: 52.5em) {
+    .wine__section-inner--label-image {
+      margin-left: 0;
+      max-width: 36.5625rem; } }
+
 .wine__image--label-image {
-  margin-right: auto;
-  margin-left: auto; }
+  margin-right: 0; }
   @media (min-width: 52.5em) {
     .wine__image--label-image {
-      max-width: 400px; } }
+      max-width: 700px; } }
 
 /*************************************************************************
  * WineMaking
@@ -3180,7 +3232,6 @@ textarea {
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
-  max-width: 36.5625rem;
   -webkit-box-ordinal-group: 2;
   -webkit-order: 1;
       -ms-flex-order: 1;
@@ -3207,43 +3258,83 @@ textarea {
       padding-top: 2.875rem;
       padding-bottom: 2.875rem; } }
 
+.wine__section-inner--winemaking,
+.wine__section-inner--vineyard,
+.wine__section-inner--bottle,
+.wine__section-inner--chemical-analysis {
+  max-width: 36.5625rem; }
+
 .wine__section--vineyard {
-  padding-top: 2.875rem;
+  padding-left: calc( 8.75vw + -8px);
+  padding-top: 5.75rem;
   padding-bottom: 1.4375rem; }
+  @media (min-width: 30em) {
+    .wine__section--vineyard {
+      padding-left: 2.875rem; } }
+  @media (min-width: 60em) {
+    .wine__section--vineyard {
+      padding-left: calc( 3.5vw + 2.4px); } }
+  @media (min-width: 85em) {
+    .wine__section--vineyard {
+      padding-left: 4.3125rem; } }
 
 .wine__section--winemaking {
   padding-top: 1.4375rem;
-  padding-bottom: 1.4375rem; }
+  padding-bottom: 1.4375rem;
+  padding-right: calc( 8.75vw + -8px); }
+  @media (min-width: 30em) {
+    .wine__section--winemaking {
+      padding-right: 2.875rem; } }
+  @media (min-width: 60em) {
+    .wine__section--winemaking {
+      padding-right: calc( 3.5vw + 2.4px); } }
+  @media (min-width: 85em) {
+    .wine__section--winemaking {
+      padding-right: 4.3125rem; } }
   @media (min-width: 52.5em) {
     .wine__section--winemaking {
-      padding-top: 2.875rem; } }
+      padding-top: 5.75rem; } }
 
 .wine__section--bottle {
   padding-top: 1.4375rem;
-  padding-bottom: 1.4375rem; }
+  padding-bottom: 1.4375rem;
+  padding-left: calc( 8.75vw + -8px); }
+  @media (min-width: 30em) {
+    .wine__section--bottle {
+      padding-left: 2.875rem; } }
+  @media (min-width: 60em) {
+    .wine__section--bottle {
+      padding-left: calc( 3.5vw + 2.4px); } }
+  @media (min-width: 85em) {
+    .wine__section--bottle {
+      padding-left: 4.3125rem; } }
   @media (min-width: 52.5em) {
     .wine__section--bottle {
-      padding-bottom: 2.875rem; } }
+      padding-bottom: 5.75rem; } }
 
 .wine__section--chemical-analysis {
   padding-top: 1.4375rem;
-  padding-bottom: 2.875rem; }
+  padding-bottom: 5.75rem;
+  padding-right: calc( 8.75vw + -8px); }
+  @media (min-width: 30em) {
+    .wine__section--chemical-analysis {
+      padding-right: 2.875rem; } }
+  @media (min-width: 60em) {
+    .wine__section--chemical-analysis {
+      padding-right: calc( 3.5vw + 2.4px); } }
+  @media (min-width: 85em) {
+    .wine__section--chemical-analysis {
+      padding-right: 4.3125rem; } }
 
 @media (min-width: 52.5em) {
-  .wine__section--winemaking,
-  .wine__section--chemical-analysis {
-    margin-left: 0; }
-  .wine__section--vineyard,
-  .wine__section--bottle {
-    margin-right: 0; }
   .wine__section-inner--winemaking,
   .wine__section-inner--chemical-analysis {
-    max-width: 20.83333rem;
-    margin-right: 0; }
+    margin-left: 0;
+    padding-left: 1.4375rem; }
   .wine__section-inner--vineyard,
   .wine__section-inner--bottle {
-    margin-left: 0;
-    max-width: 20.83333rem; } }
+    margin-right: 0;
+    padding-right: 1.4375rem; } }
 
 .wine__section-inner--winemaking,
 .wine__section-inner--vineyard,
@@ -3259,6 +3350,7 @@ textarea {
 .wine__section-title--bottle,
 .wine__section-title--chemical-analysis {
   font-family: "Crimson Text", serif;
+  font-weight: 400;
   font-size: 1.5rem;
   line-height: 2.875rem/2;
   margin-top: 0;
@@ -3270,6 +3362,145 @@ textarea {
     .wine__section-title--chemical-analysis {
       font-size: 1.625rem;
       line-height: 2.875rem/2; } }
+
+/******************************************
+ * BANNER
+ */
+.single-wine__banner {
+  padding-right: calc( 8.75vw + -8px);
+  padding-left: calc( 8.75vw + -8px);
+  padding-top: 2.15625rem;
+  padding-bottom: 2.15625rem;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  width: 100%;
+  -webkit-align-self: auto;
+      -ms-flex-item-align: auto;
+          align-self: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+      -ms-flex-order: 2;
+          order: 2;
+  background: #6d8764; }
+  @media (min-width: 30em) {
+    .single-wine__banner {
+      padding-left: 2.875rem;
+      padding-right: 2.875rem; } }
+  @media (min-width: 60em) {
+    .single-wine__banner {
+      padding-left: calc( 3.5vw + 2.4px);
+      padding-right: calc( 3.5vw + 2.4px); } }
+  @media (min-width: 85em) {
+    .single-wine__banner {
+      padding-left: 4.3125rem;
+      padding-right: 4.3125rem; } }
+  .single-wine__banner * {
+    color: #fafaf9; }
+
+.banner__inner--single-wine {
+  max-width: 58.5rem;
+  margin: 0 auto; }
+
+.banner__row--single-wine {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  @media (min-width: 60em) {
+    .banner__row--single-wine {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
+
+.banner__title--single-wine {
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
+  font-size: 2.25rem;
+  line-height: 2.875rem;
+  margin-bottom: 1.4375rem; }
+  @media (min-width: 60em) {
+    .banner__title--single-wine {
+      font-size: 2.625rem;
+      line-height: 2.875rem; } }
+  @media (min-width: 60em) {
+    .banner__title--single-wine {
+      -webkit-flex-basis: 60%;
+          -ms-flex-preferred-size: 60%;
+              flex-basis: 60%;
+      width: 60%;
+      -webkit-align-self: auto;
+          -ms-flex-item-align: auto;
+              align-self: auto;
+      -webkit-box-flex: 0;
+      -webkit-flex-grow: 0;
+          -ms-flex-positive: 0;
+              flex-grow: 0;
+      -webkit-flex-shrink: 0;
+          -ms-flex-negative: 0;
+              flex-shrink: 0;
+      margin-bottom: 0; } }
+
+.banner__button--single-wine {
+  display: inline-block;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 1.25rem;
+  padding-left: 1.4375rem;
+  padding-right: 1.4375rem;
+  padding-top: 0.359375rem;
+  padding-bottom: 0.359375rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.4375rem;
+  background: transparent;
+  color: #fafaf9;
+  border-color: rgba(250, 250, 249, 0.9);
+  border-width: 2px; }
+  .banner__button--single-wine:hover {
+    background-color: #fafaf9;
+    color: #2e2926; }
+  @media (min-width: 60em) {
+    .banner__button--single-wine {
+      -webkit-flex-basis: "auto%";
+          -ms-flex-preferred-size: "auto%";
+              flex-basis: "auto%";
+      width: "auto%";
+      -webkit-align-self: auto;
+          -ms-flex-item-align: auto;
+              align-self: auto;
+      -webkit-box-flex: 0;
+      -webkit-flex-grow: 0;
+          -ms-flex-positive: 0;
+              flex-grow: 0;
+      -webkit-flex-shrink: 0;
+          -ms-flex-negative: 0;
+              flex-shrink: 0; } }
 
 /*********************************************
  * Wine Grid
@@ -3289,16 +3520,30 @@ textarea {
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
+  padding-right: calc( 8.75vw + -8px);
+  padding-left: calc( 8.75vw + -8px);
   -webkit-box-ordinal-group: 4;
   -webkit-order: 3;
       -ms-flex-order: 3;
           order: 3; }
+  @media (min-width: 30em) {
+    .single-wine__wine-grid {
+      padding-left: 2.875rem;
+      padding-right: 2.875rem; } }
+  @media (min-width: 60em) {
+    .single-wine__wine-grid {
+      padding-left: calc( 3.5vw + 2.4px);
+      padding-right: calc( 3.5vw + 2.4px); } }
+  @media (min-width: 85em) {
+    .single-wine__wine-grid {
+      padding-left: 4.3125rem;
+      padding-right: 4.3125rem; } }
 
 .wg-item--col-current {
-  -webkit-flex-basis: 25%;
-      -ms-flex-preferred-size: 25%;
-          flex-basis: 25%;
-  width: 25%;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  width: 100%;
   -webkit-align-self: auto;
       -ms-flex-item-align: auto;
           align-self: auto;
@@ -3310,7 +3555,10 @@ textarea {
       -ms-flex-negative: 0;
           flex-shrink: 0;
   padding-left: 0.359375rem;
-  padding-right: 0.359375rem; }
+  padding-right: 0.359375rem;
+  max-width: 30.25rem;
+  margin-right: auto;
+  margin-left: auto; }
   @media (min-width: 30em) {
     .wg-item--col-current {
       padding-left: 0.71875rem;
@@ -3327,6 +3575,22 @@ textarea {
     .wg-item--col-current {
       padding-left: 1.078125rem;
       padding-right: 1.078125rem; } }
+  @media (min-width: 52.5em) {
+    .wg-item--col-current {
+      -webkit-flex-basis: 20%;
+          -ms-flex-preferred-size: 20%;
+              flex-basis: 20%;
+      width: 20%;
+      -webkit-align-self: auto;
+          -ms-flex-item-align: auto;
+              align-self: auto;
+      -webkit-box-flex: 0;
+      -webkit-flex-grow: 0;
+          -ms-flex-positive: 0;
+              flex-grow: 0;
+      -webkit-flex-shrink: 0;
+          -ms-flex-negative: 0;
+              flex-shrink: 0; } }
   .wg-item--col-current .wg-item__title {
     font-family: "Lato", sans-serif;
     font-weight: 400;
@@ -3405,12 +3669,162 @@ textarea {
 
 .wine-grid__title {
   font-family: "Crimson Text", serif;
+  font-weight: 400;
   font-size: 3.375rem;
   line-height: 3.375rem;
-  margin-top: 5.75rem;
-  margin-bottom: 2.875rem;
+  margin-top: 8.625rem;
+  margin-bottom: 5.75rem;
   text-align: center; }
   @media (min-width: 52.5em) {
     .wine-grid__title {
       font-size: 4.25rem;
       line-height: 4.3125rem; } }
+
+.wine-grid__pagination {
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  width: 100%;
+  -webkit-align-self: auto;
+      -ms-flex-item-align: auto;
+          align-self: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  padding-left: 0.359375rem;
+  padding-right: 0.359375rem;
+  margin-top: 5.75rem; }
+  @media (min-width: 30em) {
+    .wine-grid__pagination {
+      padding-left: 0.71875rem;
+      padding-right: 0.71875rem;
+      padding-left: calc( 0.9895833333vw + -0.5px);
+      padding-right: calc( 0.9895833333vw + -0.5px); } }
+  @media (min-width: 60em) {
+    .wine-grid__pagination {
+      padding-left: 1.078125rem;
+      padding-right: 1.078125rem;
+      padding-left: calc( 1.5vw + -5.4px);
+      padding-right: calc( 1.5vw + -5.4px); } }
+  @media (min-width: 85em) {
+    .wine-grid__pagination {
+      padding-left: 1.078125rem;
+      padding-right: 1.078125rem; } }
+  .wine-grid__pagination .pagination__inner {
+    border-top: 1px solid rgba(46, 41, 38, 0.1); }
+  .wine-grid__pagination .pagination__element {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.4375rem;
+    padding-right: 1.4375rem;
+    padding-left: 1.4375rem;
+    padding-top: 1.4375rem;
+    padding-bottom: 1.4375rem;
+    display: inline-block;
+    color: rgba(46, 41, 38, 0.5);
+    border-top: 0.359375rem solid transparent; }
+    .wine-grid__pagination .pagination__element--current {
+      border-top-color: #6d8764; }
+    .wine-grid__pagination .pagination__element--current, .wine-grid__pagination .pagination__element:hover {
+      color: #2e2926; }
+
+/****
+ * ITEM
+ */
+.wg-item--col-3 {
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  width: 100%;
+  -webkit-align-self: auto;
+      -ms-flex-item-align: auto;
+          align-self: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  padding-left: 0.359375rem;
+  padding-right: 0.359375rem;
+  max-width: 30.25rem;
+  margin-right: auto;
+  margin-left: auto; }
+  @media (min-width: 30em) {
+    .wg-item--col-3 {
+      padding-left: 0.71875rem;
+      padding-right: 0.71875rem;
+      padding-left: calc( 0.9895833333vw + -0.5px);
+      padding-right: calc( 0.9895833333vw + -0.5px); } }
+  @media (min-width: 60em) {
+    .wg-item--col-3 {
+      padding-left: 1.078125rem;
+      padding-right: 1.078125rem;
+      padding-left: calc( 1.5vw + -5.4px);
+      padding-right: calc( 1.5vw + -5.4px); } }
+  @media (min-width: 85em) {
+    .wg-item--col-3 {
+      padding-left: 1.078125rem;
+      padding-right: 1.078125rem; } }
+  @media (min-width: 52.5em) {
+    .wg-item--col-3 {
+      -webkit-flex-basis: 33.3333%;
+          -ms-flex-preferred-size: 33.3333%;
+              flex-basis: 33.3333%;
+      width: 33.3333%;
+      -webkit-align-self: auto;
+          -ms-flex-item-align: auto;
+              align-self: auto;
+      -webkit-box-flex: 0;
+      -webkit-flex-grow: 0;
+          -ms-flex-positive: 0;
+              flex-grow: 0;
+      -webkit-flex-shrink: 0;
+          -ms-flex-negative: 0;
+              flex-shrink: 0; } }
+
+.wg-item__inner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center; }
+
+.wg-item__image {
+  max-width: 10rem;
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-box-ordinal-group: 0;
+  -webkit-order: -1;
+      -ms-flex-order: -1;
+          order: -1; }
+
+.wg-item__surtitle {
+  font-family: "Crimson Text", serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.4375rem;
+  margin-top: -2.875rem; }
+
+.wg-item__subtitle {
+  display: none; }
+
+.wg-item__title {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.4375rem;
+  text-transform: uppercase;
+  max-width: 15em;
+  margin: 0 auto; }

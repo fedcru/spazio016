@@ -93,6 +93,23 @@
   }
 }
 
+.wine__section-text--tasting-notes {
+  > p {
+    // float: right;
+    // overflow: hidden;
+    padding-left: spacing(4);
+    position: relative;
+  }
+  > p::before {
+    position: absolute;
+    content: "▶";
+    display: block;
+    // float: left;
+    left: spacing(0);
+    color: $green;
+  }
+}
+
 
 /*************************************************************************
  * Bottle Image
@@ -128,13 +145,19 @@
 .wine__section--label-image {
   @include pad($v: 7);
   background-color: palette(light, bg);
-  // @include flex-child($wd: 100);
   order: 1;
-  // align-self: center;
+  @include breakpoint-min(md) {
+  }
 }
 
 .wine__section--basic-info {
   @include layout-padding($r: 0);
+  padding-top: spacing(7);
+  padding-bottom: 0;
+
+  @include breakpoint-min(md) {
+    padding-bottom: spacing(7);
+  }
 }
 
 .wine__section-inner--basic-info {
@@ -142,8 +165,10 @@
   margin-left: auto;
   margin-right: auto;
 
+
   @include breakpoint-min(md) {
     margin-right: 0;
+    max-width: $website-width / 2;
   }
 }
 
@@ -151,14 +176,29 @@
 /*************************************************************************
  * Wine Image
  */
-.wine__image--label-image {
-  margin-right: auto;
+
+.wine__section-inner--label-image {
+  max-width: max-width(sm);
   margin-left: auto;
+  margin-right: auto;
 
   @include breakpoint-min(md) {
-    max-width: 400px;
+    margin-left: 0;
+    max-width: $website-width / 2;
   }
 }
+
+
+.wine__image--label-image {
+  margin-right: 0;
+  // max-width: max-width(sm);
+
+  @include breakpoint-min(md) {
+    max-width: 700px;
+  }
+}
+
+
 
 /*************************************************************************
  * WineMaking
@@ -168,66 +208,76 @@
 .wine__section--bottle,
 .wine__section--chemical-analysis {
   @include flex-child($wd: 100);
-  max-width: $website-width / 2;
   order: 1;
 
   @include breakpoint-min(md) {
     @include flex-child($wd: 50);
     @include pad($v:6);
   }
-  // @include breakpoint-min(xl) {
-  //   @include pad($v:8);
-  //   @include flex-child($wd: 25);
-  // }
+}
+
+.wine__section-inner--winemaking,
+.wine__section-inner--vineyard,
+.wine__section-inner--bottle,
+.wine__section-inner--chemical-analysis {
+  max-width: $website-width / 2;
 }
 
 .wine__section--vineyard {
-  padding-top: spacing(6);
+  @include layout-padding($r: 0);
+  padding-top: spacing(7);
   padding-bottom: spacing(4);
 }
 
 .wine__section--winemaking {
   @include pad($v: 4);
+  @include layout-padding($l: 0);
+
 
   @include breakpoint-min(md) {
-    padding-top: spacing(6);
+    padding-top: spacing(7);
   }
 }
 
 .wine__section--bottle {
   @include pad($v: 4);
+  @include layout-padding($r: 0);
 
   @include breakpoint-min(md) {
-    padding-bottom: spacing(6);
+    padding-bottom: spacing(7);
   }
 }
 
 .wine__section--chemical-analysis {
   padding-top: spacing(4);
-  padding-bottom: spacing(6);
+  padding-bottom: spacing(7);
+  @include layout-padding($l: 0);
+
 }
 
 
 @include breakpoint-min(md) {
-  .wine__section--winemaking,
-  .wine__section--chemical-analysis {
+  .wine__section-inner--winemaking,
+  .wine__section-inner--chemical-analysis {
     margin-left: 0;
+    padding-left: spacing(4);
   }
 
-  .wine__section--vineyard,
-  .wine__section--bottle {
+  .wine__section-inner--vineyard,
+  .wine__section-inner--bottle {
     margin-right: 0;
+    padding-right: spacing(4);
   }
 
   .wine__section-inner--winemaking,
   .wine__section-inner--chemical-analysis {
-    max-width: max-width(xs);
-    margin-right: 0;
+    // max-width: max-width(xs);
+    // margin-right: 0;
   }
   .wine__section-inner--vineyard,
   .wine__section-inner--bottle {
-    margin-left: 0;
-    max-width: max-width(xs);
+    // margin-left: 0;
+    // max-width: max-width(xs);
   }
 }
 
@@ -262,16 +312,75 @@
   @include font(h3, $mt: 0, $mb: 2);
 }
 
+
+
+/******************************************
+ * BANNER
+ */
+
+.single-wine__banner {
+  @include layout-padding();
+  @include pad($v: 5);
+  @include flex-child($wd: 100);
+  order: 2;
+  background: $green;
+
+  * {
+    color: $white;
+  }
+}
+
+.banner__inner--single-wine {
+  max-width: $website-width / 1.25;
+  margin: 0 auto;
+}
+
+.banner__row--single-wine {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  @include breakpoint-min(el) {
+    flex-direction: row;
+  }
+}
+
+.banner__title--single-wine {
+  @include font(h2);
+  margin-bottom: spacing(4);
+
+  @include breakpoint-min(el) {
+    @include flex-child($wd: 60);
+    margin-bottom: 0;
+  }
+}
+
+.banner__button--single-wine {
+  @include button(p, $pv: 1);
+  @include button-color(main, empty-w);
+
+  @include breakpoint-min(el) {
+    @include flex-child($wd: 'auto');
+  }
+}
+
 /*********************************************
  * Wine Grid
  */
 .single-wine__wine-grid {
   @include flex-child($wd: 100);
+  @include layout-padding();
   order: 3;
 }
 
 .wg-item--col-current {
-  @include flex-child(grid, $wd: 25);
+  @include flex-child(grid, $wd: 100);
+  @include max-width(sm);
+
+  @include breakpoint-min(md) {
+    @include flex-child($wd: 20);
+  }
 
   .wg-item__title {
     @include font(p);
