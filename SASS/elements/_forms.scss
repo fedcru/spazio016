@@ -86,7 +86,6 @@ select {
 .gform_button {
   @extend %button;
   @include button(p, $pv: 1);
-  @include button-color(light, filled);
   margin-top: spacing(4);
 
   text-transform: uppercase;

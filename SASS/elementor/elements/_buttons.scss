@@ -12,7 +12,7 @@
 }
 
 .elementor-section .elementor-button {
-  @include button-color(light, filled)
+  @include button-color(main, filled)
 }
 
 @each $palette, $color in $palettes {
@@ -30,8 +30,4 @@
   .color--#{$palette} .elementor-element.elementor-button-info .elementor-button {
     @include button-color($palette, empty-d);
   }
-}
-
-.color--dark .elementor-element.elementor-button-info .elementor-button {
-  @include button-color(light, empty-w);
 }

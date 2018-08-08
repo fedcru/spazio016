@@ -123,12 +123,12 @@
   }
   @if $type == 'empty-d' {
     background: transparent;
-    color: $gold;
-    border-color: $gold;
+    color: $black;
+    border-color: $black;
     border-width: 2px;
 
     &:hover {
-      background-color: $gold;
+      background-color: $black;
       color: $white;
     }
   }
