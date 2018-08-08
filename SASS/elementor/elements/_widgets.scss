@@ -192,26 +192,6 @@
   @include breakpoint-min(sm) {
     padding: spacing(4) * 2;
   }
-
-  .elementor-widget-container {
-    margin-top: spacing(-6) * 1.15;
-
-    @include breakpoint-min(sm) {
-      margin-top: spacing(-4) * 3.25;
-    }
-  }
-
-  h3 {
-    padding: spacing(2);
-    display: inline-block;
-    background: main-colors(main, bg);
-  }
-}
-
-@each $palette, $color in $palettes {
-  .color--#{$palette} .widget--boxed h3 {
-    background: palette($palette, bg);
-  }
 }
 
 .widget--border {
