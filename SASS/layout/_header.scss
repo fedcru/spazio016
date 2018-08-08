@@ -39,19 +39,23 @@ $header_bp: 'md';
 }
 
 
+.header__inner {
+
+}
+
+
+/**************************************************************************************************
+ * Logo
+ *
+ ****/
+
 .logo {
   max-width: 250px;
 }
 
 .logo--mobile {
   max-width: 150px;
-
 }
-
-.header__inner {
-
-}
-
 
 
 
@@ -90,7 +94,6 @@ $header_bp: 'md';
     &:hover,
     &.current-menu-item {
       position: relative;
-      border-color: $green;
 
       &::after {
 

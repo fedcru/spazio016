@@ -166,7 +166,6 @@
   .checkout-button {
     @include button(h4);
     margin-top: spacing(4);
-    background: $green;
     color: $white;
 
     br {

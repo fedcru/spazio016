@@ -28,15 +28,9 @@ $black-30: rgba($black, 0.30);
 $black-20: rgba($black, 0.20);
 $black-10: rgba($black, 0.10);
 $black-05: rgba($black, 0.05);
-$red: red;
+$red: #f44336;
+$green: #4CAF50;
 
-$green: #6d8764;
-$yellow: #f0ad4e;
-$red: #a52a2a;
-$gold: #b99e5b;
-
-$gray-dark: #bdb8b5;
-$gray-light: #e0dfda;
 
 
 $main-colors: (
@@ -51,7 +45,7 @@ $main-colors: (
     bg: $white,
     body: $black,
     link: $black,
-    accent: $green,
+    accent: $red,
     border: $white,
   ),
   hero: (
@@ -65,11 +59,11 @@ $main-colors: (
   main: (
     bg: $white,
     body: $black-90,
-    link: $green,
-    accent: $green,
+    link: $red,
+    accent: $red,
     border: $black-20,
     overlay: $black,
-    button-bg: $green,
+    button-bg: $red,
     button-body: $white,
   ),
   sidebar: (
@@ -90,7 +84,7 @@ $main-colors: (
 
 $palettes: (
   dark: (
-    bg: $green,
+    bg: $red,
     body: $white,
     heading: $white,
     accent: $white,
@@ -98,29 +92,6 @@ $palettes: (
     overlay: $black,
     button-bg: $white-90,
     button-body: $black,
-  ),
-
-  dark-alt: (
-    bg: $black,
-    body: $white,
-    heading: $gold,
-    accent: $white,
-    border: $white-40,
-    overlay: $black-70,
-    // button-bg: $green,
-    // button-body: $white,
-    button-bg: $white-60,
-    button-body: $black,
-  ),
-  light: (
-    bg: $gray-light,
-    body: $black-90,
-    heading: $green,
-    accent: $black,
-    border: $black-20,
-    overlay: $white,
-    button-bg: $green,
-    button-body: $white,
   ),
 );
 

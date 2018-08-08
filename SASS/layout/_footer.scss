@@ -26,26 +26,8 @@
 
 .footer__column  {
   @include flex-child(6, $wd: 100);
-  max-width: max-width(narrow);
-  margin-right: auto;
-  margin-left: auto;
-  // height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-
-
-  @include breakpoint-min(ms) {
-    @include flex-child($wd: 50);
-
-    &:first-child {
-      margin-left: 0;
-    }
-    &:last-child {
-      margin-right: 0;
-      text-align: right;
-    }
-  }
 }
 
 @include breakpoint-min(el) {

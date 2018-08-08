@@ -39,7 +39,7 @@
     border-top: spacing(1) solid transparent;
 
     &--current {
-      border-top-color: $green;
+      border-top-color: main-colors(main, accent);
     }
 
     &--current,

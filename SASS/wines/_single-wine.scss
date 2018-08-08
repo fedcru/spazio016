@@ -106,7 +106,6 @@
     display: block;
     // float: left;
     left: spacing(0);
-    color: $green;
   }
 }
 
@@ -323,7 +322,6 @@
   @include pad($v: 5);
   @include flex-child($wd: 100);
   order: 2;
-  background: $green;
 
   * {
     color: $white;

@@ -24,19 +24,19 @@
   }
 
 
-@include breakpoint-min(el) {
-  // Alternative max widths
-  @at-root .widget--wide {
-    max-width: max-width(sm);
+  @include breakpoint-min(el) {
+    // Alternative max widths
+    @at-root .widget--wide {
+      max-width: max-width(sm);
+    }
+    @at-root .widget--wider {
+      max-width: max-width(md);
+    }
+    @at-root .widget--full {
+      max-width: 100%;
+      min-width: 100%;
+    }
   }
-  @at-root .widget--wider {
-    max-width: max-width(md);
-  }
-  @at-root .widget--full {
-    max-width: 100%;
-    min-width: 100%;
-  }
-}
 
   /**
    * Specific margin top
