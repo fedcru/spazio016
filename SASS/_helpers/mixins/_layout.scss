@@ -201,24 +201,59 @@
 ////
 // Standard Layout Padding
 ///
-@mixin layout-padding() {
-  padding-left: calc( 8.75vw + -8px);
-  padding-right: calc( 8.75vw + -8px);
+@mixin layout-padding($r: 1, $l: 1, $xl: 1, $lg: 1, $sm: 1, $xs: 1 ) {
 
-  @include breakpoint-min(sm) {
-    padding-left: spacing(6);
-    padding-right: spacing(6);
+  @if $xs == 1 {
+    @if $r == 1 {
+      padding-right: calc( 8.75vw + -8px);
+    }
+
+    @if $l == 1 {
+      padding-left: calc( 8.75vw + -8px);
+    }
   }
-  @include breakpoint-min(lg) {
-    padding-left: calc( 3.5vw + 2.4px);
-    padding-right: calc( 3.5vw + 2.4px);
+
+
+  @if $sm == 1 {
+    @include breakpoint-min(sm) {
+
+      @if $l == 1 {
+        padding-left: spacing(6);
+      }
+
+      @if $r == 1 {
+        padding-right: spacing(6);
+      }
+    }
   }
-  @include breakpoint-min(xl) {
-    padding-left: spacing(6.5);
-    padding-right: spacing(6.5);
+
+
+  @if $lg == 1 {
+    @include breakpoint-min(lg) {
+
+      @if $l == 1 {
+        padding-left: calc( 3.5vw + 2.4px);
+      }
+
+      @if $r == 1 {
+        padding-right: calc( 3.5vw + 2.4px);
+      }
+    }
+  }
+
+  @if $xl == 1 {
+    @include breakpoint-min(xl) {
+
+      @if $l == 1 {
+        padding-left: spacing(6.5);
+      }
+
+      @if $r == 1 {
+        padding-right: spacing(6.5);
+      }
+    }
   }
 }
-
 
 ////
 // Layout Overflow Steps
@@ -244,7 +279,7 @@
 }
 
 @mixin layout-overflow-xl {
-  @include breakpoint-min(lg) {
+  @include breakpoint-min(xl) {
     margin-left: spacing(-6.5);
     margin-right: spacing(-6.5);
   }
@@ -342,7 +377,7 @@
 // * 3/4 - portrait - activity / holidays list
 // * 4/3 - landscape - Personal Page big image
 ///
-@mixin aspect-ratio($w, $h, $ow: 0, $os: 6, $mr: null, $ml: null) {
+@mixin aspect-ratio($w, $h, $class: 'ratio__content' , $ow: 0, $os: 6, $mr: null, $ml: null) {
 //  @include max-width($mw: $mw, $mr: $mr, $ml: $ml);
   overflow: hidden;
   position: relative;
@@ -360,7 +395,7 @@
     padding-top: ($h / $w) * 100%;
   }
 
-  & > .ratio__content {
+  & > .#{$class} {
     position: absolute;
     top: 0;
     left: 0;
@@ -370,8 +405,8 @@
 
   img,
   video {
-    object-fit:cover;
-    width:100%;
+    object-fit: cover;
+    width: 100%;
     height:100%;
   }
 }

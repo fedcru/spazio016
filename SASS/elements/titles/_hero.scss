@@ -16,9 +16,7 @@
   }
 
   @include breakpoint-min(md) {
-    &::before {
-      background: $black-10;
-    }
+
   }
 }
 
@@ -32,21 +30,28 @@
 .hero-title__content {
   max-width: max-width($text-mw);
   position: relative;
+  width: 100%;
 }
 
 .hero-title__title {
+  @include font(h1);
   color: main-colors(hero, body);
   display: block;
 }
 
 .hero-title__subtitle {
+  @include font(h3-alt, $mt: 3);
   color: main-colors(hero, body);
   display: block;
 }
 
-.hero-title__description {
+.hero-title__description * {
+  @include font(p, $mt: 4);
+
   color: main-colors(hero, body);
   max-width: max-width($text-mw);
+
+
 
   strong {
     color: main-colors(hero, body);
@@ -67,6 +72,6 @@
 }
 
 .ctas__button {
-  @include button(h4);
+  @include button(p, $pv: 1);
   @include button-color($type: empty-w);
 }

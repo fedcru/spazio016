@@ -6,5 +6,5 @@
   }
 }
 .sidebar-widget__title {
-  @include font(h4);
+  @include font(uppercase);
 }

@@ -1,3 +1,21 @@
 //****************************************************************************//
 //                                    FORMS Mixins
 //****************************************************************************//
+@mixin label($font) {
+  @include font($font, $pb: 1, $pt: 1);
+  display: block;
+}
+
+@mixin input-text($font) {
+  @include font($font, $pt: 1, $pb: 1);
+  padding-right: spacing(1);
+  padding-left: spacing(2);
+  width: 100%;
+}
+
+@mixin input-select($font) {
+  @include font($font, $pt: 1, $pb: 1);
+  padding-right: spacing(1);
+  padding-left: spacing(1);
+  width: 100%;
+}

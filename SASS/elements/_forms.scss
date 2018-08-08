@@ -4,10 +4,25 @@
 
 input,
 textarea {
-  @include font(p, $pt: 2, $pb: 2);
-  width: 100%;
+  @include input-text(p);
 }
 
+select {
+  @include input-select(p);
+  background: #fff;
+}
+
+.gform_wrapper {
+  padding: spacing(3);
+  background: $black-10;
+
+  @include breakpoint-min(md) {
+    padding: spacing(4);
+  }
+  @include breakpoint-min(lg) {
+    padding: spacing(5);
+  }
+}
 
 .gform_fields {
   @include flex-setup(-2);
@@ -15,7 +30,7 @@ textarea {
 
 .gfield {
   @include flex-child(2, $wd: 100);
-  margin-bottom: spacing(5);
+  margin-bottom: spacing(3);
 }
 
 @include breakpoint-min(sm) {
@@ -29,12 +44,12 @@ textarea {
  * Labels
  */
 .gfield_label {
-  @include font(h5);
-  font-style: italic;
+  @include label(h5-alt);
 }
 
 .gfield_description {
   @include font(h5);
+  font-style: italic;
 }
 
 
@@ -52,10 +67,10 @@ textarea {
 .name_first,
 .name_last {
   @include flex-child(2, $wd: 50);
+
   label {
-    @include font(h5);
+    @include label(h5-alt);
     display: block;
-    font-style: italic;
   }
 }
 
@@ -69,8 +84,13 @@ textarea {
 }
 
 .gform_button {
-  @include button(h4);
+  @extend %button;
+  @include button(p, $pv: 1);
   @include button-color(light, filled);
+  margin-top: spacing(4);
+
+  text-transform: uppercase;
+  max-width: 16rem;
   cursor: pointer;
 }
 
@@ -84,8 +104,8 @@ textarea {
  * Errors
  */
 .validation_error {
-  padding: 0;
   color: $red;
+  padding: 0;
   margin-bottom: spacing(4);
 }
 
@@ -93,13 +113,13 @@ textarea {
   color: $red;
   font-weight: bolder !important;
 }
+
 /**
  * Colors
  */
 input,
 textarea {
   border: 2px solid $black-10;
-  @include pad($h: 2);
 
   &:focus {
     border-color: $black-30;
@@ -109,11 +129,101 @@ textarea {
 
 .color--dark {
   input,
-  textarea{
-    
+  textarea {
+
   }
   .gform_button {
     @include button-color(dark, empty-w);
     cursor: pointer;
+  }
+}
+
+/************************************************************
+ * DATE PICKER
+ *
+ **/
+.ginput_container_date {
+  position: relative;
+}
+
+.ui-datepicker-trigger {
+  position: absolute;
+  max-width: 20px !important;
+  right: 3%;
+  top: 25%;
+}
+
+.ui-datepicker {
+  width: auto;
+  box-shadow: $card-shadow--2;
+}
+
+.ui-datepicker-header {
+  padding: spacing(2);
+  background: darken($white, 5%);
+  overflow: hidden;
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+  @include font(h5-alt);
+  cursor: pointer;
+}
+
+.ui-datepicker-prev {
+  padding-right: spacing(2);
+
+  &::before {
+    content: "\00AB";
+    margin-right: spacing(1);
+  }
+}
+.ui-datepicker-next {
+  padding-left: spacing(1);
+
+  &::after {
+    content: "\00BB";
+    margin-left: spacing(1);
+  }
+}
+
+.ui-datepicker-title {
+  margin-top: spacing(2);
+
+  select {
+    width: 48%;
+  }
+
+  .ui-datepicker-month {
+    float: left;
+  }
+  .ui-datepicker-year {
+    float: right;
+  }
+}
+
+.ui-datepicker-calendar {
+  width: 100%;
+  background: $white;
+  padding-top: spacing(2);
+
+  td,
+  th {
+    text-align: center;
+    @include font(h5-alt);
+
+
+    a {
+      color: $black;
+    }
+  }
+
+  td {
+    padding: 0.15rem spacing(1);
+    border-left: 1px solid $black-10;
+    border-bottom: 1px solid $black-10;
+    &:first-child {
+      border-left: 0;
+    }
   }
 }

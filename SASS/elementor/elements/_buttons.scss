@@ -1,14 +1,14 @@
 .elementor-button.elementor-size-sm {
-  @include button(h5, $pv: 1);
+  @include button(h5-alt, $pv: 1);
   text-transform: uppercase;
 }
 .elementor-button.elementor-size-md {
-  @include button(p, $pv: 2);
+  @include button(p, $pv: 1);
   text-transform: uppercase;
 }
 
 .elementor-button.elementor-size-lg {
-  @include button(h4, $pv: 3, $ph: 5);
+  @include button(h3, $pv: 3, $ph: 5);
 }
 
 .elementor-section .elementor-button {
@@ -28,10 +28,10 @@
 
 @each $palette, $color in $palettes {
   .color--#{$palette} .elementor-element.elementor-button-info .elementor-button {
-    @include button-color($palette, empty-w);
+    @include button-color($palette, empty-d);
   }
 }
 
-.color--light .elementor-element.elementor-button-info .elementor-button {
-  @include button-color(light, empty-d);
+.color--dark .elementor-element.elementor-button-info .elementor-button {
+  @include button-color(light, empty-w);
 }

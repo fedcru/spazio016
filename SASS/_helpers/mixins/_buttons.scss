@@ -18,13 +18,13 @@
 ///
 // Mixin per i bottoni con padding
 ///
-@mixin button( $size: uppercase--sm, $mt: 0, $mb: 0, $pv: 3, $ph: 4, $ta: center ) {
+@mixin button( $size: uppercase, $mt: 0, $mb: 0, $pv: 3, $ph: 4, $ta: center ) {
   display: inline-block;
   border-width: 1px;
   border-style: solid;
-  border-radius: 0.125rem;
   text-align: $ta;
   cursor: pointer;
+  border-radius: 1.25rem;
 
   padding-left: spacing($ph);
   padding-right: spacing($ph);
@@ -115,11 +115,22 @@
     color: $white;
     border-color: $white-90;
     border-width: 2px;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: $white;
+      color: $black;
+    }
   }
   @if $type == 'empty-d' {
     background: transparent;
-    color: $black-70;
-    border-color: $black-50;
+    color: $gold;
+    border-color: $gold;
     border-width: 2px;
+
+    &:hover {
+      background-color: $gold;
+      color: $white;
+    }
   }
 }

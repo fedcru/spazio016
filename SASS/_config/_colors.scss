@@ -13,40 +13,45 @@
 // SEZIONI COLORI - //TODO
 // Usare qui le variabili semantiche segnate sopra
 ///
-$white: #fff;
+$white: #fafaf9;
 $white-90: rgba($white, 0.90);
 $white-70: rgba($white, 0.70);
 $white-60: rgba($white, 0.60);
 $white-50: rgba($white, 0.50);
 $white-40: rgba($white, 0.40);
-$black: #000;
+$black: #2e2926;
 $black-90: rgba($black, 0.85);
 $black-70: rgba($black, 0.7);
 $black-50: rgba($black, 0.5);
 $black-40: rgba($black, 0.4);
 $black-30: rgba($black, 0.30);
+$black-20: rgba($black, 0.20);
 $black-10: rgba($black, 0.10);
 $black-05: rgba($black, 0.05);
 $red: red;
 
-$green: #5cb85c;
+$green: #6d8764;
 $yellow: #f0ad4e;
-$red: #d9534f;
+$red: #a52a2a;
+$gold: #b99e5b;
+
+$gray-dark: #bdb8b5;
+$gray-light: #e0dfda;
 
 
 $main-colors: (
   topbar: (
     bg: $black,
     body: $white,
-    link: $black-30,
+    link: $white,
     accent: $white,
     border: $white,
   ),
   header: (
-    bg: $black,
-    body: $white,
-    link: $white,
-    accent: $white,
+    bg: $white,
+    body: $black,
+    link: $black,
+    accent: $green,
     border: $white,
   ),
   hero: (
@@ -59,12 +64,12 @@ $main-colors: (
   ),
   main: (
     bg: $white,
-    body: $black-70,
-    link: $black-70,
-    accent: $black-70,
-    border: $black-05,
+    body: $black-90,
+    link: $green,
+    accent: $green,
+    border: $black-20,
     overlay: $black,
-    button-bg: $black,
+    button-bg: $green,
     button-body: $white,
   ),
   sidebar: (
@@ -85,31 +90,36 @@ $main-colors: (
 
 $palettes: (
   dark: (
-    bg: $black,
+    bg: $green,
     body: $white,
+    heading: $white,
     accent: $white,
-    border: $white-40,
+    border: $white,
     overlay: $black,
     button-bg: $white-90,
     button-body: $black,
   ),
 
   dark-alt: (
-    bg: $black-70,
+    bg: $black,
     body: $white,
+    heading: $gold,
     accent: $white,
     border: $white-40,
     overlay: $black-70,
+    // button-bg: $green,
+    // button-body: $white,
     button-bg: $white-60,
     button-body: $black,
   ),
   light: (
-    bg: $white,
-    body: $black,
+    bg: $gray-light,
+    body: $black-90,
+    heading: $green,
     accent: $black,
-    border: $black-10,
+    border: $black-20,
     overlay: $white,
-    button-bg: $black-70,
+    button-bg: $green,
     button-body: $white,
   ),
 );

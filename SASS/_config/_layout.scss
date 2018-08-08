@@ -16,7 +16,9 @@ $grid-breakpoints: (
   sm: 30em,
   ms: 40em,
   md: 52.5em,
-  el: 768px, // ELEMENTOR COLUMN DROP
+  // el: 52.5em, // ELEMENTOR COLUMN DROP
+  el_st: 768px, // ELEMENTOR COLUMN DROP
+  el: 60em, // ELEMENTOR COLUMN DROP
   lg: 60em,
   xl: 85em,
   uxl: 125em,

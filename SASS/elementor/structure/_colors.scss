@@ -10,9 +10,21 @@
     border-color: main-colors(main, border);
   }
 
+  h2 {
+    color: main-colors(main, accent);
+  }
+
   //TODO - hotfix bottoni
   span {
     color: inherit;
+  }
+
+  blockquote {
+    color: rgba(main-colors(main, body), 0.7);
+
+    &::before {
+      color: rgba(main-colors(main, body), 0.2);
+    }
   }
 
   .elementor-text-editor > p > a {
@@ -32,6 +44,11 @@
 
     * {
       color: palette($palette, body);
+      border-color: palette($palette, border);
+    }
+
+    h2 {
+      color: palette($palette, heading);
     }
 
     .elementor-text-editor > p > a {
@@ -46,11 +63,11 @@
 
     blockquote,
     blockquote p {
-      color: rgba(palette($palette, body), 0.7);
+      color: rgba(palette($palette, body), 0.8);
 
       &::after,
       &::before {
-        color: rgba(palette($palette, body), 0.3);
+        color: rgba(palette($palette, body), 0.2);
       }
     }
 
@@ -77,25 +94,22 @@
 }
 
 
+.color--dark,
 .color--dark {
   h1,
   h2,
   h3 {
-    color: $white-70;
+    color: $white;
+  }
+}
+.color--light {
+  h1,
+  h2,
+  h3 {
+    color: $green;
   }
 }
 
 .overlay--dark {
   @include color-overlay(dark, 0.5);
-  // &::before {
-  //   background-color: rgba(0,0,0,0.5);
-  // }
-  &::before {
-    background: linear-gradient(90deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.0) 20%, rgba(0,0,0,0.3) 45%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0.7) 100%);
-
-    @include breakpoint-max(md) {
-      background: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 20%, rgba(0,0,0,0.4) 45%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0.9) 100%);
-      background: rgba($black, 0.5);
-    }
-  }
 }
