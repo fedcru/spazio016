@@ -41,10 +41,15 @@
 }
 
 .main__row {
-  @include flex-setup()
+  @include flex-setup(grid)
   @include pad($v: 8);
 }
 
+
+.main__content,
+.main__sidebar {
+  @include flex-child(grid, $wd: 100);
+}
 
 /**
  * Main content width
@@ -66,7 +71,7 @@
  * Sets the sidebar / content ratio here
  */
 .main__sidebar {
-
+  
   @include breakpoint-min(lg) {
     @include flex-child($wd: 35);
   }
