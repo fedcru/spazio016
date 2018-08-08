@@ -375,10 +375,14 @@
 }
 
 .wg-item--col-current {
-  @include flex-child(grid, $wd: 100);
+  @include flex-child(grid, $wd: 50);
   @include max-width(sm);
+  margin-bottom: spacing(7);
 
-  @include breakpoint-min(md) {
+  @include breakpoint-min(sm) {
+    @include flex-child($wd: 33.333);
+  }
+  @include breakpoint-min(el) {
     @include flex-child($wd: 20);
   }
 

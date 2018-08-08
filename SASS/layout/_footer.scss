@@ -26,7 +26,7 @@
 
 .footer__column  {
   @include flex-child(6, $wd: 100);
-  max-width: max-width($text-mw);
+  max-width: max-width(narrow);
   margin-right: auto;
   margin-left: auto;
   // height: 100%;
@@ -34,7 +34,10 @@
   flex-direction: column;
   justify-content: flex-end;
 
-  @include breakpoint-min(lg) {
+
+  @include breakpoint-min(ms) {
+    @include flex-child($wd: 50);
+
     &:first-child {
       margin-left: 0;
     }
@@ -47,6 +50,7 @@
 
 @include breakpoint-min(el) {
   .footer__column--1-3 {
+
     @include flex-child(6, $wd: 33.333);
     max-width: 100%;
     margin-left: 0;
@@ -59,7 +63,7 @@
 }
 
 .footer__widget {
-  margin-bottom: spacing(6);
+  // margin-bottom: spacing(6);
 
   p {
 

@@ -10,6 +10,10 @@
     border-color: main-colors(main, border);
   }
 
+  h2 {
+    color: main-colors(main, accent);
+  }
+
   //TODO - hotfix bottoni
   span {
     color: inherit;
@@ -40,6 +44,11 @@
 
     * {
       color: palette($palette, body);
+      border-color: palette($palette, border);
+    }
+
+    h2 {
+      color: palette($palette, heading);
     }
 
     .elementor-text-editor > p > a {

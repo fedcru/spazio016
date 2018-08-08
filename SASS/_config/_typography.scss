@@ -79,13 +79,26 @@ $fonts: (
       lh: 2.875rem / 2,
     ),
   ),
+  h3-alt: (
+    fm: $ff-primary,
+    fs: 1.5rem,
+    lh: 2.875rem / 2,
+    mt: 5,
+    mb: 2,
+    wt: 400,
+
+    lg: (
+      fs: 1.625rem,
+      lh: 2.875rem / 2,
+    ),
+  ),
   h4: (
     fm: $ff-secondary,
     fs: 1rem,
     lh: $line-height,
     mt: 4,
     mb: 0,
-    wt: 700,
+    wt: 400,
   ),
   h5: (
     fm: $ff-secondary,
@@ -93,7 +106,7 @@ $fonts: (
     lh: $line-height,
     mt: 4,
     mb: 0,
-    wt: 700,
+    wt: 400,
   ),
 
   h5-alt: (
@@ -102,6 +115,7 @@ $fonts: (
     lh: $line-height,
     mt: 4,
     mb: 0,
+    wt: 400,
   ),
 
   p: (

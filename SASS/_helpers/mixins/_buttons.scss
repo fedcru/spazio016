@@ -115,6 +115,7 @@
     color: $white;
     border-color: $white-90;
     border-width: 2px;
+    transition: all 0.2s;
 
     &:hover {
       background-color: $white;

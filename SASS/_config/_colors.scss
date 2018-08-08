@@ -67,7 +67,7 @@ $main-colors: (
     body: $black-90,
     link: $green,
     accent: $green,
-    border: $black-05,
+    border: $black-20,
     overlay: $black,
     button-bg: $green,
     button-body: $white,
@@ -92,8 +92,9 @@ $palettes: (
   dark: (
     bg: $green,
     body: $white,
+    heading: $white,
     accent: $white,
-    border: $white-40,
+    border: $white,
     overlay: $black,
     button-bg: $white-90,
     button-body: $black,
@@ -102,6 +103,7 @@ $palettes: (
   dark-alt: (
     bg: $black,
     body: $white,
+    heading: $gold,
     accent: $white,
     border: $white-40,
     overlay: $black-70,
@@ -113,8 +115,9 @@ $palettes: (
   light: (
     bg: $gray-light,
     body: $black-90,
+    heading: $green,
     accent: $black,
-    border: $black-10,
+    border: $black-20,
     overlay: $white,
     button-bg: $green,
     button-body: $white,

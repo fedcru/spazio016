@@ -1,3 +1,7 @@
+.shortcode__wine-grid {
+  margin-top: spacing(8);
+}
+
 .wine-grid__inner {
   max-width: $website-width;
   margin: 0 auto;
@@ -50,14 +54,50 @@
 /****
  * ITEM
  */
-
+.wg-item {
+  @include max-width(sm);
+  @include flex-child(grid, $wd: 50);
+  margin-bottom: spacing(7);
+}
 
 .wg-item--col-3 {
-  @include flex-child(grid, $wd: 100);
-  @include max-width(sm);
 
   @include breakpoint-min(md) {
     @include flex-child($wd: 33.3333);
+  }
+}
+.wg-item--col-4 {
+  @include breakpoint-min(sm) {
+    @include flex-child($wd: 25);
+  }
+}
+.wg-item--col-5 {
+
+  @include breakpoint-min(sm) {
+    @include flex-child($wd: 33.333);
+  }
+  @include breakpoint-min(md) {
+    @include flex-child($wd: 20);
+  }
+}
+
+.wg-item--col-6 {
+
+  @include breakpoint-min(sm) {
+    @include flex-child($wd: 33.3333);
+  }
+  @include breakpoint-min(el) {
+    @include flex-child($wd: 16.6666);
+  }
+}
+
+.wg-item--col-7 {
+
+  @include breakpoint-min(sm) {
+    @include flex-child($wd: 33.3333);
+  }
+  @include breakpoint-min(el) {
+    @include flex-child($wd: 14.285);
   }
 }
 
@@ -78,7 +118,11 @@
 
   &__surtitle {
     @include font(h4);
-    margin-top: spacing(-6);
+    margin-top: spacing(-5);
+
+    @include breakpoint-min(el) {
+      margin-top: spacing(-6);
+    }
 
     // text-transform: uppercase;
 

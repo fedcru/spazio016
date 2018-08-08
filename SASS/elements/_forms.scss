@@ -80,13 +80,15 @@ select {
  */
 .gform_footer {
   width: 100%;
-  text-align: center;
+  text-align: right;
 }
 
 .gform_button {
   @extend %button;
   @include button(p, $pv: 1);
   @include button-color(light, filled);
+  margin-top: spacing(4);
+
   text-transform: uppercase;
   max-width: 16rem;
   cursor: pointer;
@@ -165,6 +167,7 @@ textarea {
 .ui-datepicker-prev,
 .ui-datepicker-next {
   @include font(h5-alt);
+  cursor: pointer;
 }
 
 .ui-datepicker-prev {

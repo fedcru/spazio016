@@ -377,7 +377,7 @@
 // * 3/4 - portrait - activity / holidays list
 // * 4/3 - landscape - Personal Page big image
 ///
-@mixin aspect-ratio($w, $h, $ow: 0, $os: 6, $mr: null, $ml: null) {
+@mixin aspect-ratio($w, $h, $class: 'ratio__content' , $ow: 0, $os: 6, $mr: null, $ml: null) {
 //  @include max-width($mw: $mw, $mr: $mr, $ml: $ml);
   overflow: hidden;
   position: relative;
@@ -395,7 +395,7 @@
     padding-top: ($h / $w) * 100%;
   }
 
-  & > .ratio__content {
+  & > .#{$class} {
     position: absolute;
     top: 0;
     left: 0;
@@ -405,8 +405,8 @@
 
   img,
   video {
-    object-fit:cover;
-    width:100%;
+    object-fit: cover;
+    width: 100%;
     height:100%;
   }
 }
