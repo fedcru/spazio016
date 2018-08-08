@@ -57,68 +57,7 @@ $header_bp: 'md';
   max-width: 150px;
 }
 
-
-
-.primary-nav {
-  @include marg($v: 4);
-  display: none;
-
-  @include breakpoint-min(md) {
-    display: block;
-  }
-}
-
-.primary-nav__inner {
-  @include marg($h: auto);
-
-  text-align: center;
-  max-width: $website-width;
-  display: flex;
-  justify-content: flex-end;
-
-  &> .menu-item {
-    @include font(h4);
-    text-transform: uppercase;
-    border-bottom: 1px solid transparent;
-    padding: 0;
-    margin-right: spacing(6);
-
-    &:last-child {
-      margin-right: 0;
-    }
-
-    a {
-      line-height: inherit;
-    }
-
-    &:hover,
-    &.current-menu-item {
-      position: relative;
-
-      &::after {
-
-      }
-
-      a {
-        color: main-colors(header, accent);
-
-      }
-
-      &>.sub-menu {
-        top: spacing(6) * 1.00;
-      }
-    }
-  }
-
-  .sub-menu {
-    @include pad($h: 2);
-
-    li {
-      text-align: left;
-
-      &:last-child {
-        border: 0;
-      }
-    }
-  }
-}
+/**************************************************************************************************
+ * NAvigation
+ * See elements/header/nav.scss
+ */

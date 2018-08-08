@@ -1,6 +1,7 @@
 
 
 @import 'wp_header';
+
 // FUNCTIONS & PROJECT CONFIGURATION
 @import '_helpers/functions';
 @import '_config/typography';
@@ -8,7 +9,7 @@
 @import '_config/layout';
 @import '_helpers/mixins';
 
-
+// Normalize
 @import 'normalize';
 
 
@@ -32,8 +33,14 @@
 
 // Header elements
 @import 'elements/header/top-bar';
-@import 'elements/header/header-widgets';
+@import 'elements/header/nav';
+@import 'elements/header/mobile-menu';
 
+// Small elements
+@import 'elements/forms';
+@import 'elements/widgets-sidebar';
+@import 'elements/titles/standard';
+@import 'elements/titles/hero';
 
 
 ////
@@ -41,17 +48,14 @@
 ///
 @import 'elementor/elementor';
 
-// Small elements
-@import 'elements/mobile-menu';
-@import 'elements/forms';
-@import 'elements/widgets-sidebar';
-@import 'elements/titles/standard';
-@import 'elements/titles/hero';
-
+///
 // BLOG
+///
 @import 'elements/blog/loops';
 
+///
 // wines
+///
 // @import 'wines/wine-import';
 
 ////
