@@ -44,7 +44,7 @@ select {
  * Labels
  */
 .gfield_label {
-  @include label(h5-alt);
+  @include label(h5);
 }
 
 .gfield_description {
@@ -69,7 +69,7 @@ select {
   @include flex-child(2, $wd: 50);
 
   label {
-    @include label(h5-alt);
+    @include label(h5);
     display: block;
   }
 }
@@ -165,7 +165,7 @@ textarea {
 
 .ui-datepicker-prev,
 .ui-datepicker-next {
-  @include font(h5-alt);
+  @include font(h5);
   cursor: pointer;
 }
 
@@ -209,7 +209,7 @@ textarea {
   td,
   th {
     text-align: center;
-    @include font(h5-alt);
+    @include font(h5);
 
 
     a {

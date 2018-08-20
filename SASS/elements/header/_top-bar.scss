@@ -78,8 +78,7 @@
  * Widget
  */
 .top-area__widget {
-  @include font(h5-alt, $pt: 1, $pb: 1);
-  // margin-right: 0;
+
 
   &:nth-child(2) {
     padding: 0;
@@ -97,7 +96,6 @@
 }
 
 .top-area .button {
-  @include button(h5-alt, $pv: 1);
   @include button-color(main, filled);
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -185,7 +183,7 @@
 
 
   li {
-    @include font(h5-alt);
+
     a {
       padding: 0;
     }

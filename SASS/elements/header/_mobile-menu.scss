@@ -11,7 +11,7 @@
 }
 
 .mobile-nav__icon {
-  fill: $black;
+  fill: main-colors(header, accent);
 }
 
 .modal .mobile-nav__menu {
@@ -25,7 +25,7 @@
   @include pad($h: 4);
   padding-top: spacing(8);
   padding-bottom: spacing(6);
-  background-color: $black;
+  background-color: main-colors(header, accent);
   display: flex; //TODO - move in parent
   flex-direction: column; //TODO move in parent
   justify-content: flex-start;

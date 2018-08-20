@@ -230,7 +230,7 @@
   }
 
   &> h5 {
-    @include font(h5-alt, $mt: default, $mb: default);
+    @include font(h5, $mt: default, $mb: default);
   }
 
   &> p,

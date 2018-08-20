@@ -3,7 +3,6 @@ $header_bp: 'md';
 .header {
   @include layout-padding();
   box-shadow: $card-shadow--2;
-  background-color: $black;
   position: relative;
   z-index: 9;
   background-color: main-colors(header, bg);

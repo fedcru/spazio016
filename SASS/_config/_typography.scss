@@ -79,22 +79,9 @@ $fonts: (
       lh: 2.875rem / 2,
     ),
   ),
-  h3-alt: (
-    fm: $ff-primary,
-    fs: 1.5rem,
-    lh: 2.875rem / 2,
-    mt: 5,
-    mb: 2,
-    wt: 400,
-
-    lg: (
-      fs: 1.625rem,
-      lh: 2.875rem / 2,
-    ),
-  ),
   h4: (
     fm: $ff-secondary,
-    fs: 1rem,
+    fs: $font-size,
     lh: $line-height,
     mt: 4,
     mb: 0,
@@ -102,15 +89,6 @@ $fonts: (
   ),
   h5: (
     fm: $ff-secondary,
-    fs: 0.875rem,
-    lh: $line-height,
-    mt: 4,
-    mb: 0,
-    wt: 400,
-  ),
-
-  h5-alt: (
-    fm: $ff-primary,
     fs: 0.875rem,
     lh: $line-height,
     mt: 4,
@@ -126,14 +104,6 @@ $fonts: (
     mb: 4,
   ),
 
-  uppercase: (
-    fm: $ff-primary,
-    wt: 700,
-    fs: $font-size,
-    mb: 4,
-    mt: 4,
-    tt: uppercase,
-  ),
 );
 
 $lists: (

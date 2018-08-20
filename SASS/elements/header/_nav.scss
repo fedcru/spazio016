@@ -2,7 +2,7 @@
   @include marg($v: 4);
   display: none;
 
-  @include breakpoint-min(md) {
+  @include breakpoint-min($header_bp) {
     display: block;
   }
 }

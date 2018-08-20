@@ -1,5 +1,5 @@
 .elementor-button.elementor-size-sm {
-  @include button(h5-alt, $pv: 1);
+  @include button(h5, $pv: 1);
   text-transform: uppercase;
 }
 .elementor-button.elementor-size-md {
