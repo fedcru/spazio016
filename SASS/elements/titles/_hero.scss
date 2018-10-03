@@ -40,7 +40,7 @@
 }
 
 .hero-title__subtitle {
-  @include font(h3-alt, $mt: 3);
+  @include font(h3, $mt: 3);
   color: main-colors(hero, body);
   display: block;
 }

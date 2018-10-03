@@ -49,6 +49,49 @@ $el-v-space: 7;
       @include pad($v: 0);
     }
   }
+
+  ////
+  // custom padding classes
+  ///
+  &.section--pv-sm {
+
+    &> .elementor-container {
+      @include pad($v: 5);
+
+      // Vertical spacing on large screen
+      @include breakpoint-min(el) {
+        @include pad($v: 6);
+      }
+    }
+  }
+
+  &.section--pb-sm {
+
+    &> .elementor-container {
+      padding-bottom: spacing(5);
+
+      // Vertical spacing on large screen
+      @include breakpoint-min(el) {
+        padding-bottom: spacing(6);
+      }
+    }
+  }
+
+  &.section--pb-xs {
+
+    &> .elementor-container {
+      padding-bottom: spacing(4);
+
+      // Vertical spacing on large screen
+      @include breakpoint-min(el) {
+        padding-bottom: spacing(5);
+      }
+    }
+  }
+
+  &.section--pv-xxs > .elementor-container {
+    @include pad($v: 4);
+  }
 }
 
 
@@ -64,7 +107,6 @@ $el-v-space: 7;
   @include breakpoint-min(el) {
     @include pad($v: 0);
   }
-
 }
 
 /**

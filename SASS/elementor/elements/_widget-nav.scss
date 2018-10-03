@@ -1,7 +1,9 @@
 .elementor-widget-wp-widget-nav_menu {
+
   .menu {
     @include marg($h: auto);
-    margin-top: spacing(4);
+    white-space: nowrap;
+    // margin-top: spacing(4);
     text-align: center;
 
 
@@ -12,15 +14,6 @@
 
       @include breakpoint-min(md) {
         @include pad($h: 4);
-      }
-
-
-      &:first-child {
-        padding-left: 0
-      }
-      &:last-child {
-        padding-right: 0;
-        border-right: 0;
       }
     }
   }

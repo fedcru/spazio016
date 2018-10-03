@@ -1,0 +1,32 @@
+.modal {
+  position: fixed;
+}
+
+a {
+  cursor: pointer;
+}
+
+.modal__inner {
+  max-width: max-width($text_mw);
+  background-color: main-colors(main, bg);
+  width: 97%;
+  left: 0;
+  right: 0;
+  @include pad($v: 5, $h: 4)
+
+  @include breakpoint-min(sm) {
+    width: 50%;
+    @include pad($h: 5);
+  }
+}
+
+
+
+.modal__button--close {
+  height: spacing(6);
+  width: spacing(6);
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1rem;
+}

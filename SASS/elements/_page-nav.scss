@@ -1,0 +1,33 @@
+.page-nav {
+  overflow: hidden;
+  padding-left: 0;
+  padding-right: 0;
+  box-shadow: $card-shadow--1;
+  z-index: 1;
+
+  &> .elementor-container {
+    overflow: auto;
+    padding-bottom: spacing(2);
+    margin-bottom: spacing(-4);
+    padding-top: spacing(1);
+
+    @include breakpoint-min(el) {
+      padding-top: spacing(4);
+      padding-bottom: spacing(4);
+      margin-bottom: 0;
+      overflow: hidden;
+    }
+  }
+
+  &--fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+
+    @at-root .elementor-element-edit-mode #{&} {
+      position: relative;
+    }
+
+  }
+}
