@@ -188,7 +188,7 @@
   transition: color .15s ease-in;
   background-position: 0 1.0525em;
   background-size: 5px 5px;
-  background-repeat-y: no-repeat;
+  background-repeat: repeat-x;
   background-image: linear-gradient(to top, transparent, transparent 1.5px, $color 1.5px, $color 2px, transparent 2px);
   background-position: center bottom;
   color: $color;

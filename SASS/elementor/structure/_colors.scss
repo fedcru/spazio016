@@ -27,7 +27,9 @@
     }
   }
 
-  .elementor-text-editor > p > a {
+  .elementor-text-editor > p > a,
+  .elementor-text-editor > ul > li > a,
+  .elementor-text-editor > ol > li > a {
     @include link();
     font-weight: bold;
   }
@@ -79,7 +81,9 @@
           color: palette($palette, body);
         }
 
-        .elementor-text-editor > p > a {
+        .elementor-text-editor > p > a,
+        .elementor-text-editor > ul > li > a,
+        .elementor-text-editor > ol > li > a {
           @include link($palette);
         }
 

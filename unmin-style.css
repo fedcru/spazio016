@@ -122,7 +122,9 @@ hr,
   line-height: 1.4375rem;
   margin-bottom: 1.4375rem; }
 
-.typography > p > a {
+.typography > p > a,
+.typography > ol > li > a,
+.typography > ul > li > a {
   position: relative;
   text-shadow: -1px -1px 0 #fff, -1px -1px 0 #fff, -1px -1px 0 #fff, 1px 1px 0 #fff;
   -webkit-transition: color .15s ease-in;
@@ -130,7 +132,7 @@ hr,
   transition: color .15s ease-in;
   background-position: 0 1.0525em;
   background-size: 5px 5px;
-  background-repeat-y: no-repeat;
+  background-repeat: repeat-x;
   background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #f44336 1.5px, #f44336 2px, transparent 2px);
   background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #f44336 1.5px, #f44336 2px, transparent 2px);
   background-image: linear-gradient(to top, transparent, transparent 1.5px, #f44336 1.5px, #f44336 2px, transparent 2px);
@@ -2054,7 +2056,9 @@ a {
     color: rgba(0, 0, 0, 0.7); }
     .elementor-section blockquote::before {
       color: rgba(0, 0, 0, 0.2); }
-  .elementor-section .elementor-text-editor > p > a {
+  .elementor-section .elementor-text-editor > p > a,
+  .elementor-section .elementor-text-editor > ul > li > a,
+  .elementor-section .elementor-text-editor > ol > li > a {
     position: relative;
     text-shadow: -1px -1px 0 #fff, -1px -1px 0 #fff, -1px -1px 0 #fff, 1px 1px 0 #fff;
     -webkit-transition: color .15s ease-in;
@@ -2062,7 +2066,7 @@ a {
     transition: color .15s ease-in;
     background-position: 0 1.0525em;
     background-size: 5px 5px;
-    background-repeat-y: no-repeat;
+    background-repeat: repeat-x;
     background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #f44336 1.5px, #f44336 2px, transparent 2px);
     background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #f44336 1.5px, #f44336 2px, transparent 2px);
     background-image: linear-gradient(to top, transparent, transparent 1.5px, #f44336 1.5px, #f44336 2px, transparent 2px);
@@ -2085,7 +2089,7 @@ a {
     transition: color .15s ease-in;
     background-position: 0 1.0525em;
     background-size: 5px 5px;
-    background-repeat-y: no-repeat;
+    background-repeat: repeat-x;
     background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
     background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
     background-image: linear-gradient(to top, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
@@ -2110,7 +2114,9 @@ a {
     background-color: #f44336; }
     .color--dark .color--dark * {
       color: #fff; }
-    .color--dark .color--dark .elementor-text-editor > p > a {
+    .color--dark .color--dark .elementor-text-editor > p > a,
+    .color--dark .color--dark .elementor-text-editor > ul > li > a,
+    .color--dark .color--dark .elementor-text-editor > ol > li > a {
       position: relative;
       text-shadow: -1px -1px 0 #f44336, -1px -1px 0 #f44336, -1px -1px 0 #f44336, 1px 1px 0 #f44336;
       -webkit-transition: color .15s ease-in;
@@ -2118,7 +2124,7 @@ a {
       transition: color .15s ease-in;
       background-position: 0 1.0525em;
       background-size: 5px 5px;
-      background-repeat-y: no-repeat;
+      background-repeat: repeat-x;
       background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
       background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
       background-image: linear-gradient(to top, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
@@ -2699,7 +2705,7 @@ a {
   transition: color .15s ease-in;
   background-position: 0 1.0525em;
   background-size: 5px 5px;
-  background-repeat-y: no-repeat;
+  background-repeat: repeat-x;
   background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #f44336 1.5px, #f44336 2px, transparent 2px);
   background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #f44336 1.5px, #f44336 2px, transparent 2px);
   background-image: linear-gradient(to top, transparent, transparent 1.5px, #f44336 1.5px, #f44336 2px, transparent 2px);

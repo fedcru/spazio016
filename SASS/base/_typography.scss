@@ -88,7 +88,9 @@ hr,
     @include font(p, $mt: default, $mb: default);
   }
 
-  &> p > a {
+  &> p > a,
+  &> ol > li > a,
+  &> ul > li > a {
     @include link;
   }
 
