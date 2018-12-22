@@ -59,7 +59,7 @@
   @include breakpoint-min(lg) {
     @include flex-child($wd: 65);
 
-    &--full {
+    &--layout-full {
       @include flex-child($wd: 100);
     }
   }
@@ -71,7 +71,7 @@
  * Sets the sidebar / content ratio here
  */
 .main__sidebar {
-  
+
   @include breakpoint-min(lg) {
     @include flex-child($wd: 35);
   }
