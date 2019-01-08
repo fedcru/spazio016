@@ -188,45 +188,6 @@ $el-v-space: 7;
   }
 }
 
-
-/**
- * Horizontal margin correction
- * Negative margin is applied to the section
- * According to the parent section type.
- */
-
-.elementor-section-boxed.elementor-inner-section .elementor-row {
-
-  // // Default, Narrow & Extended parents
-  // @at-root .elementor-column-gap-default #{&} {
-  //   @include grid-marg();
-  // }
-  // @at-root .elementor-column-gap-narrow #{&} {
-  //   @include grid-marg();
-  // }
-  // @at-root .elementor-column-gap-extended #{&} {
-  //   @include grid-marg();
-  // }
-  // @at-root .elementor-column-gap-wide #{&} {
-  //   @include grid-marg();
-  // }
-  // @at-root .elementor-column-gap-wider #{&} {
-  //   @include grid-marg();
-  // }
-}
-
-@include breakpoint-min(xl) {
-  // .elementor-section-boxed.elementor-inner-section .elementor-row {
-  //   // Wide & Wider parents
-  //   @at-root .elementor-column-gap-wide #{&} {
-  //     @include marg($h: -$el-gutter-lg);
-  //   }
-  //   @at-root .elementor-column-gap-wider #{&} {
-  //     @include marg($h: -$el-gutter-lg);
-  //   }
-  // }
-}
-
 /**
  * Special layout such as the 1/3 +2/3 with the netsted columns inside
  */

@@ -57,6 +57,26 @@
       }
     }
 
+    // Force column content to align to the boxed section content
+    .column--force-left .elementor-column-wrap {
+      max-width: $website-width / 2;
+      margin-left: auto;
+      margin-right: 0;
+
+      @include breakpoint-min(xl) {
+        padding-left: 0 !important;
+      }
+    }
+    .column--force-right .elementor-column-wrap {
+      max-width: $website-width / 2;
+      margin-right: auto;
+      margin-left: 0;
+
+      @include breakpoint-min(xl) {
+        padding-right: 0 !important;
+      }
+    }
+
 
     /**
      * Padding resets before the columns drop

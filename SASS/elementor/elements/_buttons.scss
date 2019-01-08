@@ -11,7 +11,7 @@
   @include button(h3, $pv: 3, $ph: 5);
 }
 
-.elementor-section .elementor-button {
+.elementor-button {
   @include button-color(main, filled)
 }
 

@@ -1,0 +1,26 @@
+.main {
+  background-color: main-colors(main, bg);
+  color: main-colors(main, body);
+
+  * {
+    border-color: main-colors(main, border);
+  }
+}
+
+a {
+  color: inherit;
+}
+
+.typography,
+.elementor-text-editor {
+  & > p > a,
+  & > ul > li > a,
+  & > ol > li > a {
+   @include link;
+ }
+}
+
+
+// h1, h2, h3, h4, h5, h6 {
+//   color: main-colors(main, body);
+// }

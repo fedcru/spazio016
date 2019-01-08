@@ -1,59 +1,62 @@
-.elementor-section {
-  background-color: main-colors(main, bg);
+// .elementor-section {
+//   background-color: main-colors(main, bg);
+//
+//   &.elementor-inner-section {
+//     background-color: transparent;
+//   }
+//
+//   * {
+//     color: main-colors(main, body);
+//     border-color: main-colors(main, border);
+//   }
+//
+//   h2 {
+//     color: main-colors(main, accent);
+//   }
+//
+//   //TODO - hotfix bottoni
+//   span {
+//     color: inherit;
+//   }
+//
+//   blockquote {
+//     color: rgba(main-colors(main, body), 0.7);
+//
+//     &::before {
+//       color: rgba(main-colors(main, body), 0.2);
+//     }
+//   }
+//
+//   .elementor-text-editor > p > a,
+//   .elementor-text-editor > ul > li > a,
+//   .elementor-text-editor > ol > li > a {
+//     @include link();
+//     font-weight: bold;
+//   }
+//
+//   .font--color-light {
+//
+//   }
+// }
 
-  &.elementor-inner-section {
-    background-color: transparent;
-  }
-
-  * {
-    color: main-colors(main, body);
-    border-color: main-colors(main, border);
-  }
-
-  h2 {
-    color: main-colors(main, accent);
-  }
-
-  //TODO - hotfix bottoni
-  span {
-    color: inherit;
-  }
-
-  blockquote {
-    color: rgba(main-colors(main, body), 0.7);
-
-    &::before {
-      color: rgba(main-colors(main, body), 0.2);
-    }
-  }
-
-  .elementor-text-editor > p > a,
-  .elementor-text-editor > ul > li > a,
-  .elementor-text-editor > ol > li > a {
-    @include link();
-    font-weight: bold;
-  }
-
-  .font--color-light {
-
-  }
-}
 
 
 @each $palette, $color in $palettes {
   .color--#{$palette} {
     background-color: palette($palette, bg);
+    color: palette($palette, body);
 
     * {
-      color: palette($palette, body);
-      border-color: palette($palette, border);
+      border-color: palette($palette, border);      
     }
 
-    h2 {
-      color: palette($palette, heading);
-    }
+    // h1, h2, h3, h4, h5, h6 {
+    //   color: palette($palette, heading);
+    // }
 
-    .elementor-text-editor > p > a {
+    .elementor-text-editor > p > a,
+    .elementor-text-editor > ul > li > a,
+    .elementor-text-editor > ol > li > a {
       @include link($palette);
     }
 
@@ -72,31 +75,12 @@
         color: rgba(palette($palette, body), 0.2);
       }
     }
-
-    @each $palette, $color in $palettes {
-      .color--#{$palette} {
-        background-color: palette($palette, bg);
-
-        * {
-          color: palette($palette, body);
-        }
-
-        .elementor-text-editor > p > a,
-        .elementor-text-editor > ul > li > a,
-        .elementor-text-editor > ol > li > a {
-          @include link($palette);
-        }
-
-        ::selection {
-          background-color: palette($palette, accent);
-          color: palette($palette, bg);
-          text-shadow: none;
-        }
-      }
-    }
   }
 }
 
+.elementor-inner-section {
+  background-color: transparent;
+}
 
 .overlay--dark {
   @include color-overlay(dark, 0.5);

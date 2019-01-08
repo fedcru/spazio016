@@ -1,5 +1,6 @@
 /*!
 Theme Name: FrontEnd Child
+Version: 1.0
 Theme URI: -
 Author: GlocalWeb
 Author URI: https://glocalweb.it
@@ -190,6 +191,35 @@ p > strong {
 .theme-icon {
   font-family: "Theme Icons"; }
 
+.main {
+  background-color: #fff;
+  color: rgba(17, 17, 17, 0.85); }
+  .main * {
+    border-color: rgba(17, 17, 17, 0.2); }
+
+a {
+  color: inherit; }
+
+.typography > p > a,
+.typography > ul > li > a,
+.typography > ol > li > a,
+.elementor-text-editor > p > a,
+.elementor-text-editor > ul > li > a,
+.elementor-text-editor > ol > li > a {
+  position: relative;
+  text-shadow: -1px -1px 0 #fff, -1px -1px 0 #fff, -1px -1px 0 #fff, 1px 1px 0 #fff;
+  -webkit-transition: color .15s ease-in;
+  -o-transition: color .15s ease-in;
+  transition: color .15s ease-in;
+  background-position: 0 1.0525em;
+  background-size: 5px 5px;
+  background-repeat: repeat-x;
+  background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #f44336 1.5px, #f44336 2px, transparent 2px);
+  background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #f44336 1.5px, #f44336 2px, transparent 2px);
+  background-image: linear-gradient(to top, transparent, transparent 1.5px, #f44336 1.5px, #f44336 2px, transparent 2px);
+  background-position: center bottom;
+  color: #f44336; }
+
 /*
  * The Website container
  */
@@ -205,8 +235,7 @@ p > strong {
   *********************************************************************************************/
 .main {
   padding-right: calc( 8.75vw + -8px);
-  padding-left: calc( 8.75vw + -8px);
-  background-color: #fff; }
+  padding-left: calc( 8.75vw + -8px); }
   @media (min-width: 30em) {
     .main {
       padding-left: 2.875rem;
@@ -219,9 +248,6 @@ p > strong {
     .main {
       padding-left: 4.3125rem;
       padding-right: 4.3125rem; } }
-  .main * {
-    color: rgba(0, 0, 0, 0.85);
-    border-color: rgba(0, 0, 0, 0.2); }
 
 .main__inner {
   max-width: 73.125rem; }
@@ -357,7 +383,7 @@ p > strong {
           -ms-flex-negative: 0;
               flex-shrink: 0; } }
   .main__sidebar * {
-    color: rgba(0, 0, 0, 0.7); }
+    color: rgba(17, 17, 17, 0.7); }
 
 .header {
   padding-right: calc( 8.75vw + -8px);
@@ -386,9 +412,9 @@ p > strong {
     padding-top: 0.71875rem;
     padding-bottom: 0.71875rem; }
   .header .header__nav * {
-    color: #000; }
+    color: #111; }
   .header .header__nav a {
-    color: #000; }
+    color: #111; }
     .header .header__nav a:hover {
       color: #f44336; }
 
@@ -407,7 +433,7 @@ p > strong {
  * See elements/header/nav.scss
  */
 .footer {
-  background-color: #000; }
+  background-color: #111; }
   .footer * {
     color: rgba(255, 255, 255, 0.7); }
   .footer strong {
@@ -661,7 +687,7 @@ p > strong {
   padding-left: calc( 8.75vw + -8px);
   padding-top: 0;
   padding-bottom: 0;
-  background-color: #000; }
+  background-color: #111; }
   @media (min-width: 30em) {
     .top-area {
       margin-left: -2.875rem;
@@ -993,7 +1019,7 @@ select {
 
 .gform_wrapper {
   padding: 1.078125rem;
-  background: rgba(0, 0, 0, 0.1); }
+  background: rgba(17, 17, 17, 0.1); }
   @media (min-width: 52.5em) {
     .gform_wrapper {
       padding: 1.4375rem; } }
@@ -1173,10 +1199,10 @@ select {
  */
 input,
 textarea {
-  border: 2px solid rgba(0, 0, 0, 0.1); }
+  border: 2px solid rgba(17, 17, 17, 0.1); }
   input:focus,
   textarea:focus {
-    border-color: rgba(0, 0, 0, 0.3);
+    border-color: rgba(17, 17, 17, 0.3);
     outline: none; }
 
 .color--dark .gform_button {
@@ -1190,7 +1216,7 @@ textarea {
   cursor: pointer; }
   .color--dark .gform_button:hover {
     background-color: #fff;
-    color: #000; }
+    color: #111; }
 
 /******************
  * Validation Field
@@ -1263,11 +1289,11 @@ textarea {
     line-height: 1.4375rem; }
     .ui-datepicker-calendar td a,
     .ui-datepicker-calendar th a {
-      color: #000; }
+      color: #111; }
   .ui-datepicker-calendar td {
     padding: 0.15rem 0.359375rem;
-    border-left: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+    border-left: 1px solid rgba(17, 17, 17, 0.1);
+    border-bottom: 1px solid rgba(17, 17, 17, 0.1); }
     .ui-datepicker-calendar td:first-child {
       border-left: 0; }
 
@@ -1435,7 +1461,7 @@ a {
   margin-right: calc( -8.75vw + 8px);
   padding-top: 5.75rem;
   padding-bottom: 5.75rem;
-  background-color: #000;
+  background-color: #111;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1483,7 +1509,7 @@ a {
     bottom: 0;
     left: 0;
     z-index: 0;
-    background-color: rgba(0, 0, 0, 0.3); }
+    background-color: rgba(17, 17, 17, 0.3); }
 
 .hero-title__inner {
   display: -webkit-box;
@@ -1575,7 +1601,7 @@ a {
   transition: all 0.2s; }
   .ctas__button:hover {
     background-color: #fff;
-    color: #000; }
+    color: #111; }
 
 /**
  * Section overflow
@@ -1636,6 +1662,16 @@ a {
 /***
  * Columns
  */
+@media (min-width: 768px) {
+  .elementor-column.elementor-col-66,
+  .elementor-column[data-col="66"] {
+    width: 100%; } }
+
+@media (min-width: 60em) {
+  .elementor-column.elementor-col-66,
+  .elementor-column[data-col="66"] {
+    width: 66.666%; } }
+
 @media (min-width: 768px) {
   .elementor-column.elementor-col-50,
   .elementor-column[data-col="50"] {
@@ -1893,11 +1929,6 @@ a {
         padding-bottom: 1.4375rem; } }
 
 /**
- * Horizontal margin correction
- * Negative margin is applied to the section
- * According to the parent section type.
- */
-/**
  * Special layout such as the 1/3 +2/3 with the netsted columns inside
  */
 @media (max-width: 84.99em) {
@@ -1923,9 +1954,9 @@ a {
     padding-top: 2.15625rem;
     padding-bottom: 2.15625rem; }
     .section--border-center .elementor-column:first-child {
-      border-right: 1px solid rgba(0, 0, 0, 0.2); }
+      border-right: 1px solid rgba(17, 17, 17, 0.2); }
     .section--border-center .elementor-column:last-child {
-      border-left: 1px solid rgba(0, 0, 0, 0.2); } }
+      border-left: 1px solid rgba(17, 17, 17, 0.2); } }
 
 .color--dark .section--border-center .elementor-column {
   border-color: #fff; }
@@ -1996,7 +2027,23 @@ a {
       padding-top: 4.3125rem;
       padding-bottom: 4.3125rem;
       padding-right: 2.15625rem;
-      padding-left: 2.15625rem; } }
+      padding-left: 2.15625rem; }
+    .elementor-section-full_width .column--force-left .elementor-column-wrap {
+      max-width: 36.5625rem;
+      margin-left: auto;
+      margin-right: 0; } }
+    @media (min-width: 60em) and (min-width: 85em) {
+      .elementor-section-full_width .column--force-left .elementor-column-wrap {
+        padding-left: 0 !important; } }
+
+@media (min-width: 60em) {
+    .elementor-section-full_width .column--force-right .elementor-column-wrap {
+      max-width: 36.5625rem;
+      margin-right: auto;
+      margin-left: 0; } }
+    @media (min-width: 60em) and (min-width: 85em) {
+      .elementor-section-full_width .column--force-right .elementor-column-wrap {
+        padding-right: 0 !important; } }
   @media (min-width: 60em) and (max-width: 84.99em) and (min-width: 60em) {
     .elementor-section-full_width .elementor-section-full_width .elementor-row > .elementor-column:not(.elementor-col-50) .elementor-column-wrap {
       padding-top: 4.3125rem;
@@ -2041,47 +2088,14 @@ a {
           -ms-flex-item-align: center;
               align-self: center; } }
 
-.elementor-section {
-  background-color: #fff; }
-  .elementor-section.elementor-inner-section {
-    background-color: transparent; }
-  .elementor-section * {
-    color: rgba(0, 0, 0, 0.85);
-    border-color: rgba(0, 0, 0, 0.2); }
-  .elementor-section h2 {
-    color: #f44336; }
-  .elementor-section span {
-    color: inherit; }
-  .elementor-section blockquote {
-    color: rgba(0, 0, 0, 0.7); }
-    .elementor-section blockquote::before {
-      color: rgba(0, 0, 0, 0.2); }
-  .elementor-section .elementor-text-editor > p > a,
-  .elementor-section .elementor-text-editor > ul > li > a,
-  .elementor-section .elementor-text-editor > ol > li > a {
-    position: relative;
-    text-shadow: -1px -1px 0 #fff, -1px -1px 0 #fff, -1px -1px 0 #fff, 1px 1px 0 #fff;
-    -webkit-transition: color .15s ease-in;
-    -o-transition: color .15s ease-in;
-    transition: color .15s ease-in;
-    background-position: 0 1.0525em;
-    background-size: 5px 5px;
-    background-repeat: repeat-x;
-    background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #f44336 1.5px, #f44336 2px, transparent 2px);
-    background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #f44336 1.5px, #f44336 2px, transparent 2px);
-    background-image: linear-gradient(to top, transparent, transparent 1.5px, #f44336 1.5px, #f44336 2px, transparent 2px);
-    background-position: center bottom;
-    color: #f44336;
-    font-weight: bold; }
-
 .color--dark {
-  background-color: #f44336; }
+  background-color: #f44336;
+  color: #fff; }
   .color--dark * {
-    color: #fff;
     border-color: #fff; }
-  .color--dark h2 {
-    color: #fff; }
-  .color--dark .elementor-text-editor > p > a {
+  .color--dark .elementor-text-editor > p > a,
+  .color--dark .elementor-text-editor > ul > li > a,
+  .color--dark .elementor-text-editor > ol > li > a {
     position: relative;
     text-shadow: -1px -1px 0 #f44336, -1px -1px 0 #f44336, -1px -1px 0 #f44336, 1px 1px 0 #f44336;
     -webkit-transition: color .15s ease-in;
@@ -2110,34 +2124,9 @@ a {
     .color--dark blockquote p::after,
     .color--dark blockquote p::before {
       color: rgba(255, 255, 255, 0.2); }
-  .color--dark .color--dark {
-    background-color: #f44336; }
-    .color--dark .color--dark * {
-      color: #fff; }
-    .color--dark .color--dark .elementor-text-editor > p > a,
-    .color--dark .color--dark .elementor-text-editor > ul > li > a,
-    .color--dark .color--dark .elementor-text-editor > ol > li > a {
-      position: relative;
-      text-shadow: -1px -1px 0 #f44336, -1px -1px 0 #f44336, -1px -1px 0 #f44336, 1px 1px 0 #f44336;
-      -webkit-transition: color .15s ease-in;
-      -o-transition: color .15s ease-in;
-      transition: color .15s ease-in;
-      background-position: 0 1.0525em;
-      background-size: 5px 5px;
-      background-repeat: repeat-x;
-      background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
-      background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
-      background-image: linear-gradient(to top, transparent, transparent 1.5px, #fff 1.5px, #fff 2px, transparent 2px);
-      background-position: center bottom;
-      color: #fff; }
-    .color--dark .color--dark ::-moz-selection {
-      background-color: #fff;
-      color: #f44336;
-      text-shadow: none; }
-    .color--dark .color--dark ::selection {
-      background-color: #fff;
-      color: #f44336;
-      text-shadow: none; }
+
+.elementor-inner-section {
+  background-color: transparent; }
 
 .overlay--dark {
   position: relative; }
@@ -2149,7 +2138,7 @@ a {
     bottom: 0;
     left: 0;
     z-index: 0;
-    background-color: rgba(0, 0, 0, 0.5); }
+    background-color: rgba(17, 17, 17, 0.5); }
 
 /**
  * Widget Max Widths
@@ -2467,32 +2456,32 @@ a {
       font-size: 1.625rem;
       line-height: 2.875rem/2; } }
 
-.elementor-section .elementor-button {
+.elementor-button {
   background: #f44336;
   color: #fff;
   border-color: #f44336; }
 
 .color--dark .elementor-button {
   background: rgba(255, 255, 255, 0.9);
-  color: #000;
+  color: #111;
   border-color: rgba(255, 255, 255, 0.9); }
 
 .elementor-element.elementor-button-info .elementor-button {
   background: transparent;
-  color: #000;
-  border-color: #000;
+  color: #111;
+  border-color: #111;
   border-width: 2px; }
   .elementor-element.elementor-button-info .elementor-button:hover {
-    background-color: #000;
+    background-color: #111;
     color: #fff; }
 
 .color--dark .elementor-element.elementor-button-info .elementor-button {
   background: transparent;
-  color: #000;
-  border-color: #000;
+  color: #111;
+  border-color: #111;
   border-width: 2px; }
   .color--dark .elementor-element.elementor-button-info .elementor-button:hover {
-    background-color: #000;
+    background-color: #111;
     color: #fff; }
 
 .elementor-widget-wp-widget-nav_menu .menu {
@@ -2611,7 +2600,7 @@ a {
 .elementor-element-edit-mode.elementor-widget-spacer,
 .elementor-element-edit-mode.elementor-widget-divider {
   width: 20px;
-  background: rgba(0, 0, 0, 0.1); }
+  background: rgba(17, 17, 17, 0.1); }
 
 .card-loop {
   display: -webkit-box;

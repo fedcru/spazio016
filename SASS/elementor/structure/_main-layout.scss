@@ -52,6 +52,16 @@
 /***
  * Columns
  */
+.elementor-column.elementor-col-66,
+.elementor-column[data-col="66"] {
+
+  @include breakpoint-min(el_st) {
+    width: 100%;
+  }
+  @include breakpoint-min(el) {
+    width: 66.666%;
+  }
+}
 .elementor-column.elementor-col-50,
 .elementor-column[data-col="50"] {
 

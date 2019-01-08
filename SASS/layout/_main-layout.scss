@@ -27,13 +27,6 @@
 
 .main {
   @include layout-padding();
-
-  background-color: main-colors(main, bg);
-
-  * {
-    color: main-colors(main, body);
-    border-color: main-colors(main, border);
-  }
 }
 
 .main__inner {
