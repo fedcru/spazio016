@@ -339,7 +339,7 @@
   align-items: center;
   flex-direction: column;
 
-  @include breakpoint-min(el) {
+  @include breakpoint-min(lg) {
     flex-direction: row;
   }
 }
@@ -348,7 +348,7 @@
   @include font(h2);
   margin-bottom: spacing(4);
 
-  @include breakpoint-min(el) {
+  @include breakpoint-min(lg) {
     @include flex-child($wd: 60);
     margin-bottom: 0;
   }
@@ -358,7 +358,7 @@
   @include button(p, $pv: 1);
   @include button-color(main, empty-w);
 
-  @include breakpoint-min(el) {
+  @include breakpoint-min(lg) {
     @include flex-child($wd: 'auto');
   }
 }
@@ -380,7 +380,7 @@
   @include breakpoint-min(sm) {
     @include flex-child($wd: 33.333);
   }
-  @include breakpoint-min(el) {
+  @include breakpoint-min(lg) {
     @include flex-child($wd: 20);
   }
 

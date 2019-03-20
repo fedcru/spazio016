@@ -16,7 +16,7 @@
   .elementor-widget-wrap {
     justify-content: center;
 
-    @include breakpoint-min(el) {
+    @include breakpoint-min(lg) {
       justify-content: inherit;
     }
   }
@@ -28,7 +28,7 @@
     @include breakpoint-min(md) {
       padding-bottom: 50%;
     }
-    @include breakpoint-min(el) {
+    @include breakpoint-min(lg) {
       padding-bottom: inherit;
     }
   }
@@ -39,7 +39,7 @@
 /**
  * COLUMNS gutter - only on large screen
  */
-@include breakpoint-min(el) {
+@include breakpoint-min(lg) {
   .elementor-section-full_width {
 
     // Default gap

@@ -11,6 +11,17 @@
 //*             PER I COLORI" in questa pagina
 //****************************************************************************//
 
+// String replace
+@function str-replace($string, $old, $new) {
+  $index: str-index($string, $old);
+  @if $index > 0 and $new != $old {
+    // Doing magic
+  }
+
+  @return $string;
+
+}
+
 ///
 // Font
 ///
@@ -39,13 +50,28 @@
 ///
 @function spacing($sp: 1) {
 
-  @if $sp >= 0 {
-    @return map-get($spacing, $sp);
+  @if type-of($sp) == 'number' {
+    @return $space * $sp;
   }
 
   @else {
-    @return map-get($spacing, ($sp * -1)) * -1;
+    @if str-index($sp, '-') != 1 {
+      @return map-get($spacing, $sp);
+    }
+    @else {
+      $new_sp: str-slice($sp, 2);
+
+      @return map-get($spacing, $new_sp) * -1;
+    }
   }
+
+  // @if $sp >= 0 {
+  //   @return map-get($spacing, $sp);
+  // }
+  // @else {
+  //   @return map-get($spacing, ($sp * -1)) * -1;
+  // }
+
 }
 
 

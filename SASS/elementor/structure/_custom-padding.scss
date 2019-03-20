@@ -1,0 +1,126 @@
+/*******
+ * Bottom padding
+ *************/
+.section--pb-none {
+  &> .elementor-container {
+    @include breakpoint-min(lg) {
+      padding-bottom: 0;
+    }
+  }
+}
+.section--pb-xs {
+  &> .elementor-container {
+    @include breakpoint-min(lg) {
+      padding-bottom: $l_v_sm;
+    }
+  }
+}
+.section--pb-sm {
+  &> .elementor-container {
+    // Vertical spacing on large screen
+    @include breakpoint-min(lg) {
+      padding-bottom: $l_v_sm;
+    }
+  }
+}
+.section--pb-lg {
+  &> .elementor-container {
+    // Vertical spacing on large screen
+    @include breakpoint-min(lg) {
+      padding-bottom: $l_v_lg;
+    }
+  }
+}
+.section--pb-xl {
+  &> .elementor-container {
+    // Vertical spacing on large screen
+    @include breakpoint-min(lg) {
+      padding-bottom: $l_v_xl;
+    }
+  }
+}
+
+
+/*********
+ * Vertical padding
+ *************/
+.section--pv-none {
+  &> .elementor-container {
+    @include breakpoint-min(lg) {
+      @include pad($v: 0);
+    }
+  }
+}
+.section--pv-xs {
+  &> .elementor-container {
+    @include breakpoint-min(lg) {
+      @include pad($v: $l_v_xs);
+    }
+  }
+}
+.section--pv-sm {
+  &> .elementor-container {
+    @include breakpoint-min(lg) {
+      @include pad($v: $l_v_sm);
+    }
+  }
+}
+.section--pv-lg {
+  &> .elementor-container {
+    // Vertical spacing on large screen
+    @include breakpoint-min(lg) {
+      @include pad($v: $l_v_lg);
+    }
+  }
+}
+.section--pv-xl {
+  &> .elementor-container {
+    // Vertical spacing on large screen
+    @include breakpoint-min(lg) {
+      @include pad($v: $l_v_xl);
+    }
+  }
+}
+
+
+/***********
+ * Bottom padding
+ ****************/
+.section--pt-none {
+    &> .elementor-container {
+    @include breakpoint-min(lg) {
+      padding-top: 0;
+    }
+  }
+}
+.section--pt-xs {
+    &> .elementor-container {
+    @include breakpoint-min(lg) {
+      padding-top: $l_v_sm;
+    }
+  }
+}
+.section--pt-sm {
+  &> .elementor-container {
+    // Vertical spacing on large screen
+    @include breakpoint-min(lg) {
+      padding-top: $l_v_sm;
+    }
+  }
+}
+.section--pt-lg {
+  &> .elementor-container {
+    // Vertical spacing on large screen
+    @include breakpoint-min(lg) {
+      padding-top: $l_v_lg;
+    }
+  }
+}
+.section--pt-xl {
+  &> .elementor-container {
+    // Vertical spacing on large screen
+    @include breakpoint-min(lg) {
+      padding-top: $l_v_xl;
+    }
+  }
+}

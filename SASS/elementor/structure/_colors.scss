@@ -1,53 +1,10 @@
-// .elementor-section {
-//   background-color: main-colors(main, bg);
-//
-//   &.elementor-inner-section {
-//     background-color: transparent;
-//   }
-//
-//   * {
-//     color: main-colors(main, body);
-//     border-color: main-colors(main, border);
-//   }
-//
-//   h2 {
-//     color: main-colors(main, accent);
-//   }
-//
-//   //TODO - hotfix bottoni
-//   span {
-//     color: inherit;
-//   }
-//
-//   blockquote {
-//     color: rgba(main-colors(main, body), 0.7);
-//
-//     &::before {
-//       color: rgba(main-colors(main, body), 0.2);
-//     }
-//   }
-//
-//   .elementor-text-editor > p > a,
-//   .elementor-text-editor > ul > li > a,
-//   .elementor-text-editor > ol > li > a {
-//     @include link();
-//     font-weight: bold;
-//   }
-//
-//   .font--color-light {
-//
-//   }
-// }
-
-
-
 @each $palette, $color in $palettes {
   .color--#{$palette} {
     background-color: palette($palette, bg);
     color: palette($palette, body);
 
     * {
-      border-color: palette($palette, border);      
+      border-color: palette($palette, border);
     }
 
     // h1, h2, h3, h4, h5, h6 {

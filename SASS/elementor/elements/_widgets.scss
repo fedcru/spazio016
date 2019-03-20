@@ -2,6 +2,7 @@
  * Widget Max Widths
  */
 
+
 .elementor-widget {
   // Basic max width
   max-width: max-width($text-mw);
@@ -24,7 +25,7 @@
   }
 
 
-  @include breakpoint-min(el) {
+  @include breakpoint-min(lg) {
     // Alternative max widths
     @at-root .widget--wide {
       max-width: max-width(sm);
@@ -48,7 +49,7 @@
     }
   }
 
-  @include breakpoint-min(el) {
+  @include breakpoint-min(lg) {
     @at-root .widget--mt-xl {
       margin-top: spacing(7);
     }
@@ -66,7 +67,7 @@
     }
   }
 
-  @include breakpoint-min(el) {
+  @include breakpoint-min(lg) {
     @at-root {
       .widget--mb-xl,
       .widget--mb-xl:not(:last-child) {
@@ -94,7 +95,7 @@
     }
   }
 
-  @include breakpoint-min(el) {
+  @include breakpoint-min(lg) {
     @at-root {
       .widget--mv-xl,
       .widget--mv-xl:not(:last-child) {
@@ -114,20 +115,25 @@
 // Margin on mobile
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 
-@include breakpoint-min(el) {
+@include breakpoint-min(lg) {
 
   // Declare flexbox on the widget wrapper
   .elementor-widget-wrap {
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: flex-start;
   }
 
-  // default state of the widget
-  .elementor-widget {
-    align-self: center;
-  }
+  // // default state of the widget
+  // .elementor-widget {
+  //   align-self: center;
+  // }
 
 
   ///
@@ -138,6 +144,7 @@
   @at-root .elementor-row .elementor-column:first-child {
     .elementor-widget {
       align-self: flex-start;
+      justify-self: flex-start;
       margin-left: 0;
     }
   }
@@ -146,6 +153,7 @@
   @at-root .elementor-row .elementor-column:last-child {
     .elementor-widget {
       align-self: flex-end;
+      justify-self: flex-end;
       margin-right: 0;
     }
   }
@@ -153,6 +161,8 @@
   // Center column
   @at-root .elementor-row .elementor-column:first-child:last-child .elementor-widget {
     align-self: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 

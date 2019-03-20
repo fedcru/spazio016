@@ -86,7 +86,7 @@
   @include breakpoint-min(sm) {
     @include flex-child($wd: 33.3333);
   }
-  @include breakpoint-min(el) {
+  @include breakpoint-min(lg) {
     @include flex-child($wd: 16.6666);
   }
 }
@@ -96,7 +96,7 @@
   @include breakpoint-min(sm) {
     @include flex-child($wd: 33.3333);
   }
-  @include breakpoint-min(el) {
+  @include breakpoint-min(lg) {
     @include flex-child($wd: 14.285);
   }
 }
@@ -120,7 +120,7 @@
     @include font(h4);
     margin-top: spacing(-5);
 
-    @include breakpoint-min(el) {
+    @include breakpoint-min(lg) {
       margin-top: spacing(-6);
     }
 

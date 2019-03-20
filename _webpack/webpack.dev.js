@@ -3,6 +3,8 @@ const common = require('./webpack.common.js');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
+let PROXY_URL = 'http://clienti-child.langhe.test/';
+
 module.exports = merge(common, {
   devtool: 'inline-source-map',
   // plugins: [
@@ -35,7 +37,7 @@ module.exports = merge(common, {
       // proxy the Webpack Dev Server endpoint
       // (which should be serving on http://localhost:3100/)
       // through BrowserSync
-      proxy: 'http://clienti-child.langhe.test/'
+      proxy: PROXY_URL
     },
     // plugin options
     {

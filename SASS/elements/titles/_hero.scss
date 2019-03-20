@@ -11,7 +11,7 @@
   @include color-overlay(hero, 0.3);
 
 
-  @include breakpoint-min(el) {
+  @include breakpoint-min(lg) {
 
   }
 
@@ -58,7 +58,7 @@
   }
 }
 
-@include breakpoint-max(el) {
+@include breakpoint-max(lg) {
   .hero-title__text,
   .hero-title__description,
   .hero-title__content {

@@ -3,6 +3,7 @@
  */
 .elementor-section {
   @include layout-overflow();
+  position: relative;
 
   * {
     background-position: center;
@@ -16,9 +17,6 @@
 .elementor-section .elementor-container {
   margin-left: auto;
   margin-right: auto;
-
-  // HOTFIX #1 because valign of **columns** is not working
-  //display: block;
   display: flex;
 }
 
@@ -27,59 +25,63 @@
  */
 .elementor-row {
   width: auto;
-
-  //Rel to: HOTFIX #1
+  display: flex;
   flex-basis: 100%;
+  //TC elementor backend
   flex-grow: 1;
+  flex-wrap: wrap;
 }
 
 
-/**
- * Resets the padding on the .populated element
- * on all screen sizes.
- */
-.elementor-column-gap-default,
-.elementor-column-gap-narrow,
-.elementor-column-gap-extended,
-.elementor-column-gap-wide,
-.elementor-column-gap-wider {
-  &> .elementor-row > .elementor-column > .elementor-element-populated {
-    padding: 0;
-  }
+/******
+ * Columns wraps
+ * Elementor Backend
+ *********/
+.elementor-column-wrap {
+  width: 100%;
+  position: relative;
+  display: flex;
 }
 
 
+.elementor-inner-section {
+  width: 100% !important;
+}
 /***
  * Columns
  */
-.elementor-column.elementor-col-66,
+.elementor-column {
+  @include flex-child($wd: 100);
+  position: relative;
+}
+
+.elementor-col-66,
 .elementor-column[data-col="66"] {
-
-  @include breakpoint-min(el_st) {
-    width: 100%;
-  }
-  @include breakpoint-min(el) {
-    width: 66.666%;
+  @include breakpoint-min(lg) {
+    @include flex-child($wd: 66.6666);
   }
 }
-.elementor-column.elementor-col-50,
+
+.elementor-col-50,
 .elementor-column[data-col="50"] {
-
-  @include breakpoint-min(el_st) {
-    width: 100%;
-  }
-  @include breakpoint-min(el) {
-    width: 50%;
+  @include breakpoint-min(lg) {
+    @include flex-child($wd: 50);
   }
 }
-.elementor-column.elementor-col-33,
+
+.elementor-col-33,
 .elementor-column[data-col="33"] {
 
-  @include breakpoint-min(el_st) {
-    width: 100%;
+  @include breakpoint-min(lg) {
+    @include flex-child($wd: 33.33333);
   }
-  @include breakpoint-min(el) {
-    width: 33.33333%;
+}
+
+.elementor-col-25,
+.elementor-column[data-col="25"] {
+
+  @include breakpoint-min(lg) {
+    @include flex-child($wd: 25);
   }
 }
 
@@ -89,28 +91,28 @@
 .column--mob-order-1 {
   order: 1;
 
-  @include breakpoint-min(el) {
+  @include breakpoint-min(lg) {
     order: inherit;
   }
 }
 .column--mob-order-2 {
   order: 2;
 
-  @include breakpoint-min(el) {
+  @include breakpoint-min(lg) {
     order: inherit;
   }
 }
 .column--mob-order-3 {
   order: 3;
 
-  @include breakpoint-min(el) {
+  @include breakpoint-min(lg) {
     order: inherit;
   }
 }
 .column--mob-order-4 {
   order: 4;
 
-  @include breakpoint-min(el) {
+  @include breakpoint-min(lg) {
     order: inherit;
   }
 }

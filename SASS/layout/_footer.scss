@@ -30,7 +30,7 @@
   flex-direction: column;
 }
 
-@include breakpoint-min(el) {
+@include breakpoint-min(lg) {
   .footer__column--1-3 {
 
     @include flex-child(6, $wd: 33.333);

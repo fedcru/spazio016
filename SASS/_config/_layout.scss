@@ -16,9 +16,7 @@ $grid-breakpoints: (
   sm: 30em,
   ms: 40em,
   md: 52.5em,
-  // el: 52.5em, // ELEMENTOR COLUMN DROP
-  el_st: 768px, // ELEMENTOR COLUMN DROP
-  el: 60em, // ELEMENTOR COLUMN DROP
+  col: 60em, // Column drop
   lg: 60em,
   xl: 85em,
   uxl: 125em,
@@ -49,18 +47,30 @@ $text-mw: 'sm';
 $space: $line-height / 4;
 
 $spacing: (
-  0: 0,
-  1: $space, //xxa
-  2: $space * 2, //xs
-  3: $space * 3, //sm
-  4: $space * 4, //md
-  5: $space * 6, //lg
-  5.5: $space * 7, //lg
-  6: $space * 8, //xl * 8
-  6.1: $space * 9, // * 9
-  6.5: $space * 12, // * 12
-  7: $space * 16, //xxl
-  7.5: $space * 20,
-  8: $space * 24,
-  9: $space * 32,
+  xs: $space * 2,
+  sm: $space * 4,
+  md: $space * 8,
+  ml: $space * 16,
+  lg: $space * 32,
+  xl: $space * 64,
+);
+
+$grid_gutters: (
+  xs: (
+    val: spacing(1),
+    fb: 1px,
+  ),
+
+  sm: (
+    val: spacing(2),
+  ),
+
+  lg: (
+    val: spacing(3),
+  ),
+
+  xl: (
+    val: spacing(3),
+  ),
+
 );
