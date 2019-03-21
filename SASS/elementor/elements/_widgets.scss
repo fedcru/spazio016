@@ -1,107 +1,63 @@
+
+/***
+ * Utilities
+ ***/
+.elementor-align-center {
+  text-align: center;
+}
+.elementor-align-right {
+  text-align: right;
+}
+.elementor-align-left {
+  text-align: left;
+}
+.elementor-align-justify {
+  text-align: justify;
+}
+
 /**
- * Widget Max Widths
+ * Widget Widths
  */
-
-
 .elementor-widget {
   // Basic max width
   max-width: max-width($text-mw);
-
-  //This is because widget remain small if not enough text is in them.
-  // it can damage something...
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
   width: 100%;
+}
 
-  &.elementor-widget-video,
-  &.elementor-widget-button {
-    width: 100%;
-  }
+.elementor-section-boxed .elementor-widget {
+  margin-bottom: spacing(6);
+  // @include marg($v: 4);
 
-  &.elementor-widget-image {
-    width: auto;
-  }
-
-  &:not(:last-child) {
-    margin-bottom: spacing(6)
-  }
-
-
-  @include breakpoint-min(lg) {
-    // Alternative max widths
-    @at-root .widget--wide {
-      max-width: max-width(sm);
-    }
-    @at-root .widget--wider {
-      max-width: max-width(md);
-    }
-    @at-root .widget--full {
-      max-width: 100%;
-      min-width: 100%;
+  @include breakpoint-min($col_bp) {
+    &:last-child {
+      margin-bottom: 0;
     }
   }
+}
 
-  /**
-   * Specific margin top
-   */
-  @at-root {
-    .widget--mt-lg,
-    .widget--mt-xl {
-      margin-top: spacing(6);
-    }
+.elementor-widget-video,
+.elementor-widget-button {
+  width: 100%;
+}
+
+.elementor-widget-image {
+  width: auto;
+}
+
+@include breakpoint-min(lg) {
+  // Alternative max widths
+  .widget--wide {
+    max-width: max-width(sm);
   }
-
-  @include breakpoint-min(lg) {
-    @at-root .widget--mt-xl {
-      margin-top: spacing(7);
-    }
+  .widget--wider {
+    max-width: max-width(md);
   }
-
-  /**
-   * Specific margin bottom
-   */
-  @at-root {
-    .widget--mb-lg,
-    .widget--mb-lg:not(:last-child),
-    .widget--mb-xl,
-    .widget--mb-xl:not(:last-child) {
-      margin-bottom: spacing(6);
-    }
-  }
-
-  @include breakpoint-min(lg) {
-    @at-root {
-      .widget--mb-xl,
-      .widget--mb-xl:not(:last-child) {
-        margin-bottom: spacing(7);
-      }
-
-      @at-root {
-        .widget--mb-none,
-        .widget--mb-none:not(:last-child) {
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
-
-  /**
-   * Specific vertical margin
-   */
-  @at-root {
-    .widget--mv-lg,
-    .widget--mv-lg:not(:last-child),
-    .widget--mv-xl,
-    .widget--mv-xl:not(:last-child) {
-      @include marg($v: 6);
-    }
-  }
-
-  @include breakpoint-min(lg) {
-    @at-root {
-      .widget--mv-xl,
-      .widget--mv-xl:not(:last-child) {
-        @include marg($v: 7);
-      }
-    }
+  .widget--full {
+    max-width: 100%;
+    min-width: 100%;
   }
 }
 
@@ -111,40 +67,11 @@
  * WIDGETS HORIZONTAL ALIGN
  */
 
-.elementor-widget {
-// Margin on mobile
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-}
-
 @include breakpoint-min(lg) {
-
-  // Declare flexbox on the widget wrapper
-  .elementor-widget-wrap {
-    display: flex;
-    // flex-direction: column;
-    position: relative;
-    width: 100%;
-    flex-wrap: wrap;
-    align-content: flex-start;
-  }
-
-  // // default state of the widget
-  // .elementor-widget {
-  //   align-self: center;
-  // }
-
-
-  ///
-  // Normal Sections
-  ///
 
   // First column
   @at-root .elementor-row .elementor-column:first-child {
     .elementor-widget {
-      align-self: flex-start;
-      justify-self: flex-start;
       margin-left: 0;
     }
   }
@@ -152,35 +79,31 @@
   // Last column
   @at-root .elementor-row .elementor-column:last-child {
     .elementor-widget {
-      align-self: flex-end;
-      justify-self: flex-end;
       margin-right: 0;
     }
   }
 
   // Center column
   @at-root .elementor-row .elementor-column:first-child:last-child .elementor-widget {
-    align-self: center;
     margin-left: auto;
     margin-right: auto;
   }
-
 
   ///
   // Nested Sections
   ///
   .elementor-inner-section .elementor-row .elementor-column:first-child .elementor-widget {
-    align-self: flex-start;
+    margin-left: 0;
   }
 
   .elementor-inner-section .elementor-row .elementor-column:last-child .elementor-widget {
-    align-self: flex-end;
+    margin-right: 0;
   }
 
   .elementor-inner-section .elementor-row .elementor-column:first-child:last-child .elementor-widget {
-    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
   }
-
 
   ///
   // Collapsed widgets
@@ -201,125 +124,11 @@
 
 
 .widget--boxed {
-  padding: spacing(4);
-
-  @include breakpoint-min(sm) {
-    padding: spacing(4) * 2;
-  }
+  @include pad($v: 4);
+  @include grid_pad();
 }
 
 .widget--border {
   border: 1px solid;
   border-color: inherit;
 }
-
-
-/***
- * Text Widget
- */
-.elementor-text-editor {
-  & > * {
-    &:first-child {
-      margin-top: 0;
-    }
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  &> h1 {
-    @include font(h1, $mt: default, $mb: default);
-  }
-
-  &> h2 {
-    @include font(h2, $mt: default, $mb: default);
-  }
-
-  &> h3 {
-    @include font(h3, $mt: default, $mb: default);
-  }
-
-  &> h4 {
-    @include font(h4, $mt: default, $mb: default);
-  }
-
-  &> h5 {
-    @include font(h5, $mt: default, $mb: default);
-  }
-
-  &> p,
-  &> h3--p {
-    @include font(p, $mt: default, $mb: default);
-  }
-
-  &> ul,
-  &> ol {
-    @include list();
-
-    li {
-      // @include pad($v: 1);
-      // padding-left: spacing(3);
-      @include font(p);
-    }
-  }
-
-  &> ul {
-    list-style: disc;
-  }
-  &> ol {
-    list-style: decimal;
-  }
-
-  &> .h1--h2 {
-    @include font(h2, $mt: 6.5, $mb: 6);
-  }
-  &> .h1--h3 {
-    @include font(h3, $mt: 5, $mb: 2);
-  }
-
-  &> blockquote {
-    @include font(h3);
-    position: relative;
-    padding: spacing(4) 0;
-    font-style: italic;
-
-    &::before {
-      font-style: normal;
-      content: "\201C";
-      position: absolute;
-      font-family: serif;
-      font-size: 10rem;
-      // left: 50%;
-      // right: 50%;
-      width: 100%;
-      text-align: center;
-      top: spacing(-6.5);
-
-
-      @include breakpoint-min(md) {
-        left: spacing(4) * -4;
-        top: spacing(-1);
-        width: auto;
-        text-align: left;
-      }
-    }
-  }
-}
-
-@include breakpoint-min(lg) {
-  .image--negative-top {
-    margin-top: spacing(-8);
-    z-index: 9;
-  }
-  .image--negative-bottom {
-    margin-bottom: spacing(-8);
-    z-index: 9;
-  }
-}
-
-// .image--u-landscape {
-//   width: 100% !important;
-//   .elementor-widget-container {
-//     @include aspect-ratio(9, 5, 'elementor-image');
-//   }
-// }

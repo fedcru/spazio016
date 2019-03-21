@@ -4,8 +4,8 @@ $l_v_md: spacing(ml);
 $l_v_lg: spacing(lg);
 $l_v_xl: spacing(xl);
 
-$l_h_xs: 0;
-$l_h_sm: 0;
-$l_h_md: 0;
-$l_h_lg: 0;
-$l_h_xl: 0;
+$l_h_xs: spacing(1);
+$l_h_sm: spacing(2);
+$l_h_md: spacing(4);
+$l_h_lg: spacing(6);
+$l_h_xl: spacing(9);

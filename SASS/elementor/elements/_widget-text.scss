@@ -1,0 +1,91 @@
+/***
+ * Text Widget
+ */
+.elementor-text-editor {
+  & > * {
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &> h1 {
+    @include font(h1, $mt: default, $mb: default);
+  }
+
+  &> h2 {
+    @include font(h2, $mt: default, $mb: default);
+  }
+
+  &> h3 {
+    @include font(h3, $mt: default, $mb: default);
+  }
+
+  &> h4 {
+    @include font(h4, $mt: default, $mb: default);
+  }
+
+  &> h5 {
+    @include font(h5, $mt: default, $mb: default);
+  }
+
+  &> p,
+  &> h3--p {
+    @include font(p, $mt: default, $mb: default);
+  }
+
+  &> ul,
+  &> ol {
+    @include list();
+
+    li {
+      // @include pad($v: 1);
+      // padding-left: spacing(3);
+      @include font(p);
+    }
+  }
+
+  &> ul {
+    list-style: disc;
+  }
+  &> ol {
+    list-style: decimal;
+  }
+
+  &> .h1--h2 {
+    @include font(h2, $mt: 6.5, $mb: 6);
+  }
+  &> .h1--h3 {
+    @include font(h3, $mt: 5, $mb: 2);
+  }
+
+  &> blockquote {
+    @include font(h3);
+    position: relative;
+    padding: spacing(4) 0;
+    font-style: italic;
+
+    &::before {
+      font-style: normal;
+      content: "\201C";
+      position: absolute;
+      font-family: serif;
+      font-size: 10rem;
+      // left: 50%;
+      // right: 50%;
+      width: 100%;
+      text-align: center;
+      top: spacing(-6.5);
+
+
+      @include breakpoint-min(md) {
+        left: spacing(4) * -4;
+        top: spacing(-1);
+        width: auto;
+        text-align: left;
+      }
+    }
+  }
+}

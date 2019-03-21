@@ -64,14 +64,6 @@
       @return map-get($spacing, $new_sp) * -1;
     }
   }
-
-  // @if $sp >= 0 {
-  //   @return map-get($spacing, $sp);
-  // }
-  // @else {
-  //   @return map-get($spacing, ($sp * -1)) * -1;
-  // }
-
 }
 
 

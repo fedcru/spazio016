@@ -83,6 +83,16 @@ $main-colors: (
 );
 
 $palettes: (
+  main: (
+    bg: main-colors(main, bg),
+    body: main-colors(main, body),
+    heading: main-colors(main, heading),
+    accent: main-colors(main, accent),
+    border: main-colors(main, border),
+    overlay: main-colors(main, overlay),
+    button-bg: main-colors(main, button-bg),
+    button-body: main-colors(main, button-body),
+  ),
   dark: (
     bg: $red,
     body: $white,
@@ -92,6 +102,16 @@ $palettes: (
     overlay: $black,
     button-bg: $white-90,
     button-body: $black,
+  ),
+  light: (
+    bg: lighten($black, 95),
+    body: $black-90,
+    heading: $black-90,
+    accent: $black-90,
+    border: $black-90,
+    overlay: $white,
+    button-bg: $black,
+    button-body: $white,
   ),
 );
 

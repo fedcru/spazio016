@@ -3,23 +3,25 @@
  *************/
 .section--pb-none {
   &> .elementor-container {
-    @include breakpoint-min(lg) {
-      padding-bottom: 0;
-    }
+    padding-bottom: 0;
   }
 }
 .section--pb-xs {
   &> .elementor-container {
-    @include breakpoint-min(lg) {
-      padding-bottom: $l_v_sm;
-    }
+    padding-bottom: $l_v_sm;
   }
 }
 .section--pb-sm {
   &> .elementor-container {
     // Vertical spacing on large screen
+    padding-bottom: $l_v_sm;
+  }
+}
+.section--pb-md {
+  &> .elementor-container {
+    // Vertical spacing on large screen
     @include breakpoint-min(lg) {
-      padding-bottom: $l_v_sm;
+      padding-bottom: $l_v_md;
     }
   }
 }
@@ -46,22 +48,23 @@
  *************/
 .section--pv-none {
   &> .elementor-container {
-    @include breakpoint-min(lg) {
-      @include pad($v: 0);
-    }
+    @include pad($v: 0);
   }
 }
 .section--pv-xs {
   &> .elementor-container {
-    @include breakpoint-min(lg) {
-      @include pad($v: $l_v_xs);
-    }
+    @include pad($v: $l_v_xs);
   }
 }
 .section--pv-sm {
   &> .elementor-container {
+    @include pad($v: $l_v_sm);
+  }
+}
+.section--pv-md {
+  &> .elementor-container {
     @include breakpoint-min(lg) {
-      @include pad($v: $l_v_sm);
+      @include pad($v: $l_v_md);
     }
   }
 }
@@ -87,24 +90,26 @@
  * Bottom padding
  ****************/
 .section--pt-none {
-    &> .elementor-container {
-    @include breakpoint-min(lg) {
-      padding-top: 0;
-    }
+  &> .elementor-container {
+    padding-top: 0;
   }
 }
 .section--pt-xs {
-    &> .elementor-container {
-    @include breakpoint-min(lg) {
-      padding-top: $l_v_sm;
-    }
+  &> .elementor-container {
+    padding-top: $l_v_sm;
   }
 }
 .section--pt-sm {
   &> .elementor-container {
     // Vertical spacing on large screen
+    padding-top: $l_v_sm;
+  }
+}
+.section--pt-md {
+  &> .elementor-container {
+    // Vertical spacing on large screen
     @include breakpoint-min(lg) {
-      padding-top: $l_v_sm;
+      padding-top: $l_v_md;
     }
   }
 }

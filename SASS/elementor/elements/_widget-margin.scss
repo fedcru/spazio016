@@ -1,0 +1,14 @@
+/***************************
+ * Widget custom margins
+ ***************/
+.widget--mtn-md {
+  @include breakpoint-min($col_bp) {
+    margin-top: -$l_v_md * 2;
+    z-index: 1;
+  }
+
+  &-mob {
+    margin-top: -$l_v_md * 2;
+    z-index: 1;
+  }
+}

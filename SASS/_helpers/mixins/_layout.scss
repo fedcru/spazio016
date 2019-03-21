@@ -91,39 +91,56 @@
 }
 
 
-////
-// Grid Pad
-////
-@mixin grid-pad($xs: true, $sm: true, $lg: true, $xl: true) {
-  @if ($xs) {
-    padding-left: spacing(1);
-    padding-right: spacing(1);
-  }
+@mixin grid_pad() {
+  @include pad($h: $xs_gutter);
 
-  @if ($sm) {
-    @include breakpoint-min(sm) {
-      padding-left: spacing(2);
-      padding-right: spacing(2);
-      padding-left: calc( 0.9895833333vw + -0.5px);
-      padding-right: calc( 0.9895833333vw + -0.5px);
+  @each $bp, $bps in $grid_gutters {
+    @include breakpoint-min($bp) {
+      @if map-has-nested-keys($grid_gutters, $bp, fb) {
+        $fb_padding: map-get(map-get($grid_gutters, $bp), fb);
+        @include pad($h: $fb_padding);
+      }
+      $padding: map-get(map-get($grid_gutters, $bp), val);
+      @include pad($h: $padding);
     }
   }
-
-  @if ($lg) {
-    @include breakpoint-min(lg) {
-      padding-left: spacing(3);
-      padding-right: spacing(3);
-      padding-left: calc( 1.5vw + -5.4px);
-      padding-right: calc( 1.5vw + -5.4px);
-      // margin-left: calc( -1.5vw + 5.4px);
-      // margin-right: calc( -1.5vw + 5.4px);
+}
+@mixin col_pad() {
+  @each $bp, $bps in $grid_gutters_desktop {
+    @include breakpoint-min($bp) {
+      @if map-has-nested-keys($grid_gutters_desktop, $bp, fb) {
+        $fb_padding: map-get(map-get($grid_gutters_desktop, $bp), fb);
+        @include pad($h: $fb_padding);
+      }
+      $padding: map-get(map-get($grid_gutters_desktop, $bp), val);
+      @include pad($h: $padding);
     }
   }
+}
 
-  @if ($xl) {
-    @include breakpoint-min(xl) {
-      padding-left: spacing(3);
-      padding-right: spacing(3);
+@mixin grid_marg() {
+  @include marg($h: $xs_gutter);
+
+  @each $bp, $bps in $grid_gutters {
+    @include breakpoint-min($bp) {
+      @if map-has-nested-keys($grid_gutters, $bp, fb) {
+        $fb_margin: map-get(map-get($grid_gutters, $bp), fb)  * -1;
+        @include marg($h: $fb_margin);
+      }
+      $margin: map-get(map-get($grid_gutters, $bp), val) * -1;
+      @include marg($h: $margin);
+    }
+  }
+}
+@mixin col_marg() {
+  @each $bp, $bps in $grid_gutters_desktop {
+    @include breakpoint-min($bp) {
+      @if map-has-nested-keys($grid_gutters_desktop, $bp, fb) {
+        $fb_margin: map-get(map-get($grid_gutters_desktop, $bp), fb)  * -1;
+        @include marg($h: $fb_margin);
+      }
+      $margin: map-get(map-get($grid_gutters_desktop, $bp), val) * -1;
+      @include marg($h: $margin);
     }
   }
 }
@@ -229,38 +246,38 @@
 ////
 // Grid margins (negative)
 ////
-@mixin grid-marg($xs: true, $sm: true, $lg: true, $xl: true) {
-
-  @if ($xs) {
-    margin-left: spacing(-1);
-    margin-right: spacing(-1);
-  }
-
-  @if ($sm) {
-    @include breakpoint-min(sm) {
-      margin-left: spacing(-2);
-      margin-right: spacing(-2);
-      margin-left: calc( -0.9895833333vw + 0.5px);
-      margin-right: calc( -0.9895833333vw + 0.5px);
-    }
-  }
-
-  @if ($lg) {
-    @include breakpoint-min(lg) {
-      margin-left: spacing(-3);
-      margin-right: spacing(-3);
-      margin-left: calc( -1.5vw + 5.4px);
-      margin-right: calc( -1.5vw + 5.4px);
-    }
-  }
-
-  @if ($xl) {
-    @include breakpoint-min(xl) {
-      margin-left: spacing(-3);
-      margin-right: spacing(-3);
-    }
-  }
-}
+// @mixin grid-marg($xs: true, $sm: true, $lg: true, $xl: true) {
+//
+//   @if ($xs) {
+//     margin-left: spacing(-1);
+//     margin-right: spacing(-1);
+//   }
+//
+//   @if ($sm) {
+//     @include breakpoint-min(sm) {
+//       margin-left: spacing(-2);
+//       margin-right: spacing(-2);
+//       margin-left: calc( -0.9895833333vw + 0.5px);
+//       margin-right: calc( -0.9895833333vw + 0.5px);
+//     }
+//   }
+//
+//   @if ($lg) {
+//     @include breakpoint-min(lg) {
+//       margin-left: spacing(-3);
+//       margin-right: spacing(-3);
+//       margin-left: calc( -1.5vw + 5.4px);
+//       margin-right: calc( -1.5vw + 5.4px);
+//     }
+//   }
+//
+//   @if ($xl) {
+//     @include breakpoint-min(xl) {
+//       margin-left: spacing(-3);
+//       margin-right: spacing(-3);
+//     }
+//   }
+// }
 
 ////
 // Standard Layout Padding

@@ -6,9 +6,17 @@
   ///
   // Standard gutter
   ///
-  .elementor-row > .elementor-column .elementor-column-wrap {
-    @include pad( $v: $el-gutter-md);
-    @include layout-padding();
+  .elementor-row  {
+    // @include col_marg();
+
+    .elementor-column {
+      // @include col_pad();
+    }
+    .elementor-column-wrap {
+      @include layout-padding();
+      height: 100%;
+      @include pad($v: $l_v_md);
+    }
   }
 
   // On mobile, the widget centers itself vertically
@@ -44,114 +52,52 @@
 
     // Default gap
     .elementor-row > .elementor-column .elementor-column-wrap {
-      @include pad( $h: $el-gutter-md );
-      @include pad( $v: $el-gutter-lg );
+      // @include pad( $h: $el-gutter-md );
+      // @include pad( $v: $el-gutter-lg );
     }
 
     // A slightly smaller gap
     .elementor-column-gap-narrow,
     .elementor-column-gap-extended {
       &> .elementor-row > .elementor-column .elementor-column-wrap {
-        @include pad( $v: $el-gutter-md );
-        @include pad( $h: $el-gutter-sm );
+        // @include pad( $v: $el-gutter-md );
+        // @include pad( $h: $el-gutter-sm );
       }
     }
 
     // Force column content to align to the boxed section content
-    .column--force-left .elementor-column-wrap {
-      max-width: $website-width / 2;
-      margin-left: auto;
-      margin-right: 0;
-
+    .column--force-right {
+      //remove the grid padding
       @include breakpoint-min(xl) {
-        padding-left: 0 !important;
-      }
-    }
-    .column--force-right .elementor-column-wrap {
-      max-width: $website-width / 2;
-      margin-right: auto;
-      margin-left: 0;
-
-      @include breakpoint-min(xl) {
-        padding-right: 0 !important;
-      }
-    }
-
-
-    /**
-     * Padding resets before the columns drop
-     * On smaller columns (such as thirds and) the padding become smaller. but not on the half * column
-     */
-    @include breakpoint-bet(xl, el) {
-    .elementor-section-full_width .elementor-row > .elementor-column:not(.elementor-col-50) .elementor-column-wrap {
-        @include pad( $v: $el-gutter-md );
-        @include pad( $h: $el-gutter-sm );
+        padding-right: 0;
       }
 
-      // The fourhts become halfes
-      .elementor-section-full_width .elementor-column.elementor-column.elementor-col-25,
-      .elementor-section-full_width .elementor-row .elementor-column[data-col="25"] {
-        width: 50%;
-        flex-basis: 50%;
-      }
-    }
-
-
-    /**
-     * Widths resets for thirds just before the column drops
-     * the first col becomes a 100%
-     * the last 2 become a 50%
-     */
-    @include breakpoint-bet(md, el) {
-      .elementor-section-full_width {
-
-        .elementor-column.elementor-column.elementor-col-33,
-        .elementor-section-full_width .elementor-row .elementor-column[data-col="33"] {
-          width: 50%;
-          flex-basis: 50%;
-        }
-
-        .elementor-column.elementor-column.elementor-col-33:first-child,
-        .elementor-section-full_width .elementor-row .elementor-column[data-col="33"]:first-child {
-          width: 100%;
-          flex-basis: 100%;
+      .elementor-column-wrap {
+        max-width: $website-width / 2;
+        margin-left: auto;
+        margin-right: 0;
+        // remove the layout padding
+        @include breakpoint-min(xl) {
+          padding-left: 0;
         }
       }
     }
 
-
-
-
-    ///
-    // Horizontal align of widgets
-    // This has to be very specific so that it resets the more "generic" option.
-    // We can see if we want to move this rules inside the widgets.scss file
-    // and make a more specific
-    ///
-
-    // First column
-    .elementor-row .elementor-column {
-      .elementor-widget {
-        align-self: center;
+    .column--force-left {
+      //remove the grid padding
+      @include breakpoint-min(xl) {
+        padding-left: 0;
       }
-    }
 
-    // First column
-    .elementor-row .elementor-column:first-child {
-      .elementor-widget {
-        align-self: center;
-      }
-    }
-    // Last column
-    .elementor-row .elementor-column:last-child {
-      .elementor-widget {
-        align-self: center;
-      }
-    }
+      .elementor-column-wrap {
+        max-width: $website-width / 2;
+        margin-right: auto;
+        margin-left: 0;
 
-    // Center column
-    .elementor-row .elementor-column:first-child:last-child .elementor-widget {
-      align-self: center;
+        @include breakpoint-min(xl) {
+          padding-right: 0;
+        }
+      }
     }
   }
 }

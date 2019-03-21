@@ -1,12 +1,3 @@
-/**
- * Local Variables
- */
-$el-gutter-sm: 5;
-$el-gutter-md: 6.5;
-$el-gutter-lg: 7;
-
-$el-v-space: 7;
-
 /*****************************************************************************************
  *
  *                                          BOXED SECTION
@@ -15,12 +6,11 @@ $el-v-space: 7;
  *
  ****************************************************************************************/
 
-
 /**
  * BOXED section width
  * it needs a separate rules because of nesting
  */
-.elementor-section.elementor-section-boxed > .elementor-container {
+.elementor-section-boxed > .elementor-container {
   max-width: $website-width;
 }
 
@@ -29,23 +19,37 @@ $el-v-space: 7;
  * Boxed Sections
  * Basic setup
  */
-.elementor-section-boxed {
+.elementor-section-boxed:not(.elementor-inner-section) {
   @include layout-padding();
+}
 
-
-
+.elementor-section-boxed {
   // Vertical Spacing
   &> .elementor-container {
     @include pad($v: $l_v_md);
 
-    // Resets all the padding on gap-no section
-    &.elementor-column-gap-no {
-      @include pad($v: 0);
-    }
+    // @include breakpoint-min($col_bp) {
+    //   @include pad($v: $l_v_md);
+    // }
+
   }
 }
 
+// Vertical spacing nested
+.elementor-inner-section {
+  // Vertical Spacing
+  &> .elementor-container {
+    @include pad($v: $l_v_xs);
+  }
+}
 
+// .elementor-section-boxed .elementor-column {
+//   @include marg($v: 2);
+//
+//   @include breakpoint-min($col_bp) {
+//     @include marg($v: 0);
+//   }
+// }
 
 /**
  * COLUMNS Horizontal gutter - only on large screen
@@ -61,10 +65,10 @@ $el-v-space: 7;
   .elementor-column-gap-extended  {
 
     &> .elementor-row {
-      @include grid-marg();
+      @include col_marg();
 
       &> .elementor-column {
-        @include grid-pad();
+        @include col_pad();
       }
     }
   }
@@ -78,13 +82,24 @@ $el-v-space: 7;
   .elementor-section-boxed {
 
     // Wide & Wider gap
-    .elementor-column-gap-wide,
-    .elementor-column-gap-wider {
+    .elementor-column-gap-wide {
+
       &> .elementor-row {
-        @include marg($h: -$el-gutter-lg);
+        @include marg($h: -$l_h_lg);
 
         &> .elementor-column {
-          @include pad( $h: $el-gutter-lg );
+          @include pad( $h: $l_h_lg );
+        }
+      }
+    }
+
+    .elementor-column-gap-wider {
+
+      &> .elementor-row {
+        @include marg($h: -$l_h_xl);
+
+        &> .elementor-column {
+          @include pad( $h: $l_h_xl );
         }
       }
     }
@@ -96,22 +111,9 @@ $el-v-space: 7;
  * NESTED SECTION
  */
 
-/**
- * Vertical padding correction
- */
-.elementor-section-boxed.elementor-inner-section {
+.elementor-inner-section {
   padding: 0;
   margin: 0;
-
-  &> .elementor-container {
-    // Mobile
-    @include pad($v: 0);
-
-    // Large screens //TODO - check if this should be breapoint 'el'
-    @include breakpoint-min(lg) {
-      @include pad($v: 4);
-    }
-  }
 }
 
 
@@ -124,8 +126,8 @@ $el-v-space: 7;
       padding: 0;
     }
     .elementor-column {
-      padding-top: spacing($el-gutter-md) / 2;
-      padding-bottom: spacing($el-gutter-md) / 2;
+      padding-top: $l_v_sm;
+      padding-bottom: $l_v_sm;
 
       &:first-child {
         border-right: 1px solid main-colors(main, border);
