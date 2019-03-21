@@ -28,10 +28,11 @@
 }
 
 .elementor-section-boxed .elementor-widget {
-  margin-bottom: spacing(6);
+  margin-bottom: spacing(4);
   // @include marg($v: 4);
 
   @include breakpoint-min($col_bp) {
+    margin-bottom: spacing(6);
     &:last-child {
       margin-bottom: 0;
     }

@@ -1903,6 +1903,14 @@ a {
 *                     maximim width, that equals the width of the website
  *
  ****************************************************************************************/
+.elementor-section-boxed:not(.elementor-inner-section) {
+  margin-top: 2.875rem;
+  margin-bottom: 2.875rem; }
+  @media (min-width: 60em) {
+    .elementor-section-boxed:not(.elementor-inner-section) {
+      margin-top: 5.75rem;
+      margin-bottom: 5.75rem; } }
+
 /**
  * BOXED section width
  * it needs a separate rules because of nesting
@@ -1933,14 +1941,6 @@ a {
     .elementor-section-boxed:not(.elementor-inner-section) {
       padding-left: 2.33594rem;
       padding-right: 2.33594rem; } }
-
-.elementor-section-boxed > .elementor-container {
-  padding-top: 5.75rem;
-  padding-bottom: 5.75rem; }
-
-.elementor-inner-section > .elementor-container {
-  padding-top: 1.4375rem;
-  padding-bottom: 1.4375rem; }
 
 /**
  * COLUMNS Horizontal gutter - only on large screen
@@ -2003,7 +2003,10 @@ a {
  */
 .elementor-inner-section {
   padding: 0;
-  margin: 0; }
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 1.79688rem;
+  margin-bottom: 1.79688rem; }
 
 /**
  * Sections with borders
@@ -2103,84 +2106,6 @@ a {
   @media (min-width: 60em) and (min-width: 85em) {
     .elementor-section-full_width .column--force-left .elementor-column-wrap {
       padding-right: 0; } }
-
-/*******
- * Bottom padding
- *************/
-.section--pb-none > .elementor-container {
-  padding-bottom: 0; }
-
-.section--pb-xs > .elementor-container {
-  padding-bottom: 2.875rem; }
-
-.section--pb-sm > .elementor-container {
-  padding-bottom: 2.875rem; }
-
-@media (min-width: 60em) {
-  .section--pb-md > .elementor-container {
-    padding-bottom: 5.75rem; } }
-
-@media (min-width: 60em) {
-  .section--pb-lg > .elementor-container {
-    padding-bottom: 11.5rem; } }
-
-@media (min-width: 60em) {
-  .section--pb-xl > .elementor-container {
-    padding-bottom: 23rem; } }
-
-/*********
- * Vertical padding
- *************/
-.section--pv-none > .elementor-container {
-  padding-top: 0rem;
-  padding-bottom: 0rem; }
-
-.section--pv-xs > .elementor-container {
-  padding-top: 1.4375rem;
-  padding-bottom: 1.4375rem; }
-
-.section--pv-sm > .elementor-container {
-  padding-top: 2.875rem;
-  padding-bottom: 2.875rem; }
-
-@media (min-width: 60em) {
-  .section--pv-md > .elementor-container {
-    padding-top: 5.75rem;
-    padding-bottom: 5.75rem; } }
-
-@media (min-width: 60em) {
-  .section--pv-lg > .elementor-container {
-    padding-top: 11.5rem;
-    padding-bottom: 11.5rem; } }
-
-@media (min-width: 60em) {
-  .section--pv-xl > .elementor-container {
-    padding-top: 23rem;
-    padding-bottom: 23rem; } }
-
-/***********
- * Bottom padding
- ****************/
-.section--pt-none > .elementor-container {
-  padding-top: 0; }
-
-.section--pt-xs > .elementor-container {
-  padding-top: 2.875rem; }
-
-.section--pt-sm > .elementor-container {
-  padding-top: 2.875rem; }
-
-@media (min-width: 60em) {
-  .section--pt-md > .elementor-container {
-    padding-top: 5.75rem; } }
-
-@media (min-width: 60em) {
-  .section--pt-lg > .elementor-container {
-    padding-top: 11.5rem; } }
-
-@media (min-width: 60em) {
-  .section--pt-xl > .elementor-container {
-    padding-top: 23rem; } }
 
 .color--main {
   background-color: #fff;
@@ -2337,10 +2262,12 @@ a {
   width: 100%; }
 
 .elementor-section-boxed .elementor-widget {
-  margin-bottom: 2.15625rem; }
+  margin-bottom: 1.4375rem; }
   @media (min-width: 60em) {
-    .elementor-section-boxed .elementor-widget:last-child {
-      margin-bottom: 0; } }
+    .elementor-section-boxed .elementor-widget {
+      margin-bottom: 2.15625rem; }
+      .elementor-section-boxed .elementor-widget:last-child {
+        margin-bottom: 0; } }
 
 .elementor-widget-video,
 .elementor-widget-button {

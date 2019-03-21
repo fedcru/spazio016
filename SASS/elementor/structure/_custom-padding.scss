@@ -1,131 +1,131 @@
-/*******
- * Bottom padding
- *************/
-.section--pb-none {
-  &> .elementor-container {
-    padding-bottom: 0;
-  }
-}
-.section--pb-xs {
-  &> .elementor-container {
-    padding-bottom: $l_v_sm;
-  }
-}
-.section--pb-sm {
-  &> .elementor-container {
-    // Vertical spacing on large screen
-    padding-bottom: $l_v_sm;
-  }
-}
-.section--pb-md {
-  &> .elementor-container {
-    // Vertical spacing on large screen
-    @include breakpoint-min(lg) {
-      padding-bottom: $l_v_md;
-    }
-  }
-}
-.section--pb-lg {
-  &> .elementor-container {
-    // Vertical spacing on large screen
-    @include breakpoint-min(lg) {
-      padding-bottom: $l_v_lg;
-    }
-  }
-}
-.section--pb-xl {
-  &> .elementor-container {
-    // Vertical spacing on large screen
-    @include breakpoint-min(lg) {
-      padding-bottom: $l_v_xl;
-    }
-  }
-}
-
-
-/*********
- * Vertical padding
- *************/
-.section--pv-none {
-  &> .elementor-container {
-    @include pad($v: 0);
-  }
-}
-.section--pv-xs {
-  &> .elementor-container {
-    @include pad($v: $l_v_xs);
-  }
-}
-.section--pv-sm {
-  &> .elementor-container {
-    @include pad($v: $l_v_sm);
-  }
-}
-.section--pv-md {
-  &> .elementor-container {
-    @include breakpoint-min(lg) {
-      @include pad($v: $l_v_md);
-    }
-  }
-}
-.section--pv-lg {
-  &> .elementor-container {
-    // Vertical spacing on large screen
-    @include breakpoint-min(lg) {
-      @include pad($v: $l_v_lg);
-    }
-  }
-}
-.section--pv-xl {
-  &> .elementor-container {
-    // Vertical spacing on large screen
-    @include breakpoint-min(lg) {
-      @include pad($v: $l_v_xl);
-    }
-  }
-}
-
-
-/***********
- * Bottom padding
- ****************/
-.section--pt-none {
-  &> .elementor-container {
-    padding-top: 0;
-  }
-}
-.section--pt-xs {
-  &> .elementor-container {
-    padding-top: $l_v_sm;
-  }
-}
-.section--pt-sm {
-  &> .elementor-container {
-    // Vertical spacing on large screen
-    padding-top: $l_v_sm;
-  }
-}
-.section--pt-md {
-  &> .elementor-container {
-    // Vertical spacing on large screen
-    @include breakpoint-min(lg) {
-      padding-top: $l_v_md;
-    }
-  }
-}
-.section--pt-lg {
-  &> .elementor-container {
-    // Vertical spacing on large screen
-    @include breakpoint-min(lg) {
-      padding-top: $l_v_lg;
-    }
-  }
-}
-.section--pt-xl {
-  &> .elementor-container {
-    // Vertical spacing on large screen
-    @include breakpoint-min(lg) {
-      padding-top: $l_v_xl;
-    }
-  }
-}
+// /*******
+//  * Bottom padding
+//  *************/
+// .section--pb-none {
+//   &> .elementor-container {
+//     padding-bottom: 0;
+//   }
+// }
+// .section--pb-xs {
+//   &> .elementor-container {
+//     padding-bottom: $l_v_sm;
+//   }
+// }
+// .section--pb-sm {
+//   &> .elementor-container {
+//     // Vertical spacing on large screen
+//     padding-bottom: $l_v_sm;
+//   }
+// }
+// .section--pb-md {
+//   &> .elementor-container {
+//     // Vertical spacing on large screen
+//     @include breakpoint-min(lg) {
+//       padding-bottom: $l_v_md;
+//     }
+//   }
+// }
+// .section--pb-lg {
+//   &> .elementor-container {
+//     // Vertical spacing on large screen
+//     @include breakpoint-min(lg) {
+//       padding-bottom: $l_v_lg;
+//     }
+//   }
+// }
+// .section--pb-xl {
+//   &> .elementor-container {
+//     // Vertical spacing on large screen
+//     @include breakpoint-min(lg) {
+//       padding-bottom: $l_v_xl;
+//     }
+//   }
+// }
+//
+//
+// /*********
+//  * Vertical padding
+//  *************/
+// .section--pv-none {
+//   &> .elementor-container {
+//     @include pad($v: 0);
+//   }
+// }
+// .section--pv-xs {
+//   &> .elementor-container {
+//     @include pad($v: $l_v_xs);
+//   }
+// }
+// .section--pv-sm {
+//   &> .elementor-container {
+//     @include pad($v: $l_v_sm);
+//   }
+// }
+// .section--pv-md {
+//   &> .elementor-container {
+//     @include breakpoint-min(lg) {
+//       @include pad($v: $l_v_md);
+//     }
+//   }
+// }
+// .section--pv-lg {
+//   &> .elementor-container {
+//     // Vertical spacing on large screen
+//     @include breakpoint-min(lg) {
+//       @include pad($v: $l_v_lg);
+//     }
+//   }
+// }
+// .section--pv-xl {
+//   &> .elementor-container {
+//     // Vertical spacing on large screen
+//     @include breakpoint-min(lg) {
+//       @include pad($v: $l_v_xl);
+//     }
+//   }
+// }
+//
+//
+// /***********
+//  * Bottom padding
+//  ****************/
+// .section--pt-none {
+//   &> .elementor-container {
+//     padding-top: 0;
+//   }
+// }
+// .section--pt-xs {
+//   &> .elementor-container {
+//     padding-top: $l_v_sm;
+//   }
+// }
+// .section--pt-sm {
+//   &> .elementor-container {
+//     // Vertical spacing on large screen
+//     padding-top: $l_v_sm;
+//   }
+// }
+// .section--pt-md {
+//   &> .elementor-container {
+//     // Vertical spacing on large screen
+//     @include breakpoint-min(lg) {
+//       padding-top: $l_v_md;
+//     }
+//   }
+// }
+// .section--pt-lg {
+//   &> .elementor-container {
+//     // Vertical spacing on large screen
+//     @include breakpoint-min(lg) {
+//       padding-top: $l_v_lg;
+//     }
+//   }
+// }
+// .section--pt-xl {
+//   &> .elementor-container {
+//     // Vertical spacing on large screen
+//     @include breakpoint-min(lg) {
+//       padding-top: $l_v_xl;
+//     }
+//   }
+// }

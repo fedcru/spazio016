@@ -5,7 +5,14 @@
 *                     maximim width, that equals the width of the website
  *
  ****************************************************************************************/
+.elementor-section-boxed:not(.elementor-inner-section) {
+  @include marg($v: $l_v_sm);
+  
+  @include breakpoint-min($col_bp) {
+    @include marg($v: $l_v_md);
 
+  }
+}
 /**
  * BOXED section width
  * it needs a separate rules because of nesting
@@ -26,7 +33,7 @@
 .elementor-section-boxed {
   // Vertical Spacing
   &> .elementor-container {
-    @include pad($v: $l_v_md);
+    // @include pad($v: $l_v_md);
 
     // @include breakpoint-min($col_bp) {
     //   @include pad($v: $l_v_md);
@@ -35,13 +42,7 @@
   }
 }
 
-// Vertical spacing nested
-.elementor-inner-section {
-  // Vertical Spacing
-  &> .elementor-container {
-    @include pad($v: $l_v_xs);
-  }
-}
+
 
 // .elementor-section-boxed .elementor-column {
 //   @include marg($v: 2);
@@ -113,9 +114,18 @@
 
 .elementor-inner-section {
   padding: 0;
-  margin: 0;
+  margin-left: 0;
+  margin-right: 0;
+  @include marg($v: 5);
 }
 
+// Vertical spacing nested
+.elementor-inner-section {
+  // Vertical Spacing
+  &> .elementor-container {
+    // @include pad($v: $l_v_xs);
+  }
+}
 
 /**
  * Sections with borders
