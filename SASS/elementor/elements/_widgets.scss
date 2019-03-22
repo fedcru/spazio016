@@ -28,7 +28,7 @@
 }
 
 .elementor-section-boxed .elementor-widget {
-  margin-bottom: spacing(4);
+  margin-bottom: spacing(5);
   // @include marg($v: 4);
 
   @include breakpoint-min($col_bp) {
@@ -46,6 +46,10 @@
 
 .elementor-widget-image {
   width: auto;
+
+  img {
+    display: block;
+  }
 }
 
 @include breakpoint-min(lg) {
@@ -110,11 +114,11 @@
   // Collapsed widgets
   ///
   .widget--right {
-    margin-right: 0;
+    margin-right: 0 !important;
     margin-left: auto !important;
   }
   .widget--left {
-    margin-left: 0;
+    margin-left: 0 !important;
     margin-right: auto !important;
   }
   .widget--center {
@@ -127,6 +131,11 @@
 .widget--boxed {
   @include pad($v: 4);
   @include grid_pad();
+  margin-top: spacing(6);
+
+  @include breakpoint-min($col_bp) {
+    margin-top: 0;
+  }
 }
 
 .widget--border {

@@ -27,6 +27,7 @@
 
 .main {
   @include layout-padding();
+  overflow: hidden;
 }
 
 .main__inner {

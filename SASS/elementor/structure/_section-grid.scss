@@ -3,22 +3,9 @@
  */
 .elementor-section-full_width {
 
-  ///
-  // Standard gutter
-  ///
-  .elementor-row  {
-    // @include col_marg();
-
-    .elementor-column {
-      // @include col_pad();
-    }
-    .elementor-column-wrap {
-      @include layout-padding();
-      height: 100%;
-      @include pad($v: $l_v_md);
-    }
+  .elementor-column-wrap {
+    height: 100%;
   }
-
   // On mobile, the widget centers itself vertically
   // to accomodate a possible extended min height
   .elementor-widget-wrap {
@@ -30,7 +17,7 @@
   }
 
   // On mobile Min height for empty columns with just a bg image
-  .elementor-row > .column--mobile-height .elementor-element-populated {
+  .elementor-row > .column--mob-height .elementor-element-populated {
     padding-bottom: 100%;
 
     @include breakpoint-min(md) {
@@ -42,62 +29,67 @@
   }
 }
 
-
-
-/**
- * COLUMNS gutter - only on large screen
- */
-@include breakpoint-min(lg) {
-  .elementor-section-full_width {
-
-    // Default gap
-    .elementor-row > .elementor-column .elementor-column-wrap {
-      // @include pad( $h: $el-gutter-md );
-      // @include pad( $v: $el-gutter-lg );
+.column--force-right {
+  .elementor-column-wrap {
+    @include layout-padding($xl: 0, $lg: 0);
+    @include breakpoint-min(lg) {
+      max-width: $website-width / 2;
+      margin-left: auto;
+      margin-right: 0;
     }
 
-    // A slightly smaller gap
-    .elementor-column-gap-narrow,
-    .elementor-column-gap-extended {
-      &> .elementor-row > .elementor-column .elementor-column-wrap {
-        // @include pad( $v: $el-gutter-md );
-        // @include pad( $h: $el-gutter-sm );
-      }
+
+    // remove the layout padding
+    @include breakpoint-min(xl) {
+      padding-left: 0;
+    }
+  }
+}
+
+.column--force-left {
+  .elementor-column-wrap {
+    @include layout-padding($xl: 0, $lg: 0);
+    @include breakpoint-min(lg) {
+      max-width: $website-width / 2;
+      margin-right: auto;
+      margin-left: 0;
     }
 
-    // Force column content to align to the boxed section content
-    .column--force-right {
-      //remove the grid padding
-      @include breakpoint-min(xl) {
-        padding-right: 0;
-      }
 
-      .elementor-column-wrap {
-        max-width: $website-width / 2;
-        margin-left: auto;
-        margin-right: 0;
-        // remove the layout padding
-        @include breakpoint-min(xl) {
-          padding-left: 0;
-        }
-      }
+    // remove the layout padding
+    @include breakpoint-min(xl) {
+      padding-right: 0;
     }
+  }
+}
 
-    .column--force-left {
-      //remove the grid padding
-      @include breakpoint-min(xl) {
-        padding-left: 0;
-      }
+@each $palette, $color in $palettes {
+  .elementor-column.color--#{$palette} {
+    @include pad($v: $l_v_md);
+  }
+}
 
-      .elementor-column-wrap {
-        max-width: $website-width / 2;
-        margin-right: auto;
-        margin-left: 0;
 
-        @include breakpoint-min(xl) {
-          padding-right: 0;
-        }
-      }
-    }
+.section--grid {
+
+  .elementor-column {
+    @include grid_pad();
+    @include pad($v: $l_v_md);
+  }
+
+  .elementor-column-gap-narrow .elementor-column {
+    @include pad($v: $l_v_xs);
+  }
+  .elementor-column-gap-extended .elementor-column {
+    @include pad($v: $l_v_sm);
+  }
+  .elementor-column-gap-narrow .elementor-column {
+    @include pad($v: $l_v_xs);
+  }
+  .elementor-column-gap-wide .elementor-column {
+    @include pad($v: $l_v_lg);
+  }
+  .elementor-column-gap-wider .elementor-column {
+    @include pad($v: $l_v_xl);
   }
 }
