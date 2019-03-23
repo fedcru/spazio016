@@ -1,5 +1,5 @@
-/*!
-Theme Name: FrontEnd Child
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900);/*!
+Theme Name: spazio016
 Version: 1.0
 Theme URI: -
 Author: GlocalWeb
@@ -21,7 +21,7 @@ Template: frontend
  * Vertical grid pad
  */
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
   text-rendering: optimizeLegibility;
   text-rendering: geometricPrecision; }
 
@@ -66,43 +66,31 @@ hr,
   max-width: 30.25rem; }
 
 .typography > h1 {
-  font-family: "Crimson Text", serif;
-  font-weight: 400;
-  font-size: 3.375rem;
-  line-height: 3.375rem;
-  margin-top: 2.33594rem;
-  margin-bottom: 0.71875rem; }
-  @media (min-width: 52.5em) {
-    .typography > h1 {
-      font-size: 4.25rem;
-      line-height: 4.3125rem; } }
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 4.25rem;
+  line-height: 4.5rem;
+  margin-top: 1.4375rem;
+  margin-bottom: 2.15625rem; }
 
 .typography > h2 {
-  font-family: "Crimson Text", serif;
-  font-weight: 400;
-  font-size: 2.25rem;
-  line-height: 2.875rem;
-  margin-top: 2.15625rem;
-  margin-bottom: 0.71875rem; }
-  @media (min-width: 60em) {
-    .typography > h2 {
-      font-size: 2.625rem;
-      line-height: 2.875rem; } }
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 2.625rem;
+  line-height: 3rem;
+  margin-top: 1.4375rem;
+  margin-bottom: 1.4375rem; }
 
 .typography > h3 {
-  font-family: "Crimson Text", serif;
-  font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 2.875rem/2;
-  margin-top: 1.79688rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.625rem;
+  line-height: 2.25rem/2;
+  margin-top: 1.4375rem;
   margin-bottom: 0.71875rem; }
-  @media (min-width: 60em) {
-    .typography > h3 {
-      font-size: 1.625rem;
-      line-height: 2.875rem/2; } }
 
 .typography > h4 {
-  font-family: "Crimson Text", serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.4375rem;
@@ -110,16 +98,17 @@ hr,
   margin-bottom: 0rem; }
 
 .typography > h5 {
-  font-family: "Crimson Text", serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   line-height: 1.4375rem;
   margin-top: 1.4375rem;
-  margin-bottom: 0rem; }
+  margin-bottom: 0rem;
+  text-transform: uppercase; }
 
 .typography > p {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
   font-size: 1rem;
   line-height: 1.4375rem;
   margin-bottom: 1.4375rem; }
@@ -136,11 +125,11 @@ hr,
   -webkit-background-size: 5px 5px;
           background-size: 5px 5px;
   background-repeat: repeat-x;
-  background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #f44336 1.5px, #f44336 2px, transparent 2px);
-  background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #f44336 1.5px, #f44336 2px, transparent 2px);
-  background-image: linear-gradient(to top, transparent, transparent 1.5px, #f44336 1.5px, #f44336 2px, transparent 2px);
+  background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #f7941d 1.5px, #f7941d 2px, transparent 2px);
+  background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #f7941d 1.5px, #f7941d 2px, transparent 2px);
+  background-image: linear-gradient(to top, transparent, transparent 1.5px, #f7941d 1.5px, #f7941d 2px, transparent 2px);
   background-position: center bottom;
-  color: #f44336; }
+  color: #f7941d; }
 
 .typography > ul,
 .typography > ol {
@@ -149,8 +138,8 @@ hr,
   padding-left: 1.4375rem; }
   .typography > ul li,
   .typography > ol li {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
     font-size: 1rem;
     line-height: 1.4375rem; }
 
@@ -164,31 +153,26 @@ hr,
   position: relative; }
 
 ::-moz-selection {
-  background-color: #f44336;
+  background-color: #f7941d;
   color: #fff;
   text-shadow: none; }
 
 ::selection {
-  background-color: #f44336;
+  background-color: #f7941d;
   color: #fff;
   text-shadow: none; }
 
 p > strong {
-  font-weight: 600; }
+  font-weight: 400; }
 
 .typography > .title--h1,
 .elementor-text-editor > .title--h1 {
-  font-family: "Crimson Text", serif;
-  font-weight: 400;
-  font-size: 3.375rem;
-  line-height: 3.375rem;
-  margin-top: 2.33594rem;
-  margin-bottom: 0.71875rem; }
-  @media (min-width: 52.5em) {
-    .typography > .title--h1,
-    .elementor-text-editor > .title--h1 {
-      font-size: 4.25rem;
-      line-height: 4.3125rem; } }
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 4.25rem;
+  line-height: 4.5rem;
+  margin-top: 1.4375rem;
+  margin-bottom: 2.15625rem; }
 
 .theme-icon {
   font-family: "Theme Icons"; }
@@ -217,11 +201,11 @@ a {
   -webkit-background-size: 5px 5px;
           background-size: 5px 5px;
   background-repeat: repeat-x;
-  background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #f44336 1.5px, #f44336 2px, transparent 2px);
-  background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #f44336 1.5px, #f44336 2px, transparent 2px);
-  background-image: linear-gradient(to top, transparent, transparent 1.5px, #f44336 1.5px, #f44336 2px, transparent 2px);
+  background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #f7941d 1.5px, #f7941d 2px, transparent 2px);
+  background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #f7941d 1.5px, #f7941d 2px, transparent 2px);
+  background-image: linear-gradient(to top, transparent, transparent 1.5px, #f7941d 1.5px, #f7941d 2px, transparent 2px);
   background-position: center bottom;
-  color: #f44336; }
+  color: #f7941d; }
 
 /*
  * The Website container
@@ -424,7 +408,7 @@ a {
   .header .header__nav a {
     color: #000; }
     .header .header__nav a:hover {
-      color: #f44336; }
+      color: #f7941d; }
 
 /**************************************************************************************************
  * Logo
@@ -441,9 +425,9 @@ a {
  * See elements/header/nav.scss
  */
 .footer {
-  background-color: #000; }
+  background-color: #fff; }
   .footer * {
-    color: rgba(255, 255, 255, 0.7); }
+    color: #000; }
   .footer strong {
     color: #fff; }
 
@@ -534,6 +518,17 @@ a {
     padding-right: 2.15625rem;
     max-width: 100%;
     margin-left: 0; } }
+
+.footer__widget-title {
+  text-transform: uppercase;
+  margin-bottom: 2; }
+
+.footer__widget p {
+  color: #f7941d;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 0.75rem;
+  line-height: 1.4375rem; }
 
 .footer-bottom__inner {
   max-width: 73.125rem;
@@ -657,7 +652,7 @@ a {
       text-align: left; } }
 
 .notfound__title {
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 3rem; }
 
 .notfound__text {
@@ -666,10 +661,10 @@ a {
   font-size: 1.5rem; }
 
 .notfound__site {
-  font-family: "Crimson Text", serif;
-  font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 2.875rem/2;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.625rem;
+  line-height: 2.25rem/2;
   margin-bottom: 1.4375rem;
   -webkit-flex-basis: 100%;
       -ms-flex-preferred-size: 100%;
@@ -686,10 +681,6 @@ a {
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0; }
-  @media (min-width: 60em) {
-    .notfound__site {
-      font-size: 1.625rem;
-      line-height: 2.875rem/2; } }
 
 .notfound__row {
   display: block; }
@@ -888,7 +879,7 @@ a {
       -ms-flex-pack: end;
           justify-content: flex-end; }
   .primary-nav__inner > .menu-item {
-    font-family: "Crimson Text", serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.4375rem;
@@ -903,7 +894,7 @@ a {
     .primary-nav__inner > .menu-item:hover, .primary-nav__inner > .menu-item.current-menu-item {
       position: relative; }
       .primary-nav__inner > .menu-item:hover a, .primary-nav__inner > .menu-item.current-menu-item a {
-        color: #f44336; }
+        color: #f7941d; }
       .primary-nav__inner > .menu-item:hover > .sub-menu, .primary-nav__inner > .menu-item.current-menu-item > .sub-menu {
         top: 2.15625rem; }
   .primary-nav__inner .sub-menu {
@@ -927,7 +918,7 @@ a {
   overflow-x: hidden; }
 
 .mobile-nav__icon {
-  fill: #f44336; }
+  fill: #f7941d; }
 
 .modal .mobile-nav__menu {
   position: absolute; }
@@ -940,7 +931,7 @@ a {
   padding-right: 1.4375rem;
   padding-top: 2.875rem;
   padding-bottom: 2.15625rem;
-  background-color: #f44336;
+  background-color: #f7941d;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -961,8 +952,8 @@ a {
   left: 0;
   right: 0; }
   .mobile-nav__inner li {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
     font-size: 1rem;
     line-height: 1.4375rem;
     padding-top: 0.71875rem;
@@ -1018,8 +1009,8 @@ a {
  */
 input,
 textarea {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
   font-size: 1rem;
   line-height: 1.4375rem;
   padding-top: 0.35938rem;
@@ -1029,8 +1020,8 @@ textarea {
   width: 100%; }
 
 select {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
   font-size: 1rem;
   line-height: 1.4375rem;
   padding-top: 0.35938rem;
@@ -1111,19 +1102,21 @@ select {
  * Labels
  */
 .gfield_label {
-  font-family: "Crimson Text", serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   line-height: 1.4375rem;
   padding-top: 0.35938rem;
   padding-bottom: 0.35938rem;
+  text-transform: uppercase;
   display: block; }
 
 .gfield_description {
-  font-family: "Crimson Text", serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   line-height: 1.4375rem;
+  text-transform: uppercase;
   font-style: italic; }
 
 /**
@@ -1169,12 +1162,13 @@ select {
   padding-right: 0.71875rem; }
   .name_first label,
   .name_last label {
-    font-family: "Crimson Text", serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     line-height: 1.4375rem;
     padding-top: 0.35938rem;
     padding-bottom: 0.35938rem;
+    text-transform: uppercase;
     display: block;
     display: block; }
 
@@ -1195,8 +1189,8 @@ select {
   padding-right: 1.4375rem;
   padding-top: 0.35938rem;
   padding-bottom: 0.35938rem;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
   font-size: 1rem;
   line-height: 1.4375rem;
   margin-top: 1.4375rem;
@@ -1275,10 +1269,11 @@ textarea {
 
 .ui-datepicker-prev,
 .ui-datepicker-next {
-  font-family: "Crimson Text", serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   line-height: 1.4375rem;
+  text-transform: uppercase;
   cursor: pointer; }
 
 .ui-datepicker-prev {
@@ -1309,10 +1304,11 @@ textarea {
   .ui-datepicker-calendar td,
   .ui-datepicker-calendar th {
     text-align: center;
-    font-family: "Crimson Text", serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
-    font-size: 0.875rem;
-    line-height: 1.4375rem; }
+    font-size: 0.75rem;
+    line-height: 1.4375rem;
+    text-transform: uppercase; }
     .ui-datepicker-calendar td a,
     .ui-datepicker-calendar th a {
       color: #000; }
@@ -1385,7 +1381,7 @@ a {
     margin-bottom: 0; }
 
 .sidebar-widget__title {
-  font-family: "Crimson Text", serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.4375rem; }
@@ -1432,19 +1428,15 @@ a {
     width: 100%; }
 
 .standard-title__text {
-  font-family: "Crimson Text", serif;
-  font-weight: 400;
-  font-size: 3.375rem;
-  line-height: 3.375rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 4.25rem;
+  line-height: 4.5rem;
   margin-top: 0.71875rem;
   margin-bottom: 1.4375rem; }
-  @media (min-width: 52.5em) {
-    .standard-title__text {
-      font-size: 4.25rem;
-      line-height: 4.3125rem; } }
 
 .standard-title__subtitle {
-  font-family: "Crimson Text", serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.4375rem;
@@ -1568,33 +1560,25 @@ a {
   width: 100%; }
 
 .hero-title__title {
-  font-family: "Crimson Text", serif;
-  font-weight: 400;
-  font-size: 3.375rem;
-  line-height: 3.375rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 4.25rem;
+  line-height: 4.5rem;
   color: #fff;
   display: block; }
-  @media (min-width: 52.5em) {
-    .hero-title__title {
-      font-size: 4.25rem;
-      line-height: 4.3125rem; } }
 
 .hero-title__subtitle {
-  font-family: "Crimson Text", serif;
-  font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 2.875rem/2;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.625rem;
+  line-height: 2.25rem/2;
   margin-top: 1.07813rem;
   color: #fff;
   display: block; }
-  @media (min-width: 60em) {
-    .hero-title__subtitle {
-      font-size: 1.625rem;
-      line-height: 2.875rem/2; } }
 
 .hero-title__description * {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
   font-size: 1rem;
   line-height: 1.4375rem;
   margin-top: 1.4375rem;
@@ -1623,8 +1607,8 @@ a {
   padding-right: 1.4375rem;
   padding-top: 0.35938rem;
   padding-bottom: 0.35938rem;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
   font-size: 1rem;
   line-height: 1.4375rem;
   background: transparent;
@@ -2351,17 +2335,17 @@ a {
     -webkit-background-size: 5px 5px;
             background-size: 5px 5px;
     background-repeat: repeat-x;
-    background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #f44336 1.5px, #f44336 2px, transparent 2px);
-    background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #f44336 1.5px, #f44336 2px, transparent 2px);
-    background-image: linear-gradient(to top, transparent, transparent 1.5px, #f44336 1.5px, #f44336 2px, transparent 2px);
+    background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #f7941d 1.5px, #f7941d 2px, transparent 2px);
+    background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #f7941d 1.5px, #f7941d 2px, transparent 2px);
+    background-image: linear-gradient(to top, transparent, transparent 1.5px, #f7941d 1.5px, #f7941d 2px, transparent 2px);
     background-position: center bottom;
-    color: #f44336; }
+    color: #f7941d; }
   .color--main ::-moz-selection {
-    background-color: #f44336;
+    background-color: #f7941d;
     color: #fff;
     text-shadow: none; }
   .color--main ::selection {
-    background-color: #f44336;
+    background-color: #f7941d;
     color: #fff;
     text-shadow: none; }
   .color--main blockquote,
@@ -2579,10 +2563,11 @@ a {
   padding-right: 1.4375rem;
   padding-top: 0.35938rem;
   padding-bottom: 0.35938rem;
-  font-family: "Crimson Text", serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   line-height: 1.4375rem;
+  text-transform: uppercase;
   text-transform: uppercase; }
 
 .elementor-button.elementor-size-md {
@@ -2595,8 +2580,8 @@ a {
   padding-right: 1.4375rem;
   padding-top: 0.35938rem;
   padding-bottom: 0.35938rem;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
   font-size: 1rem;
   line-height: 1.4375rem;
   text-transform: uppercase; }
@@ -2611,14 +2596,10 @@ a {
   padding-right: 1.79688rem;
   padding-top: 1.07813rem;
   padding-bottom: 1.07813rem;
-  font-family: "Crimson Text", serif;
-  font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 2.875rem/2; }
-  @media (min-width: 60em) {
-    .elementor-button.elementor-size-lg {
-      font-size: 1.625rem;
-      line-height: 2.875rem/2; } }
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.625rem;
+  line-height: 2.25rem/2; }
 
 .elementor-button {
   background: #f44336;
@@ -2684,7 +2665,7 @@ a {
   .elementor-widget-wp-widget-nav_menu .menu .menu-item {
     padding-left: 0.71875rem;
     padding-right: 0.71875rem;
-    font-family: "Crimson Text", serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.4375rem;
@@ -2803,43 +2784,31 @@ a {
   margin-bottom: 0; }
 
 .elementor-text-editor > h1 {
-  font-family: "Crimson Text", serif;
-  font-weight: 400;
-  font-size: 3.375rem;
-  line-height: 3.375rem;
-  margin-top: 2.33594rem;
-  margin-bottom: 0.71875rem; }
-  @media (min-width: 52.5em) {
-    .elementor-text-editor > h1 {
-      font-size: 4.25rem;
-      line-height: 4.3125rem; } }
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 4.25rem;
+  line-height: 4.5rem;
+  margin-top: 1.4375rem;
+  margin-bottom: 2.15625rem; }
 
 .elementor-text-editor > h2 {
-  font-family: "Crimson Text", serif;
-  font-weight: 400;
-  font-size: 2.25rem;
-  line-height: 2.875rem;
-  margin-top: 2.15625rem;
-  margin-bottom: 0.71875rem; }
-  @media (min-width: 60em) {
-    .elementor-text-editor > h2 {
-      font-size: 2.625rem;
-      line-height: 2.875rem; } }
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 2.625rem;
+  line-height: 3rem;
+  margin-top: 1.4375rem;
+  margin-bottom: 1.4375rem; }
 
 .elementor-text-editor > h3 {
-  font-family: "Crimson Text", serif;
-  font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 2.875rem/2;
-  margin-top: 1.79688rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.625rem;
+  line-height: 2.25rem/2;
+  margin-top: 1.4375rem;
   margin-bottom: 0.71875rem; }
-  @media (min-width: 60em) {
-    .elementor-text-editor > h3 {
-      font-size: 1.625rem;
-      line-height: 2.875rem/2; } }
 
 .elementor-text-editor > h4 {
-  font-family: "Crimson Text", serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.4375rem;
@@ -2847,17 +2816,18 @@ a {
   margin-bottom: 0rem; }
 
 .elementor-text-editor > h5 {
-  font-family: "Crimson Text", serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   line-height: 1.4375rem;
   margin-top: 1.4375rem;
-  margin-bottom: 0rem; }
+  margin-bottom: 0rem;
+  text-transform: uppercase; }
 
 .elementor-text-editor > p,
 .elementor-text-editor > h3--p {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
   font-size: 1rem;
   line-height: 1.4375rem;
   margin-bottom: 1.4375rem; }
@@ -2869,8 +2839,8 @@ a {
   padding-left: 1.4375rem; }
   .elementor-text-editor > ul li,
   .elementor-text-editor > ol li {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
     font-size: 1rem;
     line-height: 1.4375rem; }
 
@@ -2881,41 +2851,29 @@ a {
   list-style: decimal; }
 
 .elementor-text-editor > .h1--h2 {
-  font-family: "Crimson Text", serif;
-  font-weight: 400;
-  font-size: 2.25rem;
-  line-height: 2.875rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 2.625rem;
+  line-height: 3rem;
   margin-top: 2.33594rem;
   margin-bottom: 2.15625rem; }
-  @media (min-width: 60em) {
-    .elementor-text-editor > .h1--h2 {
-      font-size: 2.625rem;
-      line-height: 2.875rem; } }
 
 .elementor-text-editor > .h1--h3 {
-  font-family: "Crimson Text", serif;
-  font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 2.875rem/2;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.625rem;
+  line-height: 2.25rem/2;
   margin-top: 1.79688rem;
   margin-bottom: 0.71875rem; }
-  @media (min-width: 60em) {
-    .elementor-text-editor > .h1--h3 {
-      font-size: 1.625rem;
-      line-height: 2.875rem/2; } }
 
 .elementor-text-editor > blockquote {
-  font-family: "Crimson Text", serif;
-  font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 2.875rem/2;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.625rem;
+  line-height: 2.25rem/2;
   position: relative;
   padding: 1.4375rem 0;
   font-style: italic; }
-  @media (min-width: 60em) {
-    .elementor-text-editor > blockquote {
-      font-size: 1.625rem;
-      line-height: 2.875rem/2; } }
   .elementor-text-editor > blockquote::before {
     font-style: normal;
     content: "\201C";
@@ -4488,7 +4446,7 @@ button.swiper-pagination-bullet {
   position: relative; }
 
 .card__title {
-  font-family: "Crimson Text", serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.4375rem;
@@ -4506,18 +4464,19 @@ button.swiper-pagination-bullet {
 .card__meta {
   padding-left: 0.71875rem;
   padding-right: 0.71875rem;
-  font-family: "Crimson Text", serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   line-height: 1.4375rem;
   padding-top: 0.71875rem;
-  padding-bottom: 0.71875rem; }
+  padding-bottom: 0.71875rem;
+  text-transform: uppercase; }
   .card__meta * {
     color: #fff; }
 
 .card__excerpt {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
   font-size: 1rem;
   line-height: 1.4375rem; }
 
@@ -4531,8 +4490,8 @@ button.swiper-pagination-bullet {
   -webkit-background-size: 5px 5px;
           background-size: 5px 5px;
   background-repeat: repeat-x;
-  background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #f44336 1.5px, #f44336 2px, transparent 2px);
-  background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #f44336 1.5px, #f44336 2px, transparent 2px);
-  background-image: linear-gradient(to top, transparent, transparent 1.5px, #f44336 1.5px, #f44336 2px, transparent 2px);
+  background-image: -webkit-linear-gradient(bottom, transparent, transparent 1.5px, #f7941d 1.5px, #f7941d 2px, transparent 2px);
+  background-image: -o-linear-gradient(bottom, transparent, transparent 1.5px, #f7941d 1.5px, #f7941d 2px, transparent 2px);
+  background-image: linear-gradient(to top, transparent, transparent 1.5px, #f7941d 1.5px, #f7941d 2px, transparent 2px);
   background-position: center bottom;
-  color: #f44336; }
+  color: #f7941d; }

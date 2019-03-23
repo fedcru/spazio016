@@ -41,14 +41,16 @@
 
 
 .footer__widget-title {
-
+  text-transform: uppercase;
+  margin-bottom: 2;
 }
 
 .footer__widget {
   // margin-bottom: spacing(6);
 
   p {
-
+    color: main-colors(footer, link);
+    @include font(h5_light);
   }
 }
 

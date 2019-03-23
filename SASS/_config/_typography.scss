@@ -24,7 +24,7 @@
 ///
 // Families
 ///
-$ff-primary: 'Lato', sans-serif;
+$ff-primary: 'Roboto', sans-serif;
 $ff-secondary: 'Crimson Text', serif;
 $ff-script: 'Comic Sans', cursive;
 $ff-button: $ff-secondary;
@@ -41,71 +41,92 @@ $text-atts: (
 
 $fonts: (
   h1: (
-    fm: $ff-secondary,
-    fs: 3.375rem,
-    lh: 3.375rem,
-    mt: 6.5,
-    mb: 2,
-    wt: 400,
-
-    md: (
-      fs: 4.25rem,
-      lh: 4.3125rem,
-    ),
+    fm: $ff-primary,
+    fs: 4.25rem,
+    lh: 4.5rem,
+    mt: 4,
+    mb: 6,
+    wt: 300,
   ),
+h1_black: (
+    fm: $ff-primary,
+    fs: 4.25rem,
+    lh: 4.5rem,
+    mt: 4,
+    mb: 6,
+    wt: 900,
+    tt: uppercase,
+  ),
+    //md: (
+    //  fs: 4.25rem,
+    //  lh: 4.3125rem,
+  //  ),
+  // ),
+
+
+
   h2: (
-    fm: $ff-secondary,
-    fs: 2.25rem,
-    lh: 2.875rem,
-    mt: 6,
-    mb: 2,
-    wt: 400,
-
-    lg: (
-      fs: 2.625rem,
-      lh: 2.875rem,
-    ),
+    fm: $ff-primary,
+    fs: 2.625rem,
+    lh: 3rem,
+    mt: 4,
+    mb: 4,
+    wt: 700,
   ),
+  //  lg: (
+  //    fs: 2.625rem,
+ //     lh: 2.875rem,
+//    ),
+//  ),
   h3: (
-    fm: $ff-secondary,
-    fs: 1.5rem,
-    lh: 2.875rem / 2,
-    mt: 5,
+    fm: $ff-primary,
+    fs: 1.625rem,
+    lh: 2.25rem / 2,
+    mt: 4,
     mb: 2,
-    wt: 400,
-
-    lg: (
-      fs: 1.625rem,
-      lh: 2.875rem / 2,
-    ),
+    wt: 700,
   ),
+//    lg: (
+//      fs: 1.625rem,
+//      lh: 2.875rem / 2,
+//    ),
+//  ),
   h4: (
-    fm: $ff-secondary,
-    fs: $font-size,
+    fm: $ff-primary,
+    fs: 1rem,
     lh: $line-height,
     mt: 4,
     mb: 0,
     wt: 400,
   ),
+
   h5: (
-    fm: $ff-secondary,
-    fs: 0.875rem,
+    fm: $ff-primary,
+    fs: 0.75rem,
     lh: $line-height,
     mt: 4,
     mb: 0,
     wt: 400,
+    tt: uppercase,
+  ),
+
+  h5_light: (
+    fm: $ff-primary,
+    fs: 0.75rem,
+    lh: $line-height,
+    mt: 4,
+    mb: 0,
+    wt: 300,
   ),
 
   p: (
     fm: $ff-primary,
-    wt: 400,
+    wt: 300,
     fs: $font-size,
     lh: $line-height,
     mb: 4,
   ),
-
 );
-
 $lists: (
   mt: 4,
   mb: 4,

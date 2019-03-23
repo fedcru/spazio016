@@ -3,7 +3,7 @@ const common = require('./webpack.common.js');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
-let PROXY_URL = 'http://clienti-child.langhe.test/';
+let PROXY_URL = 'http://spazio016.fede.test/';
 
 module.exports = merge(common, {
   devtool: 'inline-source-map',

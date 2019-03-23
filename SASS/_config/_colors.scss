@@ -30,7 +30,7 @@ $black-10: rgba($black, 0.10);
 $black-05: rgba($black, 0.05);
 $red: #f44336;
 $green: #4CAF50;
-
+$orange: #f7941d;
 
 
 $main-colors: (
@@ -45,7 +45,7 @@ $main-colors: (
     bg: $white,
     body: $black,
     link: $black,
-    accent: $red,
+    accent: $orange,
     border: $white,
   ),
   hero: (
@@ -59,8 +59,8 @@ $main-colors: (
   main: (
     bg: $white,
     body: $black-90,
-    link: $red,
-    accent: $red,
+    link: $orange,
+    accent: $orange,
     border: $black-20,
     overlay: $black,
     button-bg: $red,
@@ -74,9 +74,9 @@ $main-colors: (
     border: $black-05,
   ),
   footer: (
-    bg: $black,
-    body: $white-70,
-    link: $white-70,
+    bg: $white,
+    body: $black,
+    link: $orange,
     accent: $white,
     border: $black-05,
   ),
