@@ -20,7 +20,7 @@
 
 
 .standard-title__subtitle {
-  @include font(h4, $mt: 2, $mb: 6);
+  @include font(h4_upper, $mt: 2, $mb: 6);
 }
 
 .standard-title__description  {
@@ -34,4 +34,7 @@
   height: 100%;
   margin-top: spacing(4);
   margin-bottom: spacing(6);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $website-width;
 }

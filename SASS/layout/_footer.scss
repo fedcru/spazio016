@@ -21,6 +21,7 @@
 
   &__row {
     @include flex-setup(-6);
+    justify-content: space-between;
   }
 }
 
@@ -33,9 +34,12 @@
 @include breakpoint-min(lg) {
   .footer__column--1-3 {
 
-    @include flex-child(6, $wd: 33.333);
-    max-width: 100%;
+    @include flex-child(6, $wd: 50);
+    max-width: max-width($text-mw);
     margin-left: 0;
+    &:last-child {
+      text-align: right;
+    }
   }
 }
 
@@ -47,11 +51,8 @@
 
 .footer__widget {
   // margin-bottom: spacing(6);
-
-  p {
     color: main-colors(footer, link);
     @include font(h5_light);
-  }
 }
 
 

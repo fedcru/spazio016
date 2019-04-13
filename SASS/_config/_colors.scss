@@ -28,10 +28,11 @@ $black-30: rgba($black, 0.30);
 $black-20: rgba($black, 0.20);
 $black-10: rgba($black, 0.10);
 $black-05: rgba($black, 0.05);
-$red: #f44336;
-$green: #4CAF50;
+$red: #ee1c25;
+$green: #36b449;
 $orange: #f7941d;
-
+$blue: #25aae1;
+$grey: #887c79;
 
 $main-colors: (
   topbar: (
@@ -45,7 +46,7 @@ $main-colors: (
     bg: $white,
     body: $black,
     link: $black,
-    accent: $orange,
+    accent: $black,
     border: $white,
   ),
   hero: (
@@ -63,7 +64,7 @@ $main-colors: (
     accent: $orange,
     border: $black-20,
     overlay: $black,
-    button-bg: $red,
+    button-bg: $green,
     button-body: $white,
   ),
   sidebar: (
@@ -102,6 +103,16 @@ $palettes: (
     overlay: $black,
     button-bg: $white-90,
     button-body: $black,
+  ),
+  blue: (
+    bg: $red,
+    body: $white,
+    heading: $white,
+    accent: $white,
+    border: $white,
+    overlay: $black,
+    button-bg: $blue,
+    button-body: $white,
   ),
   light: (
     bg: lighten($black, 95),

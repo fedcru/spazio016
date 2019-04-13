@@ -100,6 +100,16 @@ h1_black: (
     wt: 400,
   ),
 
+  h4_upper: (
+    fm: $ff-primary,
+    fs: 1rem,
+    lh: $line-height,
+    mt: 4,
+    mb: 0,
+    wt: 400,
+    tt:uppercase
+  ),
+
   h5: (
     fm: $ff-primary,
     fs: 0.75rem,

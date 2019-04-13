@@ -24,6 +24,22 @@ select {
   }
 }
 
+.gform_wrapper {
+  background-color: rgba($black-05, 0.03);
+  label {
+    color: $black;
+  }
+
+  * {
+    border-color: rgba($blue, 0.3);
+
+
+    &:focus {
+      border-color: rgba($blue, 0.3);
+    }
+  }
+}
+
 .gform_fields {
   @include flex-setup(-2);
 }
@@ -85,10 +101,9 @@ select {
 
 .gform_button {
   @extend %button;
-  @include button(p, $pv: 1);
+  @include button(h4_upper, $pv: 1);
   margin-top: spacing(4);
-
-  text-transform: uppercase;
+  @include button-color(blue);
   max-width: 16rem;
   cursor: pointer;
 }
@@ -118,7 +133,7 @@ select {
  */
 input,
 textarea {
-  border: 2px solid $black-10;
+  border: 1px solid $black-10;
 
   &:focus {
     border-color: $black-30;
