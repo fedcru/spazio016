@@ -8,7 +8,7 @@
 
 .products-loop,
 .products {
-  @include flex-setup(); //TODO - move in child
+  @include flex-setup(-4); //TODO - move in child
 }
 
 .products-loop--full {
@@ -36,9 +36,9 @@
 
 .products-loop--4,
 .products.columns-4 {
-  
+
   .product {
-    @include flex-child($wd: 50);
+    @include flex-child(4, $wd: 50);
     @include breakpoint-min(lg) {
       @include flex-child($wd: 25);
     }
@@ -65,20 +65,23 @@
   .entry-title,
   .woocommerce-loop-product__title {
     @include font(p, $mt: 4, $mb: 2);
-    font-weight: bold;
+    font-weight: 400;
   }
 
   .price {
     display: block;
-    @include font(p);
+    @include font(p, $mb: 1);
   }
 
-  .button {
-    @include button(p, $pv: 1);
-    @include button-color(light, filled);
-    margin-top: spacing(4);
+  .media-content > a {
+    @include button(h5, $pv: 0);
+
+    margin-top: spacing(1);
     width: auto;
     @include marg($h: auto);
+    &:hover{
+      @include button-color(main);
+    }
 
     &.loading {
       opacity: 0.2;

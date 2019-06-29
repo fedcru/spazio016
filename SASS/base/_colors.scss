@@ -1,6 +1,9 @@
 .main {
   background-color: main-colors(main, bg);
   color: main-colors(main, body);
+  h1, h2, h3, h4 {
+    color: main-colors(main, heading);
+  }
 
   * {
     border-color: main-colors(main, border);

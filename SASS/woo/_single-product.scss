@@ -46,7 +46,7 @@
 }
 
 .product_title  {
-  @include font(h1);
+  @include font(h2);
 }
 
 p.price {
@@ -57,6 +57,9 @@ p.price {
 
 .woocommerce-product-details__short-description {
   @include marg($v: 4);
+  p {
+    @include font(p, $mt:default, $mb:default);
+  }
 }
 
 .single-product .quantity {
@@ -68,7 +71,9 @@ p.price {
   }
   .qty {
     max-width: spacing(7);
+    min-width: spacing(12);
     padding: spacing(2) spacing(2);
+    color: main-colors(main, body);
 
     @include breakpoint-min(lg) {
       margin-left: spacing(1);

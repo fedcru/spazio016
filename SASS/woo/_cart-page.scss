@@ -4,8 +4,8 @@
     @include font(h4);
     text-align: left;
     padding: spacing(2);
-    background-color: palette(dark-alt, bg);
-    color: palette(dark-alt, body);
+    background-color: palette(dark, bg);
+    color: palette(dark, body);
   }
 
   td {

@@ -7,6 +7,10 @@ textarea {
   @include input-text(p);
 }
 
+textarea {
+  height: spacing(16)
+}
+
 select {
   @include input-select(p);
   background: #fff;
