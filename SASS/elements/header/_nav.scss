@@ -42,9 +42,12 @@
         color: main-colors(header, accent);
 
       }
+    }
 
+    &:hover {
       &>.sub-menu {
-        top: spacing(6) * 1.00;
+        top: spacing(4) * 1.00;
+
       }
     }
   }

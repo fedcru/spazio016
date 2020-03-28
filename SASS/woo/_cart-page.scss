@@ -101,7 +101,7 @@
 }
 
 .cart_totals {
-  max-width: max-width(sm);
+  max-width: max-width(lg);
   width: 100%;
 
 
@@ -163,10 +163,15 @@
     }
   }
 
-  .checkout-button {
-    @include button(h4);
-    margin-top: spacing(4);
-    color: $white;
+   .checkout-button {
+    // @include button(h4);
+    // margin-top: spacing(4);
+    // color: $white;
+    // background-color: $green;
+    @include button(p);
+    @include button-color(main, filled)
+    @include marg($v: 5);
+    text-transform: uppercase;
 
     br {
       display: none;

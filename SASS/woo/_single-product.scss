@@ -83,7 +83,7 @@ p.price {
 
 .single_add_to_cart_button {
   @include button(p);
-  @include button-color(light, filled)
+  @include button-color(main, filled)
   @include marg($v: 5);
   text-transform: uppercase;
 }
