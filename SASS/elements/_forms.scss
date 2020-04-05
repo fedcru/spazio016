@@ -121,6 +121,7 @@ input[type=checkbox],
   }
 }
 
+.woocommerce-form__label-for-checkbox input:checked + span::before,
 .checkout input:checked + span::before,
 input:checked + label::before {
   background: $tortora;

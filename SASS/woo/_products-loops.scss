@@ -4,13 +4,17 @@
 .product-grid {
   @include marg($v: 16);
   &__inner {
-    max-width: $website-width;
     margin: 0 auto;
+    max-width: max-width($text-mw);
+
+     @include breakpoint-min($col_bp) {
+      max-width: $website-width;
+     }
   }
 
   &__header {
     display: flex;
-    align-items: center;
+    // align-items: center;
     justify-content: space-between;
     flex-wrap: nowrap;
     border-bottom: 1px solid $black-10;
@@ -28,18 +32,15 @@
   }
 
   &__title {
-    // border-bottom: spacing(1) solid $orange;
     padding-bottom: spacing(2);
     @extend .h4;
     display: none;
-    // font-weight: bold;
-    // text-transform: uppercase;
-    // padding-right: spacing(1);
   }
 
   select {
     @extend .h5;
     border: 0;
+    padding-top: 0;
   }
 
   &__subtitle {
@@ -47,8 +48,27 @@
   }
 
   &__more {
-    padding-bottom: spacing(2);
+    // padding-bottom: spacing(2);
     flex-shrink: 1;
+  }
+
+  &__row {
+    @include flex-setup(-4);
+  }
+
+  &__column {
+    @include flex-child(4, 100);
+
+    &--type-sidebar {
+      @include breakpoint-min($col_bp) {
+        flex-basis: 25%;
+      }
+    }
+    &--content-has-sidebar {
+      @include breakpoint-min($col_bp) {
+        flex-basis: 75%;
+      }
+    }
   }
 
   &__list {
@@ -75,39 +95,35 @@
 
   @include breakpoint-min($col_bp) {
     @include flex-child(4, 25);
+
+    &--col-3 {
+      @include flex-child(4, 33.3333);
+    }
   }
 
   &__image-container {
     position: relative;
     background:rgba($orange, 0.1);
-    padding-top: spacing(3);
+    // padding-top: spacing(3);
     margin-bottom: spacing(-2);
   }
 
   &__image {
-    padding-top: 100%;
     position: relative;
     display: block;
     overflow: hidden;
-    top: 0;
-    height: 100%;
-    width: 100%;
+    // top: 0;
+    // height: 100%;
+    // width: 100%;
 
-    .ratio__content {
-      position: absolute;
-      display: block;
-      height: 100%;
-      width: 100%;
-      top: 0;
-    }
-
-    img {
-      display: block;
-      height: 100%;
-      width: auto;
-      margin-left: auto;
-      margin-right: auto;
-    }
+    @include aspect-ratio(1,1);
+    // img {
+    //   display: block;
+    //   height: 100%;
+    //   width: auto;
+    //   margin-left: auto;
+    //   margin-right: auto;
+    // }
   }
 
   &__info {

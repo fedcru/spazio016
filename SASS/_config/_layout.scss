@@ -54,7 +54,7 @@ $spacing: (
   xl: $space * 64,
 );
 
-$xs_gutter: spacing(2);
+$xs_gutter: spacing(-2);
 $grid_gutters_mobile: (
   sm: (
     val: spacing(3),

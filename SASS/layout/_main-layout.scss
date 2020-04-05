@@ -35,7 +35,7 @@
 }
 
 .main__row {
-  @include flex-setup(grid)
+  @include flex-setup(grid);
   @include pad($v: 8);
 }
 
