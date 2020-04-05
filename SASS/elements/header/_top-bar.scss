@@ -1,7 +1,7 @@
 .top-area {
   @include layout-overflow();
   @include layout-padding();
-  @include pad($v: 0);
+  @include pad($v: 0.5);
   background-color: main-colors(topbar, bg);
 
 
@@ -92,6 +92,10 @@
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  p {
+    @extend .h5_light;
   }
 }
 

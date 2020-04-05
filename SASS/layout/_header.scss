@@ -12,7 +12,6 @@ $header_bp: 'md';
     background-color: main-colors(header, bg);
   }
 
-
   &__row {
 
 
@@ -35,6 +34,39 @@ $header_bp: 'md';
 
       &:hover {
         color: main-colors(header, accent);
+      }
+    }
+  }
+
+  &--title-hero {
+    position: absolute;
+    width: 100%;
+    background-color: transparent;
+
+    .logo {
+      filter: grayscale(100%) brightness(500%);
+    }
+
+    .header__nav {
+      * {
+        color: $white-70;
+      }
+  
+      a {
+        color: $white-70;
+  
+        &:hover {
+          color: $white;
+        }
+      }
+
+      .menu-item {
+        &.current-menu-item,
+        &:hover {
+          a {
+            color: $white;
+          }
+        }
       }
     }
   }

@@ -64,6 +64,11 @@ hr,
   & > * {
     max-width: max-width($text-mw);
   }
+
+  &> .woocommerce {
+    max-width: none;
+    width: 100%;
+  }
   &> h1 {
     @include font(h1, $mt: default, $mb: default);
   }
@@ -137,5 +142,18 @@ p > strong {
 .elementor-text-editor {
   &> .title--h1 {
     @include font(h1, $mt: default, $mb: default);
+  }
+}
+
+@each $font, $style in $fonts {
+  .#{$font} {
+    @include font($font);
+  }
+}
+
+@each $font, $style in $fonts {
+  .typography > .#{$font},
+  .elementor-text-editor > .#{$font} {
+    @include font($font, $mt: default, $mb: default);
   }
 }
