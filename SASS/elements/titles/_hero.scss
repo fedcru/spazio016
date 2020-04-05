@@ -1,15 +1,19 @@
 .hero-title {
   @include layout-padding();
   @include layout-overflow();
-  @include pad($v: 7);
-  background-color: main-colors(hero, bg);
+  // @include pad($v: 7);
+  background: main-colors(hero, bg);
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: spacing(28);
+  padding-bottom: spacing(8);
 
-  @include color-overlay(hero, 0.3);
 
+  &--has-image {
+    @include color-overlay(hero, 0.3);
+  }
 
   @include breakpoint-min(lg) {
 
@@ -25,6 +29,11 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  @include max-width($text-mw);
+
+  @include breakpoint-min($col_bp) {
+    max-width: $website-width;
+  }
 }
 
 .hero-title__content {
@@ -34,7 +43,7 @@
 }
 
 .hero-title__title {
-  @include font(h1);
+  @include font(h1_black);
   color: main-colors(hero, body);
   display: block;
 }

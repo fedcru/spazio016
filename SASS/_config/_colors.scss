@@ -16,6 +16,7 @@
 $tortora: #8a7f7d;
 $white: #fff;
 $white-90: rgba($white, 0.90);
+$white-80: rgba($white, 0.80);
 $white-70: rgba($white, 0.70);
 $white-60: rgba($white, 0.60);
 $white-50: rgba($white, 0.50);
@@ -36,10 +37,11 @@ $orange: #f7941d;
 $blue: #25aae1;
 $grey: #887c79;
 
+$gradient: linear-gradient(90deg, rgba(54,180,73,1) 0%, rgba(37,170,225,1) 100%);
 
 $main-colors: (
   topbar: (
-    bg: $black,
+    bg: $tortora,
     body: $white,
     link: $white,
     accent: $white,
@@ -47,13 +49,13 @@ $main-colors: (
   ),
   header: (
     bg: $white,
-    body: $black,
-    link: $black,
-    accent: $black,
+    body: $grey,
+    link: $grey,
+    accent: $tortora,
     border: $white,
   ),
   hero: (
-    bg: $black,
+    bg: $tortora,
     body: $white,
     link: $white,
     accent: $white,

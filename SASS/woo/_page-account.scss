@@ -14,6 +14,48 @@
 /**
  * Login Form
  **/
+
+.woocommerce-account {
+
+
+  .col2-set:not(.addresses) {
+    // margin-top: spacing(8);
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      @extend .h3;
+      margin-bottom: spacing(4);
+    }
+  }
+
+  .col-1:not(.woocommerce-Address),
+  .col-2:not(.woocommerce-Address) {
+    margin-top: spacing(8);
+    max-width: $text-mw;
+  }
+  .col-1:not(.woocommerce-Address) {
+    @include breakpoint-min(ms) {
+      margin-right: spacing(8);
+    }
+  }
+
+  .col-2:not(.woocommerce-Address) {
+    padding: spacing(8);
+    background: $tortora;
+    color: $white;
+
+    h2 {
+      color: $white;
+    }
+  }
+
+}
+
+.woocommerce-form-register,
 .woocommerce-form-login {
   @include max-width(narrow);
 
@@ -22,8 +64,9 @@
     // text-align: center;
   }
   .button {
-    @include button(p, $pv: 2);
+    @include button(h4_upper, $pv:1);
     @include button-color(light);
+    margin-top: spacing(4);
   }
 
   // standard login ROW
@@ -38,6 +81,9 @@
     }
   }
 
+  a {
+    @include link;
+  }
 
   // REMEMBER ME
   .woocommerce-form__label-for-checkbox {
@@ -109,7 +155,7 @@
       font-weight: bold;
 
       a {
-        border-color: $black-90;
+        border-color: $tortora;
       }
 
       @include breakpoint-min(md) {
@@ -146,13 +192,17 @@
   }
 }
 
+.woocommerce-MyAccount-orders {
+  width: 100%;
+}
+
 
 /***
  * ORDINI
  */
 .woocommerce-orders-table {
   thead {
-    background: $black-90;
+    background: $tortora;
 
     th {
       padding: spacing(2);
@@ -201,14 +251,14 @@
   margin-bottom: spacing(5);
 
   thead {
-    background: $black-90;
+    background: $tortora;
 
     th {
       color: $white;
-      padding: spacing(2);
     }
   }
 
+  th,
   td {
     padding: spacing(2);
     border-bottom: 1px solid $black-10;
@@ -233,8 +283,15 @@
 /**
  * Indirizzi
  */
-.woocommerce-Address-title h3 {
-  @include font(h4, $mt: 6, $mb: 2);
+.woocommerce-Address-title {
+  
+  h3 {
+    @include font(h3, $mt: 4, $mb: 4);
+  }
+
+  a {
+    @include link;
+  }
 }
 .woocommerce-Address address {
   @include font(p, $mt: 2);

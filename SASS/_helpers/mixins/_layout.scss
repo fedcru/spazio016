@@ -595,8 +595,8 @@
   @if $fo != 0 {
     order: $fo;
   }
-  flex-basis: $wd + %;
-  width: $wd + %;
+  flex-basis: $wd * 1%;
+  width: $wd * 1%;
   align-self: $as;
   flex-grow: $gr;
   flex-shrink: $sh;

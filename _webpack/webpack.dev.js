@@ -3,9 +3,18 @@ const common = require('./webpack.common.js');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
-let PROXY_URL = 'http://spazio016.fede.test/';
+
+// const localProxy = require('./_config.js');
+// // const localProxy = require('./_config.js');
+// console.log(localProxy);
+// console.log('ciccio');
+// let PROXY_URL = localProxy;
+// console.log(PROXY_URL);
+
+let PROXY_URL = 'http://stocazzo.langhe.test/';
 
 module.exports = merge(common, {
+  
   devtool: 'inline-source-map',
   // plugins: [
 	// 	// //about SASS compilation

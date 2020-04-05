@@ -5,6 +5,14 @@
 input,
 textarea {
   @include input-text(p);
+
+  &:focus {
+    border-color: $black-50;
+  }
+
+  &::placeholder {
+    color: $black-30;
+  }
 }
 
 textarea {
@@ -72,6 +80,57 @@ select {
   font-style: italic;
 }
 
+input[type=radio],
+input[type=checkbox] { display: none }
+
+input[type=radio],
+input[type=checkbox] {
+  + label {
+    width: auto;
+    display: inline-block;
+    cursor: pointer;
+    margin-bottom: spacing(2);
+    @include font(h5_light);
+    color: $black;
+  }
+}
+
+input[type=checkbox]:checked + label,
+input[type=radio]:checked + label {
+  color: $black-90;
+}
+
+
+
+input[type=radio],
+input[type=checkbox],
+.checkout input[type=checkbox] {
+  + span::before,
+  + label::before {
+    content: "";
+    display: inline-block;
+    width: spacing(2);
+    height: spacing(2);
+    border: 2px solid #fff;
+    background: #fff;
+    margin-left: 2px;
+    margin-right: spacing(2);
+    transform: translateY(2px);
+    box-shadow: 0 0 0 2px $tortora;
+    cursor: pointer;
+  }
+}
+
+.woocommerce-form__label-for-checkbox input:checked + span::before,
+.checkout input:checked + span::before,
+input:checked + label::before {
+  background: $tortora;
+}
+
+input[type=checkbox] + label::before,
+input[type=radio] + label::before {
+  border-radius: 100%;
+}
 
 /**
  * Complex Fields
@@ -135,6 +194,7 @@ select {
 /**
  * Colors
  */
+select,
 input,
 textarea {
   border: 1px solid $black-10;

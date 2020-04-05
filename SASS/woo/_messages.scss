@@ -1,33 +1,82 @@
 .woocommerce-info {
   width: 100%;
   padding: spacing(3);
-  background-color: $green;
+  background: rgba($orange, 0.4);
   @include marg($v: 4);
-  color: $white;
+  // color: $white;
 
   a {
-    @include link(dark);
-    text-shadow: -1px -1px 0 $green, -1px -1px 0 $green, -1px -1px 0 $green, 1px 1px 0 $green
+    // @include link(dark);
+    text-decoration: underline;
+    // text-shadow: -1px -1px 0 $green, -1px -1px 0 $green, -1px -1px 0 $green, 1px 1px 0 $green
   }
 }
+
+// .woocommerce-notices-wrapper {
+
+// }
+
+// .product__main {
+//   .woocommerce-notices-wrapper {
+//     position: absolute;
+//     // background: white;
+//     top: spacing(24);
+//     z-index: 1;
+//     left: 0;
+//     right: 0;
+//     // color:$white- !important;
+//     @include breakpoint-min($col_bp) {
+//       left: 50%;
+//       // left: auto;
+//       right: auto;  
+//     }
+
+
+//     .woocommerce-message {
+//       color: $white-80;
+//     }
+//   }
+// }
+
+.checkout_coupon  {
+  // @include marg($v: 4);
+  margin-top: spacing(4);
+  margin-bottom: spacing(8);
+  max-width: max-width($text-mw);
+
+  p {
+    @extend .h5;
+    margin-bottom: spacing(4);
+  }
+
+  .button {
+    @extend %button;
+    @include button(h5_light, $pv: 1);
+    text-transform: uppercase;
+    font-weight: bold;
+    @include button-color();
+  }
+}
+
 
 
 /**
  * Message
  */
  .woocommerce-message {
-  @include flex-child($wd: 100);
-  padding: spacing(3);
-  @include marg($v: 4);
-  background-color: $green;
-  color: $white;
+  // @include flex-child($wd: 100);
+  padding: spacing(4);
+  // @include marg($v: 4);
+  // background-color: $green;
+  color: $black-90;
   max-width: $website-width;
   margin-left: auto;
   margin-right: auto;
+  background: rgba($orange, 0.4);
+
 
   a {
-    @include link(dark);
-    text-shadow: -1px -1px 0 $green, -1px -1px 0 $green, -1px -1px 0 $green, 1px 1px 0 $green;
+    text-decoration: underline;
   }
  }
 
@@ -37,16 +86,20 @@
  * Error
  */
 .woocommerce-error {
-  background: $red;
+  background: rgba($red, 0.2);
   padding: spacing(4);
-  color: #fff;
+  // color: #fff;
 
   li {
-    color: #fff;
+    // color: #fff;
     @include pad($v: 2);
 
     strong {
-      color: #fff;
+      // color: #fff;
     }
   }
+}
+
+.woocommerce-NoticeGroup {
+  margin-bottom: spacing(8);
 }

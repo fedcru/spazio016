@@ -16,7 +16,7 @@
   justify-content: flex-end;
 
   &> .menu-item {
-    @include font(h4);
+    @include font(h4_upper);
     text-transform: uppercase;
     border-bottom: 1px solid transparent;
     padding: 0;
