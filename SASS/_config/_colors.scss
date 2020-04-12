@@ -36,8 +36,14 @@ $green: #36b449;
 $orange: #f7941d;
 $blue: #25aae1;
 $grey: #887c79;
+$teal: #2fb084;
 
 $gradient: linear-gradient(90deg, rgba(54,180,73,1) 0%, rgba(37,170,225,1) 100%);
+$gradient: linear-gradient(90deg, rgba($orange,1) 0%, rgba($green,1) 50%, rgba($blue, 1) 100%);
+$gradient: linear-gradient(120deg, rgba($teal,1) 30%, rgba($green,1) 50%, rgba($blue, 1) 100%);
+// $gradient: linear-gradient(90deg, rgba($teal, 1) 0%, rgba($green, 1) 100%);
+
+// $gradient: linear-gradient(90deg, rgba($orange,1) 0%, rgba($green,1) 100%, rgba($blue, 1) 200%);
 
 $main-colors: (
   topbar: (
@@ -55,7 +61,7 @@ $main-colors: (
     border: $white,
   ),
   hero: (
-    bg: $tortora,
+    bg: $orange,
     body: $white,
     link: $white,
     accent: $white,

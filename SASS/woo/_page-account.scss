@@ -25,6 +25,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    max-width: none;
 
     h2 {
       @extend .h3;
@@ -35,7 +36,7 @@
   .col-1:not(.woocommerce-Address),
   .col-2:not(.woocommerce-Address) {
     margin-top: spacing(8);
-    max-width: $text-mw;
+    max-width: max-width($text-mw);
   }
   .col-1:not(.woocommerce-Address) {
     @include breakpoint-min(ms) {
@@ -55,10 +56,14 @@
 
 }
 
+.woocommerce-ResetPassword,
 .woocommerce-form-register,
 .woocommerce-form-login {
   @include max-width(narrow);
-
+  p {
+    margin-bottom: spacing(4);
+    @extend .p;
+  }
   // this is the button container
   .form-row {
     // text-align: center;
@@ -319,5 +324,22 @@
   .button {
     @include button(p, $pv: 2);
     @include button-color(light);
+  }
+}
+
+
+/******
+ * LOST PSW
+ *********/
+
+.woocommerce-lost-password {
+
+  .woocommerce {
+    @include max-width($text-mw);
+
+    p {
+      @extend .p;
+      margin-top: spacing(4);
+    }
   }
 }

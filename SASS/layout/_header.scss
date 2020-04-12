@@ -18,13 +18,15 @@ $header_bp: 'md';
   }
 
   &__inner {
-  //  @include pad($v: 2);
-  padding-top: spacing(2);
-  padding-bottom: spacing(6);
-  max-width: $website-width;
+    //  @include pad($v: 2);
+    padding-top: spacing(2);
+    padding-bottom: spacing(6);
+    max-width: $website-width;
   }
 
   .header__nav {
+    padding-bottom: spacing(2);
+
     * {
       color: main-colors(header, body);
     }
@@ -38,10 +40,24 @@ $header_bp: 'md';
     }
   }
 
+  &--title-standard {
+    .header__nav {
+      border-bottom: spacing(0.5) solid $tortora;
+    }
+  }
   &--title-hero {
     position: absolute;
     width: 100%;
     background-color: transparent;
+    .top-area {
+      background-color: transparent;
+    }
+
+    .mobile-nav__icon {
+      fill: $white;
+    }
+
+
 
     .logo {
       filter: grayscale(100%) brightness(500%);
@@ -52,7 +68,7 @@ $header_bp: 'md';
         color: $white-70;
       }
   
-      a {
+      .nav__inner > .menu-item > a {
         color: $white-70;
   
         &:hover {
@@ -60,21 +76,29 @@ $header_bp: 'md';
         }
       }
 
-      .menu-item {
+      .nav__inner > .menu-item {
         &.current-menu-item,
         &:hover {
-          a {
+          &> a {
             color: $white;
           }
         }
+      }
+
+      .sub-menu {
+        background: $white;
+        padding-top: 0;
       }
     }
   }
 }
 
 
-.header__inner {
-
+.site--title-hero,
+.site--header-hero {
+  .mobile-nav__inner {
+    background-color: main-colors(hero, bg);
+  }
 }
 
 

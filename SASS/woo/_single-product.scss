@@ -66,7 +66,7 @@
   }
 }
 
-.product{
+.product {
   
   &__surtitle {
     @extend .h4_upper;
@@ -80,6 +80,29 @@
       color: $orange;
       // color: $grey;
       display: block;
+    }
+  }
+
+  .woocommerce-variation-add-to-cart,
+  form.cart {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+
+  }
+
+  .single_variation_wrap {
+    width: 100%;
+  }
+
+  .product_meta {
+    @extend .h5;
+    // text-align: center;
+    @include breakpoint-min($col_bp) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
   }
 }
@@ -111,28 +134,28 @@ p.price {
 }
 
 .single-product .quantity {
-  max-width: max-width(xs);
-  margin-top: spacing(6);
+  // margin-top: spacing(4);
+  margin-bottom: spacing(4);
+
   label {
     @include font(h4);
     margin-right: spacing(2);
   }
   .qty {
-    max-width: spacing(7);
-    min-width: spacing(12);
+    max-width: spacing(12);
     padding: spacing(1) spacing(2);
-    color: main-colors(main, body);
 
-    // @include breakpoint-min(lg) {
-    //   margin-left: spacing(1);
-    // }
+    @include breakpoint-min(lg) {
+      // margin-left: spacing(1);
+    }
   }
 }
 
 .single_add_to_cart_button {
   @include button(h4_upper, $pv: 1);
   @include button-color(main, filled);
-  @include marg($v: 5);
+  // @include marg($v: 5);
+  margin-bottom: spacing(4);
   text-transform: uppercase;
 }
 
@@ -142,6 +165,7 @@ p.price {
 .variations {
   position: relative;
   @include marg($v: 4);
+  flex-basis: 100%;
   .label {
     @include font(h4);
     padding-right: spacing(1);
@@ -382,6 +406,17 @@ p.price {
   }
 }
 
+.woocommerce-Tabs-panel--description {
+  &> * {
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
 /***
  * Attributes
  ****/
@@ -495,3 +530,18 @@ p.price {
 ins {
   text-decoration: none;
 }
+
+
+/**
+form {  flex-wrap: wrap;}
+#wc-stripe-payment-request-wrapper {
+  width: 100%
+}
+
+# wc-stripe-payment-request-button-separator {
+width: 100%
+margin-bottom: 1.5rem;
+
+#wc-stripe-payment-request-button-separator + .single_add_to_cart_button {
+width: 100%;
+max-width: none; */

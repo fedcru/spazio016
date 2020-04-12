@@ -12,11 +12,18 @@
 
 .footer {
   @include layout-padding();
-  @include pad($v: 7);
+  // @include pad($v: 4);
+  padding-top: spacing(0);
+  padding-bottom: spacing(8);
 
 
   &__inner {
-    max-width: $website-width;
+    @include max-width($text-mw);
+    padding-top: spacing(8);
+    border-top: 1px solid $tortora;
+    @include breakpoint-min($col_bp) {
+      max-width: $website-width;
+    }
   }
 
   &__row {
@@ -29,16 +36,18 @@
   @include flex-child(6, $wd: 100);
   display: flex;
   flex-direction: column;
-}
 
-@include breakpoint-min(lg) {
-  .footer__column--1-4 {
+  @include breakpoint-min(md) {
+    flex-basis: 50%;
+    // &:first-child {
+    //   flex-basis: 100%;
+    // }
+  }
+  @include breakpoint-min($col_bp) {
+    flex-basis: 20%;
 
-    @include flex-child(6, $wd: 50);
-    max-width: max-width($text-mw);
-    margin-left: 0;
-    &:last-child {
-      text-align: right;
+    &:first-child {
+      flex-basis: 40%;
     }
   }
 }
@@ -50,7 +59,7 @@
 }
 
 .footer__widget {
-  // margin-bottom: spacing(6);
+  margin-bottom: spacing(4);
     color: main-colors(footer, link);
     @include font(h5_light);
 }

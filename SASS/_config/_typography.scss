@@ -50,12 +50,17 @@ $fonts: (
   ),
 h1_black: (
     fm: $ff-primary,
-    fs: 4.25rem,
-    lh: 4.5rem,
+    fs: 3.25rem,
+    lh: 3.5rem,
     mt: 4,
     mb: 6,
     wt: 900,
     tt: uppercase,
+
+    md: (
+      fs: 4.25rem,
+      lh: 4.5rem,
+    )
   ),
     //md: (
     //  fs: 4.25rem,

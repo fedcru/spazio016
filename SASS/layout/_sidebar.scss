@@ -1,6 +1,11 @@
 
 .sidebar__inner--shop {
   margin-top: spacing(8);
+  display: none;
+
+  @include breakpoint-min($col_bp) {
+    display: block;
+  }
 }
 
 .product-grid {

@@ -52,25 +52,25 @@
   //   @include flex-child($wd: 100);
   // }
 
-  &--left {
-    justify-content: space-between;
-    width: 100%;
-    flex-basis: 100%;
+  // &--left {
+  //   justify-content: space-between;
+  //   width: 100%;
+  //   flex-basis: 100%;
 
-    @include breakpoint-min(md) {
-      justify-content: flex-start;
-      width: auto;
-      flex-basis: auto;
-    }
-  }
+  //   @include breakpoint-min(md) {
+  //     justify-content: flex-start;
+  //     width: auto;
+  //     flex-basis: auto;
+  //   }
+  // }
 
-  &--right {
-    display: none;
+  // &--right {
+  //   display: none;
 
-    @include breakpoint-min(md) {
-      display: block;
-    }
-  }
+  //   @include breakpoint-min(md) {
+  //     display: block;
+  //   }
+  // }
 }
 
 
@@ -84,7 +84,33 @@
     padding: 0;
   }
 
+  p,
+  li,
+  span {
+    @extend .h5_light;
+  }
 
+  li {
+    display: inline-block;
+    padding-right: spacing(3);
+    position: relative;
+    &:after {
+      content: "•";
+      // line-height: $line-height;
+      padding-left: spacing(1);
+      font-size: 2rem;
+      position: absolute;
+      top: 0;
+      opacity: 0.5;
+    }
+
+    &:last-child {
+      padding-right: 0;
+      &:after {
+        content: none;
+      }
+    }
+  }
 
   @include breakpoint-min(sm) {
     margin-right: spacing(5);

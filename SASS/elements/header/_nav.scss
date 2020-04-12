@@ -38,7 +38,7 @@
 
       }
 
-      a {
+      &> a {
         color: main-colors(header, accent);
 
       }
@@ -47,34 +47,56 @@
     &:hover {
       &>.sub-menu {
         top: spacing(4) * 1.00;
+        height: auto;
+        opacity: 1;
+        transition: all 0.5s;
 
       }
     }
   }
 
-  &> .blu a:hover,
-  &> .current-menu-item.blu a {
+  &> .blu > a:hover,
+  &> .current-menu-item.blu > a {
     color: $blue;
   }
 
-  &> .verde a:hover,
-  &> .current-menu-item.verde a {
+  &> .verde > a:hover,
+  &> .current-menu-item.verde > a {
     color: $green;
   }
 
-  &> .arancione a:hover,
-  &> .current-menu-item.arancione a {
+  &> .arancione > a:hover,
+  &> .current-menu-item.arancione > a {
     color: $orange;
   }
 
   .sub-menu {
-    @include pad($h: 2);
+    @include pad($h: 0);
+    text-indent: 0;
+    padding-top: spacing(2);
+    height: 0;
+    transition: all 0.5s;
+    opacity: 0;
+    overflow: hidden;
 
     li {
       text-align: left;
+      @extend .h5_light;
+      text-indent: 0;
+      @include pad($v: 1);
+      border-top: 1px solid $tortora;
+      @include pad($h: 1);
 
+      
+      &:first-child {
+        border-top: 1px solid $tortora;
+      }
       &:last-child {
-        border: 0;
+        // border: 0;
+      }
+
+      &> a {
+        color: main-colors(header, body);
       }
     }
   }

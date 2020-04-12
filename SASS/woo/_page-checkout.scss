@@ -57,6 +57,7 @@
   width: 100%;
   @include breakpoint-min($col_bp) {
     flex-basis: 50%;
+    max-width: 50%;
   }
 }
 
@@ -358,4 +359,102 @@
 
 .woocommerce-additional-fields__field-wrapper {
   @include marg($v: 4);
+}
+
+.wc-credit-card-form {
+  border: 0;
+  margin-top: spacing(4);
+  padding: 0;
+  overflow: hidden;
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: space-between;
+
+  label {
+    @extend .p;
+  }
+
+  .wc-stripe-elements-field {
+    @extend .p;
+    padding-top: spacing(3);
+    padding-bottom: spacing(1);
+    @include pad($h: 2);
+    border: 1px solid $black-10;
+    background-color: $white;
+  }
+  .form-row-wide {
+    flex-basis: 100%;
+  }
+  .form-row-first,
+  .form-row-last {
+    // display: inline-block;
+    width: 49%;
+    margin-bottom: spacing(4);
+  }
+
+  .form-row-first {
+    float: left;
+  }
+
+  .form-row-last {
+    float: right;
+  }
+}
+
+.woocommerce-SavedPaymentMethods-saveNew {
+  margin-top: 0;
+}
+
+.checkout .woocommerce-NoticeGroup  {
+  flex-basis: 100%;
+}
+
+.woocommerce-terms-and-conditions {
+  @include marg($v: 4);
+  padding: spacing(2);
+  border-top: 1px solid $black-10;
+  border-bottom: 1px solid $black-10;
+
+  p {
+    @extend .h5_light;
+    margin-bottom: spacing(2);
+  }
+
+  h2, h3, h4, h5 {
+    @extend .h4;
+    margin-top: spacing(4);
+    margin-bottom: spacing(4);
+  }
+
+  ul, ol {
+    padding-left: spacing(2);
+    @include marg($v: 2);
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  li { @extend .h5_light; }
+}
+
+// .woocommerce-SavedPaymentMethods-saveNew {
+//   margin-top: spacing(4);
+// }
+
+.woocommerce-privacy-policy-text {
+  @extend .h5_light;
+  margin-bottom: spacing(4);
+
+  a {
+    @include link();
+  }
+}
+
+.woocommerce-terms-and-conditions-link {
+  @include link();
 }

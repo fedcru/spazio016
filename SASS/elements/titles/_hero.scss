@@ -1,3 +1,14 @@
+@keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+// @keyframes AnimationName {
+//   0%{background-position:0% 100%}
+//   50%{background-position:200% 100%}
+//   100%{background-position:0% 100%}
+// }
+
 .hero-title {
   @include layout-padding();
   @include layout-overflow();
@@ -9,7 +20,8 @@
   justify-content: center;
   padding-top: spacing(28);
   padding-bottom: spacing(8);
-
+  animation: AnimationName 15s ease infinite;
+  background-size: 300% 300%;
 
   &--has-image {
     @include color-overlay(hero, 0.3);

@@ -121,13 +121,13 @@ input[type=checkbox],
   }
 }
 
+.woocommerce-SavedPaymentMethods-saveNew input[type=checkbox]:checked + label::before,
 .woocommerce-form__label-for-checkbox input:checked + span::before,
 .checkout input:checked + span::before,
 input:checked + label::before {
   background: $tortora;
 }
 
-input[type=checkbox] + label::before,
 input[type=radio] + label::before {
   border-radius: 100%;
 }
