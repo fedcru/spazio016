@@ -32,15 +32,20 @@ $black-20: rgba($black_true, 0.20);
 $black-10: rgba($black_true, 0.10);
 $black-05: rgba($black_true, 0.05);
 $red: #ee1c25;
-$green: #36b449;
+$green: #31b851;
 $orange: #f7941d;
+$fucsia: #e90286;
+$red: #f0091d;
+// $yellow: #f0091d;
 $blue: #25aae1;
 $grey: #887c79;
 $teal: #2fb084;
 
 $gradient: linear-gradient(90deg, rgba(54,180,73,1) 0%, rgba(37,170,225,1) 100%);
-$gradient: linear-gradient(90deg, rgba($orange,1) 0%, rgba($green,1) 50%, rgba($blue, 1) 100%);
-$gradient: linear-gradient(120deg, rgba($teal,1) 30%, rgba($green,1) 50%, rgba($blue, 1) 100%);
+$gradient: linear-gradient(90deg, rgba($orange, 1) 0%, rgba($green, 1) 50%, rgba($blue, 1) 100%);
+$gradient: linear-gradient(90deg, rgba($blue, 1) 0%, rgba($green, 1) 25%, rgba($red, 1) 50%, rgba($orange, 1) 75%, rgba($fucsia, 1) 100%);
+$gradient: linear-gradient(120deg, rgba($green, 1) 0%, rgba($blue, 1) 33.3333%, rgba($fucsia, 1) 66.666666%, rgba($orange, 1) 100%);
+// $gradient: linear-gradient(120deg, rgba($teal,1) 30%, rgba($green,1) 50%, rgba($blue, 1) 100%);
 // $gradient: linear-gradient(90deg, rgba($teal, 1) 0%, rgba($green, 1) 100%);
 
 // $gradient: linear-gradient(90deg, rgba($orange,1) 0%, rgba($green,1) 100%, rgba($blue, 1) 200%);
@@ -61,7 +66,7 @@ $main-colors: (
     border: $white,
   ),
   hero: (
-    bg: $orange,
+    bg: $gradient,
     body: $white,
     link: $white,
     accent: $white,
