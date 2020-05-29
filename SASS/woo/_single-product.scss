@@ -32,7 +32,7 @@
   }
 
   .flex-viewport {
-    margin-bottom: spacing(2);
+    // margin-bottom: spacing(2);
   }
 
   .flex-active-slide .zoomImg {
@@ -40,10 +40,14 @@
   }
 
   .flex-control-nav {
-    @include marg($h: -2);
+    @include marg($h: -1);
+    // @include marg($v: -1);
+    display: flex;
+    flex-wrap: wrap;
   }
   .flex-control-thumbs li {
-    padding: spacing(2);
+    @include pad($v: 1);
+    @include flex-child(1, 25)
   }
 
   .onsale {
@@ -128,9 +132,9 @@ p.price {
 
 .woocommerce-product-details__short-description {
   @include marg($v: 4);
-  p {
-    @include font(p, $mt:default, $mb:default);
-  }
+  // p {
+  //   @include font(p, $mt:default, $mb:default);
+  // }
 }
 
 .single-product .quantity {
@@ -279,20 +283,6 @@ p.price {
     // border-bottom: 1px solid $black-10;
     border-top: 1px solid $black-10;
 
-  }
-
-  h2 {
-    @include font(h2, $mt: default, $mb: default);
-  }
-  h3 {
-    @include font(h3, $mt: default, $mb: default);
-  }
-  h4 {
-    @include font(h4, $mt: default, $mb: default);
-  }
-
-  p {
-    @include font(p, $mb: 4);
   }
 
   .woocommerce-Reviews-title {
@@ -529,6 +519,38 @@ p.price {
 
 ins {
   text-decoration: none;
+}
+
+.woocommerce-product-details__short-description,
+.woocommerce-Tabs-panel {
+  h2 {
+    @include font(h2, $mt: default, $mb: default);
+  }
+  h3 {
+    @include font(h3, $mt: default, $mb: default);
+  }
+  h4 {
+    @include font(h4, $mt: default, $mb: default);
+  }
+
+  li:not(.review ),
+  p {
+    @include font(p, $mb: 4);
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+  
+  ol:not(.commentlist),
+  ul:not(.commentlist) {
+    @include list();
+  }
+  
 }
 
 
