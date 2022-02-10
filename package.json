@@ -40,6 +40,6 @@
   },
   "homepage": "https://github.com/langhenet/lgenf#readme",
   "dependencies": {
-    "node-sass": "^4.6.0"
+    "node-sass": "^7.0.0"
   }
 }
