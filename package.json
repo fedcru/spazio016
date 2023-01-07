@@ -9,7 +9,7 @@
     "browser-sync-webpack-plugin": "^1.2.0",
     "cross-env": "^5.1.1",
     "css-loader": "^0.28.7",
-    "webpack": "^3.10.0",
+    "webpack": "^5.75.0",
     "webpack-bundle-analyzer": "^2.9.1",
     "extract-text-webpack-plugin": "^3.0.0",
     "webpack-dev-server": "^2.9.7",
